@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[python eval函数]]></title>
+    <url>%2F2018%2F10%2F04%2Fpython-eval%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[Python中eval函数的作用1、函数说明eval函数就是实现list、dict、tuple与str之间的转化str函数把list、dict、tuple转为字符串eg1：字符串转换成列表1234567a = "[[1,2], [3,4], [5,6], [7,8], [9,0]]"print(type(a))b = eval(a)print(b)# 输出： &lt;type 'str'&gt; [[1, 2], [3, 4], [5, 6], [7, 8], [9, 0]] eg2:字符串转换成字典123456789a = "&#123;1: 'a', 2: 'b'&#125;"print(type(a))b = eval(a)print(type(b))print(b)# 输出： &lt;type 'str'&gt; &lt;type 'dict'&gt; &#123;1: 'a', 2: 'b'&#125; eg3：字符串转换成元组123456789a = "([1,2], [3,4], [5,6], [7,8], (9,0))"print(type(a))b=eval(a)print(type(b))print(b)# 输出： &lt;type 'str'&gt; &lt;type 'tuple'&gt; ([1, 2], [3, 4], [5, 6], [7, 8], (9, 0))]]></content>
+      <categories>
+        <category>python相关函数</category>
+      </categories>
+      <tags>
+        <tag>he - Python eval函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux-commend 01]]></title>
+    <url>%2F2018%2F10%2F04%2Flinux-commend%2F</url>
+    <content type="text"><![CDATA[linux常用的进程指令1、进程查询指令1ps -ef | grep calculatorBuysell | grep -v grep | wc -l 注：该命令可以查询calculatorBuysell进程的个数]]></content>
+      <categories>
+        <category>linux浅见</category>
+      </categories>
+      <tags>
+        <tag>Linux进程相关指令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F09%2F13%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[vs 2008]]></title>
+    <url>%2F2018%2F07%2F28%2Fvs-2008%2F</url>
+    <content type="text"><![CDATA[vs 的快捷键 空格和tab键的设置 首先，先后按下两组快捷键Ctrl+R和Ctrl+W可以显示程序中的空格显示为圆点的样式，这样，在编码时，就可以知道Tab键是否为空格了。 同样，再次按下上述快捷键可以取消该显示。 将Tab键改为四个空格的方法： Tools-&gt;Options-&gt;Text Editor-&gt;C/C++-&gt;Tabs中的Tab选项由Keep tabs该为Insert Space]]></content>
+      <categories>
+        <category>vs学习</category>
+      </categories>
+      <tags>
+        <tag>VS快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python items和itertems函数的用法]]></title>
+    <url>%2F2018%2F07%2F28%2Fpython-items%E5%92%8Citertems%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[字典的定义123456#第一种：创建空字典dict=&#123;&#125;#第二种：创建字典常量dict=&#123;'key1':'value1','key2':'value2'&#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&#123;'key1':'value1','key2':'value2'&#125;;#第二种：创建时赋值dict(key1='value1',key2='value2') items函数 函数说明：items函数，将一个字典以列表的形式返回，因为字典是无序的，所以返回的列表也是无序的。123a = &#123;'a':1,'b':3&#125;a.items()返回 ：a = [('a',1),('b',3)] iteritems函数 函数说明：该函数返回一个迭代器1234567891011a = &#123;'a':1,'b':3&#125;b = a.iteritems()list(b) = [('a',1),('b',3)]for k, v in b: print k,v 返回：a 1 b 3 注：在Python 3.x 里面，iteritems()方法已经废除了。在3.x里用 items()替换iteritems() ，可以用于 for 来循环遍历。]]></content>
+      <categories>
+        <category>python相关函数</category>
+      </categories>
+      <tags>
+        <tag>python 字典的访问方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[有用的学习网站]]></title>
+    <url>%2F2018%2F07%2F23%2F%E6%9C%89%E7%94%A8%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[linux公社 免费下载地址：http://linux.linuxidc.com/ 用户名与密码都是 www.linuxidc.com Markdown 学习网站 Markdown 介绍与入门https://blog.csdn.net/u010565454/article/details/65937558 简介 Markdownhttps://ouweiya.gitbooks.io/markdown/注：该网页刷新很慢，建议使用第一个]]></content>
+      <categories>
+        <category>学习资料</category>
+      </categories>
+      <tags>
+        <tag>学习网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇博客]]></title>
+    <url>%2F2018%2F07%2F12%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[代码样式1234567891011//c++类的框架：class MyFristBlog&#123; public： MyFristBlog(); ~MyFristBlog(); private: int i; float j;&#125; 下载主题的命令git clone https://github.com/iissnan/hexo-theme-next themes/next 注：next是主题的名称，git clone是hexo命令，https://github.com/iissnan/hexo-theme-next是下载主题的网站，themes是下载的目录 hexo的基础配置修改全局的config.yml文件123456789101112theme:landscape 把landscap改为我们要替换的主题 如next然后进行主题更新：cd themes/nextgit pull再通过hexo cleanhexo g -g或者hexo cleanhexo g hexo d这样就将博客上传到github上了 添加about标签在博客所在目录下用： hexo new page about 这样会添加一个about文件夹，里面包含一个index.md。在这个文件内，可以编写一些about的信息。 然后，进入themes/jacman(进入你使用的主题下)打开_config.yml，在menu中添加about的链接。12345menu:首页: /归档: /archives关于: /about这样就会再页面菜单中生成一个关于about的链接了。 添加categories分类和tags标签1、新建标签 hexo new page tags hexo new page categories2、确认站点配置文件里有tag_dir: tags category_dir: categories3、确认主题配置文件里有tags: /tags categories: /categories4、编辑站点的source/tags/index.md，添加title: tagsdate: 2015-10-20 06:49:50type: “tags”comments: false5、编辑站点的source/categories/index.md，添加title: categoriesdate: 2015-10-20 06:49:50type: “categories”comments: false 注：编写tags和categories：冒号后面要有空格，格式如下：123456title: javascript深入理解(一)js类型知多少date: 2018-07-17 14:18:12tags: - javascriptcategories: - javascript深入理解 创建新博客1$ hexo new "My New Post"]]></content>
+      <categories>
+        <category>初识hexo</category>
+      </categories>
+      <tags>
+        <tag>初识hexo</tag>
+      </tags>
+  </entry>
+</search>

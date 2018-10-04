@@ -235,26 +235,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -297,7 +293,7 @@
                 6 tags in total
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/Linux进程相关指令/" style="font-size: 12px; color: #ccc">Linux进程相关指令</a> <a href="/tags/Python-eval函数/" style="font-size: 12px; color: #ccc">Python eval函数</a> <a href="/tags/VS快捷键/" style="font-size: 12px; color: #ccc">VS快捷键</a> <a href="/tags/python-字典的访问方法/" style="font-size: 12px; color: #ccc">python 字典的访问方法</a> <a href="/tags/初识hexo/" style="font-size: 12px; color: #ccc">初识hexo</a> <a href="/tags/学习网站/" style="font-size: 12px; color: #ccc">学习网站</a>
+              <a href="/tags/Linux进程相关指令/" style="font-size: 12px; color: #ccc">Linux进程相关指令</a> <a href="/tags/VS快捷键/" style="font-size: 12px; color: #ccc">VS快捷键</a> <a href="/tags/he-Python-eval函数/" style="font-size: 12px; color: #ccc">he - Python eval函数</a> <a href="/tags/python-字典的访问方法/" style="font-size: 12px; color: #ccc">python 字典的访问方法</a> <a href="/tags/初识hexo/" style="font-size: 12px; color: #ccc">初识hexo</a> <a href="/tags/学习网站/" style="font-size: 12px; color: #ccc">学习网站</a>
             </div>
           </div>
         
@@ -603,7 +599,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -916,19 +912,6 @@
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
