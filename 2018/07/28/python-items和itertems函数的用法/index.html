@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="字典的定义123456#第一种：创建空字典dict=&amp;#123;&amp;#125;#第二种：创建字典常亮dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;;#第二种：创建时赋值dict(">
+<meta name="description" content="字典的定义123456#第一种：创建空字典dict=&amp;#123;&amp;#125;#第二种：创建字典常量dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;;#第二种：创建时赋值dict(">
 <meta name="keywords" content="python 字典的访问方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python items和itertems函数的用法">
 <meta property="og:url" content="http://yoursite.com/2018/07/28/python-items和itertems函数的用法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="字典的定义123456#第一种：创建空字典dict=&amp;#123;&amp;#125;#第二种：创建字典常亮dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;;#第二种：创建时赋值dict(">
+<meta property="og:description" content="字典的定义123456#第一种：创建空字典dict=&amp;#123;&amp;#125;#第二种：创建字典常量dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;;#第二种：创建时赋值dict(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-28T13:53:07.379Z">
+<meta property="og:updated_time" content="2018-10-04T11:54:40.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python items和itertems函数的用法">
-<meta name="twitter:description" content="字典的定义123456#第一种：创建空字典dict=&amp;#123;&amp;#125;#第二种：创建字典常亮dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;;#第二种：创建时赋值dict(">
+<meta name="twitter:description" content="字典的定义123456#第一种：创建空字典dict=&amp;#123;&amp;#125;#第二种：创建字典常量dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;#第三种：创建字典dict=dict() 字典的赋值1234#第一种：直接赋值dict=&amp;#123;&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;&amp;#125;;#第二种：创建时赋值dict(">
 
 
 
@@ -339,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python-学习/" itemprop="url" rel="index">
-                    <span itemprop="name">python 学习</span>
+                  <a href="/categories/python相关函数/" itemprop="url" rel="index">
+                    <span itemprop="name">python相关函数</span>
                   </a>
                 </span>
 
@@ -376,7 +376,7 @@
       
 
       
-        <h2 id="字典的定义"><a href="#字典的定义" class="headerlink" title="字典的定义"></a>字典的定义</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#第一种：创建空字典</span></span><br><span class="line">dict=&#123;&#125;</span><br><span class="line"><span class="comment">#第二种：创建字典常亮</span></span><br><span class="line">dict=&#123;<span class="string">'key1'</span>:<span class="string">'value1'</span>,<span class="string">'key2'</span>:<span class="string">'value2'</span>&#125;</span><br><span class="line"><span class="comment">#第三种：创建字典</span></span><br><span class="line">dict=dict()</span><br></pre></td></tr></table></figure>
+        <h2 id="字典的定义"><a href="#字典的定义" class="headerlink" title="字典的定义"></a>字典的定义</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#第一种：创建空字典</span></span><br><span class="line">dict=&#123;&#125;</span><br><span class="line"><span class="comment">#第二种：创建字典常量</span></span><br><span class="line">dict=&#123;<span class="string">'key1'</span>:<span class="string">'value1'</span>,<span class="string">'key2'</span>:<span class="string">'value2'</span>&#125;</span><br><span class="line"><span class="comment">#第三种：创建字典</span></span><br><span class="line">dict=dict()</span><br></pre></td></tr></table></figure>
 <h2 id="字典的赋值"><a href="#字典的赋值" class="headerlink" title="字典的赋值"></a>字典的赋值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#第一种：直接赋值</span></span><br><span class="line">dict=&#123;<span class="string">'key1'</span>:<span class="string">'value1'</span>,<span class="string">'key2'</span>:<span class="string">'value2'</span>&#125;;</span><br><span class="line"><span class="comment">#第二种：创建时赋值</span></span><br><span class="line">dict(key1=<span class="string">'value1'</span>,key2=<span class="string">'value2'</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="items函数"><a href="#items函数" class="headerlink" title="items函数"></a>items函数</h2><ul>
 <li>函数说明：items函数，将一个字典以列表的形式返回，因为字典是无序的，所以返回的列表也是无序的。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'a'</span>:<span class="number">1</span>,<span class="string">'b'</span>:<span class="number">3</span>&#125;</span><br><span class="line">a.items()</span><br><span class="line">返回 ：a = [(<span class="string">'a'</span>,<span class="number">1</span>),(<span class="string">'b'</span>,<span class="number">3</span>)]</span><br></pre></td></tr></table></figure>
@@ -504,7 +504,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -515,7 +515,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -526,7 +526,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
