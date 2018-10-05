@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[table]]></title>
     <url>%2F2018%2F10%2F05%2Ftable%2F</url>
-    <content type="text"><![CDATA[##表格样式Name | Academy | score | :-: | -:Harry Potter | Gryffindor| 90Hermione Granger | Gryffindor | 100Draco Malfoy | Slytherin | 90]]></content>
+    <content type="text"><![CDATA[##表格样式 #md 水果 价格 数量 香蕉 $1 5 苹果 $1 6 草莓 $1 7]]></content>
       <categories>
         <category>学习表格</category>
       </categories>
