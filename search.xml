@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[table]]></title>
+    <url>%2F2018%2F10%2F05%2Ftable%2F</url>
+    <content type="text"><![CDATA[##表格样式Name | Academy | score | :-: | -:Harry Potter | Gryffindor| 90Hermione Granger | Gryffindor | 100Draco Malfoy | Slytherin | 90]]></content>
+      <categories>
+        <category>学习表格</category>
+      </categories>
+      <tags>
+        <tag>表格的格式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python eval函数]]></title>
     <url>%2F2018%2F10%2F04%2Fpython-eval%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[Python中eval函数的作用1、函数说明eval函数就是实现list、dict、tuple与str之间的转化str函数把list、dict、tuple转为字符串eg1：字符串转换成列表1234567a = "[[1,2], [3,4], [5,6], [7,8], [9,0]]"print(type(a))b = eval(a)print(b)# 输出： &lt;type 'str'&gt; [[1, 2], [3, 4], [5, 6], [7, 8], [9, 0]] eg2:字符串转换成字典123456789a = "&#123;1: 'a', 2: 'b'&#125;"print(type(a))b = eval(a)print(type(b))print(b)# 输出： &lt;type 'str'&gt; &lt;type 'dict'&gt; &#123;1: 'a', 2: 'b'&#125; eg3：字符串转换成元组123456789a = "([1,2], [3,4], [5,6], [7,8], (9,0))"print(type(a))b=eval(a)print(type(b))print(b)# 输出： &lt;type 'str'&gt; &lt;type 'tuple'&gt; ([1, 2], [3, 4], [5, 6], [7, 8], (9, 0))]]></content>
@@ -23,9 +34,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
+    <title></title>
     <url>%2F2018%2F09%2F13%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[title:Hello WorldWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
     <title><![CDATA[vs 2008]]></title>
