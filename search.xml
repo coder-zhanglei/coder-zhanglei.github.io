@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[c++ 标准头文件]]></title>
     <url>%2F2018%2F10%2F20%2Fc-%E6%A0%87%E5%87%86%E5%A4%B4%E6%96%87%E4%BB%B6%2F</url>
-    <content type="text"><![CDATA[常用到的头文件#include //标准字符串类 #include //标准输入输出 #include //标准向量容器 #include //标准集合容器 #include //标准映射容器 #include //标准算法using namespace std; //打开标准库的名字空间]]></content>
+    <content type="text"><![CDATA[常用到的头文件#include &lt;&gt; //标准字符串类 #include //标准输入输出 #include //标准向量容器 #include //标准集合容器 #include //标准映射容器 #include //标准算法using namespace std; //打开标准库的名字空间]]></content>
       <categories>
         <category>boost库开发</category>
       </categories>
