@@ -397,9 +397,14 @@
       
         
           
-            <h2 id="hexo的next创建about"><a href="#hexo的next创建about" class="headerlink" title="hexo的next创建about"></a>hexo的next创建about</h2><h3 id="创建步骤"><a href="#创建步骤" class="headerlink" title="创建步骤"></a>创建步骤</h3><h4 id="1、新建一个about页面，命令如下："><a href="#1、新建一个about页面，命令如下：" class="headerlink" title="- 1、新建一个about页面，命令如下："></a>- 1、新建一个about页面，命令如下：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
+            <h2 id="hexo的next创建about"><a href="#hexo的next创建about" class="headerlink" title="hexo的next创建about"></a>hexo的next创建about</h2><h3 id="创建步骤"><a href="#创建步骤" class="headerlink" title="创建步骤"></a>创建步骤</h3><ul>
+<li>1、新建一个about页面，命令如下 ： </li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
 <p> 注：在myBlog/source下会生成一个行的文件夹about，在该文件夹下会有一个index.md文件</p>
-<h4 id="2、"><a href="#2、" class="headerlink" title="-2、"></a>-2、</h4>
+<pre><code>- 2、 菜单显示about链接，在主题的thems/next/_configy.yml设置中将menu中的about前面的注释去掉
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">home: /</span><br><span class="line">archives: /archives/</span><br><span class="line">categories: /categories/</span><br><span class="line">tags: /tags/</span><br><span class="line">about: /about/</span><br></pre></td></tr></table></figure>
+
           
         
       
