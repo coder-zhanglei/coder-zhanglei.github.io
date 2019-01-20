@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux常用的指令]]></title>
+    <url>%2F2019%2F01%2F20%2Flinux%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[linux查询进程指令1、进程查询指令1ps -ef | grep calculatorBuysell | grep -v grep | wc -l 注：该命令可以查询calculatorBuysell进程的个数]]></content>
+      <categories>
+        <category>linux浅见</category>
+      </categories>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[大牛们的博客网站]]></title>
     <url>%2F2018%2F12%2F09%2F%E5%A4%A7%E7%89%9B%E4%BB%AC%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%2F</url>
     <content type="text"><![CDATA[大牛们的博客网址 http://www.yanmin99.com/]]></content>
@@ -127,14 +138,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[linux-commend 01]]></title>
-    <url>%2F2018%2F10%2F04%2Flinux-commend%2F</url>
-    <content type="text"><![CDATA[linux常用的进程指令1、进程查询指令1ps -ef | grep calculatorBuysell | grep -v grep | wc -l 注：该命令可以查询calculatorBuysell进程的个数]]></content>
+    <title><![CDATA[linux的基本配置指令]]></title>
+    <url>%2F2018%2F10%2F04%2Flinux%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[alias指令： 设置指令的别名 目的： 使用该指令可以对存在的指令设置一个容易记忆的别名 语法： alias 别名 = ‘复杂的指令’范例123alias p = ‘passwd’alias a = 'adduser -d /home/she-p 123456 sun' #设置别名alias #列出当前已经设置的别名 ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec/.bashrc来实现]]></content>
       <categories>
         <category>linux浅见</category>
       </categories>
       <tags>
-        <tag>Linux进程相关指令</tag>
+        <tag>Linux指令</tag>
       </tags>
   </entry>
   <entry>
