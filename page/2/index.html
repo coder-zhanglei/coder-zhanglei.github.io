@@ -896,7 +896,20 @@
 <li>语法： alias 别名 = ‘复杂的指令’<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> p = ‘passwd’</span><br><span class="line"><span class="built_in">alias</span> a = <span class="string">'adduser -d /home/she-p 123456 sun'</span> <span class="comment">#设置别名</span></span><br><span class="line"><span class="built_in">alias</span> <span class="comment">#列出当前已经设置的别名</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec/.bashrc来实现</p>
+<p>ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec/.bashrc来实现<br>该文件在root用户下。</p>
+<h3 id="man-显示指令的帮助信息"><a href="#man-显示指令的帮助信息" class="headerlink" title="man:显示指令的帮助信息"></a>man:显示指令的帮助信息</h3><ul>
+<li>目的:用man指令查看shell指令和相关函数</li>
+<li>语法:[-可选参数] 指令名</li>
+<li>说明: ubuntu中man的手册默认没有装。用下面几条命令就行了：<br>sudo apt-get install manpages<br>sudo apt-get install manpages-de<br>sudo apt-get install manpages-de-dev<br>sudo apt-get install manpages-dev<br>ubuntu man手册完善<br>Linux提供了丰富的帮助手册，当你需要查看某个命令的参数时不必到处上网查找，只要man一下即可。<br>Linux 的man手册共有以下几个章节：<br>1、Standard commands （标准命令）<br>2、System calls （系统调用）<br><font color="#7e7129">3、Library functions （库函数）</font><br>4、Special devices （设备说明）<br>5、File formats （文件格式）<br>6、Games and toys （游戏和娱乐）<br>7、Miscellaneous （杂项）<br>8、Administrative Commands （管理员命令）<h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">man --<span class="built_in">help</span> <span class="comment">#帮助文档</span></span><br><span class="line">man 3 open <span class="comment">#查看open函数，3代表查看库函数</span></span><br><span class="line">man 1 ls <span class="comment">#查看ls命令，1代表查看标准命令</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>ps：man -k who 后面提到，-k：显示与指定字符匹配的标题字符串的每一行</p>
+<h3 id="apropos：查找使用手册的名字和相关描述"><a href="#apropos：查找使用手册的名字和相关描述" class="headerlink" title="apropos：查找使用手册的名字和相关描述"></a>apropos：查找使用手册的名字和相关描述</h3><ul>
+<li>目标：查找一个不知道的能完成某种特殊任务的命令名称，有时候会忘记执行特定任务的命令，就可以使用apropos找出来</li>
+<li>语法：apropos [必要参数] [选择性参数] 关键词</li>
+<li>参数说明：<br>（1） 必要参数<br>| 参 数     |           说明             |<br>| ——–  |          ————–:   |<br>|   -d      |输出调试信息|<br>|  -v       |输出详细的警告信息|<br>|  -r       |认为每个关键词是一个通常的表达式|<br>|  -w       |认为每个关键词进行精确匹配|<br>|   -c      |对每个关键词进行精确匹配|<br>（2）非必要参数<br>| 参 数     |           说明             |<br>| ——–  |          ————–:   |<br>|   -s      |只在给定的部分进行搜索|<br>|  -h       |帮助信息|<br>|  -V       |版本信息|<br>内建指令：whatis，man<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apropos -r ls<span class="comment">#以通常的方式找关键词ls</span></span><br><span class="line">   apropos who <span class="comment">#等同于man -k who</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
           
         
