@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="alias指令： 设置指令的别名 目的： 使用该指令可以对存在的指令设置一个容易记忆的别名 语法： alias 别名 = ‘复杂的指令’范例123alias p = ‘passwd’alias a = &apos;adduser -d /home/she-p 123456 sun&apos; #设置别名alias #列出当前已经设置的别名   ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-20T13:10:14.177Z">
+<meta property="og:updated_time" content="2019-01-20T13:13:14.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux的基本配置指令01">
 <meta name="twitter:description" content="alias指令： 设置指令的别名 目的： 使用该指令可以对存在的指令设置一个容易记忆的别名 语法： alias 别名 = ‘复杂的指令’范例123alias p = ‘passwd’alias a = &apos;adduser -d /home/she-p 123456 sun&apos; #设置别名alias #列出当前已经设置的别名   ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec">
@@ -445,7 +445,29 @@
 </tr>
 </tbody>
 </table>
-<p>（2）非必要参数<br>|  参 数        |  说明    |<br>| :——–:    | :—-: |<br>|-s      |只在给定的部分进行搜索                |<br>|   -h       |帮助信息            |<br>| -V       |版本信息      |  </p>
+<p>（2）非必要参数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-s</td>
+<td style="text-align:center">只在给定的部分进行搜索</td>
+</tr>
+<tr>
+<td style="text-align:center">-h</td>
+<td style="text-align:center">帮助信息</td>
+</tr>
+<tr>
+<td style="text-align:center">-V</td>
+<td style="text-align:center">版本信息</td>
+</tr>
+</tbody>
+</table>
 <p>内建指令：whatis，man</p>
 <h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apropos -r ls<span class="comment">#以通常的方式找关键词ls</span></span><br><span class="line">apropos who <span class="comment">#等同于man -k who</span></span><br></pre></td></tr></table></figure>
 
