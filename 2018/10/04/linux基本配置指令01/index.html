@@ -82,14 +82,14 @@
 <meta name="description" content="alias指令： 设置指令的别名 目的： 使用该指令可以对存在的指令设置一个容易记忆的别名 语法： alias 别名 = ‘复杂的指令’范例123alias p = ‘passwd’alias a = &apos;adduser -d /home/she-p 123456 sun&apos; #设置别名alias #列出当前已经设置的别名   ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec">
 <meta name="keywords" content="Linux指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux的基本配置指令">
-<meta property="og:url" content="http://yoursite.com/2018/10/04/linux基本配置指令/index.html">
+<meta property="og:title" content="linux的基本配置指令01">
+<meta property="og:url" content="http://yoursite.com/2018/10/04/linux基本配置指令01/index.html">
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="alias指令： 设置指令的别名 目的： 使用该指令可以对存在的指令设置一个容易记忆的别名 语法： alias 别名 = ‘复杂的指令’范例123alias p = ‘passwd’alias a = &apos;adduser -d /home/she-p 123456 sun&apos; #设置别名alias #列出当前已经设置的别名   ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-20T12:42:29.184Z">
+<meta property="og:updated_time" content="2019-01-20T12:46:14.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux的基本配置指令">
+<meta name="twitter:title" content="linux的基本配置指令01">
 <meta name="twitter:description" content="alias指令： 设置指令的别名 目的： 使用该指令可以对存在的指令设置一个容易记忆的别名 语法： alias 别名 = ‘复杂的指令’范例123alias p = ‘passwd’alias a = &apos;adduser -d /home/she-p 123456 sun&apos; #设置别名alias #列出当前已经设置的别名   ps： 重启系统别名失效，如果想要永久生效，需要编辑文档/home/gec">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/04/linux基本配置指令/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/04/linux基本配置指令01/"/>
 
 
 
 
 
-  <title>linux的基本配置指令 | YHNE's bolg</title>
+  <title>linux的基本配置指令01 | YHNE's bolg</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/04/linux基本配置指令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/04/linux基本配置指令01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lei">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linux的基本配置指令</h1>
+          <h1 class="post-title" itemprop="name headline">linux的基本配置指令01</h1>
         
 
         <div class="post-meta">
@@ -368,8 +368,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/10/04/linux基本配置指令/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/10/04/linux基本配置指令/" itemprop="commentsCount"></span>
+                <a href="/2018/10/04/linux基本配置指令01/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/10/04/linux基本配置指令01/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -413,7 +413,7 @@
 <h3 id="apropos：查找使用手册的名字和相关描述"><a href="#apropos：查找使用手册的名字和相关描述" class="headerlink" title="apropos：查找使用手册的名字和相关描述"></a>apropos：查找使用手册的名字和相关描述</h3><ul>
 <li>目标：查找一个不知道的能完成某种特殊任务的命令名称，有时候会忘记执行特定任务的命令，就可以使用apropos找出来</li>
 <li>语法：apropos [必要参数] [选择性参数] 关键词</li>
-<li>参数说明：<br>（1） 必要参数<br>| 参 数     |           说明             |<br>| ——–  |          ————–:   |<br>|   -d      |输出调试信息|<br>|  -v       |输出详细的警告信息|<br>|  -r       |认为每个关键词是一个通常的表达式|<br>|  -w       |认为每个关键词进行精确匹配|<br>|   -c      |对每个关键词进行精确匹配|<br>（2）非必要参数<br>| 参 数     |           说明             |<br>| ——–  |          ————–:   |<br>|   -s      |只在给定的部分进行搜索|<br>|  -h       |帮助信息|<br>|  -V       |版本信息|<br>内建指令：whatis，man<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apropos -r ls<span class="comment">#以通常的方式找关键词ls</span></span><br><span class="line">   apropos who <span class="comment">#等同于man -k who</span></span><br></pre></td></tr></table></figure>
+<li>参数说明：<br>（1） 必要参数<br>| 参 数     |           说明             |<br>| ——–  |          :————–:  |<br>|   -d      |输出调试信息              |<br>|  -v       |输出详细的警告信息         |<br>|  -r       |认为每个关键词是一个通常的表达式|<br>|  -w       |认为每个关键词进行精确匹配    |<br>|   -c      |对每个关键词进行精确匹配           |<br>（2）非必要参数<br>| 参 数     |           说明             |<br>| ——–  |          :————–:   |<br>|   -s      |只在给定的部分进行搜索|<br>|  -h       |帮助信息|<br>|  -V       |版本信息|<br>内建指令：whatis，man<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apropos -r ls<span class="comment">#以通常的方式找关键词ls</span></span><br><span class="line">   apropos who <span class="comment">#等同于man -k who</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
