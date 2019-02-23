@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux基本配置指令03]]></title>
+    <url>%2F2019%2F02%2F23%2Flinux%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E6%8C%87%E4%BB%A403%2F</url>
+    <content type="text"><![CDATA[manpath ：设置man手册的查询路径范例12manpath #列出目前的查询路径 manpath -M /home/zhang #指定查询路径 free：显示内存信息范例1234free -b #以字节为单位显示 free -k #以KB为单位显示 free -m #以MB为单位显示 free -s 10 #每隔10s执行一次free，连续显示内存信息 crontab ：指定自动执行任务 创建新的 crontab 文件，或编辑现有文件。创建 crontab 文件的最简单方法是使用 crontab -e 命令。此命令会调用已为系统环境设置的文本编辑器。系统环境的缺省编辑器在 EDITOR 环境变量中定义。如果尚未设置此变量，crontab 命令将使用缺省编辑器 ed。最好选择您熟悉的编辑器。 以下示例说明如何确定是否已定义编辑器，以及如何将 vi 设置为缺省值。1234$ which $EDITOR$ $ EDITOR=vi$ export EDITOR $ crontab -e [username]创建 crontab 文件时，该文件会自动放入 /var/spool/cron/crontabs 目录，并以您的用户名命名。如果具有超级用户特权，则可为其他用户或 root 创建或编辑 crontab 文件。 以下示例说明如何为其他用户创建 crontab 文件。1234crontab -e jones1 0 * * 0 rm /home/jones/*.log &gt; /dev/null 2&gt;&amp;1 #添加到新 crontab 文件中的以下命令项将在每个星期日的凌晨 1:00 自动删除用户起始目录中的所有日志文件。由于该命令项不重定向输出，因此将重定向字符添加到 *.log 之后的命令行中。这样可以确保正常执行命令。crontab -l #列出目前的时程表crontab -r #删除目前的时程表 时程表格式如下 123456 f1 f2 f3 f4 f5 program#其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。#当 f1 为 * 时表示每分钟都要执行 program，f2 为 * 时表示每小时都要执行程序，其馀类推#当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其馀类推#当 f1 为 */n 时表示每 n 分钟个时间间隔执行一次，f2 为 */n 表示每 n 小时个时间间隔执行一次，其馀类推#当 f1 为 a, b, c,... 时表示第 a, b, c,... 分钟要执行，f2 为 a, b, c,... 时表示第 a, b, c...个小时要执行，其馀类推]]></content>
+      <categories>
+        <category>linux浅见</category>
+      </categories>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux的基本配置指令02]]></title>
     <url>%2F2019%2F02%2F22%2Flinux%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E6%8C%87%E4%BB%A402%2F</url>
     <content type="text"><![CDATA[clear 指令：清除屏幕信息 目的：对杂乱的屏幕进行清理 语法： clear date 指令： 显示或设置系统时间指令 目的：根据指定格式显示或设置当前系统的时间 语法：date [-可选参数][日期和时间格式] 格式为MMDDhhmm范例12datedate “Date:%Y.%m.%d Time:%H.%M.%S” echo指令：字符串输出 目的；应用该指令的字符串的值输出到标准输出 语法：echo [-可选参数] 字符串输出（1）必要参数 参 数 说明 -n 不在最后自动换行 -e 若字符串出现以下字符，加以特别处理 \a发出警告 \v删除前一个字符 \c最后不加换行符号 \f换行但光标任停在原来的位置上 \n换行且光标移至行首 \r光标移至行首，但不换行 \t插入tab \v同\f \在输出插入\字符 \nnn 将nnn看做八进制，输出它所代表的ASCII字符 -help 帮助信息 -version 版本信息 范例1echo -e “123456\n”]]></content>
