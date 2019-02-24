@@ -293,6 +293,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/linux基本配置指令04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/24/linux基本配置指令04/" itemprop="url">linux基本配置指令04</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-24T15:32:24+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/02/24/linux基本配置指令04/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/02/24/linux基本配置指令04/" class="cy_cmt_count" data-xid="2019/02/24/linux基本配置指令04/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="export-：设置或在显示环境变量"><a href="#export-：设置或在显示环境变量" class="headerlink" title="export ：设置或在显示环境变量"></a>export ：设置或在显示环境变量</h3><h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> -p <span class="comment">#列出所有环境变量</span></span><br><span class="line"><span class="built_in">export</span> M_ENV = http://www.linux.org/ <span class="comment">#定义环境变量</span></span><br></pre></td></tr></table></figure>
+<h3 id="lsmod：显示Linux内核的模块信息"><a href="#lsmod：显示Linux内核的模块信息" class="headerlink" title="lsmod：显示Linux内核的模块信息"></a>lsmod：显示Linux内核的模块信息</h3><h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod <span class="comment">#显示载入系统的模块信息</span></span><br></pre></td></tr></table></figure>
+<h3 id="reboot指令：重新启动"><a href="#reboot指令：重新启动" class="headerlink" title="reboot指令：重新启动"></a>reboot指令：重新启动</h3><ul>
+<li>语法: reboot [-可选参数]<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reboot -f <span class="comment">#强制重启</span></span><br><span class="line">reboot -i <span class="comment">#关闭网络设置后在重新启动</span></span><br><span class="line">reboot -n <span class="comment">#先保存数据，再重启</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="hostname-：显示或者设置当前系统的主机名"><a href="#hostname-：显示或者设置当前系统的主机名" class="headerlink" title="hostname ：显示或者设置当前系统的主机名"></a>hostname ：显示或者设置当前系统的主机名</h3><ul>
+<li>语法：hostname [必要参数][选择性参数]</li>
+</ul>
+<h4 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hostname -i <span class="comment">#显示主机ip地址</span></span><br><span class="line">hostname -d <span class="comment">#显示主机域名</span></span><br><span class="line">hostname Apple <span class="comment">#设置主机名称</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/linux基本配置指令03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1731,179 +1893,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/15/选购CPU/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/15/选购CPU/" itemprop="url">选购CPU</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-15T14:56:33+08:00">
-                2018-10-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/电脑硬件选购/" itemprop="url" rel="index">
-                    <span itemprop="name">电脑硬件选购</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/10/15/选购CPU/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/10/15/选购CPU/" class="cy_cmt_count" data-xid="2018/10/15/选购CPU/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="初识cpu"><a href="#初识cpu" class="headerlink" title="初识cpu"></a>初识cpu</h2><p>  CPU是central processing unit的缩写，中文名称是“中央处理器”。其内部结构归纳<br>起来可分为：控制单元、逻辑单元和存储单元三部分，这三部分相互协调，可以进行分析<br>判断、运算并控制电脑各个部分协调工作。</p>
-<h2 id="CPU的生产商及产品"><a href="#CPU的生产商及产品" class="headerlink" title="CPU的生产商及产品"></a>CPU的生产商及产品</h2><p>  目前世界上生产CPU的厂商主要有Intel公司，AMD公司<br>  inter公司的产品主要是酷睿i系列。</p>
-<h2 id="处理器核数"><a href="#处理器核数" class="headerlink" title="处理器核数"></a>处理器核数</h2><ul>
-<li>1 Intel公司<br>Intel公司六核处理器主要有：i7-5930K、i7-4960X、i7-4930K、i7-3970X等<br>Intel公司四核处理器主要有：第三代、第四代核第六代corei7四核处理器，第三代、四代核六代corei5四核处理器。</li>
-<li>2 AMD公司<br> AMD公司主流cpu有FX系列8核，6核、4核处理器，<br> APU系列4核、三核、双核处理器，<br> phenomII（羿龙II）X4四核、X3三核、X2双核等。<h2 id="CPU及CPU散热器选购实战"><a href="#CPU及CPU散热器选购实战" class="headerlink" title="CPU及CPU散热器选购实战"></a>CPU及CPU散热器选购实战</h2></li>
-</ul>
-<ul>
-<li>1 主频<br>购买不要追求过高的主频。</li>
-<li>2 注意购买时机<br>购买时可以选择推出半年到一年的CPU产品</li>
-<li>3 注意应用需求<br>在不同的应用环境下对于CPU的性能需求是不同的，所以，在进行电脑选购时<br>必须注意“适合应用”的原则。</li>
-<li>4 注意预防购买假的CPU<br>（1） 看分界线<br> 原包装在外盒背面印有多种文字的产品介绍，这些文字的上下分界处，有一行看起来很像<br>黑道的分解线。如果是正品的话，即可发现这些黑道其实是极小的“intel”标志组成，而且十分清晰。<br>（2）看包装盒颜色<br>正品色彩鲜艳，次品色彩比较浅。<br>（3）看封装线<br>正品盒装Intel CPU的塑料封纸的封装线不可能在盒的右侧条形码处。<br>（4）看水印字<br> 正品刮不下来<br>（5）看激光标签<br>正品采用了四重着色技术，层次丰富，字迹清晰。<br>（6）电话查询<br>盒装上有一串很长的编码，可以通过拨打热线电话800-820-1100来查产品的真伪。<br>（7）看热封点<br>正品有4个热封点，每个热封点有两个圆点，它们在揭开后就不能复原。<br>（8）看风扇<br>看风扇的热片和轴承，原装的风扇的轴承是金属的，散热片见得凹槽为圆弧形，而且热片的低端厚实。假风扇的做工很粗糙，手感很轻。</li>
-<li>5 使用时尽量选择高外频<br>在主频情况相同的情况下，更高的外频和前端总线可以提供更大的数据传输带宽，因此相对来说表现也更优秀。<h3 id="CPU风扇选购实战"><a href="#CPU风扇选购实战" class="headerlink" title="CPU风扇选购实战"></a>CPU风扇选购实战</h3></li>
-</ul>
-<ul>
-<li>1 cpu风扇的生产厂商：清华华天公司，富士康公司、博美特公司<br>注：除了风冷扇热之外，还有一种比较好的散热方式-水冷散热。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1949,7 +1943,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
