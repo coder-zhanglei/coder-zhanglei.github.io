@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="pkill ：杀死进程 语法: pkill [必要参数][选择性参数][字符串] 功能说明：pkill指令是和kill指令的结合，用来杀死指定的进程必要参数|  参 数        |  说明    || :——–:    | :—-: ||-n  | 显示新进程           ||  -v       | 与条件不符的进程 || -x       | 与条件符合的程序    ||  -t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-25T04:17:28.732Z">
+<meta property="og:updated_time" content="2019-02-25T04:20:11.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux基本配置指令05">
 <meta name="twitter:description" content="pkill ：杀死进程 语法: pkill [必要参数][选择性参数][字符串] 功能说明：pkill指令是和kill指令的结合，用来杀死指定的进程必要参数|  参 数        |  说明    || :——–:    | :—-: ||-n  | 显示新进程           ||  -v       | 与条件不符的进程 || -x       | 与条件符合的程序    ||  -t">
@@ -404,9 +404,11 @@
 <h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pkill -9 ftp <span class="comment">#杀死进程ftp</span></span><br><span class="line">pkill -t tty1 <span class="comment">#杀死所有终端1下的进程</span></span><br><span class="line">ps -A <span class="comment">#显示所有进程</span></span><br><span class="line">pkill -u kk <span class="comment">#杀死用户kk的所有进程</span></span><br><span class="line">pkill -vu kk <span class="comment">#杀死不属于用户kk的所有进程</span></span><br></pre></td></tr></table></figure>
 <h3 id="pmap-：显示程序的内存信息"><a href="#pmap-：显示程序的内存信息" class="headerlink" title="pmap ：显示程序的内存信息"></a>pmap ：显示程序的内存信息</h3><h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pmap -2253 <span class="comment">#显示进程2263的内存信息</span></span><br><span class="line">pmap -x 2253 <span class="comment">#显示进程2263使用内存的详细信息</span></span><br><span class="line">pmap -d 2253 <span class="comment">#显示内存对应同时显示设备号</span></span><br></pre></td></tr></table></figure>
 <h3 id="pwck-：检查密码文件"><a href="#pwck-：检查密码文件" class="headerlink" title="pwck ：检查密码文件"></a>pwck ：检查密码文件</h3><ul>
-<li>语法 : pwck [必要参数][文件]<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><code>`</code>bash<br> pwck /etc/passwd #检测密码文件</li>
+<li>语法 : pwck [必要参数][文件]</li>
 </ul>
-<p><code>`</code>               </p>
+<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><pre><code class="bash">pwck /etc/passwd <span class="comment">#检测密码文件</span>
+
+</code></pre>
 
       
     </div>
