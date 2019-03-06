@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux用户指令02]]></title>
+    <url>%2F2019%2F03%2F06%2Flinux%E7%94%A8%E6%88%B7%E6%8C%87%E4%BB%A402%2F</url>
+    <content type="text"><![CDATA[diff：生成差异文件（1）参数说明 参 数 说明 -c 显示所有内容，同时标出不同之处 -a 对文本文件进行逐行比较，非文本文件看作文本文件进行比较 -i 忽略大小写的不同 -r 比较目录时递归比较子目录中的文件 范例123diff -a a1.txt a3.txt #比较两个文件的不同diff Desktop/yy1 Desktop/yy2 # 比较两个文件夹的不同diff -c a1.txt a3.txt #比较两个文件的不同，并生成差异文件 find ：查找目录或者文件 语法： find[路径][-可选参数] 范例12345find *.txt # 查找.txt的文件find /root/edsktop/yy1/ -ctime -2 #查找448小时内被修改过的文件find -name yy* #查找指定字符串类型的目录find -name yy.*#查找的结果是以yy命名的文件find -size 0#查找字节数为0的文件 ftp ：文件传输指令范例1ftp 192.168.1.1 connected to 192.168.1.2#使用ftp地址建立ftp连接 注：建立的过程会输入用户名和密码，建立之后可用get和put指令实现文件的上传和下载删除文件用delete指令 gunzip：解压文件范例12gunzip yy.txt.gz #解压文件gunzip -l yy.txt.gz #解压文件时显示文件相关信息 gzip：压缩文件范例12gzip -v yy.txt #压缩文件时显示文件相关信息gzip -d yy.txt.gz #解压指定文件]]></content>
+      <categories>
+        <category>linux浅见</category>
+      </categories>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[qt-for-android的安装]]></title>
     <url>%2F2019%2F03%2F05%2Fqt-for-android%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[QT软件的安装下载软件https://pan.baidu.com/s/1o8CxKaptmVthHVE3x3sjXw zndu参考相关博客链接：https://www.jianshu.com/p/437465a530dc https://blog.csdn.net/qq_32250025/article/details/79106662 1、安装安装 java -jdk ,android-ndk,android-sdktools 安装 java -jdk，对应版本：jdk1.8.0_201 安装android-ndk ， 安装ndk的时候，android-ndk-r10e以上的版本没有arm-linux-androideabi-gdb.exe，所以在下载安装包的时候不能下载版本太高，10以下的版本就够. 安装android-sdktools 在安装sdk的时候会出现jdk找不到，或者版本过低，这时要先配置环境变量。当配置好环境变量出现版本过低的时候要重新下载jdk安装文件重新安装，之前我安装jdk-11.0.2后，再安装sdk时出现版本过低，重新下载了jdk1.8.0_201安装就可以。在配置qt文件的时候会出现不适一个平台，这时候要启动sdk文件夹下的SDK Manager.exe安装Android包。 安装ant 这个是在qt软件上:工具-&gt;选项-&gt;android:下的Ant executable项后面有一个下载的符号，点击可自动下载。ps：对应的软件都在网盘里环境变量的配置(1) JAVA_HOME 值： C:\Program Files\Java\jdk1.8.0_45(2)ANDROID_HOME 值：D:\Android\sdk(3)CLASSPATH 值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar; 编译文件 在构建的时候选择Android构建和运行就能够编译出.apk文件，对应的文件再编译文件夹下的/bin目录]]></content>
@@ -14,7 +25,7 @@
   <entry>
     <title><![CDATA[linux用户指令01]]></title>
     <url>%2F2019%2F03%2F03%2Flinux%E7%94%A8%E6%88%B7%E6%8C%87%E4%BB%A401%2F</url>
-    <content type="text"><![CDATA[who：显示系统用户信息范例12who #显示当前登录系统的用户信息who # 显示用户登录位置 whois：查找用户/域名信息范例12whois mary #查找Mary用户的信息whois www.miwifi.com # 查找目标网络信息 bunzip2，bzip2，bzip2recover：解压.bz2类型的文件，压缩成.bz2文件，损坏.bz2文件的修复范例12345bunzip2 -c filename.bz2 #解压后文件直接输出到标准输出bzip2 filenamebzip2 -7 -k filename #压缩文件filename并保留原文件bzip2-b filename.bz2 #解压文件bzip2recover filename #修复.bz2文件 linux中cat、more、less命令区别详解 linux中命令cat、more、less均可用来查看文件内容，主要区别有： cat是一次性显示整个文件的内容，还可以将多个文件连接起来显示，它常与重定向符号配合使用，适用于文件内容少的情况；more和less一般用于显示文件内容超过一屏的内容，并且提供翻页的功能。more比cat强大，提供分页显示的功能，less比more更强大，提供翻页，跳转，查找等命令。而且more和less都支持：用空格显示下一页，按键b显示上一页。下面详细介绍这3个命令。]]></content>
+    <content type="text"><![CDATA[who：显示系统用户信息范例12who #显示当前登录系统的用户信息who -l -H# 显示用户登录位置 whois：查找用户/域名信息范例12whois mary #查找Mary用户的信息whois www.miwifi.com # 查找目标网络信息 bunzip2，bzip2，bzip2recover：解压.bz2类型的文件，压缩成.bz2文件，损坏.bz2文件的修复范例12345bunzip2 -c filename.bz2 #解压后文件直接输出到标准输出bzip2 filenamebzip2 -7 -k filename #压缩文件filename并保留原文件bzip2-b filename.bz2 #解压文件bzip2recover filename #修复.bz2文件 linux中cat、more、less命令区别详解 linux中命令cat、more、less均可用来查看文件内容，主要区别有： cat是一次性显示整个文件的内容，还可以将多个文件连接起来显示，它常与重定向符号配合使用，适用于文件内容少的情况；more和less一般用于显示文件内容超过一屏的内容，并且提供翻页的功能。more比cat强大，提供分页显示的功能，less比more更强大，提供翻页，跳转，查找等命令。而且more和less都支持：用空格显示下一页，按键b显示上一页。下面详细介绍这3个命令。]]></content>
       <categories>
         <category>linux浅见</category>
       </categories>
