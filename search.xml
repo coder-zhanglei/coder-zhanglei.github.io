@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux文件操作与管理03]]></title>
+    <url>%2F2019%2F03%2F09%2Flinux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B8%8E%E7%AE%A1%E7%90%8603%2F</url>
+    <content type="text"><![CDATA[rcp ：远程复制文件或目录 语法：rcp [- 可选参数]远程/本地主机名：源文件/目录 本地/远程主机名：目标文件/目录 参数选择| 参 数 | 说明 || :——–: | :—-: || -p | 保留源文件/目录的属性 || -r | 处理指定文件夹下的文件及其子目录下的所有文件 | 范例1rcp -p 192.168.1.121:/home/vc /home/yy/ #复制文件，将远程文件复制到本地/home/yy/，同时保留源文件的属性，一般主机名不用给 tar ：打包同时压缩/解压文件 语法：[- 可选参数] [文件] 参数选择| 参 数 | 说明 || :——–: | :—-: || -c | 压缩文件 || -x | 解压文件 || -r |添加文件到已存在的备份文件的尾部 || -j | 使用bzip2压缩文件 || -z | 使用gzip压缩文件 || -v | 显示详细信息 || -f |指定备份文件 |范例123tar -xzvf s1.tar.gz #解压s1.tar.gz 文件tar -czvf s1.tar.gz *.txt #压缩.txt文件tar -c a1.txt a2.txt &gt;s1.tar #打包文件 whereis ，which：查找文件-语法 ：whereis/which [-可选参数] 文件 范例12whereis *.txt #查找文件，查找目录下的.txt文件which az #查找文件，执行which az， 在环境变量$PATH指定的目录“/usr/bin”下查找文件，显示查找结果 info：读取目录信息范例12info init &gt;1.log #显示init的帮助信息info info #显示info的具体使用方法]]></content>
+      <categories>
+        <category>linux浅见</category>
+      </categories>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux文件操作与管理02]]></title>
-    <url>%2F2019%2F03%2F08%2Flinux%E7%94%A8%E6%88%B7%E6%8C%87%E4%BB%A403%2F</url>
+    <url>%2F2019%2F03%2F08%2Flinux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B8%8E%E7%AE%A1%E7%90%8602%2F</url>
     <content type="text"><![CDATA[less :一次显示一页文本 语法 ： less [-参数] 文件名 范例1less a3.txt 注：显示文本后：按b：向后翻页，d：向后翻半页，h:显示帮助界面，u：向前滚动半页，y:向前滚动一行；回车键：滚动一行；空壳键：滚动一页；q：退出 mv：移动或更名现有的文件或目录 语法：mv [-可选参数] 源文件 目标文件/目录 范例1mv a.txt b.txt ncftp：文件传输指令 语法：ncftp [-可选参数] [主机/IP地址] 参数选择| 参 数 | 说明 || :——–: | :—-: ||-u&lt;用户名&gt; | 使用用户名 || -p&lt;密码&gt; | 使用指定密码 || -P&lt;端口号&gt; | 使用指定端口号，默认为21 | 范例1234ncftp -u sy114 -p 123456 192.168.128.1 #登录##相似的命令ncftpget -u sy114 -p 123456 192.168.128.1 /home/yy1/vc #下载文件ncftpput -u sy114 -p 123456 192.168.128.1 /home/yy1/vc #上传文件 注：登录上后跟ftp指令相似 paste：合并文件 语法：paste [-可选参数] [文件]范例12paste a1 a2 #合并文件的行paste -s a1 a2 #合并文件的行，并指定间隔符 patch：修补文件，给文件打补丁 语法： patch [-可选参数] [文件]范例12diff a1 a2&gt;sy.diff #比较文件的差异，生成差异文件sy.diffpatch a1&lt;sy.diff #修复a1]]></content>
       <categories>
         <category>linux浅见</category>
@@ -13,7 +24,7 @@
   </entry>
   <entry>
     <title><![CDATA[linux文件操作与管理01]]></title>
-    <url>%2F2019%2F03%2F06%2Flinux%E7%94%A8%E6%88%B7%E6%8C%87%E4%BB%A402%2F</url>
+    <url>%2F2019%2F03%2F06%2Flinux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B8%8E%E7%AE%A1%E7%90%8601%2F</url>
     <content type="text"><![CDATA[diff：生成差异文件（1）参数说明 参 数 说明 -c 显示所有内容，同时标出不同之处 -a 对文本文件进行逐行比较，非文本文件看作文本文件进行比较 -i 忽略大小写的不同 -r 比较目录时递归比较子目录中的文件 范例123diff -a a1.txt a3.txt #比较两个文件的不同diff Desktop/yy1 Desktop/yy2 # 比较两个文件夹的不同diff -c a1.txt a3.txt #比较两个文件的不同，并生成差异文件 find ：查找目录或者文件 语法： find[路径][-可选参数] 范例12345find *.txt # 查找.txt的文件find /root/edsktop/yy1/ -ctime -2 #查找448小时内被修改过的文件find -name yy* #查找指定字符串类型的目录find -name yy.*#查找的结果是以yy命名的文件find -size 0#查找字节数为0的文件 ftp ：文件传输指令范例1ftp 192.168.1.1 connected to 192.168.1.2#使用ftp地址建立ftp连接 注：建立的过程会输入用户名和密码，建立之后可用get和put指令实现文件的上传和下载删除文件用delete指令 gunzip：解压文件范例12gunzip yy.txt.gz #解压文件gunzip -l yy.txt.gz #解压文件时显示文件相关信息 gzip：压缩文件范例12gzip -v yy.txt #压缩文件时显示文件相关信息gzip -d yy.txt.gz #解压指定文件]]></content>
       <categories>
         <category>linux浅见</category>
