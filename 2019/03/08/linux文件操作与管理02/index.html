@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="less :一次显示一页文本 语法 ： less [-参数] 文件名  范例1less a3.txt 注：显示文本后：按b：向后翻页，d：向后翻半页，h:显示帮助界面，u：向前滚动半页，y:向前滚动一行；回车键：滚动一行；空壳键：滚动一页；q：退出 mv：移动或更名现有的文件或目录 语法：mv [-可选参数] 源文件 目标文件/目录  范例1mv a.txt b.txt ncftp：文件传输指令">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-08T13:13:49.941Z">
+<meta property="og:updated_time" content="2019-03-10T03:00:11.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux文件操作与管理02">
 <meta name="twitter:description" content="less :一次显示一页文本 语法 ： less [-参数] 文件名  范例1less a3.txt 注：显示文本后：按b：向后翻页，d：向后翻半页，h:显示帮助界面，u：向前滚动半页，y:向前滚动一行；回车键：滚动一行；空壳键：滚动一页；q：退出 mv：移动或更名现有的文件或目录 语法：mv [-可选参数] 源文件 目标文件/目录  范例1mv a.txt b.txt ncftp：文件传输指令">
@@ -408,9 +408,31 @@
 <h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv a.txt b.txt</span><br></pre></td></tr></table></figure>
 <h2 id="ncftp：文件传输指令"><a href="#ncftp：文件传输指令" class="headerlink" title="ncftp：文件传输指令"></a>ncftp：文件传输指令</h2><ul>
 <li>语法：ncftp [-可选参数] [主机/IP地址]</li>
-<li>参数选择<br>|  参 数        |  说明    |<br>| :——–:    | :—-: |<br>|-u&lt;用户名&gt;  | 使用用户名              |<br>|  -p&lt;密码&gt;   | 使用指定密码      |<br>| -P&lt;端口号&gt;      | 使用指定端口号，默认为21    |  <h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ncftp -u sy114 -p 123456 192.168.128.1   <span class="comment">#登录</span></span><br><span class="line"><span class="comment">##相似的命令</span></span><br><span class="line">ncftpget -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#下载文件</span></span><br><span class="line">ncftpput -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#上传文件</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>参数选择</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-u&lt;用户名&gt;</td>
+<td style="text-align:center">使用用户名</td>
+</tr>
+<tr>
+<td style="text-align:center">-p&lt;密码&gt;</td>
+<td style="text-align:center">使用指定密码</td>
+</tr>
+<tr>
+<td style="text-align:center">-P&lt;端口号&gt;</td>
+<td style="text-align:center">使用指定端口号，默认为21</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ncftp -u sy114 -p 123456 192.168.128.1   <span class="comment">#登录</span></span><br><span class="line"><span class="comment">##相似的命令</span></span><br><span class="line">ncftpget -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#下载文件</span></span><br><span class="line">ncftpput -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#上传文件</span></span><br></pre></td></tr></table></figure>
 <p>注：登录上后跟ftp指令相似</p>
 <h2 id="paste：合并文件"><a href="#paste：合并文件" class="headerlink" title="paste：合并文件"></a>paste：合并文件</h2><ul>
 <li>语法：paste [-可选参数] [文件]<h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">paste a1 a2 <span class="comment">#合并文件的行</span></span><br><span class="line">paste -s a1 a2 <span class="comment">#合并文件的行，并指定间隔符</span></span><br></pre></td></tr></table></figure>
@@ -573,7 +595,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

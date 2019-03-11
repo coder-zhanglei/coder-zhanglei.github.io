@@ -293,6 +293,249 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/11/linux下的文本编辑01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/11/linux下的文本编辑01/" itemprop="url">linux下的文本编辑01</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-11T11:37:15+08:00">
+                2019-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/03/11/linux下的文本编辑01/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/03/11/linux下的文本编辑01/" class="cy_cmt_count" data-xid="2019/03/11/linux下的文本编辑01/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="vim-文本编辑"><a href="#vim-文本编辑" class="headerlink" title="vim :文本编辑"></a>vim :文本编辑</h2><ul>
+<li>语法：vim [-可选参数] [文件]<h3 id="vim环境下的常用指令"><a href="#vim环境下的常用指令" class="headerlink" title="vim环境下的常用指令"></a>vim环境下的常用指令</h3></li>
+<li>命令模式：<br>D:删除光标所在行后的所有词<br>nG：n为数字，将光标移至第n行位置<br>p：将复制的内容粘贴到光标所在位置<br>r：修改光标所在处的字符<br>x：删除光标所在处的字符<br>X：删除光标所在处的前一个字符<br>d+d：连按两次，将删除光标所在行<br>n+d+d：n为数字，删除光标所在行及其下面的n-1行，共n行<br>y+y：整行复制<br>Ctrl+b：向上翻一页<br>Ctrl+f：向下翻一页<br>Ctrl+d：向后翻半页<br>Ctrl+u：向前翻半页<br>Ctrl+g：在最后一行处显示光标所在位置的行数和文章的总行数</li>
+<li><p>输入模式：<br>i：从当前光标处插入<br>I：从当前光标所在行的行首开始插入<br>o：在当前光标所在行下方新增一行，从新增行的行首开始输入<br>O：在当前光标所在行上方新增一行，从新增行的行首开始输入</p>
+</li>
+<li><p>末行模式<br>：n:加载文件<br>：w:存盘<br>：w newfile：文件另存为<br>：wq：存盘退出<br>：W!：对只读文件强制写入存盘<br>：q：退出<br>：q！：强制退出<br>：set nu：在每行的开头显示行数<br>：set none：取消每行开头的行数显示<br>：/字符串：匹配字符串查找，按n向下查找，N向上查找</p>
+</li>
+</ul>
+<h2 id="wc：计算字数"><a href="#wc：计算字数" class="headerlink" title="wc：计算字数"></a>wc：计算字数</h2><ul>
+<li>语法：wc[-可选参数][文件]</li>
+<li>参数说明</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-c</td>
+<td style="text-align:center">只显示字符数</td>
+</tr>
+<tr>
+<td style="text-align:center">-l</td>
+<td style="text-align:center">只显示行数</td>
+</tr>
+<tr>
+<td style="text-align:center">-w</td>
+<td style="text-align:center">只显示字数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><pre><code class="bash">wc -c ar <span class="comment">#计算字节数</span>
+wc -w ar <span class="comment"># 计算字数</span>
+wc -l <span class="comment">#计算行数</span>
+</code></pre>
+<h2 id="tail-：显示文件的末尾内容"><a href="#tail-：显示文件的末尾内容" class="headerlink" title="tail ：显示文件的末尾内容"></a>tail ：显示文件的末尾内容</h2><ul>
+<li>语法：tail [ 必要参数] [选择性参数][文件]</li>
+<li>参数说明<br>（1）必要参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-f</td>
+<td style="text-align:center">循环读取</td>
+</tr>
+<tr>
+<td style="text-align:center">-q</td>
+<td style="text-align:center">不显示处理信息</td>
+</tr>
+<tr>
+<td style="text-align:center">-v</td>
+<td style="text-align:center">运行时显示详细的处理信息</td>
+</tr>
+</tbody>
+</table>
+<p>（2）选择性参数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-c</td>
+<td style="text-align:center">要显示的字节数</td>
+</tr>
+<tr>
+<td style="text-align:center">-n</td>
+<td style="text-align:center">显示的行数</td>
+</tr>
+<tr>
+<td style="text-align:center">-help</td>
+<td style="text-align:center">帮助信息</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><pre><code class="bash">tail -n 30 install.log <span class="comment">#显示文件末尾30行的内容</span>
+tail -f 2.log <span class="comment">#显示文件内容。2.log文件是更新的，-f可以动态监测文件末尾的内容</span>
+tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文件末尾内容</span>
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/09/linux文件操作与管理03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -629,9 +872,31 @@
 <h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv a.txt b.txt</span><br></pre></td></tr></table></figure>
 <h2 id="ncftp：文件传输指令"><a href="#ncftp：文件传输指令" class="headerlink" title="ncftp：文件传输指令"></a>ncftp：文件传输指令</h2><ul>
 <li>语法：ncftp [-可选参数] [主机/IP地址]</li>
-<li>参数选择<br>|  参 数        |  说明    |<br>| :——–:    | :—-: |<br>|-u&lt;用户名&gt;  | 使用用户名              |<br>|  -p&lt;密码&gt;   | 使用指定密码      |<br>| -P&lt;端口号&gt;      | 使用指定端口号，默认为21    |  <h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ncftp -u sy114 -p 123456 192.168.128.1   <span class="comment">#登录</span></span><br><span class="line"><span class="comment">##相似的命令</span></span><br><span class="line">ncftpget -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#下载文件</span></span><br><span class="line">ncftpput -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#上传文件</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>参数选择</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-u&lt;用户名&gt;</td>
+<td style="text-align:center">使用用户名</td>
+</tr>
+<tr>
+<td style="text-align:center">-p&lt;密码&gt;</td>
+<td style="text-align:center">使用指定密码</td>
+</tr>
+<tr>
+<td style="text-align:center">-P&lt;端口号&gt;</td>
+<td style="text-align:center">使用指定端口号，默认为21</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ncftp -u sy114 -p 123456 192.168.128.1   <span class="comment">#登录</span></span><br><span class="line"><span class="comment">##相似的命令</span></span><br><span class="line">ncftpget -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#下载文件</span></span><br><span class="line">ncftpput -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#上传文件</span></span><br></pre></td></tr></table></figure>
 <p>注：登录上后跟ftp指令相似</p>
 <h2 id="paste：合并文件"><a href="#paste：合并文件" class="headerlink" title="paste：合并文件"></a>paste：合并文件</h2><ul>
 <li>语法：paste [-可选参数] [文件]<h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">paste a1 a2 <span class="comment">#合并文件的行</span></span><br><span class="line">paste -s a1 a2 <span class="comment">#合并文件的行，并指定间隔符</span></span><br></pre></td></tr></table></figure>
@@ -1888,160 +2153,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/20/linux常用的指令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/20/linux常用的指令/" itemprop="url">linux常用的指令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-20T17:31:44+08:00">
-                2019-01-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
-                    <span itemprop="name">linux浅见</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/01/20/linux常用的指令/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/01/20/linux常用的指令/" class="cy_cmt_count" data-xid="2019/01/20/linux常用的指令/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="linux查询进程指令"><a href="#linux查询进程指令" class="headerlink" title="linux查询进程指令"></a>linux查询进程指令</h2><p>1、进程查询指令<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef <span class="string">| grep calculatorBuysell | grep -v grep | wc -l</span></span><br></pre></td></tr></table></figure></p>
-<p>注：该命令可以查询calculatorBuysell进程的个数</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2092,7 +2203,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
