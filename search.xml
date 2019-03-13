@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux磁盘操作管理]]></title>
+    <url>%2F2019%2F03%2F13%2Flinux%E7%A3%81%E7%9B%98%E6%93%8D%E4%BD%9C%E7%AE%A1%E7%90%8601%2F</url>
+    <content type="text"><![CDATA[badblocks ：检查磁盘坏道 语法：badblocks [-可选参数] 磁盘设备 [结束块 [启始块]] 参数说明 参 数 说明 -f 强制检查一个已经挂载的设备 -b&lt;区块大小&gt; 指定磁盘的区块大小，以字节为单位 -c&lt;区块大小&gt; 指定每个磁盘区块检查的次数 -i&lt;文件&gt; 跳过保存在指定文件中的坏道消息，避免重复检查 -o&lt;文件&gt; 将检查的结果输出到指定的文件中进行保存 -s 显示检查进度 注：/dev/hd:IDE磁盘；/dev/sd:SCSI磁盘；/dev/ed:ESDI磁盘；/dev/fd:软磁盘 范例123badblocks /dev/fd0H1440 #检查整个磁盘是否有坏道badblocks -b /dev/hdal -o had-badblocks #检查/dev/hdal 是否有坏道，同时将检查的结果保存到文件hda-badlocks中\#如果有坏道查看文件将显示列表，如果没有无信息被列出 df:磁盘信息 说明：使用df查看磁盘空间的信息，可以查看文件系统的占有情况。 语法：df [-可选参数] [文件或设备] 参数说明 参 数 说明 -h 以可读性较高的方式显示 -H 相当于“-h”，但在计算时，1K = 1000,而不是1024 -a 显示包括0块在内的所有文件系统的情况 -i 显示inode节点信息 范例1234df #显示磁盘信息df -hdf -iadf -t ext2 #显示当前磁盘的文件系统的信息 du ：显示目录或者文件所占的磁盘空间范例12du ax #显示ax文件占用的磁盘空间du #显示当前目录所占的磁盘空间 tree ：以树状图显示目录内容 语法：tree [-可选参数] [目录] 范例1tree]]></content>
+      <categories>
+        <category>linux浅见</category>
+      </categories>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux下的文本编辑01]]></title>
     <url>%2F2019%2F03%2F11%2Flinux%E4%B8%8B%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%9101%2F</url>
     <content type="text"><![CDATA[vim :文本编辑 语法：vim [-可选参数] [文件]vim环境下的常用指令 命令模式：D:删除光标所在行后的所有词nG：n为数字，将光标移至第n行位置p：将复制的内容粘贴到光标所在位置r：修改光标所在处的字符x：删除光标所在处的字符X：删除光标所在处的前一个字符d+d：连按两次，将删除光标所在行n+d+d：n为数字，删除光标所在行及其下面的n-1行，共n行y+y：整行复制Ctrl+b：向上翻一页Ctrl+f：向下翻一页Ctrl+d：向后翻半页Ctrl+u：向前翻半页Ctrl+g：在最后一行处显示光标所在位置的行数和文章的总行数 输入模式：i：从当前光标处插入I：从当前光标所在行的行首开始插入o：在当前光标所在行下方新增一行，从新增行的行首开始输入O：在当前光标所在行上方新增一行，从新增行的行首开始输入 末行模式：n:加载文件：w:存盘：w newfile：文件另存为：wq：存盘退出：W!：对只读文件强制写入存盘：q：退出：q！：强制退出：set nu：在每行的开头显示行数：set none：取消每行开头的行数显示：/字符串：匹配字符串查找，按n向下查找，N向上查找 wc：计算字数 语法：wc[-可选参数][文件] 参数说明 参 数 说明 -c 只显示字符数 -l 只显示行数 -w 只显示字数 范例wc -c ar #计算字节数 wc -w ar # 计算字数 wc -l #计算行数 tail ：显示文件的末尾内容 语法：tail [ 必要参数] [选择性参数][文件] 参数说明（1）必要参数 参 数 说明 -f 循环读取 -q 不显示处理信息 -v 运行时显示详细的处理信息 （2）选择性参数 参 数 说明 -c 要显示的字节数 -n 显示的行数 -help 帮助信息 范例tail -n 30 install.log #显示文件末尾30行的内容 tail -f 2.log #显示文件内容。2.log文件是更新的，-f可以动态监测文件末尾的内容 tail -n 5 *.log #显示文件末尾内容]]></content>
