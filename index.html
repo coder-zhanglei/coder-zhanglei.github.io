@@ -293,6 +293,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/python盒子：模块、包、程序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/02/python盒子：模块、包、程序/" itemprop="url">python盒子：模块、包、程序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-02T15:20:13+08:00">
+                2019-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/02/python盒子：模块、包、程序/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/02/python盒子：模块、包、程序/" class="cy_cmt_count" data-xid="2019/04/02/python盒子：模块、包、程序/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><p>  主要是sys库，调用sys.argv<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'fafdsaf:'</span>,sys.argv)<span class="comment">#接收外部的参数</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="使用别名导入模块"><a href="#使用别名导入模块" class="headerlink" title="使用别名导入模块"></a>使用别名导入模块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> report <span class="keyword">as</span> wr <span class="comment"># 把report别名为wr</span></span><br></pre></td></tr></table></figure>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>  把多个模块组织成文件层次，称之为包。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#主程序是boxes/weather.py</span></span><br><span class="line"><span class="keyword">from</span> source <span class="keyword">import</span> daily,weekly<span class="comment">#模块1：boxes/sources/daily.py  模块2：boxes/source/weekly.py</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#还要在sources目录下添加一个文件：init.py。这个文件可以是空的，但是不能少</span></span><br><span class="line"><span class="comment">#在主程序下就可以调用source目录下的文件了</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> report <span class="keyword">as</span> wr <span class="comment"># 把report别名为wr</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="双端队列"><a href="#双端队列" class="headerlink" title="双端队列"></a>双端队列</h2><p>  模块deque，from collections import deque;函数popleft()去掉最左边的项并返回该项，pop()去掉最右边的项并返回该项。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">palindrome</span><span class="params">(word)</span>:</span></span><br><span class="line">    <span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line">    dq = deque(word)</span><br><span class="line">    <span class="keyword">while</span> len(dq) &gt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> dq.popleft != dq.pop()：</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<h2 id="itertools迭代代码结构"><a href="#itertools迭代代码结构" class="headerlink" title="itertools迭代代码结构"></a>itertools迭代代码结构</h2><p>  在for…in循环中调用迭代函数，每次会返回一项，并记住当前调用的状态</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> itertools.chain([[<span class="number">1</span>,<span class="number">2</span>],[<span class="string">'a'</span>,<span class="string">'b'</span>]):</span><br><span class="line">    print(item) <span class="comment">#每次输出一项</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">cycle()是在参数之间循环的无限迭代器</span><br><span class="line">accumulate()计算积累的值</span><br></pre></td></tr></table></figure>
+<h2 id="友好输出pprint"><a href="#友好输出pprint" class="headerlink" title="友好输出pprint"></a>友好输出pprint</h2><p>  pprint()会尽量排列输出元素从而增加可读性</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br></pre></td></tr></table></figure>
+<h2 id="获取更多python代码"><a href="#获取更多python代码" class="headerlink" title="获取更多python代码"></a>获取更多python代码</h2><ul>
+<li>pypi: <a href="http://pypi.python.org" target="_blank" rel="noopener">http://pypi.python.org</a> 也称为cheese shop</li>
+<li>github： <a href="http://github.com/python" target="_blank" rel="noopener">http://github.com/python</a></li>
+<li>readthedocs <a href="https://readthedoces.org" target="_blank" rel="noopener">https://readthedoces.org</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/31/python函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -418,8 +584,7 @@
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回的是一个函数，</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(args)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"%s"</span> ,%args</span><br><span class="line">    <span class="keyword">return</span> inner</span><br></pre></td></tr></table></figure>
 <h3 id="匿名函数：lambda-函数"><a href="#匿名函数：lambda-函数" class="headerlink" title="匿名函数：lambda()函数"></a>匿名函数：lambda()函数</h3><pre><code>lambda函数是用一个语句表达的匿名函数，可以用它来代替小的函数。
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">edit_stroy</span><span class="params">(words,func)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        print(func(word))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enliven</span><span class="params">(word)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> word.capitalize() + <span class="string">'!'</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用函数为</span></span><br><span class="line">edit_stroy(starirs,enliven)</span><br><span class="line"><span class="comment">#用匿名函数为</span></span><br><span class="line">edit_stroy(starirs,<span class="keyword">lambda</span> word: word.capitalize() + <span class="string">'!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#lambda函数接收一个参数word。在冒号和末尾圆括号之间的部分为函数的定义。</span></span><br></pre></td></tr></table></figure>
-<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><pre><code>生成器使用来创建一个Python对象的。用它可以迭代庞大的序列，且不需要在内存中创建和存储整个序列。通常，生成器是为迭代器产生数的。
-</code></pre><p>它会记录上一次调用的位置，并且返回下一个值。这一点和普通函数都是不一样的，一般函数不记录前一次调用，而且都会在函数的第一行执行。</p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>  生成器使用来创建一个Python对象的。用它可以迭代庞大的序列，且不需要在内存中创建和存储整个序列。通常，生成器是为迭代器产生数的。<br>它会记录上一次调用的位置，并且返回下一个值。这一点和普通函数都是不一样的，一般函数不记录前一次调用，而且都会在函数的第一行执行。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_range</span><span class="params">(first=<span class="number">0</span>,last=<span class="number">10</span>,step=<span class="number">1</span>)</span>:</span></span><br><span class="line">    number=first</span><br><span class="line">    <span class="keyword">while</span> number &lt; last:</span><br><span class="line">        <span class="keyword">yield</span> number   <span class="comment">#记录上一次调用的位置，并且返回下一个值</span></span><br><span class="line">        number += step</span><br></pre></td></tr></table></figure>
 <h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><pre><code>装饰器实质是一个函数 =。它把一个函数作为输入并且返回另外一个函数。通常使用如下技巧：
 </code></pre><ul>
@@ -1997,227 +2162,6 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/09/linux文件操作与管理03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/09/linux文件操作与管理03/" itemprop="url">linux文件操作与管理03</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T11:05:14+08:00">
-                2019-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
-                    <span itemprop="name">linux浅见</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/09/linux文件操作与管理03/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/09/linux文件操作与管理03/" class="cy_cmt_count" data-xid="2019/03/09/linux文件操作与管理03/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="rcp-：远程复制文件或目录"><a href="#rcp-：远程复制文件或目录" class="headerlink" title="rcp ：远程复制文件或目录"></a>rcp ：远程复制文件或目录</h2><ul>
-<li>语法：rcp [- 可选参数]远程/本地主机名：源文件/目录  本地/远程主机名：目标文件/目录</li>
-<li>参数选择</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参 数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-p</td>
-<td style="text-align:center">保留源文件/目录的属性</td>
-</tr>
-<tr>
-<td style="text-align:center">-r</td>
-<td style="text-align:center">处理指定文件夹下的文件及其子目录下的所有文件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rcp -p 192.168.1.121:/home/vc /home/yy/ <span class="comment">#复制文件，将远程文件复制到本地/home/yy/，同时保留源文件的属性，一般主机名不用给</span></span><br></pre></td></tr></table></figure>
-<h2 id="tar-：打包同时压缩-解压文件"><a href="#tar-：打包同时压缩-解压文件" class="headerlink" title="tar ：打包同时压缩/解压文件"></a>tar ：打包同时压缩/解压文件</h2><ul>
-<li>语法：[- 可选参数] [文件]</li>
-<li>参数选择</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参 数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-c</td>
-<td style="text-align:center">压缩文件</td>
-</tr>
-<tr>
-<td style="text-align:center">-x</td>
-<td style="text-align:center">解压文件</td>
-</tr>
-<tr>
-<td style="text-align:center">-r</td>
-<td style="text-align:center">添加文件到已存在的备份文件的尾部</td>
-</tr>
-<tr>
-<td style="text-align:center">-j</td>
-<td style="text-align:center">使用bzip2压缩文件</td>
-</tr>
-<tr>
-<td style="text-align:center">-z</td>
-<td style="text-align:center">使用gzip压缩文件</td>
-</tr>
-<tr>
-<td style="text-align:center">-v</td>
-<td style="text-align:center">显示详细信息</td>
-</tr>
-<tr>
-<td style="text-align:center">-f</td>
-<td style="text-align:center">指定备份文件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf s1.tar.gz  <span class="comment">#解压s1.tar.gz 文件</span></span><br><span class="line">tar -czvf s1.tar.gz *.txt  <span class="comment">#压缩.txt文件</span></span><br><span class="line">tar  -c a1.txt a2.txt &gt;s1.tar <span class="comment">#打包文件</span></span><br></pre></td></tr></table></figure>
-<h2 id="whereis-，which：查找文件"><a href="#whereis-，which：查找文件" class="headerlink" title="whereis ，which：查找文件"></a>whereis ，which：查找文件</h2><p>-语法 ：whereis/which [-可选参数] 文件</p>
-<h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whereis *.txt <span class="comment">#查找文件，查找目录下的.txt文件</span></span><br><span class="line"><span class="built_in">which</span> az <span class="comment">#查找文件，执行which az， 在环境变量$PATH指定的目录“/usr/bin”下查找文件，显示查找结果</span></span><br></pre></td></tr></table></figure>
-<h2 id="info：读取目录信息"><a href="#info：读取目录信息" class="headerlink" title="info：读取目录信息"></a>info：读取目录信息</h2><h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">info init &gt;1.log <span class="comment">#显示init的帮助信息</span></span><br><span class="line">info info <span class="comment">#显示info的具体使用方法</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2268,7 +2212,7 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2290,7 +2234,7 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

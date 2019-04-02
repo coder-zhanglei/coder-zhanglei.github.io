@@ -293,6 +293,227 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/09/linux文件操作与管理03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/09/linux文件操作与管理03/" itemprop="url">linux文件操作与管理03</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T11:05:14+08:00">
+                2019-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/03/09/linux文件操作与管理03/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/03/09/linux文件操作与管理03/" class="cy_cmt_count" data-xid="2019/03/09/linux文件操作与管理03/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="rcp-：远程复制文件或目录"><a href="#rcp-：远程复制文件或目录" class="headerlink" title="rcp ：远程复制文件或目录"></a>rcp ：远程复制文件或目录</h2><ul>
+<li>语法：rcp [- 可选参数]远程/本地主机名：源文件/目录  本地/远程主机名：目标文件/目录</li>
+<li>参数选择</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-p</td>
+<td style="text-align:center">保留源文件/目录的属性</td>
+</tr>
+<tr>
+<td style="text-align:center">-r</td>
+<td style="text-align:center">处理指定文件夹下的文件及其子目录下的所有文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rcp -p 192.168.1.121:/home/vc /home/yy/ <span class="comment">#复制文件，将远程文件复制到本地/home/yy/，同时保留源文件的属性，一般主机名不用给</span></span><br></pre></td></tr></table></figure>
+<h2 id="tar-：打包同时压缩-解压文件"><a href="#tar-：打包同时压缩-解压文件" class="headerlink" title="tar ：打包同时压缩/解压文件"></a>tar ：打包同时压缩/解压文件</h2><ul>
+<li>语法：[- 可选参数] [文件]</li>
+<li>参数选择</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-c</td>
+<td style="text-align:center">压缩文件</td>
+</tr>
+<tr>
+<td style="text-align:center">-x</td>
+<td style="text-align:center">解压文件</td>
+</tr>
+<tr>
+<td style="text-align:center">-r</td>
+<td style="text-align:center">添加文件到已存在的备份文件的尾部</td>
+</tr>
+<tr>
+<td style="text-align:center">-j</td>
+<td style="text-align:center">使用bzip2压缩文件</td>
+</tr>
+<tr>
+<td style="text-align:center">-z</td>
+<td style="text-align:center">使用gzip压缩文件</td>
+</tr>
+<tr>
+<td style="text-align:center">-v</td>
+<td style="text-align:center">显示详细信息</td>
+</tr>
+<tr>
+<td style="text-align:center">-f</td>
+<td style="text-align:center">指定备份文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf s1.tar.gz  <span class="comment">#解压s1.tar.gz 文件</span></span><br><span class="line">tar -czvf s1.tar.gz *.txt  <span class="comment">#压缩.txt文件</span></span><br><span class="line">tar  -c a1.txt a2.txt &gt;s1.tar <span class="comment">#打包文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="whereis-，which：查找文件"><a href="#whereis-，which：查找文件" class="headerlink" title="whereis ，which：查找文件"></a>whereis ，which：查找文件</h2><p>-语法 ：whereis/which [-可选参数] 文件</p>
+<h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whereis *.txt <span class="comment">#查找文件，查找目录下的.txt文件</span></span><br><span class="line"><span class="built_in">which</span> az <span class="comment">#查找文件，执行which az， 在环境变量$PATH指定的目录“/usr/bin”下查找文件，显示查找结果</span></span><br></pre></td></tr></table></figure>
+<h2 id="info：读取目录信息"><a href="#info：读取目录信息" class="headerlink" title="info：读取目录信息"></a>info：读取目录信息</h2><h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">info init &gt;1.log <span class="comment">#显示init的帮助信息</span></span><br><span class="line">info info <span class="comment">#显示info的具体使用方法</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/linux文件操作与管理02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1843,161 +2064,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/大牛们的博客网站/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/09/大牛们的博客网站/" itemprop="url">大牛们的博客网站</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T14:41:28+08:00">
-                2018-12-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/初识hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">初识hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/12/09/大牛们的博客网站/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/12/09/大牛们的博客网站/" class="cy_cmt_count" data-xid="2018/12/09/大牛们的博客网站/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="大牛们的博客网址"><a href="#大牛们的博客网址" class="headerlink" title="大牛们的博客网址"></a>大牛们的博客网址</h2><ul>
-<li><a href="http://www.yanmin99.com/" target="_blank" rel="noopener">http://www.yanmin99.com/</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2048,7 +2114,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2070,7 +2136,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

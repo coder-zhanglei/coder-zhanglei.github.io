@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="函数的定义  依次输入def，函数名，带有参数的圆括号，最后紧跟冒号（:），一个函数可以接受任何类型的值作为输入变量，并且返回任何数量的任何类型的结果。如果函数不显示调用return，会默认返回none。  注：none不代表false，作为布尔值和FALSE是一样的。12def do_nothing    pass 函数的参数位置参数传入的参数值是按照顺序依次复制过去的，顺序不同，参数的引用结果">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-31T03:47:11.968Z">
+<meta property="og:updated_time" content="2019-03-31T03:49:05.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python函数">
 <meta name="twitter:description" content="函数的定义  依次输入def，函数名，带有参数的圆括号，最后紧跟冒号（:），一个函数可以接受任何类型的值作为输入变量，并且返回任何数量的任何类型的结果。如果函数不显示调用return，会默认返回none。  注：none不代表false，作为布尔值和FALSE是一样的。12def do_nothing    pass 函数的参数位置参数传入的参数值是按照顺序依次复制过去的，顺序不同，参数的引用结果">
@@ -418,8 +418,7 @@
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回的是一个函数，</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(args)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"%s"</span> ,%args</span><br><span class="line">    <span class="keyword">return</span> inner</span><br></pre></td></tr></table></figure>
 <h3 id="匿名函数：lambda-函数"><a href="#匿名函数：lambda-函数" class="headerlink" title="匿名函数：lambda()函数"></a>匿名函数：lambda()函数</h3><pre><code>lambda函数是用一个语句表达的匿名函数，可以用它来代替小的函数。
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">edit_stroy</span><span class="params">(words,func)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        print(func(word))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enliven</span><span class="params">(word)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> word.capitalize() + <span class="string">'!'</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用函数为</span></span><br><span class="line">edit_stroy(starirs,enliven)</span><br><span class="line"><span class="comment">#用匿名函数为</span></span><br><span class="line">edit_stroy(starirs,<span class="keyword">lambda</span> word: word.capitalize() + <span class="string">'!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#lambda函数接收一个参数word。在冒号和末尾圆括号之间的部分为函数的定义。</span></span><br></pre></td></tr></table></figure>
-<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><pre><code>生成器使用来创建一个Python对象的。用它可以迭代庞大的序列，且不需要在内存中创建和存储整个序列。通常，生成器是为迭代器产生数的。
-</code></pre><p>它会记录上一次调用的位置，并且返回下一个值。这一点和普通函数都是不一样的，一般函数不记录前一次调用，而且都会在函数的第一行执行。</p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>  生成器使用来创建一个Python对象的。用它可以迭代庞大的序列，且不需要在内存中创建和存储整个序列。通常，生成器是为迭代器产生数的。<br>它会记录上一次调用的位置，并且返回下一个值。这一点和普通函数都是不一样的，一般函数不记录前一次调用，而且都会在函数的第一行执行。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_range</span><span class="params">(first=<span class="number">0</span>,last=<span class="number">10</span>,step=<span class="number">1</span>)</span>:</span></span><br><span class="line">    number=first</span><br><span class="line">    <span class="keyword">while</span> number &lt; last:</span><br><span class="line">        <span class="keyword">yield</span> number   <span class="comment">#记录上一次调用的位置，并且返回下一个值</span></span><br><span class="line">        number += step</span><br></pre></td></tr></table></figure>
 <h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><pre><code>装饰器实质是一个函数 =。它把一个函数作为输入并且返回另外一个函数。通常使用如下技巧：
 </code></pre><ul>
@@ -502,6 +501,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/02/python盒子：模块、包、程序/" rel="prev" title="python盒子：模块、包、程序">
+                python盒子：模块、包、程序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -582,7 +585,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -604,7 +607,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
