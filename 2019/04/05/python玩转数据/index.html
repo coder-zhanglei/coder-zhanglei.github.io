@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="Python数据编码 表1：编码方式     编码 说明     ‘ascii’ 经典的7比特ASCII编码   ‘utf-8’ 最长用的以8比特为单位的变长编码   ‘latin-1’ 被称为ISO 8859-1编码   ‘cp-1252’ windows常用编码   ‘unicode-escape’ Python中Unicode的转义文本格式，\uxxxx或者\uxxxxxxxx    解码">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-05T09:55:57.739Z">
+<meta property="og:updated_time" content="2019-04-05T10:01:36.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python玩转数据">
 <meta name="twitter:description" content="Python数据编码 表1：编码方式     编码 说明     ‘ascii’ 经典的7比特ASCII编码   ‘utf-8’ 最长用的以8比特为单位的变长编码   ‘latin-1’ 被称为ISO 8859-1编码   ‘cp-1252’ windows常用编码   ‘unicode-escape’ Python中Unicode的转义文本格式，\uxxxx或者\uxxxxxxxx    解码">
@@ -549,11 +549,6 @@
 <td style="text-align:center">expr</td>
 </tr>
 <tr>
-<td style="text-align:center">“expr1</td>
-<td style="text-align:center">expr2”</td>
-<td>eppr1或expr2</td>
-</tr>
-<tr>
 <td style="text-align:center">.</td>
 <td style="text-align:center">除\n外的任何字符</td>
 </tr>
@@ -623,7 +618,7 @@
 </tr>
 </tbody>
 </table>
-<p>  注：在匹配是为了防止转义用r’\bxxxxx’</p>
+<p>  注：在匹配是为了防止转义用r’\bxxxxx’，  “expr1 | expr2” 表示 eppr1或expr2 。</p>
 <h3 id="模式：定义匹配的输出"><a href="#模式：定义匹配的输出" class="headerlink" title="模式：定义匹配的输出"></a>模式：定义匹配的输出</h3><p>  当使用match()或search()时，所有的匹配会以m.group()的形式返回到对象m中。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">source = <span class="string">''' I wish I may,I wish I might have a dish of fish tonight'''</span></span><br><span class="line">m = re.search(<span class="string">r'(. dish\b).*(\bfish)'</span>,source)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group()</span><br><span class="line"><span class="string">'a dish of fish'</span></span><br><span class="line"></span><br><span class="line">m = re.search(<span class="string">r'(?P&lt;DISH&gt;. dish\b).*(?P&lt;FISH&gt;\bfish)'</span>,source)<span class="comment">#(?P&lt;name&gt;expr)这样的匹配模式会匹配expr，并将匹配结果存入name的组中</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.groups()</span><br><span class="line">  (<span class="string">'a dish'</span>, <span class="string">'fish'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="string">'DISH'</span>)</span><br><span class="line">  <span class="string">'a dish'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="string">'FISH'</span>)</span><br><span class="line">  <span class="string">'fish'</span></span><br></pre></td></tr></table></figure>
 
