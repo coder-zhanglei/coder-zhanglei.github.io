@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="我的代码库  网址： https://github.com/coder-zhanglei/zhanglei.github.io.git  参考的博客： https://www.cnblogs.com/zhixi/p/9584624.html 准备工作1、 在github上创建自己账号，建立自己的代码库，已完成2、 安装git软件，下载地址：https://windows.github.com/">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-14T04:12:59.724Z">
+<meta property="og:updated_time" content="2019-04-14T04:46:09.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建自己的github代码库">
 <meta name="twitter:description" content="我的代码库  网址： https://github.com/coder-zhanglei/zhanglei.github.io.git  参考的博客： https://www.cnblogs.com/zhixi/p/9584624.html 准备工作1、 在github上创建自己账号，建立自己的代码库，已完成2、 安装git软件，下载地址：https://windows.github.com/">
@@ -428,6 +428,8 @@
 <p>  这样，再打开远程仓库就可以看到两个文件已经被删除了：</p>
 <h2 id="列几个常用的git命令"><a href="#列几个常用的git命令" class="headerlink" title="列几个常用的git命令"></a>列几个常用的git命令</h2><p>git init 项目初始化<br>git clone 拉取项目<br>git add . 添加到暂存区<br>git commit -m 添加commit信息<br>git push 将本地分支推送到服务器上去<br>git pull origin master 本地与服务器端同步</p>
 <p>git log 查看日志<br>git status 查看当前状态<br>git tag 查看版本号<br>git diff 查看尚未提交的更新</p>
+<h3 id="git-fetch：相当于是从远程获取最新版本到本地，不会自动merge"><a href="#git-fetch：相当于是从远程获取最新版本到本地，不会自动merge" class="headerlink" title="git fetch：相当于是从远程获取最新版本到本地，不会自动merge"></a>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</h3><p>Git log -p master..origin/master 比较本地的master分支和origin/master分支的差别<br>查看对比一下 ，具体效果这里就不贴了，各位可以自行测试<br>git merge origin/master 进行合并</p>
+<p>需要注意的是: 和push不同, fetch会自动获取远程`新加入’的分支.</p>
 
       
     </div>
@@ -496,6 +498,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/14/代码库常见错误/" rel="prev" title="代码库常见错误">
+                代码库常见错误 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -577,7 +583,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -599,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -632,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我的代码库"><span class="nav-number">1.</span> <span class="nav-text">我的代码库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本配置"><span class="nav-number">3.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载和上传远程仓库的文件"><span class="nav-number">4.</span> <span class="nav-text">下载和上传远程仓库的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支，上传文件"><span class="nav-number">4.2.</span> <span class="nav-text">创建分支，上传文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传指令的区别"><span class="nav-number">4.2.1.</span> <span class="nav-text">上传指令的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仓库的管理"><span class="nav-number">5.</span> <span class="nav-text">仓库的管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-删除已有仓库"><span class="nav-number">5.1.</span> <span class="nav-text">一.删除已有仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-删除Github中的某个文件或文件夹"><span class="nav-number">5.2.</span> <span class="nav-text">二.删除Github中的某个文件或文件夹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列几个常用的git命令"><span class="nav-number">6.</span> <span class="nav-text">列几个常用的git命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我的代码库"><span class="nav-number">1.</span> <span class="nav-text">我的代码库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本配置"><span class="nav-number">3.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载和上传远程仓库的文件"><span class="nav-number">4.</span> <span class="nav-text">下载和上传远程仓库的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支，上传文件"><span class="nav-number">4.2.</span> <span class="nav-text">创建分支，上传文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传指令的区别"><span class="nav-number">4.2.1.</span> <span class="nav-text">上传指令的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仓库的管理"><span class="nav-number">5.</span> <span class="nav-text">仓库的管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-删除已有仓库"><span class="nav-number">5.1.</span> <span class="nav-text">一.删除已有仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-删除Github中的某个文件或文件夹"><span class="nav-number">5.2.</span> <span class="nav-text">二.删除Github中的某个文件或文件夹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列几个常用的git命令"><span class="nav-number">6.</span> <span class="nav-text">列几个常用的git命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-fetch：相当于是从远程获取最新版本到本地，不会自动merge"><span class="nav-number">6.1.</span> <span class="nav-text">git fetch：相当于是从远程获取最新版本到本地，不会自动merge</span></a></li></ol></li></ol></div>
             
 
           </div>
