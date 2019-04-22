@@ -403,6 +403,7 @@
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>1.首先我们看一下分支情况:<br>git branch -a<br>2.如果没有看到你想要的分支,先获取所有分支:<br>git fetch  需要注意的是: 和push不同, fetch会自动获取远程 `新加入’ 的分支.</p>
 <h2 id="执行git-push出现”Everything-up-to-date”"><a href="#执行git-push出现”Everything-up-to-date”" class="headerlink" title="执行git push出现”Everything up-to-date”"></a>执行git push出现”Everything up-to-date”</h2><p>在github上git clone一个项目，在里面创建一个目录，然后git push的时候，出现报错”Everything up-to-date”</p>
 <p>原因：<br>1）没有git add .<br>2）没有git commit -m “提交信息”<br>如果上面两个步骤都成功执行，还出现这个错误是因为创建的目录下是空的，目录下必须有文件才能git push上传成功。<br>在github上创建文件的时候，在新文件名后加/符号就是文件夹，但是这种方式只支持英文名目录，中文名目录不支持。</p>
+<h2 id="对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法"><a href="#对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法" class="headerlink" title="对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法"></a>对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法</h2><p>主要原因是安全设置的问题：<br>首先执行git config http.sslVerify “false”   若出现下列错误<br>git config http.sslVerify “false”  fatal: not in a git directory<br>再继续执行   git config  –globle   http.sslVerify “false”   问题解决</p>
 
           
         

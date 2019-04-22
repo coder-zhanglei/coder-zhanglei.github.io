@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s bolg">
 <meta property="og:description" content="Git新建分支出现fatal: Not a valid object name: ‘master’错误  原因是没有提交一个对象，要先commit之后才会真正建立master分支，此时才可以建立其它分支。 123456git add c++git commot -m &quot;提交c++&quot;#然后创建分支git branch wapgit branch -a #查看分支 出现error: The follo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-14T04:44:22.109Z">
+<meta property="og:updated_time" content="2019-04-22T13:56:29.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码库常见错误">
 <meta name="twitter:description" content="Git新建分支出现fatal: Not a valid object name: ‘master’错误  原因是没有提交一个对象，要先commit之后才会真正建立master分支，此时才可以建立其它分支。 123456git add c++git commot -m &quot;提交c++&quot;#然后创建分支git branch wapgit branch -a #查看分支 出现error: The follo">
@@ -403,6 +403,7 @@
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>1.首先我们看一下分支情况:<br>git branch -a<br>2.如果没有看到你想要的分支,先获取所有分支:<br>git fetch  需要注意的是: 和push不同, fetch会自动获取远程 `新加入’ 的分支.</p>
 <h2 id="执行git-push出现”Everything-up-to-date”"><a href="#执行git-push出现”Everything-up-to-date”" class="headerlink" title="执行git push出现”Everything up-to-date”"></a>执行git push出现”Everything up-to-date”</h2><p>在github上git clone一个项目，在里面创建一个目录，然后git push的时候，出现报错”Everything up-to-date”</p>
 <p>原因：<br>1）没有git add .<br>2）没有git commit -m “提交信息”<br>如果上面两个步骤都成功执行，还出现这个错误是因为创建的目录下是空的，目录下必须有文件才能git push上传成功。<br>在github上创建文件的时候，在新文件名后加/符号就是文件夹，但是这种方式只支持英文名目录，中文名目录不支持。</p>
+<h2 id="对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法"><a href="#对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法" class="headerlink" title="对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法"></a>对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法</h2><p>主要原因是安全设置的问题：<br>首先执行git config http.sslVerify “false”   若出现下列错误<br>git config http.sslVerify “false”  fatal: not in a git directory<br>再继续执行   git config  –globle   http.sslVerify “false”   问题解决</p>
 
       
     </div>
@@ -607,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git新建分支出现fatal-Not-a-valid-object-name-‘master’错误"><span class="nav-number">1.</span> <span class="nav-text">Git新建分支出现fatal: Not a valid object name: ‘master’错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现error-The-following-untracked-working-tree-files-would-be-overwritten-by-checkout"><span class="nav-number">2.</span> <span class="nav-text">出现error: The following untracked working tree files would be overwritten by checkout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git使用之-pathspec-master-did-not-match-any-file-s-known-to-git"><span class="nav-number">3.</span> <span class="nav-text">Git使用之(pathspec master did not match any file(s) known to git)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决"><span class="nav-number">3.1.</span> <span class="nav-text">解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行git-push出现”Everything-up-to-date”"><span class="nav-number">4.</span> <span class="nav-text">执行git push出现”Everything up-to-date”</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git新建分支出现fatal-Not-a-valid-object-name-‘master’错误"><span class="nav-number">1.</span> <span class="nav-text">Git新建分支出现fatal: Not a valid object name: ‘master’错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现error-The-following-untracked-working-tree-files-would-be-overwritten-by-checkout"><span class="nav-number">2.</span> <span class="nav-text">出现error: The following untracked working tree files would be overwritten by checkout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git使用之-pathspec-master-did-not-match-any-file-s-known-to-git"><span class="nav-number">3.</span> <span class="nav-text">Git使用之(pathspec master did not match any file(s) known to git)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决"><span class="nav-number">3.1.</span> <span class="nav-text">解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行git-push出现”Everything-up-to-date”"><span class="nav-number">4.</span> <span class="nav-text">执行git push出现”Everything up-to-date”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法"><span class="nav-number">5.</span> <span class="nav-text">对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法</span></a></li></ol></div>
             
 
           </div>
