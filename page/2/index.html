@@ -291,6 +291,278 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/Python对象和类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/04/Python对象和类/" itemprop="url">Python对象和类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T11:07:13+08:00">
+                2019-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/04/Python对象和类/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/04/Python对象和类/" class="cy_cmt_count" data-xid="2019/04/04/Python对象和类/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>  Python中所有数据都是以对象的形式出现，只有当你想要创建属于自己的对象或者需要修改已有的对象的行为时，才需要关注对象的内部<br>实现细节。对象就是包含了代码的超级数据结构。</p>
+<h2 id="class-定义类"><a href="#class-定义类" class="headerlink" title="class 定义类"></a>class 定义类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>  在类声明里定义<strong>init</strong>()方法时，第一个参数必须为self，在定义类的方法（函数）时，第一个参数也必须为self。在定义中<strong>init</strong><br>不是必须的。只有当需要区分由该类创建的不同对象时，才需要指定。</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>  从已有的类衍生出新的类，添加或修改部分功能。习惯称原始的类为父类，超类或基类，将新的类称为子类或衍生类。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(Person)</span>:</span><span class="comment">#继承了Person</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>  在子类中可有覆盖父类的方法，从新实现父类的方法即可实现方法的覆盖。</p>
+<h3 id="用super从父类得到帮助"><a href="#用super从父类得到帮助" class="headerlink" title="用super从父类得到帮助"></a>用super从父类得到帮助</h3><p>  重子类中调用父类的方法，用super实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(Person)</span>:</span><span class="comment">#继承了Person</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        super().__init__(name)<span class="comment">#调用父类的方法</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用属性对特性进行访问和设置"><a href="#使用属性对特性进行访问和设置" class="headerlink" title="使用属性对特性进行访问和设置"></a>使用属性对特性进行访问和设置</h2><p>  不希望别人直接访问这个特性，因此需要定义两个方法：getter，setter。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(Person)</span>:</span><span class="comment">#继承了Person</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        super().__init__(name)<span class="comment">#调用父类的方法</span></span><br><span class="line"><span class="meta">    @property    #用于指定getter方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        retrun <span class="string">'afad'</span></span><br><span class="line"><span class="meta">    @name.setter  #用于指定setter方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self,input_name)</span></span></span><br><span class="line">        self.name = input_name</span><br></pre></td></tr></table></figure></p>
+<p>  如果没有指定setter属性，将无法从类的外部对它进行值的改变。</p>
+<h2 id="使用名称重整保护私有特性"><a href="#使用名称重整保护私有特性" class="headerlink" title="使用名称重整保护私有特性"></a>使用名称重整保护私有特性</h2><p>  对那些需要刻意隐藏在类内部的特性有自己的命名规范：由（__）双下划线开头。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Duck</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">        </span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        retrun self.__name</span><br><span class="line"><span class="meta">    @name.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self,name)</span></span></span><br><span class="line">        self.__name = name#这种，让外部的代码无法使用</span><br></pre></td></tr></table></figure>
+<h2 id="方法的类型’"><a href="#方法的类型’" class="headerlink" title="方法的类型’"></a>方法的类型’</h2><p>  有些数据（特性）和函数（方法）是类本身的一部分，还有一些是由类创建的实例的一部分。在类的定义中，以self作为第一个参数的方法<br>都是实例的方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">()</span>:</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        A.count += <span class="number">1</span>;<span class="comment">#类特性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">'I'</span>m an A<span class="string">'</span></span><br><span class="line"><span class="string">    @classmethod#类方法，第一个参数是类本身。参数被写作cls，全称class是保留字</span></span><br><span class="line"><span class="string">    def kids(cls):</span></span><br><span class="line"><span class="string">        print '</span>A has<span class="string">',cls.count,"little objects"</span></span><br><span class="line"><span class="string">easy_A =A()</span></span><br></pre></td></tr></table></figure>
+<h2 id="特殊方法"><a href="#特殊方法" class="headerlink" title="特殊方法"></a>特殊方法</h2><p>  特殊方法的名称以双下划线（__）开头和结束。</p>
+<ul>
+<li>表1：和比较相关的方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:center">使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_ _eq_ _(self,other)</td>
+<td style="text-align:center">self == other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ ne _ _(self,other)</td>
+<td style="text-align:center">self != other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ lt _ _(self,other)</td>
+<td style="text-align:center">self &lt; other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _gt_ _(self,other)</td>
+<td style="text-align:center">self &gt; other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _le_ _(self,other)</td>
+<td style="text-align:center">self &lt;= other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ge_ _(self,other)</td>
+<td style="text-align:center">self &gt;= other</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>表2：和数学相关的方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:center">使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_ _ <em>add</em> _(self,other)</td>
+<td style="text-align:center">self + other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>sub</em> _ _(self,other)</td>
+<td style="text-align:center">self != other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ _ mul _ _ _(self,other)</td>
+<td style="text-align:center">self * other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>floordiv</em> _ _(self,other)</td>
+<td style="text-align:center">self // other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>truediv</em> _ _(self,other)</td>
+<td style="text-align:center">self / other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>mov</em> _ _(self,other)</td>
+<td style="text-align:center">self % other</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>pow</em> _ _(self,other)</td>
+<td style="text-align:center">self ** other</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>表2：其他种类的方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:center">使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">_ _ <em>str</em> _ _(self,other)</td>
+<td style="text-align:center">str(self)</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>repr</em> _ _(self,other)</td>
+<td style="text-align:center">repr(self)</td>
+</tr>
+<tr>
+<td style="text-align:center">_ _ <em>len</em> _ _(self,other)</td>
+<td style="text-align:center">len(self)</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Word</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,text)</span>:</span></span><br><span class="line">        self.text = text</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__eq__</span><span class="params">(self,words)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.text.lower = words.text.lower()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self,words)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.text</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self,words)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'Word(" '</span>self.text<span class="string">' ")'</span></span><br><span class="line">first = word(<span class="string">'ha'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>  将类作为参数传入另一个类。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bill</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,description)</span>:</span></span><br><span class="line">        self.description = description</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bill</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,length)</span>:</span></span><br><span class="line">        self.length = length</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Duck</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,bill,tail)</span>:</span></span><br><span class="line">        self.bill = bill</span><br><span class="line">        self.tail = tail</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">about</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'this duck has a '</span>,bill.description,<span class="string">'bill and a'</span>,tail.length,<span class="string">'tail'</span>)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/python盒子：模块、包、程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1917,249 +2189,6 @@ set()将其他类型转换为集合
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/11/linux下的文本编辑01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/11/linux下的文本编辑01/" itemprop="url">linux下的文本编辑01</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-11T11:37:15+08:00">
-                2019-03-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
-                    <span itemprop="name">linux浅见</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/11/linux下的文本编辑01/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/11/linux下的文本编辑01/" class="cy_cmt_count" data-xid="2019/03/11/linux下的文本编辑01/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="vim-文本编辑"><a href="#vim-文本编辑" class="headerlink" title="vim :文本编辑"></a>vim :文本编辑</h2><ul>
-<li>语法：vim [-可选参数] [文件]<h3 id="vim环境下的常用指令"><a href="#vim环境下的常用指令" class="headerlink" title="vim环境下的常用指令"></a>vim环境下的常用指令</h3></li>
-<li>命令模式：<br>D:删除光标所在行后的所有词<br>nG：n为数字，将光标移至第n行位置<br>p：将复制的内容粘贴到光标所在位置<br>r：修改光标所在处的字符<br>x：删除光标所在处的字符<br>X：删除光标所在处的前一个字符<br>d+d：连按两次，将删除光标所在行<br>n+d+d：n为数字，删除光标所在行及其下面的n-1行，共n行<br>y+y：整行复制<br>Ctrl+b：向上翻一页<br>Ctrl+f：向下翻一页<br>Ctrl+d：向后翻半页<br>Ctrl+u：向前翻半页<br>Ctrl+g：在最后一行处显示光标所在位置的行数和文章的总行数</li>
-<li><p>输入模式：<br>i：从当前光标处插入<br>I：从当前光标所在行的行首开始插入<br>o：在当前光标所在行下方新增一行，从新增行的行首开始输入<br>O：在当前光标所在行上方新增一行，从新增行的行首开始输入</p>
-</li>
-<li><p>末行模式<br>：n:加载文件<br>：w:存盘<br>：w newfile：文件另存为<br>：wq：存盘退出<br>：W!：对只读文件强制写入存盘<br>：q：退出<br>：q！：强制退出<br>：set nu：在每行的开头显示行数<br>：set none：取消每行开头的行数显示<br>：/字符串：匹配字符串查找，按n向下查找，N向上查找</p>
-</li>
-</ul>
-<h2 id="wc：计算字数"><a href="#wc：计算字数" class="headerlink" title="wc：计算字数"></a>wc：计算字数</h2><ul>
-<li>语法：wc[-可选参数][文件]</li>
-<li>参数说明</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参 数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-c</td>
-<td style="text-align:center">只显示字符数</td>
-</tr>
-<tr>
-<td style="text-align:center">-l</td>
-<td style="text-align:center">只显示行数</td>
-</tr>
-<tr>
-<td style="text-align:center">-w</td>
-<td style="text-align:center">只显示字数</td>
-</tr>
-</tbody>
-</table>
-<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><pre><code class="bash">wc -c ar <span class="comment">#计算字节数</span>
-wc -w ar <span class="comment"># 计算字数</span>
-wc -l <span class="comment">#计算行数</span>
-</code></pre>
-<h2 id="tail-：显示文件的末尾内容"><a href="#tail-：显示文件的末尾内容" class="headerlink" title="tail ：显示文件的末尾内容"></a>tail ：显示文件的末尾内容</h2><ul>
-<li>语法：tail [ 必要参数] [选择性参数][文件]</li>
-<li>参数说明<br>（1）必要参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参 数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-f</td>
-<td style="text-align:center">循环读取</td>
-</tr>
-<tr>
-<td style="text-align:center">-q</td>
-<td style="text-align:center">不显示处理信息</td>
-</tr>
-<tr>
-<td style="text-align:center">-v</td>
-<td style="text-align:center">运行时显示详细的处理信息</td>
-</tr>
-</tbody>
-</table>
-<p>（2）选择性参数</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参 数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-c</td>
-<td style="text-align:center">要显示的字节数</td>
-</tr>
-<tr>
-<td style="text-align:center">-n</td>
-<td style="text-align:center">显示的行数</td>
-</tr>
-<tr>
-<td style="text-align:center">-help</td>
-<td style="text-align:center">帮助信息</td>
-</tr>
-</tbody>
-</table>
-<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><pre><code class="bash">tail -n 30 install.log <span class="comment">#显示文件末尾30行的内容</span>
-tail -f 2.log <span class="comment">#显示文件内容。2.log文件是更新的，-f可以动态监测文件末尾的内容</span>
-tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文件末尾内容</span>
-</code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2210,7 +2239,7 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2232,7 +2261,7 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
