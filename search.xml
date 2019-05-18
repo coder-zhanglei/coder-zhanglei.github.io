@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Altium Designer学习笔记01]]></title>
+    <url>%2F2019%2F05%2F18%2FAltium-Designer%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%2F</url>
+    <content type="text"><![CDATA[Altium Designer15的安装1、 安装包在百度网盘中Altium Designer文件夹下安装教程参考：https://wenku.baidu.com/view/63535606b9d528ea81c7799e.html https://wenku.baidu.com/view/60bd5b9c6c175f0e7cd137bb.html 2、 基本快捷键 shift+S :切换单层显示和多层显示 L ： 调出底层的器件 shift+ctrl+单击 ： 高亮光标所在的已连接网络 视频教程：b站上有基础的教程很完整可以参考。]]></content>
+      <categories>
+        <category>画PCB板学习</category>
+      </categories>
+      <tags>
+        <tag>Altium Designer15</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python出错ModuleNotFoundError: No module named 'sklearn.cross_validation']]></title>
     <url>%2F2019%2F04%2F28%2Fpython%E5%87%BA%E9%94%99ModuleNotFoundError-No-module-named-sklearn-cross-validation%2F</url>
     <content type="text"><![CDATA[12from sklearn.cross_validation import KFoldfrom sklearn.cross_validation import train_test_split sklearn更新后在执行以上代码时可能会出现这样的问题：1ModuleNotFoundError: No module named 'sklearn.cross_validation' 此时可以考虑使用以下方法导入库：12from sklearn.model_selection import KFoldfrom sklearn.model_selection import train_test_split 此时就不会报错了。]]></content>
