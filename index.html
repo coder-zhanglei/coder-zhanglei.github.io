@@ -291,6 +291,190 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/24/plotly的动态可视化绘图02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/24/plotly的动态可视化绘图02/" itemprop="url">plotly的动态可视化绘图02</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-24T11:39:44+08:00">
+                2019-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/24/plotly的动态可视化绘图02/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/05/24/plotly的动态可视化绘图02/" class="cy_cmt_count" data-xid="2019/05/24/plotly的动态可视化绘图02/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h2><p>  plotly没有独立的线形图函数，而是把线形图与散点图全部用Scatter函数实现。</p>
+<p>散点图和线图的混合<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment">#--------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"><span class="comment">#-------code</span></span><br><span class="line"><span class="comment"># Create random data with numpy</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">N = <span class="number">100</span></span><br><span class="line">random_x =  np.linspace(<span class="number">0</span>,<span class="number">1</span>,N)</span><br><span class="line">random_y0 = np.random.randn(N) + <span class="number">5</span></span><br><span class="line">random_y1 = np.random.randn(N)</span><br><span class="line">random_y2 = np.random.randn(N) - <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Create traces</span></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x = random_x,</span><br><span class="line">    y = random_y0,</span><br><span class="line">    mode = <span class="string">'markers'</span>,       <span class="comment">#纯散点图的绘制</span></span><br><span class="line">    name = <span class="string">'markers'</span>        <span class="comment">#曲线名称</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=random_x,</span><br><span class="line">    y=random_y1,</span><br><span class="line">    mode=<span class="string">'lines+markers'</span>,  <span class="comment"># 散点+线 图的绘制</span></span><br><span class="line">    name=<span class="string">'lines+markers'</span>  <span class="comment"># 曲线名称</span></span><br><span class="line">    </span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=random_x,</span><br><span class="line">    y=random_y2,</span><br><span class="line">    mode=<span class="string">'lines'</span>,  <span class="comment"># 线 图的绘制</span></span><br><span class="line">    name=<span class="string">'lines'</span>  <span class="comment"># 曲线名称</span></span><br><span class="line"></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = [trace0, trace1,trace2]</span><br><span class="line">pyplt(data,filename=<span class="string">'scatter_basic_demo.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>  markers、lines、lines+markers三个图形的输出格式不同，是因为Scatter函数中的mode参数不同，</p>
+<p>样式的设置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># --------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------code</span></span><br><span class="line"><span class="comment"># Create random data with numpy</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">N = <span class="number">500</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, N)</span><br><span class="line"></span><br><span class="line">random_y0 = np.random.randn(N) + <span class="number">5</span></span><br><span class="line">random_y1 = np.random.randn(N)</span><br><span class="line">random_y2 = np.random.randn(N) - <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create traces</span></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=np.random.randn(N),</span><br><span class="line">    y=np.random.randn(N)+<span class="number">2</span>,</span><br><span class="line">    mode=<span class="string">'markers+lines'</span>,  <span class="comment"># 纯散点图的绘制</span></span><br><span class="line">    name=<span class="string">'above'</span>,  <span class="comment"># 曲线名称</span></span><br><span class="line">    marker = dict(</span><br><span class="line">        size = <span class="number">10</span>,<span class="comment">#设置点的宽度</span></span><br><span class="line">        color = <span class="string">'rgba(152, 0, 0, .8)'</span>,<span class="comment">#设置点的颜色</span></span><br><span class="line">        line = dict(</span><br><span class="line">            width = <span class="number">2</span>, <span class="comment">#设置线条的宽度</span></span><br><span class="line">            color = <span class="string">'rgb(0, 0, 0)'</span> <span class="comment">#设置线条的颜色</span></span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    </span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=np.random.randn(N),</span><br><span class="line">    y=np.random.randn(N) - <span class="number">2</span>,</span><br><span class="line">    mode=<span class="string">'markers'</span>,  <span class="comment"># 散点+线 图的绘制</span></span><br><span class="line">    name=<span class="string">'Below'</span>,  <span class="comment"># 曲线名称</span></span><br><span class="line">    marker = dict(</span><br><span class="line">        size = <span class="number">10</span>,<span class="comment">#设置点的宽度</span></span><br><span class="line">        color = <span class="string">'rgba(255, 182, 193, .9)'</span>,<span class="comment">#设置点的颜色</span></span><br><span class="line">        line = dict(</span><br><span class="line">            width = <span class="number">2</span>, <span class="comment">#设置线条的宽度</span></span><br><span class="line">            </span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = [trace0, trace1]</span><br><span class="line"></span><br><span class="line">layout = dict(</span><br><span class="line">    title = <span class="string">'Styled Scatter'</span>,</span><br><span class="line">    yaxis = dict(zeroline = <span class="keyword">True</span>),</span><br><span class="line">    xaxis = dict(zeroline = <span class="keyword">False</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fig = dict(data=data, layout = layout)</span><br><span class="line">pyplt(fig, filename=<span class="string">'scatter_basic_demo.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>使用Scatter函数可以绘制线形图与散点图，主要参数如下;</p>
+<ul>
+<li>connectgaps:布尔变量，用于连接缺失数据</li>
+<li>dx、dy:x、y坐标的步进值，默认值是1<br>= error_x,error_y:x,y出错信息</li>
+<li>fillcolor：填充模式</li>
+<li>hoverfinfo：当用户与图形互动时，鼠标指针显示的参数，包括x，y，z坐标数据，<br>以及text（文字信息），name（图形名称）等参数的组合，可使用+，all，none和skip（忽略）作为组合连接符号，默认是all（全部消失）</li>
+<li>hoveron：当用户与图形互动时，鼠标指针显示的模式，包括points（点图），fills（填充图）和points+fills三种模式</li>
+<li>ids：在动画图表中数据点和图形key键的列表参数。</li>
+<li>legendgroup：图例参数，默认是空字符串</li>
+<li>line：线条参数，包括大小，颜色，格式等</li>
+<li>marker：数据节点参数，包括大小，颜色，格式等</li>
+<li>mode ： 图形格式，包括lines，marker，text，使用+或none等符号进行模式组合</li>
+<li>name：名称参数</li>
+<li>opacity：透明度参数，范围是0~1</li>
+<li>rsrc，xsrc，ysrc，tsrc，idssrc，textsrc，textpositionsrc：字符串源数列表</li>
+<li>r、t：仅用与极坐标图，r用于设置径向坐标（半径），t用于设置角坐标</li>
+<li>showlegend：布尔变量，用于切换图标显示</li>
+<li>stream：数据流，用于实时显示数据图表</li>
+<li>textfont：文本字体参数，包括字体名称，颜色，大小等</li>
+<li>textposition：“文本”元素的位置参数，包括top left（）</li>
+<li>text:文本数据</li>
+<li>type：数据显示模式 constant，percent，sqrt，array（数组）</li>
+<li>x0,y0:坐标起点坐标</li>
+<li>xaxis，yaxis：x，y坐标参数</li>
+<li>xcalendar，ycalender：坐标时间参数的格式，默认是公历。</li>
+<li>x，y：设置坐标x，y轴的坐标数据</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/plotly的动态可视化绘图01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -397,11 +581,11 @@
           
             <h2 id="plotly安装"><a href="#plotly安装" class="headerlink" title="plotly安装"></a>plotly安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install ploty</span><br><span class="line">pip install ploty --upgrade <span class="comment">#更新plotly</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>查看帮助 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import plotly </span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br></pre></td></tr></table></figure>
+<li>查看帮助 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import plotly </span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="离线绘图函数"><a href="#离线绘图函数" class="headerlink" title="离线绘图函数"></a>离线绘图函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">from</span> plotly.graph_objs <span class="keyword">import</span> Scatter, Layout, Data</span><br><span class="line"></span><br><span class="line">py.offline.init_notebook_mode()     <span class="comment">#该条语句是在Jupyter Notebook（此前被称为 IPython notebook）中绘图</span></span><br><span class="line">trace0 = Scatter(  <span class="comment">#确定坐标 x，y</span></span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">10</span>,<span class="number">15</span>,<span class="number">12</span>,<span class="number">17</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = Scatter(</span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">16</span>,<span class="number">5</span>,<span class="number">11</span>,<span class="number">9</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = Data([trace0, trace1])<span class="comment">#两条线</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#py.offline.iplot(data, filename='first_offline_start') IPlot是在Notebook中绘图的函数</span></span><br><span class="line">py.offline.plot(data, filename=<span class="string">'first_offline_start'</span>)</span><br></pre></td></tr></table></figure>
-<p>   参数解释：<br>   def plot(figure_or_data, show_link=False, link_text=’Export to plot.ly’,<br>         validate=True, output_type=’file’, include_plotlyjs=True,<br>         filename=’temp-plot.html’, auto_open=True, image=None,<br>         image_filename=’plot_image’, image_width=800, image_height=600,<br>         config=None, include_mathjax=False, auto_play=True,<br>         animation_opts=None):<br>   py.plot是绘制图形的主函数，主要参数如下：<br>   figure_or_data：绘图的数据<br>   show_link:默认为False，显示右下角的链接<br>   link_text:右下角显示的文字，默认为Export to plotly.ly<br>   validate:确保所有关键字是有效的。但是当需要额外、非必须的关键字或plo.js版本比graph_reference.json版本旧时，会忽略这部分内容。<br>   filename：设置绘图结果的存储路径。</p>
+<h2 id="离线绘图函数"><a href="#离线绘图函数" class="headerlink" title="离线绘图函数"></a>离线绘图函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">from</span> plotly.graph_objs <span class="keyword">import</span> Scatter, Layout, Data</span><br><span class="line"></span><br><span class="line">py.offline.init_notebook_mode()     <span class="comment">#该条语句是在Jupyter Notebook（此前被称为 IPython notebook）中绘图</span></span><br><span class="line">trace0 = Scatter(  <span class="comment">#确定坐标 x，y</span></span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">10</span>,<span class="number">15</span>,<span class="number">12</span>,<span class="number">17</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = Scatter(</span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">16</span>,<span class="number">5</span>,<span class="number">11</span>,<span class="number">9</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = Data([trace0, trace1])<span class="comment">#两条线</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#py.offline.iplot(data, filename='first_offline_start') IPlot是在Notebook中绘图的函数</span></span><br><span class="line">py.offline.plot(data, filename=<span class="string">'first_offline_start'</span>)</span><br><span class="line"><span class="comment">#py.offline.plot(data, filename='first_offline_start',image='png')#保存画出的png图片</span></span><br></pre></td></tr></table></figure>
+<p>   参数解释：<br>   def plot(figure_or_data, show_link=False, link_text=’Export to plot.ly’,<br>         validate=True, output_type=’file’, include_plotlyjs=True,<br>         filename=’temp-plot.html’, auto_open=True, image=None,<br>         image_filename=’plot_image’, image_width=800, image_height=600,<br>         config=None, include_mathjax=False, auto_play=True,<br>         animation_opts=None):<br>   py.plot是绘制图形的主函数，主要参数如下：<br>   figure_or_data：绘图的数据<br>   show_link:默认为False，显示右下角的链接<br>   link_text:右下角显示的文字，默认为Export to plotly.ly<br>   validate:确保所有关键字是有效的。但是当需要额外、非必须的关键字或plo.js版本比graph_reference.json版本旧时，会忽略这部分内容。<br>   filename：设置绘图结果的存储路径。<br>   image_filename：保存绘制的图片(.png ) 格式</p>
 <h3 id="模块解释"><a href="#模块解释" class="headerlink" title="模块解释"></a>模块解释</h3><p>  plotly模块库里的graph_obj（图像对象）子模块的Scatter（数据布局）对象定义，跟函数和对象一样是字典格式。<br>  Data函数，把代表两条曲线的变量定义为一组图形数据，一列表的格式[]。</p>
 <h2 id="基本绘图流程"><a href="#基本绘图流程" class="headerlink" title="基本绘图流程"></a>基本绘图流程</h2><ul>
 <li>添加图规数据（add_trace）,使用的是Scatter等函数命令</li>
@@ -1803,296 +1987,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/python系统/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/python系统/" itemprop="url">python系统</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T14:53:49+08:00">
-                2019-04-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python心得/" itemprop="url" rel="index">
-                    <span itemprop="name">Python心得</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/08/python系统/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/08/python系统/" class="cy_cmt_count" data-xid="2019/04/08/python系统/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
-<li>创建文件</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fb = open(<span class="string">'test.txt'</span>,<span class="string">'wt'</span>)</span><br><span class="line">fb.close()</span><br></pre></td></tr></table></figure>
-<ul>
-<li>检查文件是否存在</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.path.exists(<span class="string">'oops.txt'</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>用isfile()检查是否为文件</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断是否文件</span></span><br><span class="line">name = <span class="string">'oops.txt'</span></span><br><span class="line">os.path.isfile(name)</span><br><span class="line"><span class="comment">#判断是否是目录</span></span><br><span class="line">os.path.isdir(name)</span><br><span class="line"><span class="comment">#isabs()判断参数是否是一个绝对路径名，参数不需要是一个真正的文件</span></span><br><span class="line">os.path.isabs(name)</span><br><span class="line">os.path.isabs(<span class="string">'/big/fake/name'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>copy()复制文件<br>copy()函数来自另一个模块shutil</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line">shutil.copy(oops.txt,<span class="string">'ohno.txt'</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>rename()重命名文件</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.rename(<span class="string">'ohno.txt'</span>,<span class="string">'ohwell.txt'</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>用abspath()获取路径名<br>该函数会把相对路径扩展为一个绝对路径名<br>os.path.abspath(‘oops.txt’)</p>
-</li>
-<li><p>realpath()获取符号的路径名</p>
-</li>
-<li><p>remove 删除文件<br>os.remove(‘oops.txt’)</p>
-</li>
-</ul>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li>创建目录<br>os.mkdir(‘pomes’)</li>
-<li>rmdir()删除目录<br>os.rmdir(‘pomes’)</li>
-<li><p>列出目录内容<br>os.listdir(‘pomes’)</p>
-</li>
-<li><p>使用chdir()修改当前目录<br>可以从一个目录跳转到另一个目录<br>os.chdir(‘pomes’)</p>
-</li>
-<li><p>glob()列出匹配文件</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> golb</span><br><span class="line">glob.glob(<span class="string">'m*'</span>)<span class="comment">#获取以m开头的文件和目录</span></span><br><span class="line">glob.glob(<span class="string">'？？'</span>)<span class="comment">#获取所有名称为两个字符的文件和目录</span></span><br><span class="line">glob.glob(<span class="string">'m????e'</span>)<span class="comment">#获取名称为6个字符并且以m开头以e结尾</span></span><br><span class="line">glob.glob(<span class="string">'[klm]*e'</span>)<span class="comment">#获取所有以k、l或者m开头的文件和目录</span></span><br><span class="line"><span class="comment">#[!abc]会匹配除了a、b和c之外的所有字符</span></span><br></pre></td></tr></table></figure>
-<h2 id="程序和进程"><a href="#程序和进程" class="headerlink" title="程序和进程"></a>程序和进程</h2><p>  进程之间是相互隔离的，一个进程无法访问其他进程的内容，也无法操作其他进程。操作系统会根据所有正在运行的进程，给每一个进程一小段运行时间，然后切换到<br>其他进程，这样既可以做到公平又可以响应用户操作。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.getpid()<span class="comment">#获取当前进程id号</span></span><br><span class="line">os.getcwd()<span class="comment">#当前工作目录</span></span><br><span class="line">os.getuid()<span class="comment">#获取用户ID</span></span><br><span class="line">os.getgid()<span class="comment">#获取用户组ID</span></span><br></pre></td></tr></table></figure>
-<h3 id="subprocess创建进程"><a href="#subprocess创建进程" class="headerlink" title="subprocess创建进程"></a>subprocess创建进程</h3><p>  import subprocess<br>  ret = subprocess.getoutput(‘date’)</p>
-<h2 id="使用multiprocessing创建进程"><a href="#使用multiprocessing创建进程" class="headerlink" title="使用multiprocessing创建进程"></a>使用multiprocessing创建进程</h2><p>  multiprocessing模块可以在一个程序中运行多个进程</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> multiprocessing</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_this</span><span class="params">(what)</span>:</span></span><br><span class="line">    whoami(what)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">whoami</span><span class="params">(what)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Process %s says:%s'</span> %(os.getpid(),what)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    whoami(<span class="string">"I'm the main program"</span>)</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        p = multiprocessing.Process(target=do_this,args=(<span class="string">"I'm function %d"</span> %n))</span><br><span class="line">        p.start()</span><br></pre></td></tr></table></figure>
-<h2 id="使用terminate-终止进程"><a href="#使用terminate-终止进程" class="headerlink" title="使用terminate()终止进程"></a>使用terminate()终止进程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = multiprocessing.Process(target=do_this,args=(<span class="string">"I'm function %d"</span> %n))</span><br><span class="line">p.start()</span><br><span class="line">p.terminate()</span><br></pre></td></tr></table></figure>
-<h2 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h2><p>  import calendar<br>  calendar.isleap(1900)#判断1900是否死闰年</p>
-<h3 id="datetime模块"><a href="#datetime模块" class="headerlink" title="datetime模块"></a>datetime模块</h3><p>  dattime定义了4个主要的对象：</p>
-<ul>
-<li>date 处理年、月、日</li>
-<li>time 处理时、分、秒</li>
-<li>datetime 处理日期和时间同时出现的情况</li>
-<li>timedelta处理日期和时间的间隔</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> date </span><br><span class="line">halloween = date(<span class="number">2014</span>,<span class="number">10</span>,<span class="number">31</span>)</span><br><span class="line">halloween.day</span><br><span class="line">halloween.month</span><br><span class="line">halloween.isoformat()<span class="comment">#打印一个date对象，ISO是ISO 8601，一种表示日期和时间的国际标准</span></span><br></pre></td></tr></table></figure>
-<h3 id="time模块"><a href="#time模块" class="headerlink" title="time模块"></a>time模块</h3><p>  一种表示绝对时间的方法是计算从某个起点开始的秒数。unix时间使用的是从1970年1月1日0点开始的秒数。<br>  time模块的time()函数会返回当前时间的纪元<br>  localtime()函数返回当前系统时区下的时间，gmtime()返回UTC时间<br>  strftime()<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">now = time.time()</span><br><span class="line">time.ctime(now) <span class="comment">#把一个纪元值转换为一个字符</span></span><br><span class="line">curtime = time.strftime(<span class="string">'%Y-%m-%d'</span>,time.localtime(time.time()))<span class="comment">#获取当天的时间</span></span><br><span class="line">cur = time.mktime(time.strptime(curtime,<span class="string">'%Y-%m-%d'</span>))</span><br></pre></td></tr></table></figure></p>
-<h2 id="读写日期和时间"><a href="#读写日期和时间" class="headerlink" title="读写日期和时间"></a>读写日期和时间</h2><table>
-<thead>
-<tr>
-<th>格式化字符串</th>
-<th style="text-align:right">日期/时间单元</th>
-<th style="text-align:center">范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%Y</td>
-<td style="text-align:right">年</td>
-<td style="text-align:center">1900-…</td>
-</tr>
-<tr>
-<td>%m</td>
-<td style="text-align:right">月</td>
-<td style="text-align:center">01-12</td>
-</tr>
-<tr>
-<td>%B</td>
-<td style="text-align:right">月名</td>
-<td style="text-align:center">January，….</td>
-</tr>
-<tr>
-<td>%b</td>
-<td style="text-align:right">月名缩写</td>
-<td style="text-align:center">Jan-…</td>
-</tr>
-<tr>
-<td>%d</td>
-<td style="text-align:right">日</td>
-<td style="text-align:center">01-31</td>
-</tr>
-<tr>
-<td>%A</td>
-<td style="text-align:right">星期</td>
-<td style="text-align:center">Sunday，….</td>
-</tr>
-<tr>
-<td>%a</td>
-<td style="text-align:right">星期缩写</td>
-<td style="text-align:center">Sun-…</td>
-</tr>
-<tr>
-<td>%H</td>
-<td style="text-align:right">时（24小时制）</td>
-<td style="text-align:center">00-23</td>
-</tr>
-<tr>
-<td>%I</td>
-<td style="text-align:right">时（12小时制）</td>
-<td style="text-align:center">01-12….</td>
-</tr>
-<tr>
-<td>%p</td>
-<td style="text-align:right">上午/下午</td>
-<td style="text-align:center">AM，PM</td>
-</tr>
-<tr>
-<td>%M</td>
-<td style="text-align:right">分</td>
-<td style="text-align:center">00-59</td>
-</tr>
-<tr>
-<td>%S</td>
-<td style="text-align:right">秒</td>
-<td style="text-align:center">00-59</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">fmt =<span class="string">"It's %A ,%B %d,%Y,local time  %I:%M%S%p"</span></span><br><span class="line">t = time.localtime()</span><br></pre></td></tr></table></figure>
-<h2 id="其他模块"><a href="#其他模块" class="headerlink" title="其他模块"></a>其他模块</h2><ul>
-<li>arrow分</li>
-<li>dateutil</li>
-<li>iso8601</li>
-<li>fleming 提供许多时区的函数</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2138,7 +2037,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2160,7 +2059,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

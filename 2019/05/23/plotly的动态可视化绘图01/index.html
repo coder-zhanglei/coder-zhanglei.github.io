@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="plotly安装12pip install plotypip install ploty --upgrade #更新plotly  查看帮助 123import plotly help(plotly.offline.plot)help(plotly.offline.plot)   离线绘图函数1234567891011121314151617import plotly as pyfrom plot">
+<meta name="description" content="plotly安装12pip install plotypip install ploty --upgrade #更新plotly  查看帮助 12import plotly help(plotly.offline.plot)   离线绘图函数123456789101112131415161718import plotly as pyfrom plotly.graph_objs import Sca">
 <meta name="keywords" content="plotly模块开始">
 <meta property="og:type" content="article">
 <meta property="og:title" content="plotly的动态可视化绘图01">
 <meta property="og:url" content="http://yoursite.com/2019/05/23/plotly的动态可视化绘图01/index.html">
 <meta property="og:site_name" content="YHNE&#39;s bolg">
-<meta property="og:description" content="plotly安装12pip install plotypip install ploty --upgrade #更新plotly  查看帮助 123import plotly help(plotly.offline.plot)help(plotly.offline.plot)   离线绘图函数1234567891011121314151617import plotly as pyfrom plot">
+<meta property="og:description" content="plotly安装12pip install plotypip install ploty --upgrade #更新plotly  查看帮助 12import plotly help(plotly.offline.plot)   离线绘图函数123456789101112131415161718import plotly as pyfrom plotly.graph_objs import Sca">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T12:47:59.388Z">
+<meta property="og:updated_time" content="2019-05-24T06:43:01.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="plotly的动态可视化绘图01">
-<meta name="twitter:description" content="plotly安装12pip install plotypip install ploty --upgrade #更新plotly  查看帮助 123import plotly help(plotly.offline.plot)help(plotly.offline.plot)   离线绘图函数1234567891011121314151617import plotly as pyfrom plot">
+<meta name="twitter:description" content="plotly安装12pip install plotypip install ploty --upgrade #更新plotly  查看帮助 12import plotly help(plotly.offline.plot)   离线绘图函数123456789101112131415161718import plotly as pyfrom plotly.graph_objs import Sca">
 
 
 
@@ -397,11 +397,11 @@
       
         <h2 id="plotly安装"><a href="#plotly安装" class="headerlink" title="plotly安装"></a>plotly安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install ploty</span><br><span class="line">pip install ploty --upgrade <span class="comment">#更新plotly</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>查看帮助 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import plotly </span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br></pre></td></tr></table></figure>
+<li>查看帮助 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import plotly </span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="离线绘图函数"><a href="#离线绘图函数" class="headerlink" title="离线绘图函数"></a>离线绘图函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">from</span> plotly.graph_objs <span class="keyword">import</span> Scatter, Layout, Data</span><br><span class="line"></span><br><span class="line">py.offline.init_notebook_mode()     <span class="comment">#该条语句是在Jupyter Notebook（此前被称为 IPython notebook）中绘图</span></span><br><span class="line">trace0 = Scatter(  <span class="comment">#确定坐标 x，y</span></span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">10</span>,<span class="number">15</span>,<span class="number">12</span>,<span class="number">17</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = Scatter(</span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">16</span>,<span class="number">5</span>,<span class="number">11</span>,<span class="number">9</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = Data([trace0, trace1])<span class="comment">#两条线</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#py.offline.iplot(data, filename='first_offline_start') IPlot是在Notebook中绘图的函数</span></span><br><span class="line">py.offline.plot(data, filename=<span class="string">'first_offline_start'</span>)</span><br></pre></td></tr></table></figure>
-<p>   参数解释：<br>   def plot(figure_or_data, show_link=False, link_text=’Export to plot.ly’,<br>         validate=True, output_type=’file’, include_plotlyjs=True,<br>         filename=’temp-plot.html’, auto_open=True, image=None,<br>         image_filename=’plot_image’, image_width=800, image_height=600,<br>         config=None, include_mathjax=False, auto_play=True,<br>         animation_opts=None):<br>   py.plot是绘制图形的主函数，主要参数如下：<br>   figure_or_data：绘图的数据<br>   show_link:默认为False，显示右下角的链接<br>   link_text:右下角显示的文字，默认为Export to plotly.ly<br>   validate:确保所有关键字是有效的。但是当需要额外、非必须的关键字或plo.js版本比graph_reference.json版本旧时，会忽略这部分内容。<br>   filename：设置绘图结果的存储路径。</p>
+<h2 id="离线绘图函数"><a href="#离线绘图函数" class="headerlink" title="离线绘图函数"></a>离线绘图函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">from</span> plotly.graph_objs <span class="keyword">import</span> Scatter, Layout, Data</span><br><span class="line"></span><br><span class="line">py.offline.init_notebook_mode()     <span class="comment">#该条语句是在Jupyter Notebook（此前被称为 IPython notebook）中绘图</span></span><br><span class="line">trace0 = Scatter(  <span class="comment">#确定坐标 x，y</span></span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">10</span>,<span class="number">15</span>,<span class="number">12</span>,<span class="number">17</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = Scatter(</span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">16</span>,<span class="number">5</span>,<span class="number">11</span>,<span class="number">9</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = Data([trace0, trace1])<span class="comment">#两条线</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#py.offline.iplot(data, filename='first_offline_start') IPlot是在Notebook中绘图的函数</span></span><br><span class="line">py.offline.plot(data, filename=<span class="string">'first_offline_start'</span>)</span><br><span class="line"><span class="comment">#py.offline.plot(data, filename='first_offline_start',image='png')#保存画出的png图片</span></span><br></pre></td></tr></table></figure>
+<p>   参数解释：<br>   def plot(figure_or_data, show_link=False, link_text=’Export to plot.ly’,<br>         validate=True, output_type=’file’, include_plotlyjs=True,<br>         filename=’temp-plot.html’, auto_open=True, image=None,<br>         image_filename=’plot_image’, image_width=800, image_height=600,<br>         config=None, include_mathjax=False, auto_play=True,<br>         animation_opts=None):<br>   py.plot是绘制图形的主函数，主要参数如下：<br>   figure_or_data：绘图的数据<br>   show_link:默认为False，显示右下角的链接<br>   link_text:右下角显示的文字，默认为Export to plotly.ly<br>   validate:确保所有关键字是有效的。但是当需要额外、非必须的关键字或plo.js版本比graph_reference.json版本旧时，会忽略这部分内容。<br>   filename：设置绘图结果的存储路径。<br>   image_filename：保存绘制的图片(.png ) 格式</p>
 <h3 id="模块解释"><a href="#模块解释" class="headerlink" title="模块解释"></a>模块解释</h3><p>  plotly模块库里的graph_obj（图像对象）子模块的Scatter（数据布局）对象定义，跟函数和对象一样是字典格式。<br>  Data函数，把代表两条曲线的变量定义为一组图形数据，一列表的格式[]。</p>
 <h2 id="基本绘图流程"><a href="#基本绘图流程" class="headerlink" title="基本绘图流程"></a>基本绘图流程</h2><ul>
 <li>添加图规数据（add_trace）,使用的是Scatter等函数命令</li>
@@ -477,6 +477,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/24/plotly的动态可视化绘图02/" rel="prev" title="plotly的动态可视化绘图02">
+                plotly的动态可视化绘图02 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -558,7 +562,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -580,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
