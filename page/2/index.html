@@ -291,6 +291,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/Python真正的开发者/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/Python真正的开发者/" itemprop="url">Python真正的开发者</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T20:21:43+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/08/Python真正的开发者/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/08/Python真正的开发者/" class="cy_cmt_count" data-xid="2019/04/08/Python真正的开发者/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="寻找Python代码"><a href="#寻找Python代码" class="headerlink" title="寻找Python代码"></a>寻找Python代码</h2><ul>
+<li>Python标准库：<a href="http://docs.python.org/3/library/" target="_blank" rel="noopener">http://docs.python.org/3/library/</a> </li>
+<li>python包索引(PyPi)：<a href="https://pypi.python.org/pypi" target="_blank" rel="noopener">https://pypi.python.org/pypi</a></li>
+</ul>
+<h2 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h2><h3 id="安装包的方法"><a href="#安装包的方法" class="headerlink" title="安装包的方法"></a>安装包的方法</h3><ul>
+<li>用pip，如：pip install flask</li>
+<li>用操作系统自带的包管理工具</li>
+<li>源代码安装:python install setup.py</li>
+</ul>
+<h2 id="调试代码"><a href="#调试代码" class="headerlink" title="调试代码"></a>调试代码</h2><h3 id="用pdb进行调试"><a href="#用pdb进行调试" class="headerlink" title="用pdb进行调试"></a>用pdb进行调试</h3><p>1、 语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Python -m pdb capitals.py   </span><br><span class="line">(Pdb) c  <span class="comment">#输入c（继续），程序会一直运行下去，直到正常结束或者出现错误</span></span><br><span class="line">(Pdb) s  <span class="comment">#单步执行，一行一行的执行Python代码，会进入函数内部</span></span><br><span class="line">(Pdb) n  <span class="comment">#也是单步执行，但是不会进入函数内部</span></span><br><span class="line">(Pdb) l  <span class="comment">#列表，查看之后的几行</span></span><br><span class="line"> -&gt;  <span class="comment"># 指示当前行</span></span><br><span class="line">(Pdb) b 6 <span class="comment">#在第6行设置一段点</span></span><br><span class="line">(Pdb) p line <span class="comment">#打印line的值   </span></span><br><span class="line">(Pdb) l 1 <span class="comment">#l会显示代码行，1表示起始行。从第一行开始</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="记录错误日志"><a href="#记录错误日志" class="headerlink" title="记录错误日志"></a>记录错误日志</h2><p>  logging模块包含以下内容：</p>
+<ul>
+<li>你想保存到日志中的消息</li>
+<li>不同优先级以及对应的函数：debug()、info()、warn()、error()、critical().</li>
+<li>一个或多个logger对象，主要通过它们使用模块</li>
+<li>把消息写入终端、文件、数据库或者其他地方的handler</li>
+<li>创建输出的formatter；</li>
+<li>基于输入进行筛选的过滤器。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line">logging.basicConfig(level=<span class="string">'DEBUG'</span>,filename=<span class="string">'bulue_ox.log'</span>)<span class="comment">#filename会创建一个fileHandler并对logger进行设置。logging模块至少包含15钟handler</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#以日期和时间的格式写入日志文件</span></span><br><span class="line">LOG_FORMAT = <span class="string">"%(asctime)s - %(levelname)s - %(message)s"</span></span><br><span class="line">logging.basicConfig(filename=<span class="string">'./gzipcompressor.log'</span>,</span><br><span class="line">                    filemode=<span class="string">'a'</span>,</span><br><span class="line">                    level=logging.DEBUG, </span><br><span class="line">                    format=LOG_FORMAT)</span><br></pre></td></tr></table></figure>
+<h2 id="算法和数据结构"><a href="#算法和数据结构" class="headerlink" title="算法和数据结构"></a>算法和数据结构</h2><p>  列表解析比添加元素快2倍。<br>  NumPy是Python的一个数学库，它是用c编写的，运行速度很快。Python并不会编译成机器语言，而是被翻译成中间语言，然后被虚拟机解释执行。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/python系统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2353,162 +2526,6 @@ set()将其他类型转换为集合
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/番茄助手的安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/24/番茄助手的安装/" itemprop="url">番茄助手的安装</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-24T16:42:13+08:00">
-                2019-03-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/visual-studio的使用/" itemprop="url" rel="index">
-                    <span itemprop="name">visual studio的使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/24/番茄助手的安装/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/24/番茄助手的安装/" class="cy_cmt_count" data-xid="2019/03/24/番茄助手的安装/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="visual-assist的安装"><a href="#visual-assist的安装" class="headerlink" title="visual assist的安装"></a>visual assist的安装</h2><p>1、 visual assist软件下载<br><a href="https://pan.baidu.com/s/1uD7GmjuSbdemNOdEhFqReQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uD7GmjuSbdemNOdEhFqReQ</a>  rr8i</p>
-<p>2、 visual assist X通用补丁下载<br><a href="https://pan.baidu.com/s/1u-vOHdN7-m5vqiG6R1aEpA" target="_blank" rel="noopener">https://pan.baidu.com/s/1u-vOHdN7-m5vqiG6R1aEpA</a>  ed1q</p>
-<p>步骤：<br>    安装完visual assist软件软件后，打开通用补丁，直接点击安装就破解了visual assist，如果之前有<br>安装过其他的破解补丁，先点击卸载，卸载后再安装。</p>
-<h2 id="自定义vs的快捷键"><a href="#自定义vs的快捷键" class="headerlink" title="自定义vs的快捷键"></a>自定义vs的快捷键</h2><p>1、步骤<br>   工具-&gt;选项-&gt;环境-&gt;键盘；<br>   搜索你定义快捷键的功能，然后按自定义的快捷键即可；<br>比如：<br>   修改返回上一处光标位置，之前的快捷键是“Ctrl + -”；搜索“向后”（Navigatebackward），然后修改自己的快捷键即可，<br>同理向前（navigateForward）。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2559,7 +2576,7 @@ set()将其他类型转换为集合
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
