@@ -291,6 +291,739 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/ploty高级图形03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/31/ploty高级图形03/" itemprop="url">ploty高级图形03</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-31T11:31:19+08:00">
+                2019-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/31/ploty高级图形03/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/05/31/ploty高级图形03/" class="cy_cmt_count" data-xid="2019/05/31/ploty高级图形03/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="3-7-绘制SVG-可伸缩矢量图"><a href="#3-7-绘制SVG-可伸缩矢量图" class="headerlink" title="3.7 绘制SVG(可伸缩矢量图)"></a>3.7 绘制SVG(可伸缩矢量图)</h2><h3 id="矩形图的绘制"><a href="#矩形图的绘制" class="headerlink" title="矩形图的绘制"></a>矩形图的绘制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1.5</span>, <span class="number">4</span>,<span class="number">1.5</span>,<span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">3.75</span>, <span class="number">3.75</span>,<span class="number">2.2</span>,<span class="number">2.2</span>],</span><br><span class="line">    text=[<span class="string">'矩形'</span>, <span class="string">'矩形（填充）'</span>,<span class="string">'矩形（相对于plot+填充）'</span>,<span class="string">'矩形（相对于轴+填充）'</span>],</span><br><span class="line">    mode=<span class="string">'text'</span>,</span><br><span class="line">)</span><br><span class="line">data = [trace0]</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'xaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">8</span>],</span><br><span class="line">        <span class="string">'showgrid'</span>: <span class="keyword">False</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'yaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">6.5</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 普通的矩形</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">6</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(128, 0, 128, 1)'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 填充颜色的矩形</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">6</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(128, 0, 128, 1)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">2</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(128, 0, 128, 0.7)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 相对于plot的矩形 + 填充颜色</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">0.125</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">0.25</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">0.3</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(50, 171, 96)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(50, 171, 96, 0.6)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 相对于轴的矩形 + 填充颜色</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(55, 128, 191)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(55, 128, 191, 0.6)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/SVG_rectangle.html'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参数type。参数值可以是circle(圆)、rect（矩形）、path（路径）、line（线），默认是line。本例使用的是rect</li>
+<li>fillcolor参数，设置填充的颜色，默认是rgba(0,0,0,0)(白色)<h3 id="矩形图应用：设置时间序列区域高亮显示"><a href="#矩形图应用：设置时间序列区域高亮显示" class="headerlink" title="矩形图应用：设置时间序列区域高亮显示"></a>矩形图应用：设置时间序列区域高亮显示</h3></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">r'dat/day01.csv'</span>, index_col=[<span class="string">'date'</span>], parse_dates=[<span class="string">'date'</span>]) <span class="comment"># 读取数据。</span></span><br><span class="line">df.sort_index(inplace=<span class="keyword">True</span>) <span class="comment"># 设置索引列从大到小排序</span></span><br><span class="line">df = df.iloc[<span class="number">-300</span>:<span class="number">-100</span>] <span class="comment"># 选取其中的200行数据</span></span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(x=df.index, y=df[<span class="string">'close'</span>], mode=<span class="string">'lines'</span>, name=<span class="string">'temperature'</span>)</span><br><span class="line"></span><br><span class="line">data = [trace0]</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="comment"># 我们通过创建矩形的方式来高亮某一个时间区间</span></span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 首先，我们高亮显示2月4日---&gt;3月6日.</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="comment"># x参考系使用绝对坐标系（相对于轴）</span></span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="comment"># y参考系使用相对坐标系（相对于plot）</span></span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="string">'2015-02-04'</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="string">'2015-03-06'</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'#d3d3d3'</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">0</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 其次，我们高亮显示区间5月20日---&gt;6月22日.</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="string">'2015-05-20'</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="string">'2015-06-22'</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'#d3d3d3'</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">0</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fig = &#123;<span class="string">'data'</span>: data, <span class="string">'layout'</span>: layout&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/timestamp_highlight.html'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="圆形图的绘制"><a href="#圆形图的绘制" class="headerlink" title="圆形图的绘制"></a>圆形图的绘制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1.5</span>, <span class="number">3.5</span>],</span><br><span class="line">    y=[<span class="number">0.75</span>, <span class="number">2.5</span>],</span><br><span class="line">    text=[<span class="string">'无填充圆'</span>,</span><br><span class="line">          <span class="string">'有填充圆'</span>],</span><br><span class="line">    mode=<span class="string">'text'</span>,</span><br><span class="line">)</span><br><span class="line">data = [trace0]</span><br><span class="line"></span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'xaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">4.5</span>],</span><br><span class="line">        <span class="string">'zeroline'</span>: <span class="keyword">False</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'yaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">4.5</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'width'</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="string">'height'</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 无填充圆</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(50, 171, 96, 1)'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 有填充圆</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(50, 171, 96, 0.7)'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(50, 171, 96, 1)'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/SVG_circle.html'</span>)</span><br></pre></td></tr></table></figure>
+<p> 注意：本例中设置了参数   ‘width’: 800, ‘height’: 800,如果参数hight != width,则按照我们自己的方式画出来的圆是一个椭圆，默认是 ‘width’: 450, ‘height’: 750</p>
+<h3 id="圆形图应用：高亮显示散点图的聚集簇"><a href="#圆形图应用：高亮显示散点图的聚集簇" class="headerlink" title="圆形图应用：高亮显示散点图的聚集簇"></a>圆形图应用：高亮显示散点图的聚集簇</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x0 = np.random.normal(<span class="number">2</span>, <span class="number">0.45</span>, <span class="number">300</span>)</span><br><span class="line">y0 = np.random.normal(<span class="number">2</span>, <span class="number">0.45</span>, <span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">x1 = np.random.normal(<span class="number">6</span>, <span class="number">0.4</span>, <span class="number">200</span>)</span><br><span class="line">y1 = np.random.normal(<span class="number">6</span>, <span class="number">0.4</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">x2 = np.random.normal(<span class="number">4</span>, <span class="number">0.3</span>, <span class="number">200</span>)</span><br><span class="line">y2 = np.random.normal(<span class="number">4</span>, <span class="number">0.3</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=x0,</span><br><span class="line">    y=y0,</span><br><span class="line">    mode=<span class="string">'markers'</span>,</span><br><span class="line">)</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=x1,</span><br><span class="line">    y=y1,</span><br><span class="line">    mode=<span class="string">'markers'</span></span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=x2,</span><br><span class="line">    y=y2,</span><br><span class="line">    mode=<span class="string">'markers'</span></span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=x1,</span><br><span class="line">    y=y0,</span><br><span class="line">    mode=<span class="string">'markers'</span></span><br><span class="line">)</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x0),</span><br><span class="line">            <span class="string">'y0'</span>: min(y0),</span><br><span class="line">            <span class="string">'x1'</span>: max(x0),</span><br><span class="line">            <span class="string">'y1'</span>: max(y0),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'blue'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'blue'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x1),</span><br><span class="line">            <span class="string">'y0'</span>: min(y1),</span><br><span class="line">            <span class="string">'x1'</span>: max(x1),</span><br><span class="line">            <span class="string">'y1'</span>: max(y1),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'orange'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'orange'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x2),</span><br><span class="line">            <span class="string">'y0'</span>: min(y2),</span><br><span class="line">            <span class="string">'x1'</span>: max(x2),</span><br><span class="line">            <span class="string">'y1'</span>: max(y2),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'green'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'green'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x1),</span><br><span class="line">            <span class="string">'y0'</span>: min(y0),</span><br><span class="line">            <span class="string">'x1'</span>: max(x1),</span><br><span class="line">            <span class="string">'y1'</span>: max(y0),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'red'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'red'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">'showlegend'</span>: <span class="keyword">False</span>,</span><br><span class="line">&#125;</span><br><span class="line">data = [trace0, trace1, trace2, trace3]</span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/clusters.html'</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/ploty高级图形02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/31/ploty高级图形02/" itemprop="url">ploty高级图形02</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-31T11:01:43+08:00">
+                2019-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/31/ploty高级图形02/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/05/31/ploty高级图形02/" class="cy_cmt_count" data-xid="2019/05/31/ploty高级图形02/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="多子图"><a href="#多子图" class="headerlink" title="多子图"></a>多子图</h2><h3 id="子坐标轴自定义"><a href="#子坐标轴自定义" class="headerlink" title="子坐标轴自定义"></a>子坐标轴自定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace1 = go.Scatter(x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], y=[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">trace2 = go.Scatter(x=[<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>], y=[<span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>])</span><br><span class="line">trace3 = go.Scatter(x=[<span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>], y=[<span class="number">600</span>, <span class="number">700</span>, <span class="number">800</span>])</span><br><span class="line">trace4 = go.Scatter(x=[<span class="number">4000</span>, <span class="number">5000</span>, <span class="number">6000</span>], y=[<span class="number">7000</span>, <span class="number">8000</span>, <span class="number">9000</span>])</span><br><span class="line"></span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">2</span>, cols=<span class="number">2</span>, subplot_titles=(<span class="string">'Plot 1'</span>, <span class="string">'Plot 2'</span>,</span><br><span class="line">                                                          <span class="string">'Plot 3'</span>, <span class="string">'Plot 4'</span>))</span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace4, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'xaxis1'</span>].update(title=<span class="string">'xaxis 1 title'</span>)</span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'xaxis2'</span>].update(title=<span class="string">'xaxis 2 title'</span>, range=[<span class="number">10</span>, <span class="number">50</span>])</span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'xaxis3'</span>].update(title=<span class="string">'xaxis 3 title'</span>, showgrid=<span class="keyword">False</span>)</span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'xaxis4'</span>].update(title=<span class="string">'xaxis 4 title'</span>, type=<span class="string">'log'</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'yaxis1'</span>].update(title=<span class="string">'yaxis 1 title'</span>)</span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'yaxis2'</span>].update(title=<span class="string">'yaxis 2 title'</span>, range=[<span class="number">40</span>, <span class="number">80</span>])</span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'yaxis3'</span>].update(title=<span class="string">'yaxis 3 title'</span>, showgrid=<span class="keyword">False</span>)</span><br><span class="line">fig[<span class="string">'layout'</span>][<span class="string">'yaxis4'</span>].update(title=<span class="string">'yaxis 4 title'</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(title=<span class="string">'Customizing Subplot Axes'</span>)</span><br><span class="line"></span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplot_custom_axes.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>  在plotly中对已经定义好的绘图进行自定义，需要修改figure中的Layout。本例的代码只定义了坐标轴的显示范围，坐标轴类型和是否显示网格，对于其他<br>的画面布局，也可以通过这种方式进行定义。</p>
+<h3 id="嵌入式子图"><a href="#嵌入式子图" class="headerlink" title="嵌入式子图"></a>嵌入式子图</h3><p>最关键的参数是domain<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">    y=[<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>]</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>],</span><br><span class="line">    y=[<span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>],</span><br><span class="line">    xaxis=<span class="string">'x2'</span>,</span><br><span class="line">    yaxis=<span class="string">'y2'</span></span><br><span class="line">)</span><br><span class="line">data = [trace1, trace2]</span><br><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain=[<span class="number">0.6</span>, <span class="number">0.95</span>],</span><br><span class="line">        anchor=<span class="string">'y2'</span></span><br><span class="line">    ),</span><br><span class="line">    yaxis2=dict(</span><br><span class="line">        domain=[<span class="number">0.6</span>, <span class="number">0.95</span>],</span><br><span class="line">        anchor=<span class="string">'x2'</span></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line">fig = go.Figure(data=data, layout=layout)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplot_insert.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="混合图"><a href="#混合图" class="headerlink" title="混合图"></a>混合图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> plotly.graph_objs <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># read in volcano database data</span></span><br><span class="line">df = pd.read_excel(<span class="string">r'dat/volcano_db.xlsx'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># frequency of Country</span></span><br><span class="line">freq = df</span><br><span class="line">freq = freq.Country.value_counts().reset_index().rename(columns=&#123;<span class="string">'index'</span>: <span class="string">'x'</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot(1) top 10 countries by total volcanoes</span></span><br><span class="line">locations = go.Bar(x=freq[<span class="string">'x'</span>][<span class="number">0</span>:<span class="number">10</span>],y=freq[<span class="string">'Country'</span>][<span class="number">0</span>:<span class="number">10</span>], marker=dict(color=<span class="string">'#CF1020'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># read in 3d volcano surface data</span></span><br><span class="line">df_v = pd.read_excel(<span class="string">r'dat/volcano.xlsx'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot(2) 3d surface of volcano</span></span><br><span class="line">threed = Surface(z=df_v.values.tolist(), colorscale=<span class="string">'Reds'</span>, showscale=<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot(3)  scattergeo map of volcano locations</span></span><br><span class="line">trace3 = &#123;</span><br><span class="line">  <span class="string">"geo"</span>: <span class="string">"geo3"</span>,</span><br><span class="line">  <span class="string">"lon"</span>: df[<span class="string">'Longitude'</span>],</span><br><span class="line">  <span class="string">"lat"</span>: df[<span class="string">'Latitude'</span>],</span><br><span class="line">  <span class="string">"hoverinfo"</span>: <span class="string">'text'</span>,</span><br><span class="line">  <span class="string">"marker"</span>: &#123;</span><br><span class="line">    <span class="string">"size"</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="string">"opacity"</span>: <span class="number">0.8</span>,</span><br><span class="line">    <span class="string">"color"</span>: <span class="string">'#CF1020'</span>,</span><br><span class="line">    <span class="string">"colorscale"</span>: <span class="string">'Viridis'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"mode"</span>: <span class="string">"markers"</span>,</span><br><span class="line">  <span class="string">"type"</span>: <span class="string">"scattergeo"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = go.Data([locations, threed, trace3])</span><br><span class="line"></span><br><span class="line"><span class="comment"># control the subplot below using domain in 'geo', 'scene', and 'axis'</span></span><br><span class="line">layout = &#123;</span><br><span class="line">  <span class="string">"plot_bgcolor"</span>: <span class="string">'black'</span>,</span><br><span class="line">  <span class="string">"paper_bgcolor"</span>: <span class="string">'black'</span>,</span><br><span class="line">  <span class="string">"titlefont"</span>: &#123;</span><br><span class="line">      <span class="string">"size"</span>: <span class="number">20</span>,</span><br><span class="line">      <span class="string">"family"</span>: <span class="string">"Raleway"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"font"</span>: &#123;</span><br><span class="line">      <span class="string">"color"</span>: <span class="string">'white'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dragmode"</span>: <span class="string">"zoom"</span>,</span><br><span class="line">  <span class="string">"geo3"</span>: &#123;</span><br><span class="line">    <span class="string">"domain"</span>: &#123;</span><br><span class="line">      <span class="string">"x"</span>: [<span class="number">0</span>, <span class="number">0.55</span>],</span><br><span class="line">      <span class="string">"y"</span>: [<span class="number">0</span>, <span class="number">0.9</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"lakecolor"</span>: <span class="string">"rgba(127,205,255,1)"</span>,</span><br><span class="line">    <span class="string">"oceancolor"</span>: <span class="string">"rgb(6,66,115)"</span>,</span><br><span class="line">    <span class="string">"landcolor"</span>: <span class="string">'white'</span>,</span><br><span class="line">    <span class="string">"projection"</span>: &#123;<span class="string">"type"</span>: <span class="string">"orthographic"</span>&#125;,</span><br><span class="line">    <span class="string">"scope"</span>: <span class="string">"world"</span>,</span><br><span class="line">    <span class="string">"showlakes"</span>: <span class="keyword">True</span>,</span><br><span class="line">    <span class="string">"showocean"</span>: <span class="keyword">True</span>,</span><br><span class="line">    <span class="string">"showland"</span>: <span class="keyword">True</span>,</span><br><span class="line">    <span class="string">"bgcolor"</span>: <span class="string">'black'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"margin"</span>: &#123;</span><br><span class="line">    <span class="string">"r"</span>: <span class="number">10</span>,</span><br><span class="line">    <span class="string">"t"</span>: <span class="number">25</span>,</span><br><span class="line">    <span class="string">"b"</span>: <span class="number">40</span>,</span><br><span class="line">    <span class="string">"l"</span>: <span class="number">60</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"scene"</span>: &#123;<span class="string">"domain"</span>: &#123;</span><br><span class="line">      <span class="string">"x"</span>: [<span class="number">0.5</span>, <span class="number">1</span>],</span><br><span class="line">      <span class="string">"y"</span>: [<span class="number">0</span>, <span class="number">0.55</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">           <span class="string">"xaxis"</span>: &#123;<span class="string">"gridcolor"</span>: <span class="string">'white'</span>&#125;,</span><br><span class="line">           <span class="string">"yaxis"</span>: &#123;<span class="string">"gridcolor"</span>: <span class="string">'white'</span>&#125;,</span><br><span class="line">           <span class="string">"zaxis"</span>: &#123;<span class="string">"gridcolor"</span>: <span class="string">'white'</span>&#125;</span><br><span class="line">           &#125;,</span><br><span class="line">  <span class="string">"showlegend"</span>: <span class="keyword">False</span>,</span><br><span class="line">  <span class="string">"title"</span>: <span class="string">"&lt;br&gt;Volcano Database"</span>,</span><br><span class="line">  <span class="string">"xaxis"</span>: &#123;</span><br><span class="line">    <span class="string">"anchor"</span>: <span class="string">"y"</span>,</span><br><span class="line">    <span class="string">"domain"</span>: [<span class="number">0.6</span>, <span class="number">0.95</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"yaxis"</span>: &#123;</span><br><span class="line">    <span class="string">"anchor"</span>: <span class="string">"x"</span>,</span><br><span class="line">    <span class="string">"domain"</span>: [<span class="number">0.65</span>, <span class="number">0.95</span>],</span><br><span class="line">    <span class="string">"showgrid"</span>: <span class="keyword">False</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">annotations = &#123; <span class="string">"text"</span>: <span class="string">"Source: NOAA"</span>,</span><br><span class="line">               <span class="string">"showarrow"</span>: <span class="keyword">False</span>,</span><br><span class="line">               <span class="string">"xref"</span>: <span class="string">"paper"</span>,</span><br><span class="line">               <span class="string">"yref"</span>: <span class="string">"paper"</span>,</span><br><span class="line">               <span class="string">"x"</span>: <span class="number">0</span>,</span><br><span class="line">               <span class="string">"y"</span>: <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">layout[<span class="string">'annotations'</span>] = [annotations]</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=data, layout=layout)</span><br><span class="line">pyplt(fig, filename = <span class="string">"tmp/Mixed Subplots Volcano.html"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="3-7-绘制SVG-可伸缩矢量图"><a href="#3-7-绘制SVG-可伸缩矢量图" class="headerlink" title="3.7 绘制SVG(可伸缩矢量图)"></a>3.7 绘制SVG(可伸缩矢量图)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1.2</span>, <span class="number">3.5</span>, <span class="number">5</span>,<span class="number">0.5</span>,<span class="number">7</span>],</span><br><span class="line">    y=[<span class="number">1</span>, <span class="number">1.8</span>, <span class="number">1.2</span>,<span class="number">0.5</span>,<span class="number">0.6</span>],</span><br><span class="line">    text=[<span class="string">'垂直线(破折号)'</span>, <span class="string">'水平线（点+破折号）'</span>, <span class="string">'对角线（点）'</span>,<span class="string">'对角线（相对于plot）'</span>,<span class="string">'对角线（相对于轴）'</span>],</span><br><span class="line">    mode=<span class="string">'text'</span>,</span><br><span class="line">)</span><br><span class="line">data = [trace0]</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'xaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">8</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'yaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">2.5</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 画垂直线</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(55, 128, 191)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">                <span class="string">'dash'</span>:<span class="string">'dash'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 水平线</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(50, 171, 96)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">4</span>,</span><br><span class="line">                <span class="string">'dash'</span>: <span class="string">'dashdot'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 对角线</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">6</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(128, 0, 128)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">4</span>,</span><br><span class="line">                <span class="string">'dash'</span>: <span class="string">'dot'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 相对于轴绘图</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">8</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(55, 128, 191)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 相对于plot绘图</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">0.5</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">0.5</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(50, 171, 96)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/SVG_line.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>  前面的图形都是通过go.Scatter 等函数绘制的，绘制SVG是在layout中进行设置的。本例中：</p>
+<ul>
+<li>dash 参数的使用，用于设置线性图结果的呈现方式，可选择值有solid（线条），dot（点），longdash（长破折号），dashdot（点+破折号）和longdashdot（长点+破折号），默认是solid</li>
+<li>xref（yref）参数的使用，该参数有两个值：paper和x(y).如果值为x，则x0，x1对应的值为坐标轴的绝对值，比如“x0=0,x1=4”表示线的起点为0，终点在4；如果值为paper，则x0、x1对应的值为坐标轴的相对值，本例中<br>“x0=0，x1=0.5”表示线的起点x0在0处，线的终点x1在0.5*8=4处<h3 id="线形图的应用：创建图形的切线"><a href="#线形图的应用：创建图形的切线" class="headerlink" title="线形图的应用：创建图形的切线"></a>线形图的应用：创建图形的切线</h3>代码的功能通过人工的方法找出，f(x)= sin(x^2)+1在区间[1,3]之间的几个极值点。然后根据这几个极值点绘制水平线<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 代码SVG_tangent_line.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">x0 = np.linspace(<span class="number">1</span>, <span class="number">3</span>, <span class="number">200</span>)</span><br><span class="line">y0 = x0 * np.sin(np.power(x0, <span class="number">2</span>)) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=x0,</span><br><span class="line">    y=y0,</span><br><span class="line">)</span><br><span class="line">data = [trace0]</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'title'</span>: <span class="string">"f(x)=sin(x^2)+1"</span>,</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">2.30756</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">1.75</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">2.30756</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.7</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'red'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">2.5</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">2.5</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">3.80796</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">3.05</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">3.80796</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.7</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'red'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">2.5</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'line'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1.90</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">-1.1827</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">2.50</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">-1.1827</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.7</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'red'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">2.5</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/tangent-line.html'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/ploty高级图形01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/28/ploty高级图形01/" itemprop="url">ploty高级图形01</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-28T10:48:17+08:00">
+                2019-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/28/ploty高级图形01/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/05/28/ploty高级图形01/" class="cy_cmt_count" data-xid="2019/05/28/ploty高级图形01/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="时间序列"><a href="#时间序列" class="headerlink" title="时间序列"></a>时间序列</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#----pre def</span></span><br><span class="line">pyplt =  py.offline.plot</span><br><span class="line"></span><br><span class="line">x_datetime = [datetime(year=<span class="number">2013</span>,month=<span class="number">10</span>,day=<span class="number">4</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">11</span>,day=<span class="number">5</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">12</span>,day=<span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line">x_string = [<span class="string">'2013-10-04'</span>,<span class="string">'2013-11-05'</span>,<span class="string">'2013-12-06'</span>]<span class="comment">#时间格式的字符串</span></span><br><span class="line"></span><br><span class="line">trace_time = go.Scatter(x=x_datetime,y=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>],name = <span class="string">'trace_datetime'</span>)</span><br><span class="line">trace_string = go.Scatter(x=x_string,y=[<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>],name=<span class="string">'trace_string'</span>)</span><br><span class="line"></span><br><span class="line">data = [trace_time,trace_string]</span><br><span class="line">pyplt(data,filename=<span class="string">'timeSeries.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>  从代码可以看出，只要传入的x是日期或时间格式的字符串，plotly就会自动识别为时间格式。</p>
+<h3 id="时间范围约束"><a href="#时间范围约束" class="headerlink" title="时间范围约束"></a>时间范围约束</h3><p>  有时候我们只想展示部分时间范围内的绘图结果，这时通过传递一个range参数即可实现这个功能<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#----pre def</span></span><br><span class="line">pyplt =  py.offline.plot</span><br><span class="line"></span><br><span class="line">x_datetime = [datetime(year=<span class="number">2013</span>,month=<span class="number">10</span>,day=<span class="number">4</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">11</span>,day=<span class="number">5</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">12</span>,day=<span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">to_unix_time</span><span class="params">(dt)</span>:</span></span><br><span class="line">    <span class="string">''''</span></span><br><span class="line"><span class="string">    :param dt:datetime 类型的时间戳</span></span><br><span class="line"><span class="string">    ：return:dt相对于utc起始时间差别的毫秒数</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    epoch = datetime.utcfromtimestamp(<span class="number">0</span>) <span class="comment">#获取0时刻对应的utc（世界标准时间）</span></span><br><span class="line">    <span class="keyword">return</span> (dt - epoch).total_seconds() * <span class="number">1000</span> <span class="comment">#计算传入时间相对于utc起始时间的毫秒数</span></span><br><span class="line"></span><br><span class="line">data = [go.Scatter(</span><br><span class="line">    x = x_datetime,</span><br><span class="line">    y = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>]</span><br><span class="line">)]</span><br><span class="line"></span><br><span class="line">layout = go.Layout(xaxis = dict(</span><br><span class="line">    range = [to_unix_time(datetime(<span class="number">2013</span>,<span class="number">10</span>,<span class="number">17</span>)),</span><br><span class="line">          to_unix_time(datetime(<span class="number">2013</span>,<span class="number">11</span>,<span class="number">20</span>))]</span><br><span class="line">))</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=data,layout=layout)</span><br><span class="line">pyplt(data,filename=<span class="string">'timeSeries.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>  主要是在x轴的布局上限制x的取值范围。</p>
+<h3 id="滑动选择控件"><a href="#滑动选择控件" class="headerlink" title="滑动选择控件"></a>滑动选择控件</h3><p>  滑块与选择器主要是通过Layout布局函数来实现的。对于选择器，主要是在xais.rangeselector.buttons中定义一些参数，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">xaxis = dict(</span><br><span class="line">      rangeselector = dict(</span><br><span class="line">          buttons=list([</span><br><span class="line">              dict(count = <span class="number">1</span>,</span><br><span class="line">                  label = <span class="string">'1m'</span>,</span><br><span class="line">                  step = <span class="string">'month'</span></span><br><span class="line">                  stepmode = <span class="string">'backward'</span></span><br><span class="line">              ),</span><br><span class="line">          ]) </span><br><span class="line">      )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>(1) xaxis 表示对x轴进行定义：rangeselector表示对x轴的选择器进行定义；button表示选择器的按钮，是一个列表形式，每个列表元素都是一个选择器按钮。<br>(2) “count = 1,step = ‘month’ “表示这个选择器覆盖的时间长度是“1xmonth”，即一个月，“label=‘1m’”表示标签为1m<br>(3) stepmode 有以下两种使用方法</p>
+<ul>
+<li>当stepmode=’backward’时，表示从后往前推进countxstep时间，列如，当count=1，step=‘year’时，表示时间范围将近一年。</li>
+<li>当stepmode = ‘todate’时，一般只有一种方用法，就是计算今年以来的时间。例如，当count=1，step=‘year’时，表示范围从最后日期到最后日期所在的年初，而不是一年。</li>
+</ul>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> FF</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment">#----pre def</span></span><br><span class="line">pyplt =  py.offline.plot</span><br><span class="line"></span><br><span class="line">data_matrix = [[<span class="string">'国家'</span>,<span class="string">'年份'</span>,<span class="string">'人口'</span>],</span><br><span class="line">               [<span class="string">'中国'</span>,<span class="number">2000</span>, <span class="number">1267430000</span>],</span><br><span class="line">               [<span class="string">'美国'</span>,<span class="number">2000</span>, <span class="number">282200000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>,<span class="number">2000</span>,<span class="number">27790000</span>],</span><br><span class="line">               [<span class="string">'中国'</span>, <span class="number">2000</span>, <span class="number">1267430000</span>],</span><br><span class="line">               [<span class="string">'美国'</span>, <span class="number">2000</span>, <span class="number">282200000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>, <span class="number">2000</span>, <span class="number">27790000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>,<span class="number">2000</span>,<span class="number">27790000</span>],</span><br><span class="line">               [<span class="string">'中国'</span>, <span class="number">2000</span>, <span class="number">1267430000</span>],</span><br><span class="line">               [<span class="string">'美国'</span>, <span class="number">2000</span>, <span class="number">282200000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>, <span class="number">2000</span>, <span class="number">27790000</span>]</span><br><span class="line">                ]</span><br><span class="line"></span><br><span class="line">table = FF.create_table(data_matrix)</span><br><span class="line">pyplt(table,filename=<span class="string">'simple_table'</span>,show_link=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
+<p>  代码用到了figure_factory类，这个类存储了除之前的基础绘图方法的一些高级绘图方法。</p>
+<h3 id="添加链接"><a href="#添加链接" class="headerlink" title="添加链接"></a>添加链接</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data_matrix = [</span><br><span class="line">    [<span class="string">'user'</span>,<span class="string">'Language'</span>,<span class="string">'chart Type'</span>,<span class="string">'#of Views'</span>],</span><br><span class="line">    [<span class="string">'&lt;a href="https://plot.ly/~empet/folder/home"&gt;empet&lt;/a&gt;'</span>,......         ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>  运用HTML语言中<a> 标签的herf属性即可：’<a href="https://plot.ly/~empet/folder/home" target="_blank" rel="noopener">empet</a>‘</a></p>
+<h3 id="使用Pandas"><a href="#使用Pandas" class="headerlink" title="使用Pandas"></a>使用Pandas</h3><p>  数据分析用Pandas，<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">r'day01.csv'</span>,index_col=[<span class="number">0</span>])</span><br><span class="line">df_sample = df[<span class="number">100</span>:<span class="number">120</span>]</span><br><span class="line"></span><br><span class="line">table = FF.create_table(df_sample,index=<span class="keyword">True</span>,index_title=<span class="string">'Date'</span>)</span><br><span class="line">pyplt(table,filename=<span class="string">'simple_table.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>  Pandas的数据结构DataFrame是一种表格结构。</p>
+<h3 id="改变大小与颜色"><a href="#改变大小与颜色" class="headerlink" title="改变大小与颜色"></a>改变大小与颜色</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">colorscale = [[<span class="number">0</span>,<span class="string">'#4d004c'</span>],[<span class="number">.5</span>, <span class="string">'#f2e5ff'</span>],[<span class="number">1</span>,<span class="string">'#ffffff'</span>]]</span><br><span class="line">fontcolor = [<span class="string">'#FCFCFC'</span>,<span class="string">'#00EE00'</span>,<span class="string">'#FF3030'</span>]</span><br><span class="line"></span><br><span class="line">table = FF.create_table(df_sample,index=<span class="keyword">True</span>,colorscale=colorscale,font_color = fontcolor)</span><br><span class="line">table.layout.width=<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置文本大小</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(table.layout.annotations)):</span><br><span class="line">    table.layout.annotations[i].font.size = <span class="number">10</span> + (i % <span class="number">50</span>)*<span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+<p>(1) colorscale参数是一个列表，是[[0,’#4d004c’],[.5, ‘#f2e5ff’],[1,’#ffffff’]]表示表头的颜色是#4d004c; [.5, ‘#f2e5ff’] 除表头外，表格的奇数行的背景颜色是’#f2e5ff’，同理[1,’#ffffff’]表示偶数行的背景色是’#ffffff’<br>(2) fontcolors参数时一个列表，它既可以是一个元素的列表，表示所有表格的文字使用一种颜色（默认是[‘#000000’]）,也可以是三个元素的列表，分别宝石表头，奇数列，偶数列的文字颜色，甚至可以是一个与表格行数相同的列表。可以为每一行自定义一个颜色。<br>(3) table.layout.width=1000 把表格的宽度设置为1000</p>
+<h3 id="表格与图"><a href="#表格与图" class="headerlink" title="表格与图"></a>表格与图</h3><p>  将表格与图展示在一张图上。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> FF</span><br><span class="line">  <span class="comment">#创建表格</span></span><br><span class="line">  figure = FF.create_table(table_data, height_constant = <span class="number">60</span>)</span><br><span class="line">  <span class="comment">#吧图添加到figure中</span></span><br><span class="line">  figure[<span class="string">'data'</span>].extend(go.Data([trace,trace1]))</span><br><span class="line"><span class="comment">#对两幅图进行布局管理</span></span><br><span class="line">figure.layout.xaxis.update(&#123;<span class="string">'domain'</span>:[[<span class="number">0</span>,<span class="number">.5</span>]&#125;)</span><br><span class="line">figure.layout.xaxis2.update(&#123;<span class="string">'domain'</span>:[<span class="number">0.6</span>, <span class="number">1.</span>]&#125;)</span><br><span class="line"><span class="comment">#设置第二幅图的y轴与x的对应。把字典figure.layout.yaxis2由空值变为&#123;‘anchor’:'x2','title':'分值'&#125;，其中&#123;‘anchor’:'x2'&#125;的意思是yaxis2坐标轴是与xaxis2坐标轴对应的。</span></span><br><span class="line">figure.layout.yaxis2,update(&#123;‘anchor’:<span class="string">'x2'</span>&#125;)  </span><br><span class="line">figure.layout.yaxis2,update(&#123;<span class="string">'title'</span>:<span class="string">'分值'</span>&#125;) </span><br><span class="line"><span class="comment">#设置figure的边界与标题</span></span><br><span class="line">figure.layout.margin.update(&#123;<span class="string">'t'</span>:<span class="number">50</span>, <span class="string">'b'</span>:<span class="number">100</span>&#125;)<span class="comment">#距离顶部50个单位，距离底部100个单位</span></span><br><span class="line">figure.layout.update（‘title’:<span class="string">'xxxxxxxx'</span>）<span class="comment">#标题</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="多个坐标轴"><a href="#多个坐标轴" class="headerlink" title="多个坐标轴"></a>多个坐标轴</h2><p>  一幅图中多个图表的数据可能相差很大，所以要以不同的坐标标定。</p>
+<h3 id="双坐标轴"><a href="#双坐标轴" class="headerlink" title="双坐标轴"></a>双坐标轴</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">layout = go.Layout(</span><br><span class="line">    title = <span class="string">'Y 轴双轴示例'</span>，</span><br><span class="line">    yaxis = dict(title = <span class="string">'yaxis 标题'</span>)，</span><br><span class="line">    yaxis2 = dict(title = <span class="string">'yaxis 标题'</span>,titlefont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">    tickfont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">    overlaying = <span class="string">'y'</span>,side = <span class="string">'right'</span>),</span><br><span class="line">    </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>  关键的代码：<br>  titlefont用于设置标题格式，这里谁知yaxis2的标题颜色<br>  tickfont 用于设置刻度格式，这里谁知yaxis2的标题颜色<br>  overlaying是覆盖的意思，y表示覆盖y轴。<br>  side的参数为top，bottom，left，right中的一种，表示坐标轴的位置，right表示右坐标轴，即yaxis2为右坐标轴。</p>
+<h4 id="多坐标轴"><a href="#多坐标轴" class="headerlink" title="多坐标轴"></a>多坐标轴</h4><p>   多坐标轴跟双坐标类似，在布局上多几个坐标轴的参数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    layout = go.Layout(</span><br><span class="line">        title = <span class="string">'Y 轴双轴示例'</span>，</span><br><span class="line">        yaxis = dict(title = <span class="string">'yaxis 标题'</span>)，</span><br><span class="line">        yaxis2 = dict(title = <span class="string">'yaxis 标题'</span>,titlefont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">        tickfont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">        overlaying = <span class="string">'y'</span>,</span><br><span class="line">        side = <span class="string">'right'</span>,</span><br><span class="line">        anchor = ‘free’,</span><br><span class="line">        position = <span class="number">0.85</span></span><br><span class="line">        ),</span><br><span class="line">        </span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">    比较重要的是下面几行：</span><br><span class="line">    overlaying = <span class="string">'y'</span>,</span><br><span class="line">    side = <span class="string">'right'</span>,</span><br><span class="line">    anchor = ‘free’,表示要绑定的坐标轴，如果为free，则其坐标轴由position的值指定，</span><br><span class="line">    position = <span class="number">0.85</span> <span class="comment">#表示字啊0.85这个位置上是yaxis2所在的位置。</span></span><br><span class="line"><span class="comment">## 多子图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 双子图</span></span><br><span class="line">方法一：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line">fig = tools.make_subplots(row =<span class="number">2</span>,cols=<span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace1,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">600</span>, title=<span class="string">'i &lt; 3 subplots'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>方法二：</p>
+<p>用domain参数；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.7</span>]</span><br><span class="line">     ),</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain = [<span class="number">0.8</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    yaxis2=dict(</span><br><span class="line">        anchor=<span class="string">'x2'</span></span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="多子图"><a href="#多子图" class="headerlink" title="多子图"></a>多子图</h3><p>方法一：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#用make_subplot</span></span><br><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line">fig = tools.make_subplots(row =<span class="number">2</span>,cols=<span class="number">2</span>，subplot_titles = (<span class="string">'Plot1'</span>, <span class="string">'Plot2'</span>, <span class="string">'Plot3'</span>, <span class="string">'Plot4'</span>))</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace4, <span class="number">2</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">     ),</span><br><span class="line">     yaxis = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">     ),</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain = [<span class="number">0.55</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    xaxis3=dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">        anchor=<span class="string">'y3'</span></span><br><span class="line">    )</span><br><span class="line">    xaxis4=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>,<span class="number">1</span>]</span><br><span class="line">        anchor=<span class="string">'y4'</span></span><br><span class="line">    )</span><br><span class="line">       yaxis2 = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">        anchor=<span class="string">'x2'</span></span><br><span class="line">     ),</span><br><span class="line">     yaxis3 = dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>,<span class="number">1</span>]</span><br><span class="line">     ),</span><br><span class="line">     yaxis4 = dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>,<span class="number">1</span>]</span><br><span class="line">         anchor=<span class="string">'x4'</span></span><br><span class="line">     ),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="分割视图区间"><a href="#分割视图区间" class="headerlink" title="分割视图区间"></a>分割视图区间</h3><p>想为每个子图定义自己的大小，就涉及视图区间的分配问题，make_subplots方法为解决这个问题封装了一个参数specs，这个参数的简单使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">2</span>, cols=<span class="number">2</span>, specs=[[&#123;&#125;, &#123;&#125;], [&#123;<span class="string">'colspan'</span>: <span class="number">2</span>&#125;, <span class="keyword">None</span>]],</span><br><span class="line">                          subplot_titles=(<span class="string">'First Subplot'</span>,<span class="string">'Second Subplot'</span>, <span class="string">'Third Subplot'</span>))</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace0, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(showlegend=<span class="keyword">False</span>, title=<span class="string">'Specs with Subplot Title'</span>)</span><br></pre></td></tr></table></figure>
+<p>  spes参数定义了如何分配视图区间，本案例中的specs=[[{}, {}], [{‘colspan’: 2, None]}，表示第一行的两个子图平均分配区间，第二行的第一个子图占据2列的区间，<br>更复杂的如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">fig = tools.make_subplots(rows=<span class="number">5</span>, cols=<span class="number">2</span>,</span><br><span class="line">                          specs=[[&#123;&#125;, &#123;<span class="string">'rowspan'</span>: <span class="number">2</span>&#125;],</span><br><span class="line">                                 [&#123;&#125;, <span class="keyword">None</span>],</span><br><span class="line">                                 [&#123;<span class="string">'rowspan'</span>: <span class="number">2</span>, <span class="string">'colspan'</span>: <span class="number">2</span>&#125;, <span class="keyword">None</span>],</span><br><span class="line">                                 [<span class="keyword">None</span>, <span class="keyword">None</span>],</span><br><span class="line">                                 [&#123;&#125;, &#123;&#125;]],</span><br><span class="line">                          print_grid=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace4, <span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace5, <span class="number">5</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace6, <span class="number">5</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">1000</span>, title=<span class="string">'specs examples'</span>)</span><br><span class="line">```  </span><br><span class="line">  把<span class="number">5</span>*<span class="number">2</span>的视图区间分配给<span class="number">6</span>个子图。</span><br><span class="line"><span class="comment">### 子图共享坐标轴</span></span><br><span class="line"></span><br><span class="line">方法一：</span><br><span class="line">```python</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">    y=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>],</span><br><span class="line">    y=[<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">    xaxis=<span class="string">'x2'</span>,</span><br><span class="line">    yaxis=<span class="string">'y'</span></span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">600</span>, <span class="number">700</span>, <span class="number">800</span>],</span><br><span class="line">    xaxis=<span class="string">'x'</span>,</span><br><span class="line">    yaxis=<span class="string">'y3'</span></span><br><span class="line">)</span><br><span class="line">trace4 = go.Scatter(</span><br><span class="line">    x=[<span class="number">4000</span>, <span class="number">5000</span>, <span class="number">6000</span>],</span><br><span class="line">    y=[<span class="number">7000</span>, <span class="number">8000</span>, <span class="number">9000</span>],</span><br><span class="line">    xaxis=<span class="string">'x4'</span>,</span><br><span class="line">    yaxis=<span class="string">'y4'</span></span><br><span class="line">)</span><br><span class="line">data = [trace1, trace2, trace3, trace4]</span><br><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis=dict(</span><br><span class="line">        domain=[<span class="number">0</span>, <span class="number">0.45</span>]</span><br><span class="line">    ),</span><br><span class="line">    yaxis=dict(</span><br><span class="line">        domain=[<span class="number">0</span>, <span class="number">0.45</span>]</span><br><span class="line">    ),</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    xaxis4=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>],</span><br><span class="line">        anchor=<span class="string">'y4'</span></span><br><span class="line">    ),</span><br><span class="line">    yaxis3=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    yaxis4=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>],</span><br><span class="line">        anchor=<span class="string">'x4'</span></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line">fig = go.Figure(data=data, layout=layout)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplot_shared_axes.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>方法二：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">    y=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>],</span><br><span class="line">    y=[<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">600</span>, <span class="number">700</span>, <span class="number">800</span>],</span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=[<span class="number">4000</span>, <span class="number">5000</span>, <span class="number">6000</span>],</span><br><span class="line">    y=[<span class="number">7000</span>, <span class="number">8000</span>, <span class="number">9000</span>],</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">2</span>, cols=<span class="number">2</span>, shared_yaxes=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace0, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">600</span>,</span><br><span class="line">                     title=<span class="string">'Multiple Subplots with Shared Y-Axes'</span>)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplot_share_yaxes.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>也可以设置两个坐标都共享：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">100</span>, <span class="number">110</span>, <span class="number">120</span>],</span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">    y=[<span class="number">1000</span>, <span class="number">1100</span>, <span class="number">1200</span>],</span><br><span class="line">)</span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">3</span>, cols=<span class="number">1</span>, specs=[[&#123;&#125;], [&#123;&#125;], [&#123;&#125;]],</span><br><span class="line">                          shared_xaxes=<span class="keyword">True</span>, shared_yaxes=<span class="keyword">True</span>,</span><br><span class="line">                          vertical_spacing=<span class="number">0.001</span>)</span><br><span class="line">fig.append_trace(trace1, <span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">600</span>, title=<span class="string">'Stacked Subplots with Shared X-Axes'</span>)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplots_shared_xyaxes.html'</span>)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/Python对象概览/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/28/Python对象概览/" itemprop="url">Python对象概览</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-28T10:26:16+08:00">
+                2019-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/28/Python对象概览/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/05/28/Python对象概览/" class="cy_cmt_count" data-xid="2019/05/28/Python对象概览/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>plotly的对象除各种类型的图表外，还包括数据库连接和数据分析工具<h2 id="plotly的绘图对象包括以下类型"><a href="#plotly的绘图对象包括以下类型" class="headerlink" title="plotly的绘图对象包括以下类型"></a>plotly的绘图对象包括以下类型</h2></li>
+</ul>
+<ul>
+<li>2D平面图表</li>
+<li>3D立体图表</li>
+<li>Maps，地图类型的图表</li>
+<li>WebGL格式图表</li>
+<li>Layout，画面布局函数</li>
+<li>Axis，坐标工具，包括2D/3D平面坐标，立体坐标和极坐标（AngularAxis）</li>
+<li>Annotation，图表注释工具。</li>
+<li>Error，误差调整工具，包括x、y、z三种坐标的误差修正</li>
+<li>Figure，图形整合工具</li>
+<li>Font，字体工具</li>
+<li>Legend，图例工具</li>
+<li>Margin，图表边缘间距工具</li>
+<li>Marker，标记工具</li>
+<li>金融行业通用的OHLC数据格式工具</li>
+<li>Array，数据坐标列表</li>
+<li>Data，图表数据整合工具</li>
+<li>Stream，实时图表数据流工具</li>
+<li>Scene，场景工具</li>
+</ul>
+<h3 id="2D平面绘图对象"><a href="#2D平面绘图对象" class="headerlink" title="2D平面绘图对象"></a>2D平面绘图对象</h3><ul>
+<li>Angularaxis，极坐标图表</li>
+<li>Area，区域图</li>
+<li>Bar，条形图</li>
+<li>Box，盒形图</li>
+<li>Candlestick与OHLC，金融股票行业常用的K线图与OHLC曲线图</li>
+<li>ColorBar，彩条图</li>
+<li>Contour，轮廓图（等高线图）</li>
+<li>Line，曲线图</li>
+<li>Heatmap，热点图 </li>
+<li>Histogram，直方图</li>
+<li>Histogram2d，2D平面直方图</li>
+<li>Histogram2dContour，二维轮廓直方图</li>
+<li>Pie，饼图</li>
+<li>Scatter，坐标分布图（包括线形图，散点图）<h3 id="3D立体绘图对象"><a href="#3D立体绘图对象" class="headerlink" title="3D立体绘图对象"></a>3D立体绘图对象</h3></li>
+<li>Scatter3D，3D立体散点图</li>
+<li>Surface，表面图</li>
+<li>Mesh3D，3D立体网格图</li>
+<li>Poincloud，点云图<h3 id="Maps地图"><a href="#Maps地图" class="headerlink" title="Maps地图"></a>Maps地图</h3></li>
+<li>ScatterGeo，基于GEO地图模式的散点图（包括线形图）</li>
+<li>Choropleth，立体等值线图</li>
+<li>Scattermapbox，基于地图的散点图<h3 id="WebGL格式图形"><a href="#WebGL格式图形" class="headerlink" title="WebGL格式图形"></a>WebGL格式图形</h3></li>
+<li>ScatterGL，WebGL格式散点图（包括线形图）<h3 id="图表辅助工具"><a href="#图表辅助工具" class="headerlink" title="图表辅助工具"></a>图表辅助工具</h3></li>
+<li>Annotation，图表注释工具。</li>
+<li>Axis，坐标工具，包括2D/3D平面坐标，立体坐标和极坐标（AngularAxis）</li>
+<li>RadialAxis，纵横比调整工具</li>
+<li>Scatterternary，散点三元图</li>
+<li>Scene，场景工具</li>
+<li>XBins、YBins：x轴，y轴辅助参数<h3 id="Layout画面布局函数"><a href="#Layout画面布局函数" class="headerlink" title="Layout画面布局函数"></a>Layout画面布局函数</h3></li>
+<li>3D Axes，三维坐标（x轴，y轴，z轴）</li>
+<li>Axes，平面坐标（x轴，y轴）</li>
+<li>File Settings，文件设置</li>
+<li>Horizontal Legends，水平标记</li>
+<li>Images，插入图片，一般作为背景或地图数据</li>
+<li>Inset Plots，插入图形</li>
+<li>LaTeX，专业排版数据</li>
+<li>Legends，图例设置</li>
+<li>Logos，绘制格式标志</li>
+<li>Multiple Axes，多轴设置</li>
+<li>Setting Graph Size，设置图形的大小</li>
+<li>Setting the Title，Legend Entries，and Axis Title，设置标题，图例调补和轴标题</li>
+<li>Subplots，子图设置，</li>
+<li>Text and Annotations，文本和注释</li>
+<li>Text and Font Styling ，文本和字体样式<br>使用help命令可以查看Layout函数的参数与属性<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> pygo</span><br><span class="line">print(help(pygo.Layout))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/27/plotly的动态可视化绘图05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1289,670 +2022,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/" itemprop="url">python出错ModuleNotFoundError: No module named 'sklearn.cross_validation'</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-28T22:19:31+08:00">
-                2019-04-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python心得/" itemprop="url" rel="index">
-                    <span itemprop="name">Python心得</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/" class="cy_cmt_count" data-xid="2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_test_split</span><br></pre></td></tr></table></figure>
-<h2 id="sklearn更新后在执行以上代码时可能会出现这样的问题："><a href="#sklearn更新后在执行以上代码时可能会出现这样的问题：" class="headerlink" title="sklearn更新后在执行以上代码时可能会出现这样的问题："></a>sklearn更新后在执行以上代码时可能会出现这样的问题：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'sklearn.cross_validation'</span></span><br></pre></td></tr></table></figure>
-<h2 id="此时可以考虑使用以下方法导入库："><a href="#此时可以考虑使用以下方法导入库：" class="headerlink" title="此时可以考虑使用以下方法导入库："></a>此时可以考虑使用以下方法导入库：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br></pre></td></tr></table></figure>
-<p>  此时就不会报错了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/14/代码库常见错误/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/14/代码库常见错误/" itemprop="url">代码库常见错误</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-14T12:36:59+08:00">
-                2019-04-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码托管/" itemprop="url" rel="index">
-                    <span itemprop="name">代码托管</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/14/代码库常见错误/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/14/代码库常见错误/" class="cy_cmt_count" data-xid="2019/04/14/代码库常见错误/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Git新建分支出现fatal-Not-a-valid-object-name-‘master’错误"><a href="#Git新建分支出现fatal-Not-a-valid-object-name-‘master’错误" class="headerlink" title="Git新建分支出现fatal: Not a valid object name: ‘master’错误"></a>Git新建分支出现fatal: Not a valid object name: ‘master’错误</h2><p>  原因是没有提交一个对象，要先commit之后才会真正建立master分支，此时才可以建立其它分支。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add c++</span><br><span class="line">git commot -m <span class="string">"提交c++"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#然后创建分支</span></span><br><span class="line">git branch wap</span><br><span class="line">git branch -a <span class="comment">#查看分支</span></span><br></pre></td></tr></table></figure>
-<h2 id="出现error-The-following-untracked-working-tree-files-would-be-overwritten-by-checkout"><a href="#出现error-The-following-untracked-working-tree-files-would-be-overwritten-by-checkout" class="headerlink" title="出现error: The following untracked working tree files would be overwritten by checkout"></a>出现error: The following untracked working tree files would be overwritten by checkout</h2><p>  pull代码出现error: The following untracked working tree files would be overwritten by checkout </p>
-<p>$ git clean -d -fx “”</p>
-<h2 id="Git使用之-pathspec-master-did-not-match-any-file-s-known-to-git"><a href="#Git使用之-pathspec-master-did-not-match-any-file-s-known-to-git" class="headerlink" title="Git使用之(pathspec master did not match any file(s) known to git)"></a>Git使用之(pathspec master did not match any file(s) known to git)</h2><p>  不能查看分支<br>git checkout master<br>提示如下错误:<br>error: pathspec ‘master’ did not match any file(s) known to git</p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>1.首先我们看一下分支情况:<br>git branch -a<br>2.如果没有看到你想要的分支,先获取所有分支:<br>git fetch  需要注意的是: 和push不同, fetch会自动获取远程 `新加入’ 的分支.</p>
-<h2 id="执行git-push出现”Everything-up-to-date”"><a href="#执行git-push出现”Everything-up-to-date”" class="headerlink" title="执行git push出现”Everything up-to-date”"></a>执行git push出现”Everything up-to-date”</h2><p>在github上git clone一个项目，在里面创建一个目录，然后git push的时候，出现报错”Everything up-to-date”</p>
-<p>原因：<br>1）没有git add .<br>2）没有git commit -m “提交信息”<br>如果上面两个步骤都成功执行，还出现这个错误是因为创建的目录下是空的，目录下必须有文件才能git push上传成功。<br>在github上创建文件的时候，在新文件名后加/符号就是文件夹，但是这种方式只支持英文名目录，中文名目录不支持。</p>
-<h2 id="对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法"><a href="#对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法" class="headerlink" title="对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法"></a>对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法</h2><p>主要原因是安全设置的问题：<br>首先执行git config http.sslVerify “false”   若出现下列错误<br>git config http.sslVerify “false”  fatal: not in a git directory<br>再继续执行   git config  –globle   http.sslVerify “false”   问题解决</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/13/创建自己的github代码库/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/13/创建自己的github代码库/" itemprop="url">创建自己的github代码库</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-13T22:12:00+08:00">
-                2019-04-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码托管/" itemprop="url" rel="index">
-                    <span itemprop="name">代码托管</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/13/创建自己的github代码库/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/13/创建自己的github代码库/" class="cy_cmt_count" data-xid="2019/04/13/创建自己的github代码库/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="我的代码库"><a href="#我的代码库" class="headerlink" title="我的代码库"></a>我的代码库</h2><p>  网址： <a href="https://github.com/coder-zhanglei/zhanglei.github.io.git" target="_blank" rel="noopener">https://github.com/coder-zhanglei/zhanglei.github.io.git</a><br>  参考的博客： <a href="https://www.cnblogs.com/zhixi/p/9584624.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhixi/p/9584624.html</a></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1、 在github上创建自己账号，建立自己的代码库，已完成<br>2、 安装git软件，下载地址：<a href="https://windows.github.com/" target="_blank" rel="noopener">https://windows.github.com/</a>  或  <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br>注：安装好git后右键就有Git Bash Here可以打开git上传下载文件的框</p>
-<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>1、 添加本地目录到远程仓库<br>  在你的本地文件目录下右击，就会出现Git Bash选项，点击进入。<br>2、 设置用户名和邮箱地址。这两个值是作为上传时记录的值。输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git config --global user.name <span class="string">"用户名"</span></span><br><span class="line"> git config --global user.email <span class="string">"邮箱"</span></span><br><span class="line"><span class="comment">#设置好后可以用命令查看当前的设置：</span></span><br><span class="line">git config --global user.name</span><br></pre></td></tr></table></figure>
-<h2 id="下载和上传远程仓库的文件"><a href="#下载和上传远程仓库的文件" class="headerlink" title="下载和上传远程仓库的文件"></a>下载和上传远程仓库的文件</h2><p>1、 首先初始化本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p>  注：会生成.git的隐藏文件。没有生成就是没初始化成功</p>
-<p>2、 连接远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin <span class="string">"https://github.com/GitHub用户名/代码仓库名称.git"</span></span><br><span class="line">git remote add origin  https://github.com/coder-zhanglei/zhanglei.github.io.git</span><br></pre></td></tr></table></figure>
-<p>  可以通过git remote -v 查看本地链接到的远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure></p>
-<p>  若分支设置错误，可以查看后切换分支<br>【git remote rm origin】 删除现有远程仓库<br>【git remote add origin url】添加新远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br><span class="line">git remote add origin url</span><br></pre></td></tr></table></figure>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>1、 从远程仓库拉取所有更新（每次上传项目都要操作）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
-<p>  注意：此处极易报错！<br>  因为远程代码仓库和本地代码仓库合并后，可能会有冲突，如有报错，使用git status查看状态</p>
-<p>  pull，因为两个仓库不同，发现refusing to merge unrelated histories，无法pull<br>  因为他们是两个不同的项目，要把两个不同的项目合并，git需要添加一句代码，在git pull，这句代码是在git 2.9.2版本发生的，最新的版本需要添加–allow-unrelated-histories<br>git pull origin master –allow-unrelated-histories<br>  注：在 git pull origin master –allow-unrelated-histories此步操作时，.gitignore文件错误冲突并没有解决，只是强制合并忽略掉了</p>
-<h3 id="创建分支，上传文件"><a href="#创建分支，上传文件" class="headerlink" title="创建分支，上传文件"></a>创建分支，上传文件</h3><p>  因为git是分布式管理，所以尽量不要在master主分支上作开发，例如自己有一个项目，在外面开发时，可以使用分支1，在家开发时可以使用分支2，如果有其他人参入 ，分别 使用分支3，4，5<br>每次提交本地代码时候，先合并远程master主分支到本地，再提交</p>
-<p>1、 创建本地分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
-<p>2、 切换本地分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure></p>
-<p>3、 本地分支提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git  add .</span><br><span class="line">git  commit -m ‘dev<span class="string">'</span></span><br><span class="line"><span class="string">git push -u origin dev</span></span><br></pre></td></tr></table></figure>
-<p>4、 合并本地分支到master</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   git  checkout master</span><br><span class="line">   git pull origin master</span><br><span class="line">   git merge origin/master  //合并分支</span><br><span class="line">   git status</span><br><span class="line">   </span><br><span class="line">On branch master</span><br><span class="line">Your branch is ahead of <span class="string">'origin/master'</span> by 12 commits.</span><br><span class="line">  (use <span class="string">"git push"</span> to publish your <span class="built_in">local</span> commits)</span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line">   <span class="comment">#上面的意思就是你有12个commit，需要push到远程master上 </span></span><br><span class="line">   <span class="comment">#执行下面命令即可</span></span><br><span class="line"></span><br><span class="line">   git push origin master</span><br></pre></td></tr></table></figure>
-<h4 id="上传指令的区别"><a href="#上传指令的区别" class="headerlink" title="上传指令的区别"></a>上传指令的区别</h4><p>$ git push origin</p>
-<p>上面命令表示，将当前分支推送到origin主机的对应分支。<br>如果当前分支只有一个追踪分支，那么主机名都可以省略。<br>$ git push 如果当前分支与多个主机存在追踪关系，那么这个时候-u选项会指定一个默认主机，这样后面就可以不加任何参数使用git push。<br>$ git push -u origin master 上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。<br> 不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。</p>
-<h2 id="仓库的管理"><a href="#仓库的管理" class="headerlink" title="仓库的管理"></a>仓库的管理</h2><p>  删除仓库，参考博客：<a href="https://blog.csdn.net/weixin_42152081/article/details/80635777" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42152081/article/details/80635777</a><br>  分支的管理 ：参考博客：<a href="https://blog.csdn.net/wankui/article/details/53328369" target="_blank" rel="noopener">https://blog.csdn.net/wankui/article/details/53328369</a></p>
-<h3 id="一-删除已有仓库"><a href="#一-删除已有仓库" class="headerlink" title="一.删除已有仓库"></a>一.删除已有仓库</h3><p>  如果我们想要删除Github中没有用的仓库，应该如何去做呢？<br>  进入到我们需要删除的仓库里面，找到“settings”即仓库设置：<br>  然后，在仓库设置里拉到最底部，找到“Danger Zone”即危险区域：<br>  点击“Delete this repository”这样就可以删除该仓库了。</p>
-<h3 id="二-删除Github中的某个文件或文件夹"><a href="#二-删除Github中的某个文件或文件夹" class="headerlink" title="二.删除Github中的某个文件或文件夹"></a>二.删除Github中的某个文件或文件夹</h3><p>  1.本地仓库和远程仓库同时删除<br>  例如要删除如图所示的_config.yml和index.md两个文件：<br>  我们先在本地把两个文件删除，然后执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add * //把本地仓库的文件上传到缓存。</span><br><span class="line">git commit -m <span class="string">'del'</span> //把第一步上传到缓存的东西上传到本地仓库，其中<span class="string">'del'</span>是操作标识，内容随便填，方便用户观看。</span><br><span class="line">git push origin master //把本地仓库的文件上传到远程仓库。</span><br></pre></td></tr></table></figure>
-<p>  这样，再打开远程仓库就可以看到两个文件已经被删除了：</p>
-<h2 id="列几个常用的git命令"><a href="#列几个常用的git命令" class="headerlink" title="列几个常用的git命令"></a>列几个常用的git命令</h2><p>git init 项目初始化<br>git clone 拉取项目<br>git add . 添加到暂存区<br>git commit -m 添加commit信息<br>git push 将本地分支推送到服务器上去<br>git pull origin master 本地与服务器端同步</p>
-<p>git log 查看日志<br>git status 查看当前状态<br>git tag 查看版本号<br>git diff 查看尚未提交的更新</p>
-<h3 id="git-fetch：相当于是从远程获取最新版本到本地，不会自动merge"><a href="#git-fetch：相当于是从远程获取最新版本到本地，不会自动merge" class="headerlink" title="git fetch：相当于是从远程获取最新版本到本地，不会自动merge"></a>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</h3><p>Git log -p master..origin/master 比较本地的master分支和origin/master分支的差别<br>查看对比一下 ，具体效果这里就不贴了，各位可以自行测试<br>git merge origin/master 进行合并</p>
-<p>需要注意的是: 和push不同, fetch会自动获取远程`新加入’的分支.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/github和gitlab/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/12/github和gitlab/" itemprop="url">github和gitlab</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-12T22:05:39+08:00">
-                2019-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码托管/" itemprop="url" rel="index">
-                    <span itemprop="name">代码托管</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/12/github和gitlab/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/12/github和gitlab/" class="cy_cmt_count" data-xid="2019/04/12/github和gitlab/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="github和gitlab的相同点"><a href="#github和gitlab的相同点" class="headerlink" title="github和gitlab的相同点"></a>github和gitlab的相同点</h2><p>  二者都是基于web的Git仓库，在很大程度上GitLab是仿照GitHub来做的，它们都提供了分享开源项目的平台，为开发团队提供了存储、分享、<br>发布和合作开发项目的中心化云存储的场所。GitHub同时提供公共仓库和私有仓库，但如果要使用私有仓库，是需要付费的。而GitLab解决了这个问题，你可以在上面创建私人的免费仓库。</p>
-<h2 id="github和gitlab的不相同点"><a href="#github和gitlab的不相同点" class="headerlink" title="github和gitlab的不相同点"></a>github和gitlab的不相同点</h2><p>  GitHub同时提供公共仓库和私有仓库，但如果要使用私有仓库，是需要付费的。而GitLab解决了这个问题，你可以在上面创建私人的免费仓库。<br>GitLab让开发团队对他们的代码仓库拥有更多的控制，相比于GitHub，它有不少的特色：</p>
-<ul>
-<li>允许免费设置仓库权限；</li>
-<li>允许用户选择分享一个project的部分代码</li>
-<li>允许用户设置project的获取权限，进一步的提升安全性；可以设置获取到团队整体的改进进度；通过innersourcing让不在权限范围内的人访问不到该资源。</li>
-<li>从代码私有性方面来看，有时公司并不希望员工获取到全部的代码，这个时候GitLab无疑是更好的选择。但对于开源项目而言，GitHub依然是代码托管的首选。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2003,7 +2072,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2025,7 +2094,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

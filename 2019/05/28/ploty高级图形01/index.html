@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="plotly高级图形,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="时间序列使用方法1234567891011121314151617import plotly as pyimport plotly.graph_objs as gofrom datetime import datetime#----pre defpyplt =  py.offline.plotx_datetime = [datetime(year=2013,month=10,day=4),date">
+<meta name="keywords" content="plotly高级图形">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ploty高级图形01">
+<meta property="og:url" content="http://yoursite.com/2019/05/28/ploty高级图形01/index.html">
+<meta property="og:site_name" content="YHNE&#39;s bolg">
+<meta property="og:description" content="时间序列使用方法1234567891011121314151617import plotly as pyimport plotly.graph_objs as gofrom datetime import datetime#----pre defpyplt =  py.offline.plotx_datetime = [datetime(year=2013,month=10,day=4),date">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-31T03:04:53.160Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ploty高级图形01">
+<meta name="twitter:description" content="时间序列使用方法1234567891011121314151617import plotly as pyimport plotly.graph_objs as gofrom datetime import datetime#----pre defpyplt =  py.offline.plotx_datetime = [datetime(year=2013,month=10,day=4),date">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/28/ploty高级图形01/">
+
+
+
+
+
+  <title>ploty高级图形01 | YHNE's bolg</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YHNE's bolg</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/ploty高级图形01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ploty高级图形01</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-28T10:48:17+08:00">
+                2019-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/28/ploty高级图形01/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/05/28/ploty高级图形01/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="时间序列"><a href="#时间序列" class="headerlink" title="时间序列"></a>时间序列</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#----pre def</span></span><br><span class="line">pyplt =  py.offline.plot</span><br><span class="line"></span><br><span class="line">x_datetime = [datetime(year=<span class="number">2013</span>,month=<span class="number">10</span>,day=<span class="number">4</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">11</span>,day=<span class="number">5</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">12</span>,day=<span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line">x_string = [<span class="string">'2013-10-04'</span>,<span class="string">'2013-11-05'</span>,<span class="string">'2013-12-06'</span>]<span class="comment">#时间格式的字符串</span></span><br><span class="line"></span><br><span class="line">trace_time = go.Scatter(x=x_datetime,y=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>],name = <span class="string">'trace_datetime'</span>)</span><br><span class="line">trace_string = go.Scatter(x=x_string,y=[<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>],name=<span class="string">'trace_string'</span>)</span><br><span class="line"></span><br><span class="line">data = [trace_time,trace_string]</span><br><span class="line">pyplt(data,filename=<span class="string">'timeSeries.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>  从代码可以看出，只要传入的x是日期或时间格式的字符串，plotly就会自动识别为时间格式。</p>
+<h3 id="时间范围约束"><a href="#时间范围约束" class="headerlink" title="时间范围约束"></a>时间范围约束</h3><p>  有时候我们只想展示部分时间范围内的绘图结果，这时通过传递一个range参数即可实现这个功能<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#----pre def</span></span><br><span class="line">pyplt =  py.offline.plot</span><br><span class="line"></span><br><span class="line">x_datetime = [datetime(year=<span class="number">2013</span>,month=<span class="number">10</span>,day=<span class="number">4</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">11</span>,day=<span class="number">5</span>),datetime(year=<span class="number">2013</span>,month=<span class="number">12</span>,day=<span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">to_unix_time</span><span class="params">(dt)</span>:</span></span><br><span class="line">    <span class="string">''''</span></span><br><span class="line"><span class="string">    :param dt:datetime 类型的时间戳</span></span><br><span class="line"><span class="string">    ：return:dt相对于utc起始时间差别的毫秒数</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    epoch = datetime.utcfromtimestamp(<span class="number">0</span>) <span class="comment">#获取0时刻对应的utc（世界标准时间）</span></span><br><span class="line">    <span class="keyword">return</span> (dt - epoch).total_seconds() * <span class="number">1000</span> <span class="comment">#计算传入时间相对于utc起始时间的毫秒数</span></span><br><span class="line"></span><br><span class="line">data = [go.Scatter(</span><br><span class="line">    x = x_datetime,</span><br><span class="line">    y = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">6</span>]</span><br><span class="line">)]</span><br><span class="line"></span><br><span class="line">layout = go.Layout(xaxis = dict(</span><br><span class="line">    range = [to_unix_time(datetime(<span class="number">2013</span>,<span class="number">10</span>,<span class="number">17</span>)),</span><br><span class="line">          to_unix_time(datetime(<span class="number">2013</span>,<span class="number">11</span>,<span class="number">20</span>))]</span><br><span class="line">))</span><br><span class="line"></span><br><span class="line">fig = go.Figure(data=data,layout=layout)</span><br><span class="line">pyplt(data,filename=<span class="string">'timeSeries.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>  主要是在x轴的布局上限制x的取值范围。</p>
+<h3 id="滑动选择控件"><a href="#滑动选择控件" class="headerlink" title="滑动选择控件"></a>滑动选择控件</h3><p>  滑块与选择器主要是通过Layout布局函数来实现的。对于选择器，主要是在xais.rangeselector.buttons中定义一些参数，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">xaxis = dict(</span><br><span class="line">      rangeselector = dict(</span><br><span class="line">          buttons=list([</span><br><span class="line">              dict(count = <span class="number">1</span>,</span><br><span class="line">                  label = <span class="string">'1m'</span>,</span><br><span class="line">                  step = <span class="string">'month'</span></span><br><span class="line">                  stepmode = <span class="string">'backward'</span></span><br><span class="line">              ),</span><br><span class="line">          ]) </span><br><span class="line">      )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>(1) xaxis 表示对x轴进行定义：rangeselector表示对x轴的选择器进行定义；button表示选择器的按钮，是一个列表形式，每个列表元素都是一个选择器按钮。<br>(2) “count = 1,step = ‘month’ “表示这个选择器覆盖的时间长度是“1xmonth”，即一个月，“label=‘1m’”表示标签为1m<br>(3) stepmode 有以下两种使用方法</p>
+<ul>
+<li>当stepmode=’backward’时，表示从后往前推进countxstep时间，列如，当count=1，step=‘year’时，表示时间范围将近一年。</li>
+<li>当stepmode = ‘todate’时，一般只有一种方用法，就是计算今年以来的时间。例如，当count=1，step=‘year’时，表示范围从最后日期到最后日期所在的年初，而不是一年。</li>
+</ul>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> FF</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment">#----pre def</span></span><br><span class="line">pyplt =  py.offline.plot</span><br><span class="line"></span><br><span class="line">data_matrix = [[<span class="string">'国家'</span>,<span class="string">'年份'</span>,<span class="string">'人口'</span>],</span><br><span class="line">               [<span class="string">'中国'</span>,<span class="number">2000</span>, <span class="number">1267430000</span>],</span><br><span class="line">               [<span class="string">'美国'</span>,<span class="number">2000</span>, <span class="number">282200000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>,<span class="number">2000</span>,<span class="number">27790000</span>],</span><br><span class="line">               [<span class="string">'中国'</span>, <span class="number">2000</span>, <span class="number">1267430000</span>],</span><br><span class="line">               [<span class="string">'美国'</span>, <span class="number">2000</span>, <span class="number">282200000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>, <span class="number">2000</span>, <span class="number">27790000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>,<span class="number">2000</span>,<span class="number">27790000</span>],</span><br><span class="line">               [<span class="string">'中国'</span>, <span class="number">2000</span>, <span class="number">1267430000</span>],</span><br><span class="line">               [<span class="string">'美国'</span>, <span class="number">2000</span>, <span class="number">282200000</span>],</span><br><span class="line">               [<span class="string">'加拿大'</span>, <span class="number">2000</span>, <span class="number">27790000</span>]</span><br><span class="line">                ]</span><br><span class="line"></span><br><span class="line">table = FF.create_table(data_matrix)</span><br><span class="line">pyplt(table,filename=<span class="string">'simple_table'</span>,show_link=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
+<p>  代码用到了figure_factory类，这个类存储了除之前的基础绘图方法的一些高级绘图方法。</p>
+<h3 id="添加链接"><a href="#添加链接" class="headerlink" title="添加链接"></a>添加链接</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data_matrix = [</span><br><span class="line">    [<span class="string">'user'</span>,<span class="string">'Language'</span>,<span class="string">'chart Type'</span>,<span class="string">'#of Views'</span>],</span><br><span class="line">    [<span class="string">'&lt;a href="https://plot.ly/~empet/folder/home"&gt;empet&lt;/a&gt;'</span>,......         ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>  运用HTML语言中<a> 标签的herf属性即可：’<a href="https://plot.ly/~empet/folder/home" target="_blank" rel="noopener">empet</a>‘</a></p>
+<h3 id="使用Pandas"><a href="#使用Pandas" class="headerlink" title="使用Pandas"></a>使用Pandas</h3><p>  数据分析用Pandas，<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">r'day01.csv'</span>,index_col=[<span class="number">0</span>])</span><br><span class="line">df_sample = df[<span class="number">100</span>:<span class="number">120</span>]</span><br><span class="line"></span><br><span class="line">table = FF.create_table(df_sample,index=<span class="keyword">True</span>,index_title=<span class="string">'Date'</span>)</span><br><span class="line">pyplt(table,filename=<span class="string">'simple_table.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>  Pandas的数据结构DataFrame是一种表格结构。</p>
+<h3 id="改变大小与颜色"><a href="#改变大小与颜色" class="headerlink" title="改变大小与颜色"></a>改变大小与颜色</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">colorscale = [[<span class="number">0</span>,<span class="string">'#4d004c'</span>],[<span class="number">.5</span>, <span class="string">'#f2e5ff'</span>],[<span class="number">1</span>,<span class="string">'#ffffff'</span>]]</span><br><span class="line">fontcolor = [<span class="string">'#FCFCFC'</span>,<span class="string">'#00EE00'</span>,<span class="string">'#FF3030'</span>]</span><br><span class="line"></span><br><span class="line">table = FF.create_table(df_sample,index=<span class="keyword">True</span>,colorscale=colorscale,font_color = fontcolor)</span><br><span class="line">table.layout.width=<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置文本大小</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(table.layout.annotations)):</span><br><span class="line">    table.layout.annotations[i].font.size = <span class="number">10</span> + (i % <span class="number">50</span>)*<span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+<p>(1) colorscale参数是一个列表，是[[0,’#4d004c’],[.5, ‘#f2e5ff’],[1,’#ffffff’]]表示表头的颜色是#4d004c; [.5, ‘#f2e5ff’] 除表头外，表格的奇数行的背景颜色是’#f2e5ff’，同理[1,’#ffffff’]表示偶数行的背景色是’#ffffff’<br>(2) fontcolors参数时一个列表，它既可以是一个元素的列表，表示所有表格的文字使用一种颜色（默认是[‘#000000’]）,也可以是三个元素的列表，分别宝石表头，奇数列，偶数列的文字颜色，甚至可以是一个与表格行数相同的列表。可以为每一行自定义一个颜色。<br>(3) table.layout.width=1000 把表格的宽度设置为1000</p>
+<h3 id="表格与图"><a href="#表格与图" class="headerlink" title="表格与图"></a>表格与图</h3><p>  将表格与图展示在一张图上。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> FF</span><br><span class="line">  <span class="comment">#创建表格</span></span><br><span class="line">  figure = FF.create_table(table_data, height_constant = <span class="number">60</span>)</span><br><span class="line">  <span class="comment">#吧图添加到figure中</span></span><br><span class="line">  figure[<span class="string">'data'</span>].extend(go.Data([trace,trace1]))</span><br><span class="line"><span class="comment">#对两幅图进行布局管理</span></span><br><span class="line">figure.layout.xaxis.update(&#123;<span class="string">'domain'</span>:[[<span class="number">0</span>,<span class="number">.5</span>]&#125;)</span><br><span class="line">figure.layout.xaxis2.update(&#123;<span class="string">'domain'</span>:[<span class="number">0.6</span>, <span class="number">1.</span>]&#125;)</span><br><span class="line"><span class="comment">#设置第二幅图的y轴与x的对应。把字典figure.layout.yaxis2由空值变为&#123;‘anchor’:'x2','title':'分值'&#125;，其中&#123;‘anchor’:'x2'&#125;的意思是yaxis2坐标轴是与xaxis2坐标轴对应的。</span></span><br><span class="line">figure.layout.yaxis2,update(&#123;‘anchor’:<span class="string">'x2'</span>&#125;)  </span><br><span class="line">figure.layout.yaxis2,update(&#123;<span class="string">'title'</span>:<span class="string">'分值'</span>&#125;) </span><br><span class="line"><span class="comment">#设置figure的边界与标题</span></span><br><span class="line">figure.layout.margin.update(&#123;<span class="string">'t'</span>:<span class="number">50</span>, <span class="string">'b'</span>:<span class="number">100</span>&#125;)<span class="comment">#距离顶部50个单位，距离底部100个单位</span></span><br><span class="line">figure.layout.update（‘title’:<span class="string">'xxxxxxxx'</span>）<span class="comment">#标题</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="多个坐标轴"><a href="#多个坐标轴" class="headerlink" title="多个坐标轴"></a>多个坐标轴</h2><p>  一幅图中多个图表的数据可能相差很大，所以要以不同的坐标标定。</p>
+<h3 id="双坐标轴"><a href="#双坐标轴" class="headerlink" title="双坐标轴"></a>双坐标轴</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">layout = go.Layout(</span><br><span class="line">    title = <span class="string">'Y 轴双轴示例'</span>，</span><br><span class="line">    yaxis = dict(title = <span class="string">'yaxis 标题'</span>)，</span><br><span class="line">    yaxis2 = dict(title = <span class="string">'yaxis 标题'</span>,titlefont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">    tickfont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">    overlaying = <span class="string">'y'</span>,side = <span class="string">'right'</span>),</span><br><span class="line">    </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>  关键的代码：<br>  titlefont用于设置标题格式，这里谁知yaxis2的标题颜色<br>  tickfont 用于设置刻度格式，这里谁知yaxis2的标题颜色<br>  overlaying是覆盖的意思，y表示覆盖y轴。<br>  side的参数为top，bottom，left，right中的一种，表示坐标轴的位置，right表示右坐标轴，即yaxis2为右坐标轴。</p>
+<h4 id="多坐标轴"><a href="#多坐标轴" class="headerlink" title="多坐标轴"></a>多坐标轴</h4><p>   多坐标轴跟双坐标类似，在布局上多几个坐标轴的参数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    layout = go.Layout(</span><br><span class="line">        title = <span class="string">'Y 轴双轴示例'</span>，</span><br><span class="line">        yaxis = dict(title = <span class="string">'yaxis 标题'</span>)，</span><br><span class="line">        yaxis2 = dict(title = <span class="string">'yaxis 标题'</span>,titlefont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">        tickfont = dict(color = <span class="string">'rgb(148, 103, 189)'</span>),</span><br><span class="line">        overlaying = <span class="string">'y'</span>,</span><br><span class="line">        side = <span class="string">'right'</span>,</span><br><span class="line">        anchor = ‘free’,</span><br><span class="line">        position = <span class="number">0.85</span></span><br><span class="line">        ),</span><br><span class="line">        </span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">    比较重要的是下面几行：</span><br><span class="line">    overlaying = <span class="string">'y'</span>,</span><br><span class="line">    side = <span class="string">'right'</span>,</span><br><span class="line">    anchor = ‘free’,表示要绑定的坐标轴，如果为free，则其坐标轴由position的值指定，</span><br><span class="line">    position = <span class="number">0.85</span> <span class="comment">#表示字啊0.85这个位置上是yaxis2所在的位置。</span></span><br><span class="line"><span class="comment">## 多子图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 双子图</span></span><br><span class="line">方法一：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line">fig = tools.make_subplots(row =<span class="number">2</span>,cols=<span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace1,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">600</span>, title=<span class="string">'i &lt; 3 subplots'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>方法二：</p>
+<p>用domain参数；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.7</span>]</span><br><span class="line">     ),</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain = [<span class="number">0.8</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    yaxis2=dict(</span><br><span class="line">        anchor=<span class="string">'x2'</span></span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="多子图"><a href="#多子图" class="headerlink" title="多子图"></a>多子图</h3><p>方法一：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#用make_subplot</span></span><br><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line">fig = tools.make_subplots(row =<span class="number">2</span>,cols=<span class="number">2</span>，subplot_titles = (<span class="string">'Plot1'</span>, <span class="string">'Plot2'</span>, <span class="string">'Plot3'</span>, <span class="string">'Plot4'</span>))</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace4, <span class="number">2</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">     ),</span><br><span class="line">     yaxis = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">     ),</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain = [<span class="number">0.55</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    xaxis3=dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">        anchor=<span class="string">'y3'</span></span><br><span class="line">    )</span><br><span class="line">    xaxis4=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>,<span class="number">1</span>]</span><br><span class="line">        anchor=<span class="string">'y4'</span></span><br><span class="line">    )</span><br><span class="line">       yaxis2 = dict(</span><br><span class="line">        domain=[<span class="number">0</span>,<span class="number">0.45</span>]</span><br><span class="line">        anchor=<span class="string">'x2'</span></span><br><span class="line">     ),</span><br><span class="line">     yaxis3 = dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>,<span class="number">1</span>]</span><br><span class="line">     ),</span><br><span class="line">     yaxis4 = dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>,<span class="number">1</span>]</span><br><span class="line">         anchor=<span class="string">'x4'</span></span><br><span class="line">     ),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="分割视图区间"><a href="#分割视图区间" class="headerlink" title="分割视图区间"></a>分割视图区间</h3><p>想为每个子图定义自己的大小，就涉及视图区间的分配问题，make_subplots方法为解决这个问题封装了一个参数specs，这个参数的简单使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">2</span>, cols=<span class="number">2</span>, specs=[[&#123;&#125;, &#123;&#125;], [&#123;<span class="string">'colspan'</span>: <span class="number">2</span>&#125;, <span class="keyword">None</span>]],</span><br><span class="line">                          subplot_titles=(<span class="string">'First Subplot'</span>,<span class="string">'Second Subplot'</span>, <span class="string">'Third Subplot'</span>))</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace0, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(showlegend=<span class="keyword">False</span>, title=<span class="string">'Specs with Subplot Title'</span>)</span><br></pre></td></tr></table></figure>
+<p>  spes参数定义了如何分配视图区间，本案例中的specs=[[{}, {}], [{‘colspan’: 2, None]}，表示第一行的两个子图平均分配区间，第二行的第一个子图占据2列的区间，<br>更复杂的如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">fig = tools.make_subplots(rows=<span class="number">5</span>, cols=<span class="number">2</span>,</span><br><span class="line">                          specs=[[&#123;&#125;, &#123;<span class="string">'rowspan'</span>: <span class="number">2</span>&#125;],</span><br><span class="line">                                 [&#123;&#125;, <span class="keyword">None</span>],</span><br><span class="line">                                 [&#123;<span class="string">'rowspan'</span>: <span class="number">2</span>, <span class="string">'colspan'</span>: <span class="number">2</span>&#125;, <span class="keyword">None</span>],</span><br><span class="line">                                 [<span class="keyword">None</span>, <span class="keyword">None</span>],</span><br><span class="line">                                 [&#123;&#125;, &#123;&#125;]],</span><br><span class="line">                          print_grid=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace4, <span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace5, <span class="number">5</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace6, <span class="number">5</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">1000</span>, title=<span class="string">'specs examples'</span>)</span><br><span class="line">```  </span><br><span class="line">  把<span class="number">5</span>*<span class="number">2</span>的视图区间分配给<span class="number">6</span>个子图。</span><br><span class="line"><span class="comment">### 子图共享坐标轴</span></span><br><span class="line"></span><br><span class="line">方法一：</span><br><span class="line">```python</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">    y=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>],</span><br><span class="line">    y=[<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">    xaxis=<span class="string">'x2'</span>,</span><br><span class="line">    yaxis=<span class="string">'y'</span></span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">600</span>, <span class="number">700</span>, <span class="number">800</span>],</span><br><span class="line">    xaxis=<span class="string">'x'</span>,</span><br><span class="line">    yaxis=<span class="string">'y3'</span></span><br><span class="line">)</span><br><span class="line">trace4 = go.Scatter(</span><br><span class="line">    x=[<span class="number">4000</span>, <span class="number">5000</span>, <span class="number">6000</span>],</span><br><span class="line">    y=[<span class="number">7000</span>, <span class="number">8000</span>, <span class="number">9000</span>],</span><br><span class="line">    xaxis=<span class="string">'x4'</span>,</span><br><span class="line">    yaxis=<span class="string">'y4'</span></span><br><span class="line">)</span><br><span class="line">data = [trace1, trace2, trace3, trace4]</span><br><span class="line">layout = go.Layout(</span><br><span class="line">    xaxis=dict(</span><br><span class="line">        domain=[<span class="number">0</span>, <span class="number">0.45</span>]</span><br><span class="line">    ),</span><br><span class="line">    yaxis=dict(</span><br><span class="line">        domain=[<span class="number">0</span>, <span class="number">0.45</span>]</span><br><span class="line">    ),</span><br><span class="line">    xaxis2=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    xaxis4=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>],</span><br><span class="line">        anchor=<span class="string">'y4'</span></span><br><span class="line">    ),</span><br><span class="line">    yaxis3=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>]</span><br><span class="line">    ),</span><br><span class="line">    yaxis4=dict(</span><br><span class="line">        domain=[<span class="number">0.55</span>, <span class="number">1</span>],</span><br><span class="line">        anchor=<span class="string">'x4'</span></span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line">fig = go.Figure(data=data, layout=layout)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplot_shared_axes.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>方法二：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">    y=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>],</span><br><span class="line">    y=[<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">600</span>, <span class="number">700</span>, <span class="number">800</span>],</span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=[<span class="number">4000</span>, <span class="number">5000</span>, <span class="number">6000</span>],</span><br><span class="line">    y=[<span class="number">7000</span>, <span class="number">8000</span>, <span class="number">9000</span>],</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">2</span>, cols=<span class="number">2</span>, shared_yaxes=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">fig.append_trace(trace0, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace1, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">600</span>,</span><br><span class="line">                     title=<span class="string">'Multiple Subplots with Shared Y-Axes'</span>)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplot_share_yaxes.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>也可以设置两个坐标都共享：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> plotly <span class="keyword">import</span> tools</span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    y=[<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]</span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">100</span>, <span class="number">110</span>, <span class="number">120</span>],</span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>],</span><br><span class="line">    y=[<span class="number">1000</span>, <span class="number">1100</span>, <span class="number">1200</span>],</span><br><span class="line">)</span><br><span class="line">fig = tools.make_subplots(rows=<span class="number">3</span>, cols=<span class="number">1</span>, specs=[[&#123;&#125;], [&#123;&#125;], [&#123;&#125;]],</span><br><span class="line">                          shared_xaxes=<span class="keyword">True</span>, shared_yaxes=<span class="keyword">True</span>,</span><br><span class="line">                          vertical_spacing=<span class="number">0.001</span>)</span><br><span class="line">fig.append_trace(trace1, <span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace2, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">fig.append_trace(trace3, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">fig[<span class="string">'layout'</span>].update(height=<span class="number">600</span>, width=<span class="number">600</span>, title=<span class="string">'Stacked Subplots with Shared X-Axes'</span>)</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/subplots_shared_xyaxes.html'</span>)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感恩有你</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Zhang Lei WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Zhang Lei Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/plotly高级图形/" rel="tag"># plotly高级图形</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/28/Python对象概览/" rel="next" title="Python对象概览">
+                <i class="fa fa-chevron-left"></i> Python对象概览
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/31/ploty高级图形02/" rel="prev" title="ploty高级图形02">
+                ploty高级图形02 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zhang Lei</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间序列"><span class="nav-number">1.</span> <span class="nav-text">时间序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">1.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间范围约束"><span class="nav-number">1.2.</span> <span class="nav-text">时间范围约束</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滑动选择控件"><span class="nav-number">1.3.</span> <span class="nav-text">滑动选择控件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">2.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加链接"><span class="nav-number">2.1.</span> <span class="nav-text">添加链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Pandas"><span class="nav-number">2.2.</span> <span class="nav-text">使用Pandas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变大小与颜色"><span class="nav-number">2.3.</span> <span class="nav-text">改变大小与颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格与图"><span class="nav-number">2.4.</span> <span class="nav-text">表格与图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多个坐标轴"><span class="nav-number">3.</span> <span class="nav-text">多个坐标轴</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#双坐标轴"><span class="nav-number">3.1.</span> <span class="nav-text">双坐标轴</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多坐标轴"><span class="nav-number">3.1.1.</span> <span class="nav-text">多坐标轴</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多子图"><span class="nav-number">3.2.</span> <span class="nav-text">多子图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割视图区间"><span class="nav-number">3.3.</span> <span class="nav-text">分割视图区间</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Lei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytRlKLcx';
+      var conf = '4c2d29378be7cfd02d3ed7eab947e5ba';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
