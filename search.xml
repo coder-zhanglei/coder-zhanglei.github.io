@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[matlab 程序设计基础]]></title>
     <url>%2F2019%2F08%2F03%2Fmatlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[程序结构 程序设计语言，程序结构大致可分为顺序结构，循环结构，与分支结构三类。 程序流程控制指令1、 中断命令break2、 return命令3、 等待用户反应命令pause pause指令是暂停指令。程序运行时，到pause指令执行后，程序将暂停，等待用户按任意键后而继续执行。 pause 暂停程序等待回应 pause(n) 程序运行过程中，等待n秒后继续运行 pause on 显示其后的pause指令，并执行pause指令 pause off 显示其后的pause指令，但不执行该指令人机交互语句1、 input命令v= input(‘string’) %以文本字符串string为信息给出用户提示信息，将用户输入的内容赋值给变量vv = input(‘string’,’s’) % 以文本字符串string为信息给出用户提示信息，将用户输入的内容作为字符串赋值给变量v2、 keyboard命令 是调用键盘命令。当用户输入return并按enter键后，控制权交还给M文件。3、 menu命令生成一个菜单供用户选择输入k = menu(‘mtitle’,’opt1’,’opt2’,…..,’optn’)子函数与私有函数子函数 在函数文件中定义的函数作为主函数，而在函数体内定义的其他函数均被视作子函数。子函数只能为主函数或同一主函数下其他的子函数所调用。私有函数 MATLAB语言中把放置在目录private下的函数称为私有函数，这些函数只有private目录的父目录中的函数才能调用，其他目录的函数不能调用 子函数与私有函数的区别1、 私有函数在可用的范围上大于子函数2、 在函数编辑上的结构上，私有函数与一般的函数文件的编辑相同，而子函数则只能在主函数文件中编辑。3、 当在MATLAB的M文件中调用函数时，首先检测该函数是否为此文件加下的子函数，若否，则检测是否为可用的私有函数，任然否，检测该函数是否为MATLAB搜索路径上的其他M文件。 程序设计的优化 虽然在MATLAB语言中没有规定使用变量是必须先定义，但是对于未定义的变量，如果操作系统出现越界赋值时，系统将不得不对变量进行扩充，这样大大降低了程序的运行效率，对于可能出现变量的维度不断扩大的情况下，应当预先估计变量可能出现的最大维度，进行预定义。]]></content>
+      <categories>
+        <category>matlab学习</category>
+      </categories>
+      <tags>
+        <tag>matlab基础知识</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[matlab基础知识]]></title>
