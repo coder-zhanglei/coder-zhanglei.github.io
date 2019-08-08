@@ -291,6 +291,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/linux基本配置指令03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/23/linux基本配置指令03/" itemprop="url">linux基本配置指令03</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-23T17:30:05+08:00">
+                2019-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/02/23/linux基本配置指令03/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/02/23/linux基本配置指令03/" class="cy_cmt_count" data-xid="2019/02/23/linux基本配置指令03/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="manpath-：设置man手册的查询路径"><a href="#manpath-：设置man手册的查询路径" class="headerlink" title="manpath ：设置man手册的查询路径"></a>manpath ：设置man手册的查询路径</h3><h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">manpath <span class="comment">#列出目前的查询路径</span></span><br><span class="line">manpath -M /home/zhang <span class="comment">#指定查询路径</span></span><br></pre></td></tr></table></figure>
+<h3 id="free：显示内存信息"><a href="#free：显示内存信息" class="headerlink" title="free：显示内存信息"></a>free：显示内存信息</h3><h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">free -b <span class="comment">#以字节为单位显示</span></span><br><span class="line">free -k <span class="comment">#以KB为单位显示</span></span><br><span class="line">free -m <span class="comment">#以MB为单位显示</span></span><br><span class="line">free -s 10 <span class="comment">#每隔10s执行一次free，连续显示内存信息</span></span><br></pre></td></tr></table></figure>
+<h3 id="crontab-：指定自动执行任务"><a href="#crontab-：指定自动执行任务" class="headerlink" title="crontab ：指定自动执行任务"></a>crontab ：指定自动执行任务</h3><ul>
+<li>语法: crontab [-u&lt;用户名&gt;] [-可选参数]</li>
+</ul>
+<h4 id="创建新的-crontab-文件，或编辑现有文件"><a href="#创建新的-crontab-文件，或编辑现有文件" class="headerlink" title="创建新的 crontab 文件，或编辑现有文件"></a>创建新的 crontab 文件，或编辑现有文件</h4><p>  创建 crontab 文件的最简单方法是使用 crontab -e 命令。<br>  此命令会调用已为系统环境设置的文本编辑器。系统环境的缺省编辑器在 EDITOR 环境变量中定义。如果尚未设置此变量，crontab 命令将使用缺省编辑器 ed。最好选择您熟悉的编辑器。<br><strong>以下示例说明如何确定是否已定义编辑器，以及如何将 vi 设置为缺省值</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">which</span> <span class="variable">$EDITOR</span></span><br><span class="line">$ </span><br><span class="line">$ EDITOR=vi</span><br><span class="line">$ <span class="built_in">export</span> EDITOR</span><br></pre></td></tr></table></figure></p>
+<h4 id="创建-crontab-文件时，该文件会自动放入-var-spool-cron-crontabs-目录，"><a href="#创建-crontab-文件时，该文件会自动放入-var-spool-cron-crontabs-目录，" class="headerlink" title="创建 crontab 文件时，该文件会自动放入 /var/spool/cron/crontabs 目录，"></a>创建 crontab 文件时，该文件会自动放入 /var/spool/cron/crontabs 目录，</h4><p> 并以您的用户名命名。如果具有超级用户特权，则可为其他用户或 root 创建或编辑 crontab 文件。<br>  <strong>$ crontab -e [username]</strong><br><strong>以下示例说明如何为其他用户创建 crontab 文件</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">crontab -e jones</span><br><span class="line">1 0 * * 0 rm /home/jones/*.<span class="built_in">log</span> &gt; /dev/null 2&gt;&amp;1 <span class="comment">#添加到新 crontab 文件中的以下命令项将在每个星期日的凌晨 1:00 自动删除用户起始目录中的所有日志文件。由于该命令项不重定向输出，因此将重定向字符添加到 *.log 之后的命令行中。这样可以确保正常执行命令。</span></span><br><span class="line">crontab -l <span class="comment">#列出目前的时程表</span></span><br><span class="line">crontab -r <span class="comment">#删除目前的时程表</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="时程表格式如下"><a href="#时程表格式如下" class="headerlink" title="时程表格式如下"></a>时程表格式如下</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> f1 f2 f3 f4 f5 program</span><br><span class="line"><span class="comment">#其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。</span></span><br><span class="line"><span class="comment">#当 f1 为 * 时表示每分钟都要执行 program，f2 为 * 时表示每小时都要执行程序，其馀类推</span></span><br><span class="line"><span class="comment">#当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其馀类推</span></span><br><span class="line"><span class="comment">#当 f1 为 */n 时表示每 n 分钟个时间间隔执行一次，f2 为 */n 表示每 n 小时个时间间隔执行一次，其馀类推</span></span><br><span class="line"><span class="comment">#当 f1 为 a, b, c,... 时表示第 a, b, c,... 分钟要执行，f2 为 a, b, c,... 时表示第 a, b, c...个小时要执行，其馀类推</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/linux基本配置指令02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1737,166 +1897,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/15/电脑的组成/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/15/电脑的组成/" itemprop="url">电脑的组成</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-15T14:23:40+08:00">
-                2018-10-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/电脑硬件选购/" itemprop="url" rel="index">
-                    <span itemprop="name">电脑硬件选购</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/10/15/电脑的组成/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/10/15/电脑的组成/" class="cy_cmt_count" data-xid="2018/10/15/电脑的组成/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="电脑装机维修预备知识"><a href="#电脑装机维修预备知识" class="headerlink" title="电脑装机维修预备知识"></a>电脑装机维修预备知识</h2><ul>
-<li>1 主机的内部构造<br>主机中主要包括：电源、cpu、内存、主板、硬盘、显卡、声卡、网卡、光驱等<br>（1）主板<br>主板把电脑的各个部件联系到一起，各个部件通过主板进行数据的传输。它工作的<br>稳定性直接影响整机的工作的稳定。</li>
-<li>2 电脑的软件系统<br>（1）操作系统软件<br>（2）程序设计软件<br>（3）应用软件<br>注： 连接各个设备时电源线要最后连接，其他设备随意。</li>
-</ul>
-<h2 id="制定多核电脑配置方案"><a href="#制定多核电脑配置方案" class="headerlink" title="制定多核电脑配置方案"></a>制定多核电脑配置方案</h2><ul>
-<li>1 原则<br>（1）购买电脑的目的<br>  简单用途普通配置，复杂用途高档配置。<br>（2）购买者的资金状况<br>（3）确定资金消费重点<br>  如果购机时资金不是很充足，这时应该根据购机目的和实际情况，确定资金消费的、<br>重点。如商务用机，应侧重于显示器和主板的选择。</li>
-<li>2 配置方案类型<br>（1）入门型用户<br> 2000-3000元<br>（2）大众型用户<br> 3000-6000<br>（3）专业型用户<br>6000-10000<h2 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h2>依次单击“开始-&gt;所有应用-&gt;windows管理工具-&gt;系统信息”</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1947,7 +1947,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -291,6 +291,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/plotly的动态可视化绘图01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/23/plotly的动态可视化绘图01/" itemprop="url">plotly的动态可视化绘图01</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-23T19:40:42+08:00">
+                2019-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/05/23/plotly的动态可视化绘图01/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/05/23/plotly的动态可视化绘图01/" class="cy_cmt_count" data-xid="2019/05/23/plotly的动态可视化绘图01/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="plotly安装"><a href="#plotly安装" class="headerlink" title="plotly安装"></a>plotly安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install ploty</span><br><span class="line">pip install ploty --upgrade <span class="comment">#更新plotly</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看帮助 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import plotly </span><br><span class="line"><span class="built_in">help</span>(plotly.offline.plot)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="离线绘图函数"><a href="#离线绘图函数" class="headerlink" title="离线绘图函数"></a>离线绘图函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">from</span> plotly.graph_objs <span class="keyword">import</span> Scatter, Layout, Data</span><br><span class="line"></span><br><span class="line">py.offline.init_notebook_mode()     <span class="comment">#该条语句是在Jupyter Notebook（此前被称为 IPython notebook）中绘图</span></span><br><span class="line">trace0 = Scatter(  <span class="comment">#确定坐标 x，y</span></span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">10</span>,<span class="number">15</span>,<span class="number">12</span>,<span class="number">17</span>]</span><br><span class="line">)</span><br><span class="line">trace1 = Scatter(</span><br><span class="line">    x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,],</span><br><span class="line">    y = [<span class="number">16</span>,<span class="number">5</span>,<span class="number">11</span>,<span class="number">9</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = Data([trace0, trace1])<span class="comment">#两条线</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#py.offline.iplot(data, filename='first_offline_start') IPlot是在Notebook中绘图的函数</span></span><br><span class="line">py.offline.plot(data, filename=<span class="string">'first_offline_start'</span>)</span><br><span class="line"><span class="comment">#py.offline.plot(data, filename='first_offline_start',image='png')#保存画出的png图片</span></span><br></pre></td></tr></table></figure>
+<p>   参数解释：<br>   def plot(figure_or_data, show_link=False, link_text=’Export to plot.ly’,<br>         validate=True, output_type=’file’, include_plotlyjs=True,<br>         filename=’temp-plot.html’, auto_open=True, image=None,<br>         image_filename=’plot_image’, image_width=800, image_height=600,<br>         config=None, include_mathjax=False, auto_play=True,<br>         animation_opts=None):<br>   py.plot是绘制图形的主函数，主要参数如下：<br>   figure_or_data：绘图的数据<br>   show_link:默认为False，显示右下角的链接<br>   link_text:右下角显示的文字，默认为Export to plotly.ly<br>   validate:确保所有关键字是有效的。但是当需要额外、非必须的关键字或plo.js版本比graph_reference.json版本旧时，会忽略这部分内容。<br>   filename：设置绘图结果的存储路径。<br>   image_filename：保存绘制的图片(.png ) 格式</p>
+<h3 id="模块解释"><a href="#模块解释" class="headerlink" title="模块解释"></a>模块解释</h3><p>  plotly模块库里的graph_obj（图像对象）子模块的Scatter（数据布局）对象定义，跟函数和对象一样是字典格式。<br>  Data函数，把代表两条曲线的变量定义为一组图形数据，一列表的格式[]。</p>
+<h2 id="基本绘图流程"><a href="#基本绘图流程" class="headerlink" title="基本绘图流程"></a>基本绘图流程</h2><ul>
+<li>添加图规数据（add_trace）,使用的是Scatter等函数命令</li>
+<li>设置画面布局，使用layout命令</li>
+<li>集成图形，布局数据，命令有Data，Figure。</li>
+<li>绘制图形的输出，命令是offline.plot,自定义的短命令是pyplt。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/18/Altium-Designer学习笔记01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1922,228 +2088,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/Python数据的归宿/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/Python数据的归宿/" itemprop="url">Python数据的归宿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T10:42:09+08:00">
-                2019-04-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python心得/" itemprop="url" rel="index">
-                    <span itemprop="name">Python心得</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/08/Python数据的归宿/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/08/Python数据的归宿/" class="cy_cmt_count" data-xid="2019/04/08/Python数据的归宿/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="文件的输入-输出"><a href="#文件的输入-输出" class="headerlink" title="文件的输入/输出"></a>文件的输入/输出</h2><p>  一个运行中的程序会存取放在随机存储器（ARM）上的数据。<br>  fileobj = open(filname,mode)<br>  mode的第一个字母表明对其的操作：</p>
-<ul>
-<li>r表示读模式</li>
-<li>w表示写模式。如果文件不存在则新创建，如果存在则重写新内容</li>
-<li>x表示文件不存在的情况下创建并写文件</li>
-<li>a表示文件如果存在，在文件的末尾追加写内容<br>mode的第二个字母是文件类型：</li>
-<li>t(或者省略)代表文本类型</li>
-<li>b代表二进制文件</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fb = open(<span class="string">'test.txt'</span>,<span class="string">'wt'</span>)</span><br><span class="line">fb.write(str1)</span><br><span class="line">fb.close()</span><br></pre></td></tr></table></figure>
-<h3 id="write-写文本文件"><a href="#write-写文本文件" class="headerlink" title="write()写文本文件"></a>write()写文本文件</h3><p>  数据大可以分块写：</p>
-<pre><code class="python">fout = open(<span class="string">'relativity'</span>,<span class="string">'wt'</span>)
-size = len(pome)
-offset = <span class="number">0</span>
-chunk = <span class="number">100</span>
-<span class="keyword">while</span> Ture:
-    <span class="keyword">if</span> offset &gt; size:
-        <span class="keyword">break</span>
-    fout.write(pome[offset:offset+chunk])
-    offset += chunk
-
-
-</code></pre>
-<h3 id="用read、readline、readlines读取文本文件"><a href="#用read、readline、readlines读取文本文件" class="headerlink" title="用read、readline、readlines读取文本文件"></a>用read、readline、readlines读取文本文件</h3><p>  read()读到文件末尾，再次调用read()会返回字符串‘’。 readline()读取文件的一行，readlines()调用时读取一行，并返回单行字符列表。</p>
-<pre><code class="python">fout = open(<span class="string">'relativity'</span>,<span class="string">'wt'</span>)
-<span class="keyword">while</span> Ture:
-    line = fout.readline()
-    <span class="keyword">if</span> <span class="keyword">not</span> line:
-        <span class="keyword">break</span>
-    poem += line
-fout.close()
-
-</code></pre>
-<h3 id="使用with自动关闭文件"><a href="#使用with自动关闭文件" class="headerlink" title="使用with自动关闭文件"></a>使用with自动关闭文件</h3><p>  with expression as variable:</p>
-<pre><code class="python"><span class="keyword">with</span> open(<span class="string">'relativity'</span>,<span class="string">'wt'</span>) <span class="keyword">as</span> fout:
-  fb.write(str1)
-
-</code></pre>
-<h3 id="使用seek-改变位置"><a href="#使用seek-改变位置" class="headerlink" title="使用seek()改变位置"></a>使用seek()改变位置</h3><p>  函数tell()返回距离文件开始处的字节偏移量。函数seek()允许跳转到文件其他字节偏移量的位置。<br>  seek(offset,origin)</p>
-<ul>
-<li>如果origin=0，从头开始偏移offset个字节</li>
-<li>如果origin=1，从当前位置偏移offset个字节</li>
-<li>如果origin=2，距离最后结尾处偏移offset个字节</li>
-</ul>
-<pre><code class="python">fin = open(<span class="string">'relativity'</span>,<span class="string">'rt'</span>)
-fin.tell()
-fin.seek(<span class="number">151</span>)<span class="comment">#偏移到151处</span>
-</code></pre>
-<h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><p>  数据库展现了表单形式的不同类型数据之间的关系，每一项有对应的关系。NoSQL数据库是键值对形式存储的数据。</p>
-<pre><code class="python">db = sqlite3.connect(<span class="string">'books.db'</span>)<span class="comment">#连接数据库</span>
-curs = db.cursor() <span class="comment">#创建一个cursor对象来管理数据库</span>
-curs.execute(<span class="string">'''create table book (title text,author text,year int)'''</span>) <span class="comment">#对数据库执行一个或多个sql命令</span>
-db.commit()
-<span class="comment">#插入数据</span>
-ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
-<span class="keyword">with</span> open(<span class="string">'books.csv'</span>,<span class="string">'rt'</span>) <span class="keyword">as</span> infile:
-    books = csv.DictReader(infile)
-    <span class="keyword">for</span> book <span class="keyword">in</span> books:
-        print(book)
-        <span class="keyword">print</span> book[<span class="string">' title'</span>]
-        curs.execute(ins_str,(book[<span class="string">' title'</span>],book[<span class="string">'author'</span>],book[<span class="string">'year'</span>]))
-
-</code></pre>
-<h3 id="DB-API"><a href="#DB-API" class="headerlink" title="DB-API"></a>DB-API</h3><p>  应用程序编程接口。是访问某些服务的函数集合。DB_API是Python中访问关系型数据库的标准API。<br>主要函数如下所示：</p>
-<ul>
-<li>connect（） 连接数据库，包含参数用户名，密码，服务器地址等</li>
-<li>cursor()创建一个cursor对象来管理数据库</li>
-<li>execute()和executemany() 对数据库执行一个或者多个SQL命令</li>
-<li>fetchone()、fetchmany()和fetchall()得到execute之后的结果</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2194,7 +2138,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
