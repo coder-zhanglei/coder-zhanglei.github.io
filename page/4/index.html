@@ -291,6 +291,464 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/Python真正的开发者/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/Python真正的开发者/" itemprop="url">Python真正的开发者</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T20:21:43+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/08/Python真正的开发者/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/08/Python真正的开发者/" class="cy_cmt_count" data-xid="2019/04/08/Python真正的开发者/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="寻找Python代码"><a href="#寻找Python代码" class="headerlink" title="寻找Python代码"></a>寻找Python代码</h2><ul>
+<li>Python标准库：<a href="http://docs.python.org/3/library/" target="_blank" rel="noopener">http://docs.python.org/3/library/</a> </li>
+<li>python包索引(PyPi)：<a href="https://pypi.python.org/pypi" target="_blank" rel="noopener">https://pypi.python.org/pypi</a></li>
+</ul>
+<h2 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h2><h3 id="安装包的方法"><a href="#安装包的方法" class="headerlink" title="安装包的方法"></a>安装包的方法</h3><ul>
+<li>用pip，如：pip install flask</li>
+<li>用操作系统自带的包管理工具</li>
+<li>源代码安装:python install setup.py</li>
+</ul>
+<h2 id="调试代码"><a href="#调试代码" class="headerlink" title="调试代码"></a>调试代码</h2><h3 id="用pdb进行调试"><a href="#用pdb进行调试" class="headerlink" title="用pdb进行调试"></a>用pdb进行调试</h3><p>1、 语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Python -m pdb capitals.py   </span><br><span class="line">(Pdb) c  <span class="comment">#输入c（继续），程序会一直运行下去，直到正常结束或者出现错误</span></span><br><span class="line">(Pdb) s  <span class="comment">#单步执行，一行一行的执行Python代码，会进入函数内部</span></span><br><span class="line">(Pdb) n  <span class="comment">#也是单步执行，但是不会进入函数内部</span></span><br><span class="line">(Pdb) l  <span class="comment">#列表，查看之后的几行</span></span><br><span class="line"> -&gt;  <span class="comment"># 指示当前行</span></span><br><span class="line">(Pdb) b 6 <span class="comment">#在第6行设置一段点</span></span><br><span class="line">(Pdb) p line <span class="comment">#打印line的值   </span></span><br><span class="line">(Pdb) l 1 <span class="comment">#l会显示代码行，1表示起始行。从第一行开始</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="记录错误日志"><a href="#记录错误日志" class="headerlink" title="记录错误日志"></a>记录错误日志</h2><p>  logging模块包含以下内容：</p>
+<ul>
+<li>你想保存到日志中的消息</li>
+<li>不同优先级以及对应的函数：debug()、info()、warn()、error()、critical().</li>
+<li>一个或多个logger对象，主要通过它们使用模块</li>
+<li>把消息写入终端、文件、数据库或者其他地方的handler</li>
+<li>创建输出的formatter；</li>
+<li>基于输入进行筛选的过滤器。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line">logging.basicConfig(level=<span class="string">'DEBUG'</span>,filename=<span class="string">'bulue_ox.log'</span>)<span class="comment">#filename会创建一个fileHandler并对logger进行设置。logging模块至少包含15钟handler</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#以日期和时间的格式写入日志文件</span></span><br><span class="line">LOG_FORMAT = <span class="string">"%(asctime)s - %(levelname)s - %(message)s"</span></span><br><span class="line">logging.basicConfig(filename=<span class="string">'./gzipcompressor.log'</span>,</span><br><span class="line">                    filemode=<span class="string">'a'</span>,</span><br><span class="line">                    level=logging.DEBUG, </span><br><span class="line">                    format=LOG_FORMAT)</span><br></pre></td></tr></table></figure>
+<h2 id="算法和数据结构"><a href="#算法和数据结构" class="headerlink" title="算法和数据结构"></a>算法和数据结构</h2><p>  列表解析比添加元素快2倍。<br>  NumPy是Python的一个数学库，它是用c编写的，运行速度很快。Python并不会编译成机器语言，而是被翻译成中间语言，然后被虚拟机解释执行。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/python系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/python系统/" itemprop="url">python系统</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T14:53:49+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/08/python系统/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/08/python系统/" class="cy_cmt_count" data-xid="2019/04/08/python系统/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><ul>
+<li>创建文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fb = open(<span class="string">'test.txt'</span>,<span class="string">'wt'</span>)</span><br><span class="line">fb.close()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>检查文件是否存在</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.path.exists(<span class="string">'oops.txt'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>用isfile()检查是否为文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#判断是否文件</span></span><br><span class="line">name = <span class="string">'oops.txt'</span></span><br><span class="line">os.path.isfile(name)</span><br><span class="line"><span class="comment">#判断是否是目录</span></span><br><span class="line">os.path.isdir(name)</span><br><span class="line"><span class="comment">#isabs()判断参数是否是一个绝对路径名，参数不需要是一个真正的文件</span></span><br><span class="line">os.path.isabs(name)</span><br><span class="line">os.path.isabs(<span class="string">'/big/fake/name'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>copy()复制文件<br>copy()函数来自另一个模块shutil</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line">shutil.copy(oops.txt,<span class="string">'ohno.txt'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>rename()重命名文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.rename(<span class="string">'ohno.txt'</span>,<span class="string">'ohwell.txt'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>用abspath()获取路径名<br>该函数会把相对路径扩展为一个绝对路径名<br>os.path.abspath(‘oops.txt’)</p>
+</li>
+<li><p>realpath()获取符号的路径名</p>
+</li>
+<li><p>remove 删除文件<br>os.remove(‘oops.txt’)</p>
+</li>
+</ul>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li>创建目录<br>os.mkdir(‘pomes’)</li>
+<li>rmdir()删除目录<br>os.rmdir(‘pomes’)</li>
+<li><p>列出目录内容<br>os.listdir(‘pomes’)</p>
+</li>
+<li><p>使用chdir()修改当前目录<br>可以从一个目录跳转到另一个目录<br>os.chdir(‘pomes’)</p>
+</li>
+<li><p>glob()列出匹配文件</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> golb</span><br><span class="line">glob.glob(<span class="string">'m*'</span>)<span class="comment">#获取以m开头的文件和目录</span></span><br><span class="line">glob.glob(<span class="string">'？？'</span>)<span class="comment">#获取所有名称为两个字符的文件和目录</span></span><br><span class="line">glob.glob(<span class="string">'m????e'</span>)<span class="comment">#获取名称为6个字符并且以m开头以e结尾</span></span><br><span class="line">glob.glob(<span class="string">'[klm]*e'</span>)<span class="comment">#获取所有以k、l或者m开头的文件和目录</span></span><br><span class="line"><span class="comment">#[!abc]会匹配除了a、b和c之外的所有字符</span></span><br></pre></td></tr></table></figure>
+<h2 id="程序和进程"><a href="#程序和进程" class="headerlink" title="程序和进程"></a>程序和进程</h2><p>  进程之间是相互隔离的，一个进程无法访问其他进程的内容，也无法操作其他进程。操作系统会根据所有正在运行的进程，给每一个进程一小段运行时间，然后切换到<br>其他进程，这样既可以做到公平又可以响应用户操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.getpid()<span class="comment">#获取当前进程id号</span></span><br><span class="line">os.getcwd()<span class="comment">#当前工作目录</span></span><br><span class="line">os.getuid()<span class="comment">#获取用户ID</span></span><br><span class="line">os.getgid()<span class="comment">#获取用户组ID</span></span><br></pre></td></tr></table></figure>
+<h3 id="subprocess创建进程"><a href="#subprocess创建进程" class="headerlink" title="subprocess创建进程"></a>subprocess创建进程</h3><p>  import subprocess<br>  ret = subprocess.getoutput(‘date’)</p>
+<h2 id="使用multiprocessing创建进程"><a href="#使用multiprocessing创建进程" class="headerlink" title="使用multiprocessing创建进程"></a>使用multiprocessing创建进程</h2><p>  multiprocessing模块可以在一个程序中运行多个进程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> multiprocessing</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_this</span><span class="params">(what)</span>:</span></span><br><span class="line">    whoami(what)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">whoami</span><span class="params">(what)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'Process %s says:%s'</span> %(os.getpid(),what)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    whoami(<span class="string">"I'm the main program"</span>)</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        p = multiprocessing.Process(target=do_this,args=(<span class="string">"I'm function %d"</span> %n))</span><br><span class="line">        p.start()</span><br></pre></td></tr></table></figure>
+<h2 id="使用terminate-终止进程"><a href="#使用terminate-终止进程" class="headerlink" title="使用terminate()终止进程"></a>使用terminate()终止进程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = multiprocessing.Process(target=do_this,args=(<span class="string">"I'm function %d"</span> %n))</span><br><span class="line">p.start()</span><br><span class="line">p.terminate()</span><br></pre></td></tr></table></figure>
+<h2 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h2><p>  import calendar<br>  calendar.isleap(1900)#判断1900是否死闰年</p>
+<h3 id="datetime模块"><a href="#datetime模块" class="headerlink" title="datetime模块"></a>datetime模块</h3><p>  dattime定义了4个主要的对象：</p>
+<ul>
+<li>date 处理年、月、日</li>
+<li>time 处理时、分、秒</li>
+<li>datetime 处理日期和时间同时出现的情况</li>
+<li>timedelta处理日期和时间的间隔</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> date </span><br><span class="line">halloween = date(<span class="number">2014</span>,<span class="number">10</span>,<span class="number">31</span>)</span><br><span class="line">halloween.day</span><br><span class="line">halloween.month</span><br><span class="line">halloween.isoformat()<span class="comment">#打印一个date对象，ISO是ISO 8601，一种表示日期和时间的国际标准</span></span><br></pre></td></tr></table></figure>
+<h3 id="time模块"><a href="#time模块" class="headerlink" title="time模块"></a>time模块</h3><p>  一种表示绝对时间的方法是计算从某个起点开始的秒数。unix时间使用的是从1970年1月1日0点开始的秒数。<br>  time模块的time()函数会返回当前时间的纪元<br>  localtime()函数返回当前系统时区下的时间，gmtime()返回UTC时间<br>  strftime()<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">now = time.time()</span><br><span class="line">time.ctime(now) <span class="comment">#把一个纪元值转换为一个字符</span></span><br><span class="line">curtime = time.strftime(<span class="string">'%Y-%m-%d'</span>,time.localtime(time.time()))<span class="comment">#获取当天的时间</span></span><br><span class="line">cur = time.mktime(time.strptime(curtime,<span class="string">'%Y-%m-%d'</span>))</span><br></pre></td></tr></table></figure></p>
+<h2 id="读写日期和时间"><a href="#读写日期和时间" class="headerlink" title="读写日期和时间"></a>读写日期和时间</h2><table>
+<thead>
+<tr>
+<th>格式化字符串</th>
+<th style="text-align:right">日期/时间单元</th>
+<th style="text-align:center">范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%Y</td>
+<td style="text-align:right">年</td>
+<td style="text-align:center">1900-…</td>
+</tr>
+<tr>
+<td>%m</td>
+<td style="text-align:right">月</td>
+<td style="text-align:center">01-12</td>
+</tr>
+<tr>
+<td>%B</td>
+<td style="text-align:right">月名</td>
+<td style="text-align:center">January，….</td>
+</tr>
+<tr>
+<td>%b</td>
+<td style="text-align:right">月名缩写</td>
+<td style="text-align:center">Jan-…</td>
+</tr>
+<tr>
+<td>%d</td>
+<td style="text-align:right">日</td>
+<td style="text-align:center">01-31</td>
+</tr>
+<tr>
+<td>%A</td>
+<td style="text-align:right">星期</td>
+<td style="text-align:center">Sunday，….</td>
+</tr>
+<tr>
+<td>%a</td>
+<td style="text-align:right">星期缩写</td>
+<td style="text-align:center">Sun-…</td>
+</tr>
+<tr>
+<td>%H</td>
+<td style="text-align:right">时（24小时制）</td>
+<td style="text-align:center">00-23</td>
+</tr>
+<tr>
+<td>%I</td>
+<td style="text-align:right">时（12小时制）</td>
+<td style="text-align:center">01-12….</td>
+</tr>
+<tr>
+<td>%p</td>
+<td style="text-align:right">上午/下午</td>
+<td style="text-align:center">AM，PM</td>
+</tr>
+<tr>
+<td>%M</td>
+<td style="text-align:right">分</td>
+<td style="text-align:center">00-59</td>
+</tr>
+<tr>
+<td>%S</td>
+<td style="text-align:right">秒</td>
+<td style="text-align:center">00-59</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">fmt =<span class="string">"It's %A ,%B %d,%Y,local time  %I:%M%S%p"</span></span><br><span class="line">t = time.localtime()</span><br></pre></td></tr></table></figure>
+<h2 id="其他模块"><a href="#其他模块" class="headerlink" title="其他模块"></a>其他模块</h2><ul>
+<li>arrow分</li>
+<li>dateutil</li>
+<li>iso8601</li>
+<li>fleming 提供许多时区的函数</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/Python数据的归宿/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2068,329 +2526,11 @@ set()将其他类型转换为集合
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/番茄助手的安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/24/番茄助手的安装/" itemprop="url">番茄助手的安装</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-24T16:42:13+08:00">
-                2019-03-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/visual-studio的使用/" itemprop="url" rel="index">
-                    <span itemprop="name">visual studio的使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/24/番茄助手的安装/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/24/番茄助手的安装/" class="cy_cmt_count" data-xid="2019/03/24/番茄助手的安装/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="visual-assist的安装"><a href="#visual-assist的安装" class="headerlink" title="visual assist的安装"></a>visual assist的安装</h2><p>1、 visual assist软件下载<br><a href="https://pan.baidu.com/s/1uD7GmjuSbdemNOdEhFqReQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1uD7GmjuSbdemNOdEhFqReQ</a>  rr8i</p>
-<p>2、 visual assist X通用补丁下载<br><a href="https://pan.baidu.com/s/1u-vOHdN7-m5vqiG6R1aEpA" target="_blank" rel="noopener">https://pan.baidu.com/s/1u-vOHdN7-m5vqiG6R1aEpA</a>  ed1q</p>
-<p>步骤：<br>    安装完visual assist软件软件后，打开通用补丁，直接点击安装就破解了visual assist，如果之前有<br>安装过其他的破解补丁，先点击卸载，卸载后再安装。</p>
-<h2 id="自定义vs的快捷键"><a href="#自定义vs的快捷键" class="headerlink" title="自定义vs的快捷键"></a>自定义vs的快捷键</h2><p>1、步骤<br>   工具-&gt;选项-&gt;环境-&gt;键盘；<br>   搜索你定义快捷键的功能，然后按自定义的快捷键即可；<br>比如：<br>   修改返回上一处光标位置，之前的快捷键是“Ctrl + -”；搜索“向后”（Navigatebackward），然后修改自己的快捷键即可，<br>同理向前（navigateForward）。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/16/linux的日志与进程管理01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/16/linux的日志与进程管理01/" itemprop="url">linux的日志与进程管理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-16T10:23:28+08:00">
-                2019-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
-                    <span itemprop="name">linux浅见</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/16/linux的日志与进程管理01/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/16/linux的日志与进程管理01/" class="cy_cmt_count" data-xid="2019/03/16/linux的日志与进程管理01/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="nice-设置优先级"><a href="#nice-设置优先级" class="headerlink" title="nice:设置优先级"></a>nice:设置优先级</h2><ul>
-<li>语法：nice [-可选参数] [指令] [属性]<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> nice -n 17 free -s 60&amp; <span class="comment"># 在后台运行free指令，设置优先级为17</span></span><br><span class="line"><span class="comment"># 注解：将free -s 60&amp;的优先级设为17，通过ps -l输出的NI项就可以看当前系统中相关进程的优先级</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="ps指令：报告程序状况"><a href="#ps指令：报告程序状况" class="headerlink" title="ps指令：报告程序状况"></a>ps指令：报告程序状况</h2><ul>
-<li>语法：ps [-可选参数]</li>
-</ul>
-<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -a <span class="comment">#显示系统进程</span></span><br><span class="line">pstree -anh <span class="comment">#显示进程间的关系 a:显示完整的指令，n:以进程ID排序，h:对现在执行的程序进行特别标注</span></span><br></pre></td></tr></table></figure>
-<h2 id="fg：将后台任务拉到前台执行"><a href="#fg：将后台任务拉到前台执行" class="headerlink" title="fg：将后台任务拉到前台执行"></a>fg：将后台任务拉到前台执行</h2><h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ftp 192.198.88.2 &amp;</span><br><span class="line"><span class="built_in">fg</span> %1 <span class="comment">#将ftp拉到前台执行</span></span><br></pre></td></tr></table></figure>
-<h2 id="killall：杀死同名的所有进程"><a href="#killall：杀死同名的所有进程" class="headerlink" title="killall：杀死同名的所有进程"></a>killall：杀死同名的所有进程</h2><h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall joe</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2436,7 +2576,7 @@ set()将其他类型转换为集合
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2447,7 +2587,7 @@ set()将其他类型转换为集合
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2458,7 +2598,7 @@ set()将其他类型转换为集合
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

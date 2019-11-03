@@ -291,6 +291,362 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/25/linux基本配置指令05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/25/linux基本配置指令05/" itemprop="url">linux基本配置指令05</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-25T11:44:19+08:00">
+                2019-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/02/25/linux基本配置指令05/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/02/25/linux基本配置指令05/" class="cy_cmt_count" data-xid="2019/02/25/linux基本配置指令05/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="pkill-：杀死进程"><a href="#pkill-：杀死进程" class="headerlink" title="pkill ：杀死进程"></a>pkill ：杀死进程</h3><ul>
+<li>语法: pkill [必要参数][选择性参数][字符串]</li>
+<li>功能说明：pkill指令是和kill指令的结合，用来杀死指定的进程<h4 id="必要参数"><a href="#必要参数" class="headerlink" title="必要参数"></a>必要参数</h4></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-n</td>
+<td style="text-align:center">显示新进程</td>
+</tr>
+<tr>
+<td style="text-align:center">-v</td>
+<td style="text-align:center">与条件不符的进程</td>
+</tr>
+<tr>
+<td style="text-align:center">-x</td>
+<td style="text-align:center">与条件符合的程序</td>
+</tr>
+<tr>
+<td style="text-align:center">-t</td>
+<td style="text-align:center">指定终端下的进程</td>
+</tr>
+<tr>
+<td style="text-align:center">-u</td>
+<td style="text-align:center">指定用户的程序</td>
+</tr>
+</tbody>
+</table>
+<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pkill -9 ftp <span class="comment">#杀死进程ftp</span></span><br><span class="line">pkill -t tty1 <span class="comment">#杀死所有终端1下的进程</span></span><br><span class="line">ps -A <span class="comment">#显示所有进程</span></span><br><span class="line">pkill -u kk <span class="comment">#杀死用户kk的所有进程</span></span><br><span class="line">pkill -vu kk <span class="comment">#杀死不属于用户kk的所有进程</span></span><br></pre></td></tr></table></figure>
+<h3 id="pmap-：显示程序的内存信息"><a href="#pmap-：显示程序的内存信息" class="headerlink" title="pmap ：显示程序的内存信息"></a>pmap ：显示程序的内存信息</h3><h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pmap -2253 <span class="comment">#显示进程2263的内存信息</span></span><br><span class="line">pmap -x 2253 <span class="comment">#显示进程2263使用内存的详细信息</span></span><br><span class="line">pmap -d 2253 <span class="comment">#显示内存对应同时显示设备号</span></span><br></pre></td></tr></table></figure>
+<h3 id="pwck-：检查密码文件"><a href="#pwck-：检查密码文件" class="headerlink" title="pwck ：检查密码文件"></a>pwck ：检查密码文件</h3><ul>
+<li>语法 : pwck [必要参数][文件]</li>
+</ul>
+<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><pre><code class="bash">pwck /etc/passwd <span class="comment">#检测密码文件</span>
+
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/linux基本配置指令04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/24/linux基本配置指令04/" itemprop="url">linux基本配置指令04</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-24T15:32:24+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/02/24/linux基本配置指令04/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/02/24/linux基本配置指令04/" class="cy_cmt_count" data-xid="2019/02/24/linux基本配置指令04/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="export-：设置或在显示环境变量"><a href="#export-：设置或在显示环境变量" class="headerlink" title="export ：设置或在显示环境变量"></a>export ：设置或在显示环境变量</h3><h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> -p <span class="comment">#列出所有环境变量</span></span><br><span class="line"><span class="built_in">export</span> M_ENV = http://www.linux.org/ <span class="comment">#定义环境变量</span></span><br></pre></td></tr></table></figure>
+<h3 id="lsmod：显示Linux内核的模块信息"><a href="#lsmod：显示Linux内核的模块信息" class="headerlink" title="lsmod：显示Linux内核的模块信息"></a>lsmod：显示Linux内核的模块信息</h3><h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod <span class="comment">#显示载入系统的模块信息</span></span><br></pre></td></tr></table></figure>
+<h3 id="reboot指令：重新启动"><a href="#reboot指令：重新启动" class="headerlink" title="reboot指令：重新启动"></a>reboot指令：重新启动</h3><ul>
+<li>语法: reboot [-可选参数]<h4 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reboot -f <span class="comment">#强制重启</span></span><br><span class="line">reboot -i <span class="comment">#关闭网络设置后在重新启动</span></span><br><span class="line">reboot -n <span class="comment">#先保存数据，再重启</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="hostname-：显示或者设置当前系统的主机名"><a href="#hostname-：显示或者设置当前系统的主机名" class="headerlink" title="hostname ：显示或者设置当前系统的主机名"></a>hostname ：显示或者设置当前系统的主机名</h3><ul>
+<li>语法：hostname [必要参数][选择性参数]</li>
+</ul>
+<h4 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hostname -i <span class="comment">#显示主机ip地址</span></span><br><span class="line">hostname -d <span class="comment">#显示主机域名</span></span><br><span class="line">hostname Apple <span class="comment">#设置主机名称</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/linux基本配置指令03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1563,345 +1919,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/17/选购主板/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/17/选购主板/" itemprop="url">选购主板</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-17T11:41:56+08:00">
-                2018-10-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/电脑硬件选购/" itemprop="url" rel="index">
-                    <span itemprop="name">电脑硬件选购</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/10/17/选购主板/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/10/17/选购主板/" class="cy_cmt_count" data-xid="2018/10/17/选购主板/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="主板的认识"><a href="#主板的认识" class="headerlink" title="主板的认识"></a>主板的认识</h2><p>  主板是一个电脑的中枢，所有部件及其外设只有通过它才能与处理器连接在一起进行通信，<br>并由处理器发出相应的操作指令执行相关的操作。<br>  主板上包含CPU、内存条插座、芯片组、BIOS芯片、供电电路、各种接口插座、各种散热器等部件。<br>它们决定了主板的性能和类型。</p>
-<h3 id="主流主板"><a href="#主流主板" class="headerlink" title="主流主板"></a>主流主板</h3><p>  目前有Intel公司处理器的主板和AMD公司处理器的主板。</p>
-<h3 id="识别主板芯片组"><a href="#识别主板芯片组" class="headerlink" title="识别主板芯片组"></a>识别主板芯片组</h3><p>  主板芯片组是主板的灵魂与核心，芯片组的性能优劣决定了主板性能的好坏。所有的信息<br>都是交给芯片组来完成的。在主板的构架中，北桥芯片和南桥芯片是硬件设备进行通信及沟通的桥梁<br>。<br>  北桥芯片位于CPU插座与pci-e插槽的中间，其芯片体型较大，一般会覆盖一个散热风扇。<br>北桥芯片主要负责联系CPU和控制内存。<br>  南桥芯片一般位于主板的下方，PCI插槽附件。它主要负责支持键盘控制器、USB接口、实时时钟控制<br>、数据传递方式和高级电源管理。</p>
-<h3 id="主板BIOS芯片"><a href="#主板BIOS芯片" class="headerlink" title="主板BIOS芯片"></a>主板BIOS芯片</h3><pre><code>BIOS实际上是“Basic Input/Output System”的英文缩写，中文意思是“基本输入/输出系统”。BIOS实际上
-</code></pre><p>是电脑中底层的一种程序。当启动系统时，BIOS进行加电自检、检查系统基本部件，然后<br>系统启动启动程序将系统的配置参数写入CMOS中。<br>    CMOS指的是主板上的一块可以反复读写的RAM芯片，也称为互补金属氧化物半导体随机存储器。CMOS主要用<br>来保存当前系统的硬件配置和用户对某些参数的设定，靠一块纽扣电池供电，即使断电内容也不会丢失。</p>
-<h3 id="CMOS跳线"><a href="#CMOS跳线" class="headerlink" title="CMOS跳线"></a>CMOS跳线</h3><ul>
-<li>1 跳线的目的<br>  用于清除CMOS中的数据，在清空数据之后，BIOS将出厂时的原始数据传给CMOS存储器。</li>
-<li>2 CMOS跳线的作用<br>  用放电的方法来清除开机密码或者BIOS进入密码。</li>
-<li>3 CMOS跳线的方法<br>  将CMOS电池旁边的跳线帽拔出，插入另外一个针和中间针上几秒，然后在拔出插回<br>原来的位置。或者将电池取出，将电池盒上的正负极短路几秒，再把电池安上即可。<h3 id="硬盘接口"><a href="#硬盘接口" class="headerlink" title="硬盘接口"></a>硬盘接口</h3>  硬盘的接口非常多，主要有IDE接口、SATA接口、SCSI接口、Fibre Channel接口、IEEE1394接口和USB接口。</li>
-<li>1 IDE接口<br> IDE接口的英文全称为integrated Drive Electronics（电子集成驱动器），它的本意是<br>把盘体与控制器集成在一起的做法减少了硬盘的接口电缆数目与长度，数据传输可靠得到了增强，硬盘控制起来变得更容易。<br>  有39针的接口</li>
-<li>2 SCSI接口<br>SCSI的英文全称是small computer system interface（小型计算机系统接口）。它的优势<br>在于支持多种设备，独立的总线使得他对CPU的占用率很低，传输速率也比ATA接口快很多，但价格也高很多。</li>
-<li>3 SRIAL ATA接口<br> 用四个针口就完成了所有工作，SATAII接口的传输速率达到了3Gbps，SATAIII接口的传输速率达到了6gbps。</li>
-<li>4 Fibre channel 接口<br> 中文名“光纤通道”，它与SCSI接口祸IDE接口有很大不同。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/15/选购CPU/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's bolg">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/15/选购CPU/" itemprop="url">选购CPU</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-15T14:56:33+08:00">
-                2018-10-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/电脑硬件选购/" itemprop="url" rel="index">
-                    <span itemprop="name">电脑硬件选购</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/10/15/选购CPU/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/10/15/选购CPU/" class="cy_cmt_count" data-xid="2018/10/15/选购CPU/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="初识cpu"><a href="#初识cpu" class="headerlink" title="初识cpu"></a>初识cpu</h2><p>  CPU是central processing unit的缩写，中文名称是“中央处理器”。其内部结构归纳<br>起来可分为：控制单元、逻辑单元和存储单元三部分，这三部分相互协调，可以进行分析<br>判断、运算并控制电脑各个部分协调工作。</p>
-<h2 id="CPU的生产商及产品"><a href="#CPU的生产商及产品" class="headerlink" title="CPU的生产商及产品"></a>CPU的生产商及产品</h2><p>  目前世界上生产CPU的厂商主要有Intel公司，AMD公司<br>  inter公司的产品主要是酷睿i系列。</p>
-<h2 id="处理器核数"><a href="#处理器核数" class="headerlink" title="处理器核数"></a>处理器核数</h2><ul>
-<li>1 Intel公司<br>Intel公司六核处理器主要有：i7-5930K、i7-4960X、i7-4930K、i7-3970X等<br>Intel公司四核处理器主要有：第三代、第四代核第六代corei7四核处理器，第三代、四代核六代corei5四核处理器。</li>
-<li>2 AMD公司<br> AMD公司主流cpu有FX系列8核，6核、4核处理器，<br> APU系列4核、三核、双核处理器，<br> phenomII（羿龙II）X4四核、X3三核、X2双核等。<h2 id="CPU及CPU散热器选购实战"><a href="#CPU及CPU散热器选购实战" class="headerlink" title="CPU及CPU散热器选购实战"></a>CPU及CPU散热器选购实战</h2></li>
-</ul>
-<ul>
-<li>1 主频<br>购买不要追求过高的主频。</li>
-<li>2 注意购买时机<br>购买时可以选择推出半年到一年的CPU产品</li>
-<li>3 注意应用需求<br>在不同的应用环境下对于CPU的性能需求是不同的，所以，在进行电脑选购时<br>必须注意“适合应用”的原则。</li>
-<li>4 注意预防购买假的CPU<br>（1） 看分界线<br> 原包装在外盒背面印有多种文字的产品介绍，这些文字的上下分界处，有一行看起来很像<br>黑道的分解线。如果是正品的话，即可发现这些黑道其实是极小的“intel”标志组成，而且十分清晰。<br>（2）看包装盒颜色<br>正品色彩鲜艳，次品色彩比较浅。<br>（3）看封装线<br>正品盒装Intel CPU的塑料封纸的封装线不可能在盒的右侧条形码处。<br>（4）看水印字<br> 正品刮不下来<br>（5）看激光标签<br>正品采用了四重着色技术，层次丰富，字迹清晰。<br>（6）电话查询<br>盒装上有一串很长的编码，可以通过拨打热线电话800-820-1100来查产品的真伪。<br>（7）看热封点<br>正品有4个热封点，每个热封点有两个圆点，它们在揭开后就不能复原。<br>（8）看风扇<br>看风扇的热片和轴承，原装的风扇的轴承是金属的，散热片见得凹槽为圆弧形，而且热片的低端厚实。假风扇的做工很粗糙，手感很轻。</li>
-<li>5 使用时尽量选择高外频<br>在主频情况相同的情况下，更高的外频和前端总线可以提供更大的数据传输带宽，因此相对来说表现也更优秀。<h3 id="CPU风扇选购实战"><a href="#CPU风扇选购实战" class="headerlink" title="CPU风扇选购实战"></a>CPU风扇选购实战</h3></li>
-</ul>
-<ul>
-<li>1 cpu风扇的生产厂商：清华华天公司，富士康公司、博美特公司<br>注：除了风冷扇热之外，还有一种比较好的散热方式-水冷散热。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1947,7 +1969,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1958,7 +1980,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1969,7 +1991,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
