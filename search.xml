@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[FPGA电子系统设计方法]]></title>
     <url>%2F2019%2F12%2F31%2FFPGA%E7%94%B5%E5%AD%90%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[电子系统设计步骤123456graph LRA[电子系统设计]--&gt;B[电子系统调试] B--&gt;C[制作电路板] C--&gt;D[电子系统安装] D--&gt;E[电子系统调试] E--&gt;F[合格成品]]]></content>
+    <content type="text"><![CDATA[电子系统设计步骤123456graph LRA[电子系统设计]--&gt;B[电子系统调试] B--&gt;C[制作电路板] C--&gt;D[电子系统安装] D--&gt;E[电子系统调试] E--&gt;F[合格成品] 123456graph LRA[方形] --&gt;B(圆角) B --&gt; C&#123;条件a&#125; C --&gt;|a=1| D[结果1] C --&gt;|a=2| E[结果2] F[横向流程图]]]></content>
       <categories>
         <category>FPGA学习笔记</category>
       </categories>
