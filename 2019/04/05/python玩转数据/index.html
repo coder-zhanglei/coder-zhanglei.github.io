@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python数据处理,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Python数据编码 表1：编码方式     编码 说明     ‘ascii’ 经典的7比特ASCII编码   ‘utf-8’ 最长用的以8比特为单位的变长编码   ‘latin-1’ 被称为ISO 8859-1编码   ‘cp-1252’ windows常用编码   ‘unicode-escape’ Python中Unicode的转义文本格式，\uxxxx或者\uxxxxxxxx    解码">
+<meta name="keywords" content="Python数据处理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python玩转数据">
+<meta property="og:url" content="http://yoursite.com/2019/04/05/python玩转数据/index.html">
+<meta property="og:site_name" content="YHNE&#39;s blog">
+<meta property="og:description" content="Python数据编码 表1：编码方式     编码 说明     ‘ascii’ 经典的7比特ASCII编码   ‘utf-8’ 最长用的以8比特为单位的变长编码   ‘latin-1’ 被称为ISO 8859-1编码   ‘cp-1252’ windows常用编码   ‘unicode-escape’ Python中Unicode的转义文本格式，\uxxxx或者\uxxxxxxxx    解码">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-05T10:01:36.121Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python玩转数据">
+<meta name="twitter:description" content="Python数据编码 表1：编码方式     编码 说明     ‘ascii’ 经典的7比特ASCII编码   ‘utf-8’ 最长用的以8比特为单位的变长编码   ‘latin-1’ 被称为ISO 8859-1编码   ‘cp-1252’ windows常用编码   ‘unicode-escape’ Python中Unicode的转义文本格式，\uxxxx或者\uxxxxxxxx    解码">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/05/python玩转数据/">
+
+
+
+
+
+  <title>python玩转数据 | YHNE's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YHNE's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/05/python玩转数据/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python玩转数据</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-05T16:21:35+08:00">
+                2019-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/05/python玩转数据/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/04/05/python玩转数据/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Python数据编码"><a href="#Python数据编码" class="headerlink" title="Python数据编码"></a>Python数据编码</h2><ul>
+<li>表1：编码方式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">编码</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">‘ascii’</td>
+<td style="text-align:center">经典的7比特ASCII编码</td>
+</tr>
+<tr>
+<td style="text-align:center">‘utf-8’</td>
+<td style="text-align:center">最长用的以8比特为单位的变长编码</td>
+</tr>
+<tr>
+<td style="text-align:center">‘latin-1’</td>
+<td style="text-align:center">被称为ISO 8859-1编码</td>
+</tr>
+<tr>
+<td style="text-align:center">‘cp-1252’</td>
+<td style="text-align:center">windows常用编码</td>
+</tr>
+<tr>
+<td style="text-align:center">‘unicode-escape’</td>
+<td style="text-align:center">Python中Unicode的转义文本格式，\uxxxx或者\uxxxxxxxx</td>
+</tr>
+</tbody>
+</table>
+<h2 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h2><p>  解码是将字节序列转化为Unicode字符串的过程。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">place = <span class="string">'abcrdddd'</span></span><br><span class="line">place_bytes = place.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">place2 = place.decode(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure>
+<p>  尽可能统一使用UTF-8编码，出错率低，兼容性好，可以表达所有的Unicode字符</p>
+<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><h3 id="使用-的旧式格式化"><a href="#使用-的旧式格式化" class="headerlink" title="使用%的旧式格式化"></a>使用%的旧式格式化</h3><ul>
+<li>表2：转换类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">%s</td>
+<td style="text-align:center">字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">十进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">%x</td>
+<td style="text-align:center">十六进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">%o</td>
+<td style="text-align:center">八进制整数</td>
+</tr>
+<tr>
+<td style="text-align:center">%f</td>
+<td style="text-align:center">十进制浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">%e</td>
+<td style="text-align:center">以科学计数法表示的浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">%g</td>
+<td style="text-align:center">十进制或科学计数法表示的浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">%%</td>
+<td style="text-align:center">文本值%本身</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'%s'</span> %<span class="number">42</span></span><br><span class="line"><span class="string">'%10d %10f %10s'</span> %(n,f,s) <span class="comment">#最小域宽为10个字符，右对齐</span></span><br><span class="line"><span class="string">'%-10d %-10f %-10s'</span> %(n,f,s) <span class="comment">#最小域宽为10个字符，左对齐</span></span><br><span class="line"><span class="string">'%10.4d %10.4f %10.4s'</span> %(n,f,s) <span class="comment">#设定最大字符宽度为4，右对齐，浮点数的精度限制在小数点后4位</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用-和format的新式格式化"><a href="#使用-和format的新式格式化" class="headerlink" title="使用{}和format的新式格式化"></a>使用{}和format的新式格式化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'&#123;&#125; &#123;&#125; &#123;&#125;'</span>.format(n,f,s)</span><br><span class="line"><span class="string">'&#123;2&#125; &#123;0&#125; &#123;1&#125;'</span>.format(n,f,s)<span class="comment">#0代表第一个参数</span></span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">'n'</span>:<span class="number">42</span>,<span class="string">'f'</span>:<span class="number">7.03</span>,<span class="string">'s'</span>:<span class="string">'string cheese'</span>&#125;</span><br><span class="line"><span class="string">'&#123;0[n]&#125; &#123;0[f]&#125; &#123;0[s]&#125; &#123;1&#125;'</span>.format(d,<span class="string">'other'</span>)<span class="comment">#0代表整个字典，&#123;1&#125;代表字典后面的字符串的值</span></span><br><span class="line"></span><br><span class="line"><span class="string">'&#123;0:&gt;10d&#125; &#123;1:&gt;10f&#125; &#123;2:&gt;10s&#125;'</span>.format(n,f,s)<span class="comment">#最小域宽为10个字符，左对齐</span></span><br><span class="line"><span class="string">'&#123;0:&lt;10d&#125; &#123;1:&lt;10f&#125; &#123;2:&lt;10s&#125;'</span>.format(n,f,s)<span class="comment">#最小域宽为10个字符，右对齐</span></span><br><span class="line"><span class="string">'&#123;0:^10d&#125; &#123;1:^10f&#125; &#123;2:^10s&#125;'</span>.format(n,f,s)<span class="comment">#最小域宽为10个字符,居中</span></span><br><span class="line"></span><br><span class="line"><span class="string">'&#123;0:&lt;10.4d&#125; &#123;1:&lt;10.4f&#125; &#123;2:&lt;10.4s&#125;'</span>.format(n,f,s)<span class="comment">#设定最大字符宽度为4，右对齐，浮点数的精度限制在小数点后4位</span></span><br><span class="line"></span><br><span class="line"><span class="string">'&#123;0:!^20s&#125;'</span>.format(<span class="string">'BIG SALE'</span>)<span class="comment">#用！代替空格填充</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用正则表达式匹配"><a href="#使用正则表达式匹配" class="headerlink" title="使用正则表达式匹配"></a>使用正则表达式匹配</h2><p>  相关功能都在标准库re中，因此首先需要引用他。match()函数用于查看源是否是以模式开头</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = re.match(<span class="string">'You'</span>,<span class="string">'Young Frankenstein'</span>)</span><br><span class="line">youpatter = re.compile(<span class="string">'You'</span>) <span class="comment">#编译以加快匹配速度</span></span><br><span class="line">result = youpatter.match(<span class="string">'Young Frankenstein'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>search()返回第一次成功匹配，如果存在的话</li>
+<li>findall() 返回所有不重叠的匹配，如果存在的话</li>
+<li>split()会根据pattern将source切分成若干段，返回这些片段组成的列表，</li>
+<li>sub()需要一个额外的参数replacement，它会把source中所有匹配的pattern改成replacement</li>
+</ul>
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><p>表1：特殊字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:center">一个数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\D</td>
+<td style="text-align:center">一个非数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:center">一个字母或数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\W</td>
+<td style="text-align:center">一个非字母非数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:center">空白符</td>
+</tr>
+<tr>
+<td style="text-align:center">\S</td>
+<td style="text-align:center">非空白符</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">单词边界</td>
+</tr>
+<tr>
+<td style="text-align:center">\B</td>
+<td style="text-align:center">非单词边界</td>
+</tr>
+</tbody>
+</table>
+<p>表2：模式标识符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">匹配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">abc</td>
+<td style="text-align:center">文本值</td>
+</tr>
+<tr>
+<td style="text-align:center">（expr）</td>
+<td style="text-align:center">expr</td>
+</tr>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">除\n外的任何字符</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">源字符串的开头</td>
+</tr>
+<tr>
+<td style="text-align:center">$</td>
+<td style="text-align:center">源字符串的结尾</td>
+</tr>
+<tr>
+<td style="text-align:center">prev?</td>
+<td style="text-align:center">0个或1个prev</td>
+</tr>
+<tr>
+<td style="text-align:center">prev*</td>
+<td style="text-align:center">0个或多个prev，尽可能多地匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">prev*?</td>
+<td style="text-align:center">0个或多个prev，尽可能少地匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">prev+</td>
+<td style="text-align:center">1个或多个prev，尽可能多地匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">prev+？</td>
+<td style="text-align:center">1个或多个prev，尽可能少地匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">prev{m}</td>
+<td style="text-align:center">m个连续的prev</td>
+</tr>
+<tr>
+<td style="text-align:center">prev{m,n}</td>
+<td style="text-align:center">m到n个连续的prev，尽可能多地匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">prev{m,n}？</td>
+<td style="text-align:center">m到n个连续的prev，尽可能少地匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">[ abd ]</td>
+<td style="text-align:center">a或b或c</td>
+</tr>
+<tr>
+<td style="text-align:center">[^abd ]</td>
+<td style="text-align:center">非（a或b或c）</td>
+</tr>
+<tr>
+<td style="text-align:center">prev{?=next}</td>
+<td style="text-align:center">如果后面为next，返回prev</td>
+</tr>
+<tr>
+<td style="text-align:center">prev{?!next}</td>
+<td style="text-align:center">如果后面非next，返回prev</td>
+</tr>
+<tr>
+<td style="text-align:center">（?&lt;=prev）next</td>
+<td style="text-align:center">如果前面为prev，返回next</td>
+</tr>
+<tr>
+<td style="text-align:center">（?&lt;!prev）next</td>
+<td style="text-align:center">如果前面非prev，返回next</td>
+</tr>
+</tbody>
+</table>
+<p>  注：在匹配是为了防止转义用r’\bxxxxx’，  “expr1 | expr2” 表示 eppr1或expr2 。</p>
+<h3 id="模式：定义匹配的输出"><a href="#模式：定义匹配的输出" class="headerlink" title="模式：定义匹配的输出"></a>模式：定义匹配的输出</h3><p>  当使用match()或search()时，所有的匹配会以m.group()的形式返回到对象m中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">source = <span class="string">''' I wish I may,I wish I might have a dish of fish tonight'''</span></span><br><span class="line">m = re.search(<span class="string">r'(. dish\b).*(\bfish)'</span>,source)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group()</span><br><span class="line"><span class="string">'a dish of fish'</span></span><br><span class="line"></span><br><span class="line">m = re.search(<span class="string">r'(?P&lt;DISH&gt;. dish\b).*(?P&lt;FISH&gt;\bfish)'</span>,source)<span class="comment">#(?P&lt;name&gt;expr)这样的匹配模式会匹配expr，并将匹配结果存入name的组中</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.groups()</span><br><span class="line">  (<span class="string">'a dish'</span>, <span class="string">'fish'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="string">'DISH'</span>)</span><br><span class="line">  <span class="string">'a dish'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m.group(<span class="string">'FISH'</span>)</span><br><span class="line">  <span class="string">'fish'</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感恩有你</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Zhang Lei WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Zhang Lei Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python数据处理/" rel="tag"># Python数据处理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/04/Python对象和类/" rel="next" title="Python对象和类">
+                <i class="fa fa-chevron-left"></i> Python对象和类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/08/Python数据的归宿/" rel="prev" title="Python数据的归宿">
+                Python数据的归宿 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zhang Lei</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python数据编码"><span class="nav-number">1.</span> <span class="nav-text">Python数据编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解码"><span class="nav-number">2.</span> <span class="nav-text">解码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化"><span class="nav-number">3.</span> <span class="nav-text">格式化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-的旧式格式化"><span class="nav-number">3.1.</span> <span class="nav-text">使用%的旧式格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-和format的新式格式化"><span class="nav-number">3.2.</span> <span class="nav-text">使用{}和format的新式格式化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用正则表达式匹配"><span class="nav-number">4.</span> <span class="nav-text">使用正则表达式匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊字符"><span class="nav-number">4.1.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式：定义匹配的输出"><span class="nav-number">4.2.</span> <span class="nav-text">模式：定义匹配的输出</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhang Lei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytRlKLcx';
+      var conf = '4c2d29378be7cfd02d3ed7eab947e5ba';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
