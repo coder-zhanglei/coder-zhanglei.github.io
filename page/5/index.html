@@ -291,6 +291,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/python外壳：代码结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/30/python外壳：代码结构/" itemprop="url">python外壳：代码结构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-30T10:27:26+08:00">
+                2019-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/03/30/python外壳：代码结构/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/03/30/python外壳：代码结构/" class="cy_cmt_count" data-xid="2019/03/30/python外壳：代码结构/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><pre><code>python 没有用花括号（{}）或者关键字(begin和end)来划分代码段，Python用空白来区分代码结构，
+</code></pre><p>用严格的缩进来区分代码块结构。用“#”号来对代码进行注释。用“\”做为续行符来连接不同行的代码。</p>
+<h2 id="if、elif和else"><a href="#if、elif和else" class="headerlink" title="if、elif和else"></a>if、elif和else</h2><pre><code>用法跟c语言的一样，不同的是，在每个判断语句后不用加括号，但是要加冒号(:),表示判断的结束。
+</code></pre><p>每个判断语句下面的执行语句，要有严格的缩进，表示一个代码块。</p>
+<h3 id="比较操作符"><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h3><pre><code>in 表示属于，其余跟c一样。在连接不同的比较时，有and ，or，not布尔操作符进行不同判断语句的连接。
+</code></pre><p>比如：5 &lt; x and x &lt; 10;可以写成： 5 &lt; x &lt; 10;是同样的效果。</p>
+<h4 id="真值的判断"><a href="#真值的判断" class="headerlink" title="真值的判断"></a>真值的判断</h4><pre><code>在所有的比较判断中，非空（零）即真。
+</code></pre><h2 id="while和for循环"><a href="#while和for循环" class="headerlink" title="while和for循环"></a>while和for循环</h2><pre><code>判断同if一样，while 语句后的冒号（：）表示该语句的结束（如：while count &lt; 5 :）;
+</code></pre><p>for循环，在Python中也称对容器的迭代；其中列表，字符串，元组，集合等都是可以迭代的对象，<br>基本语法：如：for rabbit in rabbits: rabbits可以是上述的迭代对象。元组或列表的迭代都是产生<br>一项，而字符串的迭代则产生单个字符。<br>   对字典的迭代，可以迭代键（for key in keys.key(): 或for key in keys:）也可以迭代值<br>（for value in value.value():）,也可以用元组的方式返回<br>（for item in accusation.items(): 或者分别赋值 for card,contents in accusation.items():）。   </p>
+<h3 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h3><pre><code>break和continue都是在循环体里使用，break跳出整个循环，continue跳出当前循环。
+</code></pre><h3 id="在循环外使用else"><a href="#在循环外使用else" class="headerlink" title="在循环外使用else"></a>在循环外使用else</h3><pre><code>基本形式如下：
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> pos &lt; len(num):</span><br><span class="line">    .....</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="keyword">else</span>： <span class="comment">#没有执行break</span></span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line"><span class="comment">#for的结构</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> cheese <span class="keyword">in</span> cheeses:</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">else</span>： <span class="comment">#没有执行break</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<pre><code>上述代码，如果没有执行break，即没有找到可执行的解。则执行else。
+</code></pre><h2 id="用zip-并行迭代"><a href="#用zip-并行迭代" class="headerlink" title="用zip()并行迭代"></a>用zip()并行迭代</h2><pre><code>所谓并行迭代就是把多个列表（或者其他容器）放在一起同时迭代，在最短序列用完后，迭代结束。
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">days = [<span class="string">'mon'</span>,<span class="string">'tue'</span>,wed]</span><br><span class="line">fruits = [<span class="string">'banana'</span>,<span class="string">'orangs'</span>,<span class="string">'peach'</span>]</span><br><span class="line">drinks = [<span class="string">'offee'</span>,<span class="string">'tea'</span>,<span class="string">'beer'</span>]</span><br><span class="line"><span class="comment">#在最短序列用完后结束迭代</span></span><br><span class="line"><span class="keyword">for</span> day, fruits, drinks <span class="keyword">in</span> zip(days, fruits, drinks):</span><br><span class="line">    ...</span><br><span class="line"><span class="comment">#用zip()配对两个元组</span></span><br><span class="line">English = <span class="string">'mon'</span>,<span class="string">'tue'</span>,<span class="string">'wed'</span></span><br><span class="line">french = <span class="string">'lundi'</span>,<span class="string">'mardi'</span>,<span class="string">'mercredi'</span></span><br><span class="line"></span><br><span class="line">list(zip(English, french))</span><br><span class="line"><span class="comment">#生成字典</span></span><br><span class="line">dict(zip(English, french))</span><br></pre></td></tr></table></figure>
+<h2 id="用range（）生成自然序列"><a href="#用range（）生成自然序列" class="headerlink" title="用range（）生成自然序列"></a>用range（）生成自然序列</h2><pre><code>range()函数可以返回在特定区间的自然序列，range(start,stop,step),start默认为0，产生的最后一个
+</code></pre><p>数的值是stop的前一个：stop - 1。step默认为1；也可以反向创建自然序列，step = -1；<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</span><br><span class="line"></span><br><span class="line"><span class="comment">#反向创建</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br></pre></td></tr></table></figure></p>
+<h2 id="推导式"><a href="#推导式" class="headerlink" title="推导式"></a>推导式</h2><pre><code>推导式是一个或者多个迭代器快速简洁地创建数据结构的一种方法，可以将循环和条件判断
+</code></pre><p>相结合，从而避免语法冗长。</p>
+<h3 id="列表和集合推导式"><a href="#列表和集合推导式" class="headerlink" title="列表和集合推导式"></a>列表和集合推导式</h3><pre><code>语法：[expression for item in iterable]
+      [expression for item in iterable if condition]
+
+集合语法：{expression for expression in iterable} 中括号变为花括号      
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">number_list = [number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>)]</span><br><span class="line">a_list = [number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">6</span>) <span class="keyword">if</span> number % <span class="number">2</span> == <span class="number">1</span>]</span><br><span class="line"> </span><br><span class="line">cells = [(row, col) <span class="keyword">for</span> row <span class="keyword">in</span> rows <span class="keyword">for</span> col <span class="keyword">in</span> cols]</span><br><span class="line"><span class="keyword">for</span> cell <span class="keyword">in</span> cells:</span><br><span class="line">    print(cell)</span><br></pre></td></tr></table></figure>
+<h2 id="字典的推导式"><a href="#字典的推导式" class="headerlink" title="字典的推导式"></a>字典的推导式</h2><pre><code>语法： {key_expression:value_expression for expression in iterable}
+也可以有if判断，以及多个for循环迭代
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">words = <span class="string">'letters'</span></span><br><span class="line"></span><br><span class="line">letter_counts = &#123;letter:words.count(letter) <span class="keyword">for</span> letter <span class="keyword">in</span> words&#125;</span><br><span class="line">print(letter_counts)</span><br><span class="line">    &#123;<span class="string">'s'</span>: <span class="number">1</span>, <span class="string">'r'</span>: <span class="number">1</span>, <span class="string">'e'</span>: <span class="number">2</span>, <span class="string">'l'</span>: <span class="number">1</span>, <span class="string">'t'</span>: <span class="number">2</span>&#125;</span><br><span class="line"><span class="comment">#对于程序执行来说，两次调用word.count(letter)浪费时间，因为‘t’和‘e’出现了两次</span></span><br><span class="line"><span class="comment"># 优化如下</span></span><br><span class="line">letter_counts = &#123;letter:words.count(letter) <span class="keyword">for</span> letter <span class="keyword">in</span> set(words)&#125;<span class="comment">#这是对集合进行迭代而不是字符串</span></span><br></pre></td></tr></table></figure>
+<h2 id="生成器推导式"><a href="#生成器推导式" class="headerlink" title="生成器推导式"></a>生成器推导式</h2><pre><code>元组是没有推导式的。用圆括号是生成器推导式
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number_thing=(number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">6</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>number_thing</span><br><span class="line">&lt;type <span class="string">'generator'</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> number <span class="keyword">in</span> number_thing:</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> number</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="comment">#一个生成器只能运行一次，之后就会被擦除</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/29/python容器：列表、元组、字典与集合/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2044,194 +2225,6 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/linux文件操作与管理01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/06/linux文件操作与管理01/" itemprop="url">linux文件操作与管理01</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-06T15:34:49+08:00">
-                2019-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
-                    <span itemprop="name">linux浅见</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/06/linux文件操作与管理01/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/06/linux文件操作与管理01/" class="cy_cmt_count" data-xid="2019/03/06/linux文件操作与管理01/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="diff：生成差异文件"><a href="#diff：生成差异文件" class="headerlink" title="diff：生成差异文件"></a>diff：生成差异文件</h2><p>（1）参数说明</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参 数</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">-c</td>
-<td style="text-align:center">显示所有内容，同时标出不同之处</td>
-</tr>
-<tr>
-<td style="text-align:center">-a</td>
-<td style="text-align:center">对文本文件进行逐行比较，非文本文件看作文本文件进行比较</td>
-</tr>
-<tr>
-<td style="text-align:center">-i</td>
-<td style="text-align:center">忽略大小写的不同</td>
-</tr>
-<tr>
-<td style="text-align:center">-r</td>
-<td style="text-align:center">比较目录时递归比较子目录中的文件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diff -a a1.txt a3.txt <span class="comment">#比较两个文件的不同</span></span><br><span class="line">diff Desktop/yy1  Desktop/yy2  <span class="comment"># 比较两个文件夹的不同</span></span><br><span class="line">diff -c a1.txt a3.txt <span class="comment">#比较两个文件的不同，并生成差异文件</span></span><br></pre></td></tr></table></figure>
-<h2 id="find-：查找目录或者文件"><a href="#find-：查找目录或者文件" class="headerlink" title="find ：查找目录或者文件"></a>find ：查找目录或者文件</h2><ul>
-<li>语法： find[路径][-可选参数]</li>
-</ul>
-<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">find *.txt <span class="comment"># 查找.txt的文件</span></span><br><span class="line">find /root/edsktop/yy1/ -ctime -2  <span class="comment">#查找448小时内被修改过的文件</span></span><br><span class="line">find -name yy* <span class="comment">#查找指定字符串类型的目录</span></span><br><span class="line">find -name yy.*<span class="comment">#查找的结果是以yy命名的文件</span></span><br><span class="line">find -size 0<span class="comment">#查找字节数为0的文件</span></span><br></pre></td></tr></table></figure>
-<h2 id="ftp-：文件传输指令"><a href="#ftp-：文件传输指令" class="headerlink" title="ftp ：文件传输指令"></a>ftp ：文件传输指令</h2><h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftp 192.168.1.1 connected to 192.168.1.2<span class="comment">#使用ftp地址建立ftp连接</span></span><br></pre></td></tr></table></figure>
-<p>注：建立的过程会输入用户名和密码，建立之后可用get和put指令实现文件的上传和下载<br>删除文件用delete指令</p>
-<h2 id="gunzip：解压文件"><a href="#gunzip：解压文件" class="headerlink" title="gunzip：解压文件"></a>gunzip：解压文件</h2><h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunzip yy.txt.gz <span class="comment">#解压文件</span></span><br><span class="line">gunzip -l yy.txt.gz <span class="comment">#解压文件时显示文件相关信息</span></span><br></pre></td></tr></table></figure>
-<h2 id="gzip：压缩文件"><a href="#gzip：压缩文件" class="headerlink" title="gzip：压缩文件"></a>gzip：压缩文件</h2><h3 id="范例-4"><a href="#范例-4" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gzip -v yy.txt <span class="comment">#压缩文件时显示文件相关信息</span></span><br><span class="line">gzip -d yy.txt.gz <span class="comment">#解压指定文件</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2282,7 +2275,7 @@ tail -n 5 *.<span class="built_in">log</span> <span class="comment">#显示文�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

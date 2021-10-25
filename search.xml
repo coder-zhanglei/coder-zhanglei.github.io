@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo 迁移]]></title>
+    <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
+    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html]]></content>
+      <categories>
+        <category>初识hexo</category>
+      </categories>
+      <tags>
+        <tag>初识hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>%2F2021%2F10%2F16%2Fhello-world%2F</url>
     <content type="text"><![CDATA[title:Hello WorldWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
@@ -624,7 +635,7 @@
   <entry>
     <title><![CDATA[大牛们的博客网站]]></title>
     <url>%2F2018%2F12%2F09%2F%E5%A4%A7%E7%89%9B%E4%BB%AC%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%2F</url>
-    <content type="text"><![CDATA[大牛们的博客网址 http://www.yanmin99.com/]]></content>
+    <content type="text"><![CDATA[大牛们的博客网址 http://www.yanmin99.com/hexo 博客迁移 https://www.cnblogs.com/iHeling/p/14095937.html]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
