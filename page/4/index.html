@@ -291,6 +291,193 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/13/创建自己的github代码库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/13/创建自己的github代码库/" itemprop="url">创建自己的github代码库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-13T22:12:00+08:00">
+                2019-04-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码托管/" itemprop="url" rel="index">
+                    <span itemprop="name">代码托管</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/13/创建自己的github代码库/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/13/创建自己的github代码库/" class="cy_cmt_count" data-xid="2019/04/13/创建自己的github代码库/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="我的代码库"><a href="#我的代码库" class="headerlink" title="我的代码库"></a>我的代码库</h2><p>  网址： <a href="https://github.com/coder-zhanglei/zhanglei.github.io.git" target="_blank" rel="noopener">https://github.com/coder-zhanglei/zhanglei.github.io.git</a><br>  参考的博客： <a href="https://www.cnblogs.com/zhixi/p/9584624.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhixi/p/9584624.html</a></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1、 在github上创建自己账号，建立自己的代码库，已完成<br>2、 安装git软件，下载地址：<a href="https://windows.github.com/" target="_blank" rel="noopener">https://windows.github.com/</a>  或  <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br>注：安装好git后右键就有Git Bash Here可以打开git上传下载文件的框</p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>1、 添加本地目录到远程仓库<br>  在你的本地文件目录下右击，就会出现Git Bash选项，点击进入。<br>2、 设置用户名和邮箱地址。这两个值是作为上传时记录的值。输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> git config --global user.name <span class="string">"用户名"</span></span><br><span class="line"> git config --global user.email <span class="string">"邮箱"</span></span><br><span class="line"><span class="comment">#设置好后可以用命令查看当前的设置：</span></span><br><span class="line">git config --global user.name</span><br></pre></td></tr></table></figure>
+<h2 id="下载和上传远程仓库的文件"><a href="#下载和上传远程仓库的文件" class="headerlink" title="下载和上传远程仓库的文件"></a>下载和上传远程仓库的文件</h2><p>1、 首先初始化本地仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>  注：会生成.git的隐藏文件。没有生成就是没初始化成功</p>
+<p>2、 连接远程仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin <span class="string">"https://github.com/GitHub用户名/代码仓库名称.git"</span></span><br><span class="line">git remote add origin  https://github.com/coder-zhanglei/zhanglei.github.io.git</span><br></pre></td></tr></table></figure>
+<p>  可以通过git remote -v 查看本地链接到的远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure></p>
+<p>  若分支设置错误，可以查看后切换分支<br>【git remote rm origin】 删除现有远程仓库<br>【git remote add origin url】添加新远程仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br><span class="line">git remote add origin url</span><br></pre></td></tr></table></figure>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>1、 从远程仓库拉取所有更新（每次上传项目都要操作）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<p>  注意：此处极易报错！<br>  因为远程代码仓库和本地代码仓库合并后，可能会有冲突，如有报错，使用git status查看状态</p>
+<p>  pull，因为两个仓库不同，发现refusing to merge unrelated histories，无法pull<br>  因为他们是两个不同的项目，要把两个不同的项目合并，git需要添加一句代码，在git pull，这句代码是在git 2.9.2版本发生的，最新的版本需要添加–allow-unrelated-histories<br>git pull origin master –allow-unrelated-histories<br>  注：在 git pull origin master –allow-unrelated-histories此步操作时，.gitignore文件错误冲突并没有解决，只是强制合并忽略掉了</p>
+<h3 id="创建分支，上传文件"><a href="#创建分支，上传文件" class="headerlink" title="创建分支，上传文件"></a>创建分支，上传文件</h3><p>  因为git是分布式管理，所以尽量不要在master主分支上作开发，例如自己有一个项目，在外面开发时，可以使用分支1，在家开发时可以使用分支2，如果有其他人参入 ，分别 使用分支3，4，5<br>每次提交本地代码时候，先合并远程master主分支到本地，再提交</p>
+<p>1、 创建本地分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
+<p>2、 切换本地分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure></p>
+<p>3、 本地分支提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git  add .</span><br><span class="line">git  commit -m ‘dev<span class="string">'</span></span><br><span class="line"><span class="string">git push -u origin dev</span></span><br></pre></td></tr></table></figure>
+<p>4、 合并本地分支到master</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   git  checkout master</span><br><span class="line">   git pull origin master</span><br><span class="line">   git merge origin/master  //合并分支</span><br><span class="line">   git status</span><br><span class="line">   </span><br><span class="line">On branch master</span><br><span class="line">Your branch is ahead of <span class="string">'origin/master'</span> by 12 commits.</span><br><span class="line">  (use <span class="string">"git push"</span> to publish your <span class="built_in">local</span> commits)</span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line">   <span class="comment">#上面的意思就是你有12个commit，需要push到远程master上 </span></span><br><span class="line">   <span class="comment">#执行下面命令即可</span></span><br><span class="line"></span><br><span class="line">   git push origin master</span><br></pre></td></tr></table></figure>
+<h4 id="上传指令的区别"><a href="#上传指令的区别" class="headerlink" title="上传指令的区别"></a>上传指令的区别</h4><p>$ git push origin</p>
+<p>上面命令表示，将当前分支推送到origin主机的对应分支。<br>如果当前分支只有一个追踪分支，那么主机名都可以省略。<br>$ git push 如果当前分支与多个主机存在追踪关系，那么这个时候-u选项会指定一个默认主机，这样后面就可以不加任何参数使用git push。<br>$ git push -u origin master 上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。<br> 不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。</p>
+<h2 id="仓库的管理"><a href="#仓库的管理" class="headerlink" title="仓库的管理"></a>仓库的管理</h2><p>  删除仓库，参考博客：<a href="https://blog.csdn.net/weixin_42152081/article/details/80635777" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42152081/article/details/80635777</a><br>  分支的管理 ：参考博客：<a href="https://blog.csdn.net/wankui/article/details/53328369" target="_blank" rel="noopener">https://blog.csdn.net/wankui/article/details/53328369</a></p>
+<h3 id="一-删除已有仓库"><a href="#一-删除已有仓库" class="headerlink" title="一.删除已有仓库"></a>一.删除已有仓库</h3><p>  如果我们想要删除Github中没有用的仓库，应该如何去做呢？<br>  进入到我们需要删除的仓库里面，找到“settings”即仓库设置：<br>  然后，在仓库设置里拉到最底部，找到“Danger Zone”即危险区域：<br>  点击“Delete this repository”这样就可以删除该仓库了。</p>
+<h3 id="二-删除Github中的某个文件或文件夹"><a href="#二-删除Github中的某个文件或文件夹" class="headerlink" title="二.删除Github中的某个文件或文件夹"></a>二.删除Github中的某个文件或文件夹</h3><p>  1.本地仓库和远程仓库同时删除<br>  例如要删除如图所示的_config.yml和index.md两个文件：<br>  我们先在本地把两个文件删除，然后执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add * //把本地仓库的文件上传到缓存。</span><br><span class="line">git commit -m <span class="string">'del'</span> //把第一步上传到缓存的东西上传到本地仓库，其中<span class="string">'del'</span>是操作标识，内容随便填，方便用户观看。</span><br><span class="line">git push origin master //把本地仓库的文件上传到远程仓库。</span><br></pre></td></tr></table></figure>
+<p>  这样，再打开远程仓库就可以看到两个文件已经被删除了：</p>
+<h2 id="列几个常用的git命令"><a href="#列几个常用的git命令" class="headerlink" title="列几个常用的git命令"></a>列几个常用的git命令</h2><p>git init 项目初始化<br>git clone 拉取项目<br>git add . 添加到暂存区<br>git commit -m 添加commit信息<br>git push 将本地分支推送到服务器上去<br>git pull origin master 本地与服务器端同步</p>
+<p>git log 查看日志<br>git status 查看当前状态<br>git tag 查看版本号<br>git diff 查看尚未提交的更新</p>
+<h3 id="git-fetch：相当于是从远程获取最新版本到本地，不会自动merge"><a href="#git-fetch：相当于是从远程获取最新版本到本地，不会自动merge" class="headerlink" title="git fetch：相当于是从远程获取最新版本到本地，不会自动merge"></a>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</h3><p>Git log -p master..origin/master 比较本地的master分支和origin/master分支的差别<br>查看对比一下 ，具体效果这里就不贴了，各位可以自行测试<br>git merge origin/master 进行合并</p>
+<p>需要注意的是: 和push不同, fetch会自动获取远程`新加入’的分支.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/github和gitlab/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2294,193 +2481,6 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/31/python函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/31/python函数/" itemprop="url">python函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-31T10:18:01+08:00">
-                2019-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python心得/" itemprop="url" rel="index">
-                    <span itemprop="name">Python心得</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/31/python函数/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/31/python函数/" class="cy_cmt_count" data-xid="2019/03/31/python函数/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h2><p>  依次输入def，函数名，带有参数的圆括号，最后紧跟冒号（:），一个函数可以接受任何类型的值作为输入变量，并且返回任何数量的任何类型的结果。<br>如果函数不显示调用return，会默认返回none。<br>  注：none不代表false，作为布尔值和FALSE是一样的。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_nothing</span></span></span><br><span class="line"><span class="function">    <span class="title">pass</span></span></span><br></pre></td></tr></table></figure></p>
-<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><pre><code>传入的参数值是按照顺序依次复制过去的，顺序不同，参数的引用结果不同、
-</code></pre><h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><p>  调用参数时可以指定对应参数的名字，这样可以不遵从顺序传入的原则。若一部分指定了参数名字，而另一部分参数没有指定名字，则没指定名字的<br>按照顺序传入的原则调用。</p>
-<h3 id="指定默认参数值"><a href="#指定默认参数值" class="headerlink" title="指定默认参数值"></a>指定默认参数值</h3><pre><code>默认参数值在函数被指定时已经计算出来了，而不是在程序运行时。
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">menu</span><span class="params">(wine,entree,dessert=<span class="string">'pudding'</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用-收集位置参数"><a href="#使用-收集位置参数" class="headerlink" title="使用*收集位置参数"></a>使用*收集位置参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(*args)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<pre><code>星号将一组可变数量的位置参数集合成参数值的元组。同样的道理，如果你的函数同时有限定的位置参数，那么*args会收集剩下的参数。
-</code></pre><h3 id="使用-收集关键字参数"><a href="#使用-收集关键字参数" class="headerlink" title="使用**收集关键字参数"></a>使用**收集关键字参数</h3><pre><code>使用两个星号可以将参数收集到一个字典中，参数的名字是字典的键，对应参数的值是字典的值。
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(**args)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<pre><code>如果把带有*args和**args的位置参数混合起来，就会按照顺序解析。
-</code></pre><h2 id="文档字符串"><a href="#文档字符串" class="headerlink" title="文档字符串"></a>文档字符串</h2><pre><code>在函数体开始的部分附上函数定义说明的文档，就是函数的字符串。
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(**args)</span>:</span></span><br><span class="line">      <span class="string">'echo return its input argument'</span></span><br><span class="line">      <span class="keyword">pass</span></span><br><span class="line">      </span><br><span class="line"><span class="comment">#可以定义更长的字符串</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(**args)</span>:</span></span><br><span class="line">      <span class="string">'''echo return its input argument</span></span><br><span class="line"><span class="string">      gdjglajfgag jfaojigiab fjajofdi '''</span></span><br><span class="line">      <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<pre><code>用Python函数help()可以打印出一个函数的文档字符串。如：help(print_args)
-</code></pre><h2 id="一等公民：函数（函数复杂定义及应用）"><a href="#一等公民：函数（函数复杂定义及应用）" class="headerlink" title="一等公民：函数（函数复杂定义及应用）"></a>一等公民：函数（函数复杂定义及应用）</h2><p>  Python中一切皆对象，包括数字，字符串，元组，列表，字典，函数。函数是Python中一等公民，可以把它们（返回值赋给变量），可以作为<br>被其他函数调用，也可以从其他函数中返回值。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数中的函数,传入的值是一个函数名，在一个函数中调用另一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_something</span><span class="params">(func)</span></span></span><br><span class="line"><span class="function">    <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function">#传参函数的函数</span></span><br><span class="line"><span class="function"><span class="title">def</span> <span class="title">run_something</span><span class="params">(func,arg1,arg2)</span></span></span><br><span class="line"><span class="function">    <span class="title">func</span><span class="params">(arg1,arg2)</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="内部函数"><a href="#内部函数" class="headerlink" title="内部函数"></a>内部函数</h3><pre><code>可以在函数中定义另外一个函数
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回的是一个值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(**args)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">return</span> inner()</span><br></pre></td></tr></table></figure>
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><pre><code>闭包：一个可以被动态创建的可以记录外部变量的函数。
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回的是一个函数，</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_args</span><span class="params">(args)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"%s"</span> ,%args</span><br><span class="line">    <span class="keyword">return</span> inner</span><br></pre></td></tr></table></figure>
-<h3 id="匿名函数：lambda-函数"><a href="#匿名函数：lambda-函数" class="headerlink" title="匿名函数：lambda()函数"></a>匿名函数：lambda()函数</h3><pre><code>lambda函数是用一个语句表达的匿名函数，可以用它来代替小的函数。
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">edit_stroy</span><span class="params">(words,func)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">        print(func(word))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enliven</span><span class="params">(word)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> word.capitalize() + <span class="string">'!'</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#调用函数为</span></span><br><span class="line">edit_stroy(starirs,enliven)</span><br><span class="line"><span class="comment">#用匿名函数为</span></span><br><span class="line">edit_stroy(starirs,<span class="keyword">lambda</span> word: word.capitalize() + <span class="string">'!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#lambda函数接收一个参数word。在冒号和末尾圆括号之间的部分为函数的定义。</span></span><br></pre></td></tr></table></figure>
-<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>  生成器使用来创建一个Python对象的。用它可以迭代庞大的序列，且不需要在内存中创建和存储整个序列。通常，生成器是为迭代器产生数的。<br>它会记录上一次调用的位置，并且返回下一个值。这一点和普通函数都是不一样的，一般函数不记录前一次调用，而且都会在函数的第一行执行。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_range</span><span class="params">(first=<span class="number">0</span>,last=<span class="number">10</span>,step=<span class="number">1</span>)</span>:</span></span><br><span class="line">    number=first</span><br><span class="line">    <span class="keyword">while</span> number &lt; last:</span><br><span class="line">        <span class="keyword">yield</span> number   <span class="comment">#记录上一次调用的位置，并且返回下一个值</span></span><br><span class="line">        number += step</span><br></pre></td></tr></table></figure>
-<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><pre><code>装饰器实质是一个函数 =。它把一个函数作为输入并且返回另外一个函数。通常使用如下技巧：
-</code></pre><ul>
-<li>*args 和 **kwargs</li>
-<li>闭包</li>
-<li>作为参数的函数</li>
-</ul>
-<h2 id="名称中的-和-的用法"><a href="#名称中的-和-的用法" class="headerlink" title="名称中的_和_的用法"></a>名称中的_和_的用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_range</span><span class="params">(first=<span class="number">0</span>,last=<span class="number">10</span>,step=<span class="number">1</span>)</span>:</span></span><br><span class="line">    number=first</span><br><span class="line">    <span class="keyword">while</span> number &lt; last:</span><br><span class="line">        <span class="keyword">yield</span> number   <span class="comment">#记录上一次调用的位置，并且返回下一个值</span></span><br><span class="line">        number += step</span><br><span class="line"></span><br><span class="line">my_range._name_ <span class="comment">#显示函数名</span></span><br><span class="line">my_range._doc_ <span class="comment">#显示文档字符串</span></span><br></pre></td></tr></table></figure>
-<h2 id="try和except处理错误"><a href="#try和except处理错误" class="headerlink" title="try和except处理错误"></a>try和except处理错误</h2><pre><code>正常执行try后面的语句，错误则执行except后面的语句。
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>：</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">except</span>：</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<pre><code>获取异常对象：
-    except exceptiontype as name
-如：except IndexError as err：将一个IndexError异常值赋给err
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2531,7 +2531,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2590,7 +2590,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

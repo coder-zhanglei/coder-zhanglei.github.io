@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[log4cxx移植笔记]]></title>
+    <url>%2F2022%2F01%2F04%2Flog4cxx%E7%A7%BB%E6%A4%8D%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[hexo 迁移]]></title>
     <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
     <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html]]></content>

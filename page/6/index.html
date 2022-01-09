@@ -291,6 +291,203 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/linux文件操作与管理02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/08/linux文件操作与管理02/" itemprop="url">linux文件操作与管理02</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-08T20:37:58+08:00">
+                2019-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/03/08/linux文件操作与管理02/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/03/08/linux文件操作与管理02/" class="cy_cmt_count" data-xid="2019/03/08/linux文件操作与管理02/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="less-一次显示一页文本"><a href="#less-一次显示一页文本" class="headerlink" title="less :一次显示一页文本"></a>less :一次显示一页文本</h2><ul>
+<li>语法 ： less [-参数] 文件名</li>
+</ul>
+<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less a3.txt</span><br></pre></td></tr></table></figure>
+<p>注：显示文本后：按b：向后翻页，d：向后翻半页，h:显示帮助界面，u：向前滚动半页，<br>y:向前滚动一行；回车键：滚动一行；空壳键：滚动一页；q：退出</p>
+<h2 id="mv：移动或更名现有的文件或目录"><a href="#mv：移动或更名现有的文件或目录" class="headerlink" title="mv：移动或更名现有的文件或目录"></a>mv：移动或更名现有的文件或目录</h2><ul>
+<li>语法：mv [-可选参数] 源文件 目标文件/目录</li>
+</ul>
+<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv a.txt b.txt</span><br></pre></td></tr></table></figure>
+<h2 id="ncftp：文件传输指令"><a href="#ncftp：文件传输指令" class="headerlink" title="ncftp：文件传输指令"></a>ncftp：文件传输指令</h2><ul>
+<li>语法：ncftp [-可选参数] [主机/IP地址]</li>
+<li>参数选择</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-u&lt;用户名&gt;</td>
+<td style="text-align:center">使用用户名</td>
+</tr>
+<tr>
+<td style="text-align:center">-p&lt;密码&gt;</td>
+<td style="text-align:center">使用指定密码</td>
+</tr>
+<tr>
+<td style="text-align:center">-P&lt;端口号&gt;</td>
+<td style="text-align:center">使用指定端口号，默认为21</td>
+</tr>
+</tbody>
+</table>
+<h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ncftp -u sy114 -p 123456 192.168.128.1   <span class="comment">#登录</span></span><br><span class="line"><span class="comment">##相似的命令</span></span><br><span class="line">ncftpget -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#下载文件</span></span><br><span class="line">ncftpput -u sy114 -p 123456 192.168.128.1 /home/yy1/vc <span class="comment">#上传文件</span></span><br></pre></td></tr></table></figure>
+<p>注：登录上后跟ftp指令相似</p>
+<h2 id="paste：合并文件"><a href="#paste：合并文件" class="headerlink" title="paste：合并文件"></a>paste：合并文件</h2><ul>
+<li>语法：paste [-可选参数] [文件]<h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">paste a1 a2 <span class="comment">#合并文件的行</span></span><br><span class="line">paste -s a1 a2 <span class="comment">#合并文件的行，并指定间隔符</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="patch：修补文件，给文件打补丁"><a href="#patch：修补文件，给文件打补丁" class="headerlink" title="patch：修补文件，给文件打补丁"></a>patch：修补文件，给文件打补丁</h2><ul>
+<li>语法： patch [-可选参数] [文件]<h3 id="范例-4"><a href="#范例-4" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">diff a1 a2&gt;sy.diff <span class="comment">#比较文件的差异，生成差异文件sy.diff</span></span><br><span class="line">patch a1&lt;sy.diff <span class="comment">#修复a1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/linux文件操作与管理01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1800,165 +1997,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/hexo的next创建about/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/09/hexo的next创建about/" itemprop="url">hexo的next创建about</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T14:09:44+08:00">
-                2018-12-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/初识hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">初识hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/12/09/hexo的next创建about/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/12/09/hexo的next创建about/" class="cy_cmt_count" data-xid="2018/12/09/hexo的next创建about/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="hexo的next创建about"><a href="#hexo的next创建about" class="headerlink" title="hexo的next创建about"></a>hexo的next创建about</h2><h3 id="创建步骤"><a href="#创建步骤" class="headerlink" title="创建步骤"></a>创建步骤</h3><ul>
-<li>1、新建一个about页面，命令如下 ： </li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
-<p> 注：在myBlog/source下会生成一个行的文件夹about，在该文件夹下会有一个index.md文件</p>
-<pre><code>- 2、 菜单显示about链接，在主题的thems/next/_configy.yml设置中将menu中的about前面的注释去掉
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">home: /</span><br><span class="line">archives: /archives/</span><br><span class="line">categories: /categories/</span><br><span class="line">tags: /tags/</span><br><span class="line">about: /about/</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2009,7 +2047,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2068,7 +2106,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
