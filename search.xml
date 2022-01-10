@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[log4cxx移植笔记]]></title>
     <url>%2F2022%2F01%2F04%2Flog4cxx%E7%A7%BB%E6%A4%8D%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[log4cxx文件的编译编译需要的三个文件：1、apache-log4cxx-0.10.0]]></content>
+      <categories>
+        <category>log4cxx</category>
+      </categories>
+      <tags>
+        <tag>log4cxx的移植</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[hexo 迁移]]></title>
