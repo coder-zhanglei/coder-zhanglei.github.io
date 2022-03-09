@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2022%2F02%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[title:Hello WorldWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[log4cxx移植笔记]]></title>
     <url>%2F2022%2F01%2F04%2Flog4cxx%E7%A7%BB%E6%A4%8D%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[log4cxx文件的编译编译需要的三个文件：1、apache-log4cxx-0.10.0]]></content>
@@ -14,18 +19,13 @@
   <entry>
     <title><![CDATA[hexo 迁移]]></title>
     <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
-    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html]]></content>
+    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html 准备工作 先安装必备软件$\color{red}{git}$, $\color{red}{node.js}$ 开始迁移迁移hexo用到的相关命令1234567git config --global user.name "yourname" #设置用户名git config --global user.email "youremail" #设置邮箱git config user.name #查询设置的用户名git config user.email #查询设置的邮箱## 正式部署hexo clean &amp;&amp; hexo g &amp;&amp; hexo d MARKDOWn编辑vscode安装如下插件即可实现markdown语法的编辑1、markdown all in one2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色3、markdown preview github stying，Github风格的预览 注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。 问题记录1、 hexo d提交时出现错误：FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/do TypeError [ERR_INVALID_ARG_TYPE]:$\color{red}{解决方法：}$该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
       <tags>
         <tag>初识hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2021%2F10%2F16%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[title:Hello WorldWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
     <title><![CDATA[FPGA电子系统设计方法]]></title>
