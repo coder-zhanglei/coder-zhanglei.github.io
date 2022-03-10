@@ -291,6 +291,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/14/代码库常见错误/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/14/代码库常见错误/" itemprop="url">代码库常见错误</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-14T12:36:59+08:00">
+                2019-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码托管/" itemprop="url" rel="index">
+                    <span itemprop="name">代码托管</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/14/代码库常见错误/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/14/代码库常见错误/" class="cy_cmt_count" data-xid="2019/04/14/代码库常见错误/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Git新建分支出现fatal-Not-a-valid-object-name-‘master’错误"><a href="#Git新建分支出现fatal-Not-a-valid-object-name-‘master’错误" class="headerlink" title="Git新建分支出现fatal: Not a valid object name: ‘master’错误"></a>Git新建分支出现fatal: Not a valid object name: ‘master’错误</h2><p>  原因是没有提交一个对象，要先commit之后才会真正建立master分支，此时才可以建立其它分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add c++</span><br><span class="line">git commot -m <span class="string">"提交c++"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#然后创建分支</span></span><br><span class="line">git branch wap</span><br><span class="line">git branch -a <span class="comment">#查看分支</span></span><br></pre></td></tr></table></figure>
+<h2 id="出现error-The-following-untracked-working-tree-files-would-be-overwritten-by-checkout"><a href="#出现error-The-following-untracked-working-tree-files-would-be-overwritten-by-checkout" class="headerlink" title="出现error: The following untracked working tree files would be overwritten by checkout"></a>出现error: The following untracked working tree files would be overwritten by checkout</h2><p>  pull代码出现error: The following untracked working tree files would be overwritten by checkout </p>
+<p>$ git clean -d -fx “”</p>
+<h2 id="Git使用之-pathspec-master-did-not-match-any-file-s-known-to-git"><a href="#Git使用之-pathspec-master-did-not-match-any-file-s-known-to-git" class="headerlink" title="Git使用之(pathspec master did not match any file(s) known to git)"></a>Git使用之(pathspec master did not match any file(s) known to git)</h2><p>  不能查看分支<br>git checkout master<br>提示如下错误:<br>error: pathspec ‘master’ did not match any file(s) known to git</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>1.首先我们看一下分支情况:<br>git branch -a<br>2.如果没有看到你想要的分支,先获取所有分支:<br>git fetch  需要注意的是: 和push不同, fetch会自动获取远程 `新加入’ 的分支.</p>
+<h2 id="执行git-push出现”Everything-up-to-date”"><a href="#执行git-push出现”Everything-up-to-date”" class="headerlink" title="执行git push出现”Everything up-to-date”"></a>执行git push出现”Everything up-to-date”</h2><p>在github上git clone一个项目，在里面创建一个目录，然后git push的时候，出现报错”Everything up-to-date”</p>
+<p>原因：<br>1）没有git add .<br>2）没有git commit -m “提交信息”<br>如果上面两个步骤都成功执行，还出现这个错误是因为创建的目录下是空的，目录下必须有文件才能git push上传成功。<br>在github上创建文件的时候，在新文件名后加/符号就是文件夹，但是这种方式只支持英文名目录，中文名目录不支持。</p>
+<h2 id="对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法"><a href="#对于在git上面拉代码报”error-RPC-failed-curl-56-OpenSSL-SSL-read-SSL-ERROR-SYSCALL-errno-10054”解决方法" class="headerlink" title="对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法"></a>对于在git上面拉代码报”error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054”解决方法</h2><p>主要原因是安全设置的问题：<br>首先执行git config http.sslVerify “false”   若出现下列错误<br>git config http.sslVerify “false”  fatal: not in a git directory<br>再继续执行   git config  –globle   http.sslVerify “false”   问题解决</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/13/创建自己的github代码库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2315,172 +2476,6 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/python盒子：模块、包、程序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/02/python盒子：模块、包、程序/" itemprop="url">python盒子：模块、包、程序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-02T15:20:13+08:00">
-                2019-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python心得/" itemprop="url" rel="index">
-                    <span itemprop="name">Python心得</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/02/python盒子：模块、包、程序/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/02/python盒子：模块、包、程序/" class="cy_cmt_count" data-xid="2019/04/02/python盒子：模块、包、程序/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><p>  主要是sys库，调用sys.argv<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'fafdsaf:'</span>,sys.argv)<span class="comment">#接收外部的参数</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="使用别名导入模块"><a href="#使用别名导入模块" class="headerlink" title="使用别名导入模块"></a>使用别名导入模块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> report <span class="keyword">as</span> wr <span class="comment"># 把report别名为wr</span></span><br></pre></td></tr></table></figure>
-<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>  把多个模块组织成文件层次，称之为包。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#主程序是boxes/weather.py</span></span><br><span class="line"><span class="keyword">from</span> source <span class="keyword">import</span> daily,weekly<span class="comment">#模块1：boxes/sources/daily.py  模块2：boxes/source/weekly.py</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#还要在sources目录下添加一个文件：init.py。这个文件可以是空的，但是不能少</span></span><br><span class="line"><span class="comment">#在主程序下就可以调用source目录下的文件了</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> report <span class="keyword">as</span> wr <span class="comment"># 把report别名为wr</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="双端队列"><a href="#双端队列" class="headerlink" title="双端队列"></a>双端队列</h2><p>  模块deque，from collections import deque;函数popleft()去掉最左边的项并返回该项，pop()去掉最右边的项并返回该项。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">palindrome</span><span class="params">(word)</span>:</span></span><br><span class="line">    <span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line">    dq = deque(word)</span><br><span class="line">    <span class="keyword">while</span> len(dq) &gt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> dq.popleft != dq.pop()：</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
-<h2 id="itertools迭代代码结构"><a href="#itertools迭代代码结构" class="headerlink" title="itertools迭代代码结构"></a>itertools迭代代码结构</h2><p>  在for…in循环中调用迭代函数，每次会返回一项，并记住当前调用的状态</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> itertools.chain([[<span class="number">1</span>,<span class="number">2</span>],[<span class="string">'a'</span>,<span class="string">'b'</span>]):</span><br><span class="line">    print(item) <span class="comment">#每次输出一项</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">cycle()是在参数之间循环的无限迭代器</span><br><span class="line">accumulate()计算积累的值</span><br></pre></td></tr></table></figure>
-<h2 id="友好输出pprint"><a href="#友好输出pprint" class="headerlink" title="友好输出pprint"></a>友好输出pprint</h2><p>  pprint()会尽量排列输出元素从而增加可读性</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br></pre></td></tr></table></figure>
-<h2 id="获取更多python代码"><a href="#获取更多python代码" class="headerlink" title="获取更多python代码"></a>获取更多python代码</h2><ul>
-<li>pypi: <a href="http://pypi.python.org" target="_blank" rel="noopener">http://pypi.python.org</a> 也称为cheese shop</li>
-<li>github： <a href="http://github.com/python" target="_blank" rel="noopener">http://github.com/python</a></li>
-<li>readthedocs <a href="https://readthedoces.org" target="_blank" rel="noopener">https://readthedoces.org</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2531,7 +2526,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
