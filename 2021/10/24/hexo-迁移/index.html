@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="YHNE&#39;s blog">
 <meta property="og:description" content="迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html  准备工作 先安装必备软件git, node.js,  开始迁移迁移hexo用到的相关命令1234567git config --global user.name &quot;coder-zhanglei&quot; #设置用户名git config --global user.email &quot;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2022-03-10T15:49:35.979Z">
+<meta property="og:updated_time" content="2022-03-10T16:03:07.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 迁移">
 <meta name="twitter:description" content="迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html  准备工作 先安装必备软件git, node.js,  开始迁移迁移hexo用到的相关命令1234567git config --global user.name &quot;coder-zhanglei&quot; #设置用户名git config --global user.email &quot;">
@@ -404,8 +404,10 @@
 <h2 id="开始迁移"><a href="#开始迁移" class="headerlink" title="开始迁移"></a>开始迁移</h2><h2 id="迁移hexo用到的相关命令"><a href="#迁移hexo用到的相关命令" class="headerlink" title="迁移hexo用到的相关命令"></a>迁移hexo用到的相关命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"coder-zhanglei"</span> <span class="comment">#设置用户名</span></span><br><span class="line">git config --global user.email <span class="string">"1357028281@qq.com"</span> <span class="comment">#设置邮箱</span></span><br><span class="line">git config user.name <span class="comment">#查询设置的用户名</span></span><br><span class="line">git config user.email <span class="comment">#查询设置的邮箱</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 正式部署</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 <h2 id="MARKDOWn编辑"><a href="#MARKDOWn编辑" class="headerlink" title="MARKDOWn编辑"></a>MARKDOWn编辑</h2><h3 id="vscode安装如下插件即可实现markdown语法的编辑"><a href="#vscode安装如下插件即可实现markdown语法的编辑" class="headerlink" title="vscode安装如下插件即可实现markdown语法的编辑"></a>vscode安装如下插件即可实现markdown语法的编辑</h3><p>1、markdown all in one<br>2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色<br>3、markdown preview github stying，Github风格的预览</p>
 <p>注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。</p>
-<h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>1、 hexo d提交时出现错误：FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/do" target="_blank" rel="noopener">http://hexo.io/do</a>  TypeError [ERR_INVALID_ARG_TYPE]:</p>
-<label style="color:red">解决方法：</label>该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi<br><br>2、  OpenSSL SSL_read: Connection was reset, errno 10054<br><br><label style="color:red">解决方法：</label>执行命令<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git config --global http.sslVerify <span class="string">"false"</span></span><br></pre></td></tr></table></figure><br><br>3、 Failed to connect to github.com port 443 after 21098 ms: Timed out<br><br><label style="color:red">解决方法：</label>
+<h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>1、 hexo d提交时出现错误：<em>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/do" target="_blank" rel="noopener">http://hexo.io/do</a>  TypeError [ERR_INVALID_ARG_TYPE]</em>:</p>
+<label style="color:red">解决方法：</label>该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi<br><br>2、  OpenSSL SSL_read: Connection was reset, <label style="color:red">errno 10054</label>
+
+<label style="color:red">解决方法：</label>执行命令<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git config --global http.sslVerify <span class="string">"false"</span></span><br></pre></td></tr></table></figure><br><br>3、 Failed to connect to github.com <label style="color:red">port 443 after 21098 ms:</label> Timed out<br><br><label style="color:red">解决方法：</label>
 
 <p><label style="color:blue">解决方法：</label>我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git config --global https.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
@@ -468,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/10/24/hexo-文章特性设置/" rel="next" title="hexo 迁移">
-                <i class="fa fa-chevron-left"></i> hexo 迁移
+              <a href="/2019/12/31/FPGA电子系统设计方法/" rel="next" title="FPGA电子系统设计方法">
+                <i class="fa fa-chevron-left"></i> FPGA电子系统设计方法
               </a>
             
           </div>
@@ -478,8 +480,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/01/04/log4cxx移植笔记/" rel="prev" title="log4cxx移植笔记">
-                log4cxx移植笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2021/10/24/hexo-文章特性设置/" rel="prev" title="hexo 迁移">
+                hexo 迁移 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
