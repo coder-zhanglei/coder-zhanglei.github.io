@@ -584,174 +584,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/24/hexo-迁移/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/10/24/hexo-迁移/" itemprop="url">hexo 迁移</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-10-24T22:45:11+08:00">
-                2021-10-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/初识hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">初识hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2021/10/24/hexo-迁移/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2021/10/24/hexo-迁移/" class="cy_cmt_count" data-xid="2021/10/24/hexo-迁移/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="迁移时候主要用到可参考的博客"><a href="#迁移时候主要用到可参考的博客" class="headerlink" title="迁移时候主要用到可参考的博客"></a>迁移时候主要用到可参考的博客</h2><ul>
-<li><a href="https://www.cnblogs.com/iHeling/p/14095937.html" target="_blank" rel="noopener">https://www.cnblogs.com/iHeling/p/14095937.html</a></li>
-</ul>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li>先安装必备软件<label style="color:red">git</label>, <label style="color:red">node.js</label>,</li>
-</ul>
-<h2 id="开始迁移"><a href="#开始迁移" class="headerlink" title="开始迁移"></a>开始迁移</h2><h2 id="迁移hexo用到的相关命令"><a href="#迁移hexo用到的相关命令" class="headerlink" title="迁移hexo用到的相关命令"></a>迁移hexo用到的相关命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"coder-zhanglei"</span> <span class="comment">#设置用户名</span></span><br><span class="line">git config --global user.email <span class="string">"1357028281@qq.com"</span> <span class="comment">#设置邮箱</span></span><br><span class="line">git config user.name <span class="comment">#查询设置的用户名</span></span><br><span class="line">git config user.email <span class="comment">#查询设置的邮箱</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 正式部署</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<h2 id="MARKDOWn编辑"><a href="#MARKDOWn编辑" class="headerlink" title="MARKDOWn编辑"></a>MARKDOWn编辑</h2><h3 id="vscode安装如下插件即可实现markdown语法的编辑"><a href="#vscode安装如下插件即可实现markdown语法的编辑" class="headerlink" title="vscode安装如下插件即可实现markdown语法的编辑"></a>vscode安装如下插件即可实现markdown语法的编辑</h3><p>1、markdown all in one<br>2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色<br>3、markdown preview github stying，Github风格的预览</p>
-<p>注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。</p>
-<h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>1、 hexo d提交时出现错误：<em>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/do" target="_blank" rel="noopener">http://hexo.io/do</a>  TypeError [ERR_INVALID_ARG_TYPE]</em>:</p>
-<label style="color:red">解决方法：</label>该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi<br><br>2、  OpenSSL SSL_read: Connection was reset, <label style="color:red">errno 10054</label>
-
-<label style="color:red">解决方法：</label>执行命令<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">"false"</span></span><br></pre></td></tr></table></figure><br><br>3、 Failed to connect to github.com <label style="color:red">port 443 after 21098 ms:</label> Timed out<br><br><label style="color:red">解决方法：</label>
-
-<p><label style="color:blue">解决方法：</label>我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global https.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/24/hexo-文章特性设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -877,11 +709,183 @@
 </blockquote>
 <p>粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***也就是三个星号***</span><br></pre></td></tr></table></figure></p>
 <p>显示效果</p>
+<blockquote>
 <p><strong><em>也就是三个星号</em></strong></p>
+</blockquote>
 <p>斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*也就是一个星号*</span><br></pre></td></tr></table></figure>
 <p>效果显示</p>
+<blockquote>
 <p><em>也就是一个星号</em></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/24/hexo-迁移/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/10/24/hexo-迁移/" itemprop="url">hexo 迁移</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-10-24T22:45:11+08:00">
+                2021-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/初识hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">初识hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2021/10/24/hexo-迁移/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2021/10/24/hexo-迁移/" class="cy_cmt_count" data-xid="2021/10/24/hexo-迁移/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="迁移时候主要用到可参考的博客"><a href="#迁移时候主要用到可参考的博客" class="headerlink" title="迁移时候主要用到可参考的博客"></a>迁移时候主要用到可参考的博客</h2><ul>
+<li><a href="https://www.cnblogs.com/iHeling/p/14095937.html" target="_blank" rel="noopener">https://www.cnblogs.com/iHeling/p/14095937.html</a></li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>先安装必备软件<label style="color:red">git</label>, <label style="color:red">node.js</label>,</li>
+</ul>
+<h2 id="开始迁移"><a href="#开始迁移" class="headerlink" title="开始迁移"></a>开始迁移</h2><h2 id="迁移hexo用到的相关命令"><a href="#迁移hexo用到的相关命令" class="headerlink" title="迁移hexo用到的相关命令"></a>迁移hexo用到的相关命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"coder-zhanglei"</span> <span class="comment">#设置用户名</span></span><br><span class="line">git config --global user.email <span class="string">"1357028281@qq.com"</span> <span class="comment">#设置邮箱</span></span><br><span class="line">git config user.name <span class="comment">#查询设置的用户名</span></span><br><span class="line">git config user.email <span class="comment">#查询设置的邮箱</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 正式部署</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="MARKDOWn编辑"><a href="#MARKDOWn编辑" class="headerlink" title="MARKDOWn编辑"></a>MARKDOWn编辑</h2><h3 id="vscode安装如下插件即可实现markdown语法的编辑"><a href="#vscode安装如下插件即可实现markdown语法的编辑" class="headerlink" title="vscode安装如下插件即可实现markdown语法的编辑"></a>vscode安装如下插件即可实现markdown语法的编辑</h3><p>1、markdown all in one<br>2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色<br>3、markdown preview github stying，Github风格的预览</p>
+<p>注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。</p>
+<h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>1、 hexo d提交时出现错误：<em>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/do" target="_blank" rel="noopener">http://hexo.io/do</a>  TypeError [ERR_INVALID_ARG_TYPE]</em>:</p>
+<label style="color:red">解决方法：</label>该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi<br><br>2、  OpenSSL SSL_read: Connection was reset, <label style="color:red">errno 10054</label>
+
+<label style="color:red">解决方法：</label>执行命令<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">"false"</span></span><br></pre></td></tr></table></figure><br><br>3、 Failed to connect to github.com <label style="color:red">port 443 after 21098 ms:</label> Timed out<br><br><label style="color:red">解决方法：</label>
+
+<p><label style="color:blue">解决方法：</label>我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global https.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
 
           
         
