@@ -28,9 +28,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo 迁移]]></title>
+    <title><![CDATA[hexo 文章特性设置]]></title>
     <url>%2F2021%2F10%2F24%2Fhexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[为字体添加颜色效果展示这是红色字体这是绿色字体这是黄色字体这是蓝色字体这是青色，蓝绿色字体 语法12345这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体 内容块1&gt; 这里的内容显示在内容块中 删除线（中划线），需要使用“~”来包含需要删除线的文本 12~~fsadfsa~~ fsadfsa下划线，需要选中需要下划线的文本，按下“CTRL”+“U”快捷键实现。 下划线的文本 粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本 也就是三个星号 斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本 也就是一个星号]]></content>
+    <content type="text"><![CDATA[为字体添加颜色效果展示这是红色字体这是绿色字体这是黄色字体这是蓝色字体这是青色，蓝绿色字体 语法12345这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体 文字风格设置内容块 1&gt; 这里的内容显示在内容块中 显示效果 这里的内容是在内容快中显示的 删除线（中划线），需要使用“~”来包含需要删除线的文本 1~~fsadfsa~~ 效果显示 fsadfsa 下划线1&lt;u&gt;下划线的文本&lt;/u&gt; 效果显示 下划线的文本 粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本1***也就是三个星号*** 显示效果 也就是三个星号 斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本 1*也就是一个星号* 效果显示 也就是一个星号]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
