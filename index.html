@@ -700,10 +700,10 @@
 <h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>1、 hexo d提交时出现错误：<em>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/do" target="_blank" rel="noopener">http://hexo.io/do</a>  TypeError [ERR_INVALID_ARG_TYPE]</em>:</p>
 <label style="color:red">解决方法：</label>该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi<br><br>2、  OpenSSL SSL_read: Connection was reset, <label style="color:red">errno 10054</label>
 
-<label style="color:red">解决方法：</label>执行命令<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git config --global http.sslVerify <span class="string">"false"</span></span><br></pre></td></tr></table></figure><br><br>3、 Failed to connect to github.com <label style="color:red">port 443 after 21098 ms:</label> Timed out<br><br><label style="color:red">解决方法：</label>
+<label style="color:red">解决方法：</label>执行命令<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">"false"</span></span><br></pre></td></tr></table></figure><br><br>3、 Failed to connect to github.com <label style="color:red">port 443 after 21098 ms:</label> Timed out<br><br><label style="color:red">解决方法：</label>
 
 <p><label style="color:blue">解决方法：</label>我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git config --global https.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global https.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
 
           
         
