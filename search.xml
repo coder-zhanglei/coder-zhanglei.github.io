@@ -17,9 +17,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo 文章特性设置]]></title>
-    <url>%2F2021%2F10%2F24%2Fhexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[为字体添加颜色效果展示这是红色字体这是绿色字体这是黄色字体这是蓝色字体这是青色，蓝绿色字体 语法12345这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体 文字风格设置内容块 1&gt; 这里的内容显示在内容块中 显示效果 这里的内容是在内容快中显示的 删除线（中划线），需要使用“~”来包含需要删除线的文本 1~~fsadfsa~~ 效果显示 fsadfsa 下划线1&lt;u&gt;下划线的文本&lt;/u&gt; 效果显示 下划线的文本 粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本1***也就是三个星号*** 显示效果 也就是三个星号 斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本 1*也就是一个星号* 效果显示 也就是一个星号]]></content>
+    <title><![CDATA[hexo 迁移]]></title>
+    <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
+    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html 准备工作 先安装必备软件git, node.js, 开始迁移迁移hexo用到的相关命令1234567git config --global user.name "coder-zhanglei" #设置用户名git config --global user.email "1357028281@qq.com" #设置邮箱git config user.name #查询设置的用户名git config user.email #查询设置的邮箱## 正式部署hexo clean &amp;&amp; hexo g &amp;&amp; hexo d MARKDOWn编辑vscode安装如下插件即可实现markdown语法的编辑1、markdown all in one2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色3、markdown preview github stying，Github风格的预览 注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。 问题记录1、 hexo d提交时出现错误：FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/do TypeError [ERR_INVALID_ARG_TYPE]: 解决方法：该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi2、 OpenSSL SSL_read: Connection was reset, errno 10054 解决方法：执行命令1git config --global http.sslVerify "false"3、 Failed to connect to github.com port 443 after 21098 ms: Timed out解决方法： 解决方法：我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决 12git config --global https.proxygit config --global --unset https.proxy]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
@@ -28,9 +28,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo 迁移]]></title>
-    <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
-    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html 准备工作 先安装必备软件git, node.js, 开始迁移迁移hexo用到的相关命令1234567git config --global user.name "coder-zhanglei" #设置用户名git config --global user.email "1357028281@qq.com" #设置邮箱git config user.name #查询设置的用户名git config user.email #查询设置的邮箱## 正式部署hexo clean &amp;&amp; hexo g &amp;&amp; hexo d MARKDOWn编辑vscode安装如下插件即可实现markdown语法的编辑1、markdown all in one2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色3、markdown preview github stying，Github风格的预览 注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。 问题记录1、 hexo d提交时出现错误：FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/do TypeError [ERR_INVALID_ARG_TYPE]: 解决方法：该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi2、 OpenSSL SSL_read: Connection was reset, errno 10054 解决方法：执行命令1git config --global http.sslVerify "false"3、 Failed to connect to github.com port 443 after 21098 ms: Timed out解决方法： 解决方法：我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决 12git config --global https.proxygit config --global --unset https.proxy]]></content>
+    <title><![CDATA[hexo 文章特性设置]]></title>
+    <url>%2F2021%2F10%2F24%2Fhexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[为字体添加颜色效果展示这是红色字体这是绿色字体这是黄色字体这是蓝色字体这是青色，蓝绿色字体 语法12345这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体 文字风格设置内容块 1&gt; 这里的内容显示在内容块中 显示效果 这里的内容是在内容快中显示的 删除线（中划线），需要使用“~”来包含需要删除线的文本 1~~fsadfsa~~ 效果显示 fsadfsa 下划线1&lt;u&gt;下划线的文本&lt;/u&gt; 效果显示 下划线的文本 粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本1***也就是三个星号*** 显示效果 也就是三个星号 斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本 1*也就是一个星号* 效果显示 也就是一个星号]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
