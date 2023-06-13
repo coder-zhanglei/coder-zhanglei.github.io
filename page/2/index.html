@@ -293,6 +293,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/matlab基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/30/matlab基础知识/" itemprop="url">matlab基础知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-30T11:41:03+08:00">
+                2019-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab学习/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/07/30/matlab基础知识/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/07/30/matlab基础知识/" class="cy_cmt_count" data-xid="2019/07/30/matlab基础知识/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="matlab基本命令"><a href="#matlab基本命令" class="headerlink" title="matlab基本命令"></a>matlab基本命令</h2><p>1、 path命令<br>  在matlab的命令行中输入可以得到matlab的所有搜索路径。使用path扩展搜索目录：path(path,’D:\matlab’)<br>2、 genpath命令<br>  在命令行中输入可以得到，有MATLAB所有的搜索路径连接而成的一个长字符串。<br>3、 使addpath命令扩展目录<br>   addpathD:\matlab -begin 将matlab添加到整个搜索路径的开始<br>   addpathD:\matlab -end 将matlab添加到整个搜索路径的末尾。</p>
+<h3 id="MATLAB帮助系统"><a href="#MATLAB帮助系统" class="headerlink" title="MATLAB帮助系统"></a>MATLAB帮助系统</h3><p>1、 帮助命令<br> help、help+函数名（类）、helpwin和helpdesk，其中后两个是用来调用MATLAB联机帮助窗口。<br>2、 lookfor函数<br>   当用户不知道某个函数的确切名称，可以用lookfor函数，根据关键字搜索。<br>3、 其他的帮助命令</p>
+<ul>
+<li>who：内存变量列表</li>
+<li>whos：内存变量的详细信息</li>
+<li>what：目录中的文件列表</li>
+<li>which：确定文件位置</li>
+<li>exist：变量检验函数<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3>1、 cd：显示或者改变工作目录<br>2、 clc：清除工作窗<br>3、 clear：清除内存变量<h3 id="续行符"><a href="#续行符" class="headerlink" title="续行符"></a>续行符</h3> “…”用3个或3个以上的连续黑点表示“续行”</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>   主要的数据类型：数字，字符串，向量，矩阵，单元型数据及结构型数据</p>
+<h3 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h3><p>   在未加特殊说明的情况下，matlab语言将所识别的一切变量视为局部变量，仅在其使用的M文件内有效。如果要将其定义为全局变量<br>加关键字global。</p>
+<h3 id="数字的显示格式"><a href="#数字的显示格式" class="headerlink" title="数字的显示格式"></a>数字的显示格式</h3><p>  在默认的状态下，数据为整型，以整数表示，数据为实数，保留小数后4位的精度近式值。</p>
+<h4 id="format控制数字显示格式"><a href="#format控制数字显示格式" class="headerlink" title="format控制数字显示格式"></a>format控制数字显示格式</h4><p>  format long,pi ;15位定点表示<br>  基本格式：format后加变量的类型用逗号隔开，加要输出的变量。</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>  所有的字符串都用单引号设定后输入或赋值；字符串相关函数以str开头。</p>
+<h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><ul>
+<li>冒号法创建向量：x = first：increment：last；向量就相当于一维数组。</li>
+<li>对数分隔的向量，x = logspace（first_value,last_value,number）</li>
+</ul>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><h3 id="矩阵的创建"><a href="#矩阵的创建" class="headerlink" title="矩阵的创建"></a>矩阵的创建</h3><ul>
+<li>eye函数；创建单位矩阵；eye（size(A)） 创建和A相同的单位矩阵</li>
+<li>rand函数，创建随机矩阵</li>
+<li>compan(P) 创建系数向量是P的多项式伴随矩阵</li>
+<li>diag(v)  创建一向量v中的元素为对角的对角阵</li>
+<li>hilb(n) 创建nxn的Hilbert矩阵</li>
+<li>zeros</li>
+<li>ones</li>
+</ul>
+<h3 id="矩阵元素的修改"><a href="#矩阵元素的修改" class="headerlink" title="矩阵元素的修改"></a>矩阵元素的修改</h3><p>  A(m,:) = [] ;删除A的第m行<br>  A(:,n) = [] ;删除A的第n列<br>  A(m,n) = a; 对m行n列的元素赋值  </p>
+<h2 id="单元型变量"><a href="#单元型变量" class="headerlink" title="单元型变量"></a>单元型变量</h2><p>  单元型变量是以单元为元素的数组，每个元素称为单元，每个单元可以包含其他类型的数组，如实数矩阵、字符串，复数向量。单元<br>变量通常用{}创建，其数据通过数组下标来引用。A={}；</p>
+<h2 id="结构型变量"><a href="#结构型变量" class="headerlink" title="结构型变量"></a>结构型变量</h2><p>  结构型变量是根据属性名（field）组织起来的不同数据类型的集合。结构的任何一个属性可以包含不同的数据类型，如字符串，矩阵等。结构型变量用函数struct来创建。s = struct(‘field’,{},’field2’,{},…)  ;s = struct(‘field’,values1,’field2,values2’)</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>.*   点乘</li>
+<li>.^  点乘方</li>
+<li>./  、 .\  点右除，点左除</li>
+<li>‘  矩阵转置。当矩阵是复数时，求矩阵的共轭转置</li>
+<li>.’ 矩阵转置。当矩阵是复数时，不求矩阵的共轭转置<br>注解：点运算是指元素点对点的运算，即矩阵内元素对元素之间的运算。点运算要求参与运算的变量在结构上必须是相似的。</li>
+<li>~= 不等于</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/25/stm32-uip心得/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1741,167 +1931,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/ploty高级图形03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/31/ploty高级图形03/" itemprop="url">ploty高级图形03</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-31T11:31:19+08:00">
-                2019-05-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
-                    <span itemprop="name">Python数据分析</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/05/31/ploty高级图形03/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/05/31/ploty高级图形03/" class="cy_cmt_count" data-xid="2019/05/31/ploty高级图形03/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="3-7-绘制SVG-可伸缩矢量图"><a href="#3-7-绘制SVG-可伸缩矢量图" class="headerlink" title="3.7 绘制SVG(可伸缩矢量图)"></a>3.7 绘制SVG(可伸缩矢量图)</h2><h3 id="矩形图的绘制"><a href="#矩形图的绘制" class="headerlink" title="矩形图的绘制"></a>矩形图的绘制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1.5</span>, <span class="number">4</span>,<span class="number">1.5</span>,<span class="number">4</span>],</span><br><span class="line">    y=[<span class="number">3.75</span>, <span class="number">3.75</span>,<span class="number">2.2</span>,<span class="number">2.2</span>],</span><br><span class="line">    text=[<span class="string">'矩形'</span>, <span class="string">'矩形（填充）'</span>,<span class="string">'矩形（相对于plot+填充）'</span>,<span class="string">'矩形（相对于轴+填充）'</span>],</span><br><span class="line">    mode=<span class="string">'text'</span>,</span><br><span class="line">)</span><br><span class="line">data = [trace0]</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'xaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">8</span>],</span><br><span class="line">        <span class="string">'showgrid'</span>: <span class="keyword">False</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'yaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">6.5</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 普通的矩形</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">6</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(128, 0, 128, 1)'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 填充颜色的矩形</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">6</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(128, 0, 128, 1)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">2</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(128, 0, 128, 0.7)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 相对于plot的矩形 + 填充颜色</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">0.125</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">0.25</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">0.3</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(50, 171, 96)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(50, 171, 96, 0.6)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 相对于轴的矩形 + 填充颜色</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">5</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgb(55, 128, 191)'</span>,</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">3</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(55, 128, 191, 0.6)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/SVG_rectangle.html'</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>参数type。参数值可以是circle(圆)、rect（矩形）、path（路径）、line（线），默认是line。本例使用的是rect</li>
-<li>fillcolor参数，设置填充的颜色，默认是rgba(0,0,0,0)(白色)<h3 id="矩形图应用：设置时间序列区域高亮显示"><a href="#矩形图应用：设置时间序列区域高亮显示" class="headerlink" title="矩形图应用：设置时间序列区域高亮显示"></a>矩形图应用：设置时间序列区域高亮显示</h3></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">r'dat/day01.csv'</span>, index_col=[<span class="string">'date'</span>], parse_dates=[<span class="string">'date'</span>]) <span class="comment"># 读取数据。</span></span><br><span class="line">df.sort_index(inplace=<span class="keyword">True</span>) <span class="comment"># 设置索引列从大到小排序</span></span><br><span class="line">df = df.iloc[<span class="number">-300</span>:<span class="number">-100</span>] <span class="comment"># 选取其中的200行数据</span></span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(x=df.index, y=df[<span class="string">'close'</span>], mode=<span class="string">'lines'</span>, name=<span class="string">'temperature'</span>)</span><br><span class="line"></span><br><span class="line">data = [trace0]</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="comment"># 我们通过创建矩形的方式来高亮某一个时间区间</span></span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 首先，我们高亮显示2月4日---&gt;3月6日.</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="comment"># x参考系使用绝对坐标系（相对于轴）</span></span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="comment"># y参考系使用相对坐标系（相对于plot）</span></span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="string">'2015-02-04'</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="string">'2015-03-06'</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'#d3d3d3'</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">0</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 其次，我们高亮显示区间5月20日---&gt;6月22日.</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'rect'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'paper'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="string">'2015-05-20'</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="string">'2015-06-22'</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'#d3d3d3'</span>,</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'width'</span>: <span class="number">0</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fig = &#123;<span class="string">'data'</span>: data, <span class="string">'layout'</span>: layout&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/timestamp_highlight.html'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="圆形图的绘制"><a href="#圆形图的绘制" class="headerlink" title="圆形图的绘制"></a>圆形图的绘制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1.5</span>, <span class="number">3.5</span>],</span><br><span class="line">    y=[<span class="number">0.75</span>, <span class="number">2.5</span>],</span><br><span class="line">    text=[<span class="string">'无填充圆'</span>,</span><br><span class="line">          <span class="string">'有填充圆'</span>],</span><br><span class="line">    mode=<span class="string">'text'</span>,</span><br><span class="line">)</span><br><span class="line">data = [trace0]</span><br><span class="line"></span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'xaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">4.5</span>],</span><br><span class="line">        <span class="string">'zeroline'</span>: <span class="keyword">False</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'yaxis'</span>: &#123;</span><br><span class="line">        <span class="string">'range'</span>: [<span class="number">0</span>, <span class="number">4.5</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'width'</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="string">'height'</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        <span class="comment"># 无填充圆</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(50, 171, 96, 1)'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment"># 有填充圆</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'rgba(50, 171, 96, 0.7)'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'y0'</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="string">'x1'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'y1'</span>: <span class="number">4</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'rgba(50, 171, 96, 1)'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/SVG_circle.html'</span>)</span><br></pre></td></tr></table></figure>
-<p> 注意：本例中设置了参数   ‘width’: 800, ‘height’: 800,如果参数hight != width,则按照我们自己的方式画出来的圆是一个椭圆，默认是 ‘width’: 450, ‘height’: 750</p>
-<h3 id="圆形图应用：高亮显示散点图的聚集簇"><a href="#圆形图应用：高亮显示散点图的聚集簇" class="headerlink" title="圆形图应用：高亮显示散点图的聚集簇"></a>圆形图应用：高亮显示散点图的聚集簇</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x0 = np.random.normal(<span class="number">2</span>, <span class="number">0.45</span>, <span class="number">300</span>)</span><br><span class="line">y0 = np.random.normal(<span class="number">2</span>, <span class="number">0.45</span>, <span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">x1 = np.random.normal(<span class="number">6</span>, <span class="number">0.4</span>, <span class="number">200</span>)</span><br><span class="line">y1 = np.random.normal(<span class="number">6</span>, <span class="number">0.4</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">x2 = np.random.normal(<span class="number">4</span>, <span class="number">0.3</span>, <span class="number">200</span>)</span><br><span class="line">y2 = np.random.normal(<span class="number">4</span>, <span class="number">0.3</span>, <span class="number">200</span>)</span><br><span class="line"></span><br><span class="line">trace0 = go.Scatter(</span><br><span class="line">    x=x0,</span><br><span class="line">    y=y0,</span><br><span class="line">    mode=<span class="string">'markers'</span>,</span><br><span class="line">)</span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=x1,</span><br><span class="line">    y=y1,</span><br><span class="line">    mode=<span class="string">'markers'</span></span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=x2,</span><br><span class="line">    y=y2,</span><br><span class="line">    mode=<span class="string">'markers'</span></span><br><span class="line">)</span><br><span class="line">trace3 = go.Scatter(</span><br><span class="line">    x=x1,</span><br><span class="line">    y=y0,</span><br><span class="line">    mode=<span class="string">'markers'</span></span><br><span class="line">)</span><br><span class="line">layout = &#123;</span><br><span class="line">    <span class="string">'shapes'</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x0),</span><br><span class="line">            <span class="string">'y0'</span>: min(y0),</span><br><span class="line">            <span class="string">'x1'</span>: max(x0),</span><br><span class="line">            <span class="string">'y1'</span>: max(y0),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'blue'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'blue'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x1),</span><br><span class="line">            <span class="string">'y0'</span>: min(y1),</span><br><span class="line">            <span class="string">'x1'</span>: max(x1),</span><br><span class="line">            <span class="string">'y1'</span>: max(y1),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'orange'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'orange'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x2),</span><br><span class="line">            <span class="string">'y0'</span>: min(y2),</span><br><span class="line">            <span class="string">'x1'</span>: max(x2),</span><br><span class="line">            <span class="string">'y1'</span>: max(y2),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'green'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'green'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'type'</span>: <span class="string">'circle'</span>,</span><br><span class="line">            <span class="string">'xref'</span>: <span class="string">'x'</span>,</span><br><span class="line">            <span class="string">'yref'</span>: <span class="string">'y'</span>,</span><br><span class="line">            <span class="string">'x0'</span>: min(x1),</span><br><span class="line">            <span class="string">'y0'</span>: min(y0),</span><br><span class="line">            <span class="string">'x1'</span>: max(x1),</span><br><span class="line">            <span class="string">'y1'</span>: max(y0),</span><br><span class="line">            <span class="string">'opacity'</span>: <span class="number">0.2</span>,</span><br><span class="line">            <span class="string">'fillcolor'</span>: <span class="string">'red'</span>,</span><br><span class="line">            <span class="string">'line'</span>: &#123;</span><br><span class="line">                <span class="string">'color'</span>: <span class="string">'red'</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">'showlegend'</span>: <span class="keyword">False</span>,</span><br><span class="line">&#125;</span><br><span class="line">data = [trace0, trace1, trace2, trace3]</span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: data,</span><br><span class="line">    <span class="string">'layout'</span>: layout,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pyplt(fig, filename=<span class="string">'tmp/clusters.html'</span>)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1952,7 +1981,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">77</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1963,7 +1992,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1974,7 +2003,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -293,6 +293,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/" itemprop="url">python出错ModuleNotFoundError: No module named 'sklearn.cross_validation'</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-28T22:19:31+08:00">
+                2019-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/" class="cy_cmt_count" data-xid="2019/04/28/python出错ModuleNotFoundError-No-module-named-sklearn-cross-validation/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_test_split</span><br></pre></td></tr></table></figure>
+<h2 id="sklearn更新后在执行以上代码时可能会出现这样的问题："><a href="#sklearn更新后在执行以上代码时可能会出现这样的问题：" class="headerlink" title="sklearn更新后在执行以上代码时可能会出现这样的问题："></a>sklearn更新后在执行以上代码时可能会出现这样的问题：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModuleNotFoundError: No module named <span class="string">'sklearn.cross_validation'</span></span><br></pre></td></tr></table></figure>
+<h2 id="此时可以考虑使用以下方法导入库："><a href="#此时可以考虑使用以下方法导入库：" class="headerlink" title="此时可以考虑使用以下方法导入库："></a>此时可以考虑使用以下方法导入库：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> KFold</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br></pre></td></tr></table></figure>
+<p>  此时就不会报错了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/14/代码库常见错误/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2206,278 +2362,6 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/Python对象和类/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/04/Python对象和类/" itemprop="url">Python对象和类</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T11:07:13+08:00">
-                2019-04-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python心得/" itemprop="url" rel="index">
-                    <span itemprop="name">Python心得</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/04/04/Python对象和类/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/04/04/Python对象和类/" class="cy_cmt_count" data-xid="2019/04/04/Python对象和类/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>  Python中所有数据都是以对象的形式出现，只有当你想要创建属于自己的对象或者需要修改已有的对象的行为时，才需要关注对象的内部<br>实现细节。对象就是包含了代码的超级数据结构。</p>
-<h2 id="class-定义类"><a href="#class-定义类" class="headerlink" title="class 定义类"></a>class 定义类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>  在类声明里定义<strong>init</strong>()方法时，第一个参数必须为self，在定义类的方法（函数）时，第一个参数也必须为self。在定义中<strong>init</strong><br>不是必须的。只有当需要区分由该类创建的不同对象时，才需要指定。</p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>  从已有的类衍生出新的类，添加或修改部分功能。习惯称原始的类为父类，超类或基类，将新的类称为子类或衍生类。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(Person)</span>:</span><span class="comment">#继承了Person</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>  在子类中可有覆盖父类的方法，从新实现父类的方法即可实现方法的覆盖。</p>
-<h3 id="用super从父类得到帮助"><a href="#用super从父类得到帮助" class="headerlink" title="用super从父类得到帮助"></a>用super从父类得到帮助</h3><p>  重子类中调用父类的方法，用super实现</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(Person)</span>:</span><span class="comment">#继承了Person</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        super().__init__(name)<span class="comment">#调用父类的方法</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用属性对特性进行访问和设置"><a href="#使用属性对特性进行访问和设置" class="headerlink" title="使用属性对特性进行访问和设置"></a>使用属性对特性进行访问和设置</h2><p>  不希望别人直接访问这个特性，因此需要定义两个方法：getter，setter。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span><span class="comment">#初始化，self是参数指向了这个正在被创建的对象的本身</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(Person)</span>:</span><span class="comment">#继承了Person</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        super().__init__(name)<span class="comment">#调用父类的方法</span></span><br><span class="line"><span class="meta">    @property    #用于指定getter方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        retrun <span class="string">'afad'</span></span><br><span class="line"><span class="meta">    @name.setter  #用于指定setter方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self,input_name)</span></span></span><br><span class="line">        self.name = input_name</span><br></pre></td></tr></table></figure></p>
-<p>  如果没有指定setter属性，将无法从类的外部对它进行值的改变。</p>
-<h2 id="使用名称重整保护私有特性"><a href="#使用名称重整保护私有特性" class="headerlink" title="使用名称重整保护私有特性"></a>使用名称重整保护私有特性</h2><p>  对那些需要刻意隐藏在类内部的特性有自己的命名规范：由（__）双下划线开头。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Duck</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">        </span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        retrun self.__name</span><br><span class="line"><span class="meta">    @name.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self,name)</span></span></span><br><span class="line">        self.__name = name#这种，让外部的代码无法使用</span><br></pre></td></tr></table></figure>
-<h2 id="方法的类型’"><a href="#方法的类型’" class="headerlink" title="方法的类型’"></a>方法的类型’</h2><p>  有些数据（特性）和函数（方法）是类本身的一部分，还有一些是由类创建的实例的一部分。在类的定义中，以self作为第一个参数的方法<br>都是实例的方法。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">()</span>:</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        A.count += <span class="number">1</span>;<span class="comment">#类特性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">'I'</span>m an A<span class="string">'</span></span><br><span class="line"><span class="string">    @classmethod#类方法，第一个参数是类本身。参数被写作cls，全称class是保留字</span></span><br><span class="line"><span class="string">    def kids(cls):</span></span><br><span class="line"><span class="string">        print '</span>A has<span class="string">',cls.count,"little objects"</span></span><br><span class="line"><span class="string">easy_A =A()</span></span><br></pre></td></tr></table></figure>
-<h2 id="特殊方法"><a href="#特殊方法" class="headerlink" title="特殊方法"></a>特殊方法</h2><p>  特殊方法的名称以双下划线（__）开头和结束。</p>
-<ul>
-<li>表1：和比较相关的方法</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">方法名</th>
-<th style="text-align:center">使用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">_ _eq_ _(self,other)</td>
-<td style="text-align:center">self == other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ ne _ _(self,other)</td>
-<td style="text-align:center">self != other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ lt _ _(self,other)</td>
-<td style="text-align:center">self &lt; other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _gt_ _(self,other)</td>
-<td style="text-align:center">self &gt; other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _le_ _(self,other)</td>
-<td style="text-align:center">self &lt;= other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ge_ _(self,other)</td>
-<td style="text-align:center">self &gt;= other</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>表2：和数学相关的方法</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">方法名</th>
-<th style="text-align:center">使用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">_ _ <em>add</em> _(self,other)</td>
-<td style="text-align:center">self + other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>sub</em> _ _(self,other)</td>
-<td style="text-align:center">self != other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ _ mul _ _ _(self,other)</td>
-<td style="text-align:center">self * other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>floordiv</em> _ _(self,other)</td>
-<td style="text-align:center">self // other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>truediv</em> _ _(self,other)</td>
-<td style="text-align:center">self / other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>mov</em> _ _(self,other)</td>
-<td style="text-align:center">self % other</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>pow</em> _ _(self,other)</td>
-<td style="text-align:center">self ** other</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>表2：其他种类的方法</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">方法名</th>
-<th style="text-align:center">使用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">_ _ <em>str</em> _ _(self,other)</td>
-<td style="text-align:center">str(self)</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>repr</em> _ _(self,other)</td>
-<td style="text-align:center">repr(self)</td>
-</tr>
-<tr>
-<td style="text-align:center">_ _ <em>len</em> _ _(self,other)</td>
-<td style="text-align:center">len(self)</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Word</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,text)</span>:</span></span><br><span class="line">        self.text = text</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__eq__</span><span class="params">(self,words)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.text.lower = words.text.lower()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self,words)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.text</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self,words)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'Word(" '</span>self.text<span class="string">' ")'</span></span><br><span class="line">first = word(<span class="string">'ha'</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>  将类作为参数传入另一个类。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bill</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,description)</span>:</span></span><br><span class="line">        self.description = description</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bill</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,length)</span>:</span></span><br><span class="line">        self.length = length</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Duck</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,bill,tail)</span>:</span></span><br><span class="line">        self.bill = bill</span><br><span class="line">        self.tail = tail</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">about</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'this duck has a '</span>,bill.description,<span class="string">'bill and a'</span>,tail.length,<span class="string">'tail'</span>)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2528,7 +2412,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">77</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2539,7 +2423,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2550,7 +2434,7 @@ ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

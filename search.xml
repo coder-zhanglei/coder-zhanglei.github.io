@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[彩票开发及选号笔记]]></title>
+    <url>%2F2023%2F06%2F13%2F%E5%BD%A9%E7%A5%A8%E5%BC%80%E5%8F%91%E5%8F%8A%E9%80%89%E5%8F%B7%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[选号规则1、假定上一次开过的全部都不中 2、假定随机（机选）的都不中 3、假定10次以上没开过奖的都不中 4、在剩下的选频率出现多次的且距上次开奖较近的号码 5、选具有一定规律的号码 开奖过的号码呈斜线 多次连开，有二有三，有三有四，类似这样的号码]]></content>
+      <categories>
+        <category>彩票开发</category>
+      </categories>
+      <tags>
+        <tag>彩票选号规则</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>%2F2023%2F01%2F30%2Fhello-world%2F</url>
     <content type="text"><![CDATA[title:Hello WorldWelcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
