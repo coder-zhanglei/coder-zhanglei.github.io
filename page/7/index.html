@@ -293,6 +293,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/linux基本配置指令02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/22/linux基本配置指令02/" itemprop="url">linux的基本配置指令02</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T18:11:33+08:00">
+                2019-02-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
+                    <span itemprop="name">linux浅见</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/02/22/linux基本配置指令02/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/02/22/linux基本配置指令02/" class="cy_cmt_count" data-xid="2019/02/22/linux基本配置指令02/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="clear-指令：清除屏幕信息"><a href="#clear-指令：清除屏幕信息" class="headerlink" title="clear 指令：清除屏幕信息"></a>clear 指令：清除屏幕信息</h3><ul>
+<li>目的：对杂乱的屏幕进行清理</li>
+<li>语法： clear</li>
+</ul>
+<h3 id="date-指令：-显示或设置系统时间指令"><a href="#date-指令：-显示或设置系统时间指令" class="headerlink" title="date 指令： 显示或设置系统时间指令"></a>date 指令： 显示或设置系统时间指令</h3><ul>
+<li>目的：根据指定格式显示或设置当前系统的时间</li>
+<li>语法：date [-可选参数][日期和时间格式]   格式为MMDDhhmm<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date</span><br><span class="line">date “Date:%Y.%m.%d Time:%H.%M.%S”</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="echo指令：字符串输出"><a href="#echo指令：字符串输出" class="headerlink" title="echo指令：字符串输出"></a>echo指令：字符串输出</h3><ul>
+<li>目的；应用该指令的字符串的值输出到标准输出</li>
+<li>语法：echo [-可选参数] 字符串输出<br>（1）必要参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参 数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-n</td>
+<td style="text-align:center">不在最后自动换行</td>
+</tr>
+<tr>
+<td style="text-align:center">-e</td>
+<td style="text-align:center">若字符串出现以下字符，加以特别处理 \a发出警告 \v删除前一个字符 \c最后不加换行符号 \f换行但光标任停在原来的位置上 \n换行且光标移至行首 \r光标移至行首，但不换行 \t插入tab \v同\f \在输出插入\字符 \nnn 将nnn看做八进制，输出它所代表的ASCII字符</td>
+</tr>
+<tr>
+<td style="text-align:center">-help</td>
+<td style="text-align:center">帮助信息</td>
+</tr>
+<tr>
+<td style="text-align:center">-version</td>
+<td style="text-align:center">版本信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -e “123456\n”</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/20/linux常用的指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -399,6 +591,8 @@
           
             <h2 id="linux查询进程指令"><a href="#linux查询进程指令" class="headerlink" title="linux查询进程指令"></a>linux查询进程指令</h2><p>1、进程查询指令<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef <span class="string">| grep calculatorBuysell | grep -v grep | wc -l</span></span><br></pre></td></tr></table></figure></p>
 <p>注：该命令可以查询calculatorBuysell进程的个数</p>
+<p>2、查看Ubuntu版本的命令<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure></p>
+<p>3、查看Linux内核版本的指令<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -1724,164 +1918,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/14/purchase-memory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/14/purchase-memory/" itemprop="url">purchase memory</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-14T14:47:07+08:00">
-                2018-10-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/电脑硬件选购/" itemprop="url" rel="index">
-                    <span itemprop="name">电脑硬件选购</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/10/14/purchase-memory/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/10/14/purchase-memory/" class="cy_cmt_count" data-xid="2018/10/14/purchase-memory/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="选购内存"><a href="#选购内存" class="headerlink" title="选购内存"></a>选购内存</h2><ol>
-<li>内存的分类<br>第一种是DRAM(动态内存),此内存集成度高，功耗和成本低，是目前主流产品，<br>第二种是SRAM（静态内存），广泛用于工作站，高档电脑、大型机和巨型机种的Cache（缓存）</li>
-<li>内存选择<br>（1） DDR SDRAM内存<br> 双倍数据速率同步内存，DDR2内存即第二代同步双倍速率动态随机存取存储器。<br>DDR2内存可进行4bit预读取，DDR3可进行8bit，DDR4 16bit预取机制，是DDR3的两倍。<br>（2）选择容量<br>1）用来上网、学习、游戏、办公、炒股、文字处理、配置8GB内存总体够用。<br>2）用来刻录、视频影像处理，8GB够用，16GB好用<br>3）用来编程16GB内存较好<br>4）用来二维或者三维图形图像设计，配置8GB内存勉强用，16GB够用，32GB内存好用。<br>5）用来设计、密集数据采集运算、虚拟现实等，配置16GB内存勉强，32GB够用<br>6）用来作web服务器，配置8GB内存勉强，32GB内存够用。<br>售后也很重要。</li>
-<li>内存的速率<br>目前主流内存的速率小于1.5ns</li>
-<li>“打磨”内存<br> 正品的芯片表面一般都有质感，要么有光泽或荧光感，要么就是亚光。如果芯片的表面色泽不存<br>甚至比较粗糙、发毛，芯片必然受到了打磨。<h2 id="内存的生产商"><a href="#内存的生产商" class="headerlink" title="内存的生产商"></a>内存的生产商</h2>1、 金士顿（Kingston）<br>2、 金邦（GEIL）<br>3、 宇瞻（Apacer）<br>4、 胜创（KINGMAX）<h3 id="相关参数的识别"><a href="#相关参数的识别" class="headerlink" title="相关参数的识别"></a>相关参数的识别</h3><img src="https://i.imgur.com/R1QRqPp.jpg" alt="金士顿DDR3内存编号含义“KVR133D3N9/2G”"><br><img src="https://i.imgur.com/DlolEt7.jpg" alt="图2"><br><img src="https://i.imgur.com/omeM34u.jpg" alt="图3"></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1932,7 +1968,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">77</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1943,7 +1979,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1954,7 +1990,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

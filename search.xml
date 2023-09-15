@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[华为云服务器简介]]></title>
+    <url>%2F2023%2F07%2F27%2F%E5%8D%8E%E4%B8%BA%E4%BA%91%2F</url>
+    <content type="text"><![CDATA[华为云ECS1、什么是ECS\ ECS(elastic compute service，弹性计算服务)可动态扩展的服务器器2、服务器的作用 完全的管理权限 快照备份和恢复 自定义镜像 试用的阿里云服务器1、 账户：root2、 密码：zhanglei123456@%3、 登录网址：https://ecs.console.aliyun.com/server/region/cn-hangzhou?__refreshToken=1690470900169 阿里云官网控制台即可进入4、 试用时间：2023.07.27-2023.10.275、 公网IP地址：121.43.179.148 私网ip:172.28.188.134 本地登录云服务器当本地登录云服务器，不能成功登录时在阿里云的实例控制台上查找连接帮助。 连接帮助位置：操作-&gt;...-&gt;远程连接-&gt;连接帮助]]></content>
+      <categories>
+        <category>华为云</category>
+      </categories>
+      <tags>
+        <tag>华为云服务器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[彩票开发及选号笔记]]></title>
     <url>%2F2023%2F06%2F13%2F%E5%BD%A9%E7%A5%A8%E5%BC%80%E5%8F%91%E5%8F%8A%E9%80%89%E5%8F%B7%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码 （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码]]></content>
@@ -28,9 +39,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo 迁移]]></title>
-    <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
-    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html 准备工作 先安装必备软件git, node.js, 必备文件 从之前的博客文件夹中选择必须要拷贝的文件，备份起来。首先是之前自己修改的文件，像配置文件_config.yml,theme文件夹，source文件夹自己写的原始文件这些都是必须要拷贝走的。除此之外还有scaffolds文件夹(文件的模板)，package.json(使用哪些包)，.gitignore(提交忽略哪些文件夹) 总结： _config.yml themes source scaffolds package.json .gitignore是需要备份的，其他文件不需要管。 开始迁移安装hexo软件123456789101112131415# 全局安装hexonpm install hexo-cli -g# 把必须拷贝的文件，拷贝到新建的文件夹内，执行以下命令# 在新建的文件夹内打开命令行，安装必要的模块，初始化# 这里不用hexo init初始化，因为配置文件我们已经拷贝过来npm install # 安装其他一些必要的组件npm install hexo-deployer-git --savenpm install hexo-generator-feed --savenpm install hexo-generator-sitemap --save 迁移hexo用到的相关命令1234567git config --global user.name "coder-zhanglei" #设置用户名git config --global user.email "1357028281@qq.com" #设置邮箱git config user.name #查询设置的用户名git config user.email #查询设置的邮箱## 正式部署hexo clean &amp;&amp; hexo g &amp;&amp; hexo d MARKDOWn编辑vscode安装如下插件即可实现markdown语法的编辑 1、markdown all in one 2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色 3、markdown preview github stying，Github风格的预览 注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。 问题记录1、 hexo d提交时出现错误：FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/do TypeError [ERR_INVALID_ARG_TYPE]: 解决方法：该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi2、 OpenSSL SSL_read: Connection was reset, errno 10054 解决方法：执行命令1git config --global http.sslVerify "false"3、 Failed to connect to github.com port 443 after 21098 ms: Timed out解决方法： 解决方法：我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决 12git config --global https.proxygit config --global --unset https.proxy]]></content>
+    <title><![CDATA[hexo 文章特性设置]]></title>
+    <url>%2F2021%2F10%2F24%2Fhexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[为字体添加颜色效果展示这是红色字体这是绿色字体这是黄色字体这是蓝色字体这是青色，蓝绿色字体 语法12345这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体 文字风格设置内容块 1&gt; 这里的内容显示在内容块中 显示效果 这里的内容是在内容快中显示的 删除线（中划线），需要使用“~”来包含需要删除线的文本 1~~fsadfsa~~ 效果显示 fsadfsa 下划线1&lt;u&gt;下划线的文本&lt;/u&gt; 效果显示 下划线的文本 粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本1***也就是三个星号*** 显示效果 也就是三个星号 斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本 1*也就是一个星号* 效果显示 也就是一个星号]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
@@ -39,9 +50,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo 文章特性设置]]></title>
-    <url>%2F2021%2F10%2F24%2Fhexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[为字体添加颜色效果展示这是红色字体这是绿色字体这是黄色字体这是蓝色字体这是青色，蓝绿色字体 语法12345这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体 文字风格设置内容块 1&gt; 这里的内容显示在内容块中 显示效果 这里的内容是在内容快中显示的 删除线（中划线），需要使用“~”来包含需要删除线的文本 1~~fsadfsa~~ 效果显示 fsadfsa 下划线1&lt;u&gt;下划线的文本&lt;/u&gt; 效果显示 下划线的文本 粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本1***也就是三个星号*** 显示效果 也就是三个星号 斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本 1*也就是一个星号* 效果显示 也就是一个星号]]></content>
+    <title><![CDATA[hexo 迁移]]></title>
+    <url>%2F2021%2F10%2F24%2Fhexo-%E8%BF%81%E7%A7%BB%2F</url>
+    <content type="text"><![CDATA[迁移时候主要用到可参考的博客 https://www.cnblogs.com/iHeling/p/14095937.html 准备工作 先安装必备软件git, node.js, 必备文件 从之前的博客文件夹中选择必须要拷贝的文件，备份起来。首先是之前自己修改的文件，像配置文件_config.yml,theme文件夹，source文件夹自己写的原始文件这些都是必须要拷贝走的。除此之外还有scaffolds文件夹(文件的模板)，package.json(使用哪些包)，.gitignore(提交忽略哪些文件夹) 总结： _config.yml themes source scaffolds package.json .gitignore是需要备份的，其他文件不需要管。 开始迁移安装hexo软件123456789101112131415# 全局安装hexonpm install hexo-cli -g# 把必须拷贝的文件，拷贝到新建的文件夹内，执行以下命令# 在新建的文件夹内打开命令行，安装必要的模块，初始化# 这里不用hexo init初始化，因为配置文件我们已经拷贝过来npm install # 安装其他一些必要的组件npm install hexo-deployer-git --savenpm install hexo-generator-feed --savenpm install hexo-generator-sitemap --save 迁移hexo用到的相关命令1234567git config --global user.name "coder-zhanglei" #设置用户名git config --global user.email "1357028281@qq.com" #设置邮箱git config user.name #查询设置的用户名git config user.email #查询设置的邮箱## 正式部署hexo clean &amp;&amp; hexo g &amp;&amp; hexo d MARKDOWn编辑vscode安装如下插件即可实现markdown语法的编辑 1、markdown all in one 2、markdown Preview enhanced，将原生markdown预览的黑色背景改为白色 3、markdown preview github stying，Github风格的预览 注：这三个插件是实现markdown编辑预览的基本插件，实现更多的markdown语法的功能，可探索更多相关的插件。 问题记录1、 hexo d提交时出现错误：FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/do TypeError [ERR_INVALID_ARG_TYPE]: 解决方法：该问题是node.js版本过高，切换会旧版本即可，旧版本为：node-v12.22.9-x64.msi2、 OpenSSL SSL_read: Connection was reset, errno 10054 解决方法：执行命令1git config --global http.sslVerify "false"3、 Failed to connect to github.com port 443 after 21098 ms: Timed out解决方法： 解决方法：我们直接在终端先输入设置代理的命令，再输入取消代理的命令即可解决 12git config --global https.proxygit config --global --unset https.proxy]]></content>
       <categories>
         <category>初识hexo</category>
       </categories>
@@ -657,7 +668,7 @@
   <entry>
     <title><![CDATA[linux常用的指令]]></title>
     <url>%2F2019%2F01%2F20%2Flinux%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8C%87%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[linux查询进程指令1、进程查询指令1ps -ef | grep calculatorBuysell | grep -v grep | wc -l 注：该命令可以查询calculatorBuysell进程的个数]]></content>
+    <content type="text"><![CDATA[linux查询进程指令1、进程查询指令1ps -ef | grep calculatorBuysell | grep -v grep | wc -l 注：该命令可以查询calculatorBuysell进程的个数 2、查看Ubuntu版本的命令1lsb_release -a 3、查看Linux内核版本的指令1uname -a]]></content>
       <categories>
         <category>linux浅见</category>
       </categories>

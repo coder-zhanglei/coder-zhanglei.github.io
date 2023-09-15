@@ -293,6 +293,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/plotly与Pandas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/02/plotly与Pandas/" itemprop="url">plotly与Pandas</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T14:50:59+08:00">
+                2019-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">Python数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/06/02/plotly与Pandas/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/06/02/plotly与Pandas/" class="cy_cmt_count" data-xid="2019/06/02/plotly与Pandas/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基本线形图"><a href="#基本线形图" class="headerlink" title="基本线形图"></a>基本线形图</h2><p>   Plotly可以识别Pandas数据格式，所以数据是Pandas的DataFrame或Series结构，可以直接传递给Plotly，不用转换为list数据格式<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py  <span class="comment"># 导入plotly库并命名为py</span></span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="number">500</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, N)</span><br><span class="line">y = np.random.randn(N)</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'x'</span>: x, <span class="string">'y'</span>: y&#125;)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">data = [</span><br><span class="line">    go.Scatter(</span><br><span class="line">        x=df[<span class="string">'x'</span>], <span class="comment"># x可以是 DataFrame 的某一列</span></span><br><span class="line">        y=df[<span class="string">'y'</span>]</span><br><span class="line">    )</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">url = pyplt(data, filename=<span class="string">'tmp/basic_line.html'</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="基本散点图"><a href="#基本散点图" class="headerlink" title="基本散点图"></a>基本散点图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py  <span class="comment"># 导入plotly库并命名为py</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">df_50 = pd.read_csv(<span class="string">r'dat/000016.csv'</span>, index_col=[<span class="string">'date'</span>]) <span class="comment"># 读取数据</span></span><br><span class="line">df_50.sort_index(inplace=<span class="keyword">True</span>) <span class="comment"># 排序</span></span><br><span class="line">df_50 = df_50.loc[<span class="string">'2017-01-03'</span>:,:]</span><br><span class="line">df_300 = pd.read_csv(<span class="string">r'dat/000300.csv'</span>, index_col=[<span class="string">'date'</span>])</span><br><span class="line">df_300.sort_index(inplace=<span class="keyword">True</span>) <span class="comment"># 排序</span></span><br><span class="line">df_300 = df_300.loc[<span class="string">'2017-01-01'</span>:]</span><br><span class="line"></span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'x'</span>: df_50.index,</span><br><span class="line">            <span class="string">'y'</span>: df_50.volume,</span><br><span class="line">            <span class="string">'mode'</span>: <span class="string">'markers'</span>,</span><br><span class="line">            <span class="string">'name'</span>: <span class="string">'上证50'</span>&#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'x'</span>: df_300.index,</span><br><span class="line">            <span class="string">'y'</span>: df_300.volume,</span><br><span class="line">            <span class="string">'mode'</span>: <span class="string">'markers'</span>,</span><br><span class="line">            <span class="string">'name'</span>: <span class="string">'沪深300'</span>&#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">'layout'</span>: &#123;</span><br><span class="line">        <span class="string">'xaxis'</span>: &#123;<span class="string">'title'</span>: <span class="string">'时间'</span>,</span><br><span class="line">                  <span class="comment"># 'type': 'log',</span></span><br><span class="line">                  &#125;,</span><br><span class="line">        <span class="string">'yaxis'</span>: &#123;<span class="string">'title'</span>: <span class="string">"成交量"</span>&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">url = pyplt(fig, filename=<span class="string">'tmp/basic_scatter.html'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="基本柱状图"><a href="#基本柱状图" class="headerlink" title="基本柱状图"></a>基本柱状图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py  <span class="comment"># 导入plotly库并命名为py</span></span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">N = <span class="number">40</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, N)</span><br><span class="line">y = np.random.randn(N)</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'x'</span>: x, <span class="string">'y'</span>: y&#125;)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">data = [</span><br><span class="line">    go.Bar(</span><br><span class="line">        x=df[<span class="string">'x'</span>], <span class="comment"># x可以是 DataFrame 的某一列</span></span><br><span class="line">        y=df[<span class="string">'y'</span>]</span><br><span class="line">    )</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">url = pyplt(data, filename=<span class="string">r'tmp/basic_bar.html'</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/31/ploty高级图形03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1864,166 +2019,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/18/Altium-Designer学习笔记01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/18/Altium-Designer学习笔记01/" itemprop="url">Altium Designer学习笔记01</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-18T17:37:25+08:00">
-                2019-05-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/画PCB板学习/" itemprop="url" rel="index">
-                    <span itemprop="name">画PCB板学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/05/18/Altium-Designer学习笔记01/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/05/18/Altium-Designer学习笔记01/" class="cy_cmt_count" data-xid="2019/05/18/Altium-Designer学习笔记01/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Altium-Designer15的安装"><a href="#Altium-Designer15的安装" class="headerlink" title="Altium Designer15的安装"></a>Altium Designer15的安装</h2><p>1、 安装包在百度网盘中Altium Designer文件夹下<br>安装教程参考：<a href="https://wenku.baidu.com/view/63535606b9d528ea81c7799e.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/63535606b9d528ea81c7799e.html</a><br>              <a href="https://wenku.baidu.com/view/60bd5b9c6c175f0e7cd137bb.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/60bd5b9c6c175f0e7cd137bb.html</a></p>
-<p>2、 基本快捷键</p>
-<ul>
-<li>shift+S :切换单层显示和多层显示</li>
-<li>L ： 调出底层的器件</li>
-<li>shift+ctrl+单击 ： 高亮光标所在的已连接网络</li>
-</ul>
-<p>视频教程：b站上有基础的教程很完整可以参考。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2074,7 +2069,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">77</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2085,7 +2080,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2096,7 +2091,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

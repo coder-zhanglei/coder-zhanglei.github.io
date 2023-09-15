@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2023-06-13T16:00:16.715Z</updated>
+  <updated>2023-09-15T14:31:49.799Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>华为云服务器简介</title>
+    <link href="http://yoursite.com/2023/07/27/%E5%8D%8E%E4%B8%BA%E4%BA%91/"/>
+    <id>http://yoursite.com/2023/07/27/%E5%8D%8E%E4%B8%BA%E4%BA%91/</id>
+    <published>2023-07-27T13:30:18.000Z</published>
+    <updated>2023-09-15T14:31:49.799Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="华为云ECS"><a href="#华为云ECS" class="headerlink" title="华为云ECS"></a>华为云ECS</h2><p>1、什么是ECS\<br>   ECS(elastic compute service，弹性计算服务)可动态扩展的服务器器<br>2、服务器的作用<br>    完全的管理权限<br>    快照备份和恢复<br>    自定义镜像</p><h2 id="试用的阿里云服务器"><a href="#试用的阿里云服务器" class="headerlink" title="试用的阿里云服务器"></a>试用的阿里云服务器</h2><p>1、 账户：root<br>2、 密码：zhanglei123456@%<br>3、 登录网址：<a href="https://ecs.console.aliyun.com/server/region/cn-hangzhou?__refreshToken=1690470900169" target="_blank" rel="noopener">https://ecs.console.aliyun.com/server/region/cn-hangzhou?__refreshToken=1690470900169</a>  阿里云官网控制台即可进入<br>4、 试用时间：2023.07.27-2023.10.27<br>5、 公网IP地址：121.43.179.148 私网ip:172.28.188.134</p><h2 id="本地登录云服务器"><a href="#本地登录云服务器" class="headerlink" title="本地登录云服务器"></a>本地登录云服务器</h2><pre><code>当本地登录云服务器，不能成功登录时在阿里云的实例控制台上查找连接帮助。连接帮助位置：操作-&gt;...-&gt;远程连接-&gt;连接帮助</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;华为云ECS&quot;&gt;&lt;a href=&quot;#华为云ECS&quot; class=&quot;headerlink&quot; title=&quot;华为云ECS&quot;&gt;&lt;/a&gt;华为云ECS&lt;/h2&gt;&lt;p&gt;1、什么是ECS\&lt;br&gt;   ECS(elastic compute service，弹性计算服务)可动态</summary>
+      
+    
+    
+    
+    <category term="华为云" scheme="http://yoursite.com/categories/华为云/"/>
+    
+    
+    <category term="华为云服务器" scheme="http://yoursite.com/tags/华为云服务器/"/>
+    
+  </entry>
   
   <entry>
     <title>彩票开发及选号笔记</title>
@@ -86,6 +110,30 @@
   </entry>
   
   <entry>
+    <title>hexo 文章特性设置</title>
+    <link href="http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/</id>
+    <published>2021-10-24T14:45:11.000Z</published>
+    <updated>2022-03-12T14:13:27.056Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="为字体添加颜色"><a href="#为字体添加颜色" class="headerlink" title="为字体添加颜色"></a>为字体添加颜色</h2><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>这是<label style="color:red">红色</label>字体<br>这是<label style="color:green">绿色</label>字体<br>这是<label style="color:yellow">黄色</label>字体<br>这是<label style="color:blue">蓝色</label>字体<br>这是<label style="color:cyan">青色，蓝绿色</label>字体</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体</span><br></pre></td></tr></table></figure><h2 id="文字风格设置"><a href="#文字风格设置" class="headerlink" title="文字风格设置"></a>文字风格设置</h2><p>内容块</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这里的内容显示在内容块中</span><br></pre></td></tr></table></figure><p>显示效果</p><blockquote><p>这里的内容是在内容快中显示的</p></blockquote><p>删除线（中划线），需要使用“~”来包含需要删除线的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~fsadfsa~~</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><del>fsadfsa</del></p></blockquote><p>下划线<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线的文本&lt;/u&gt;</span><br></pre></td></tr></table></figure></p><p>效果显示</p><blockquote><p><u>下划线的文本</u></p></blockquote><p>粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***也就是三个星号***</span><br></pre></td></tr></table></figure></p><p>显示效果</p><blockquote><p><strong><em>也就是三个星号</em></strong></p></blockquote><p>斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*也就是一个星号*</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><em>也就是一个星号</em></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;为字体添加颜色&quot;&gt;&lt;a href=&quot;#为字体添加颜色&quot; class=&quot;headerlink&quot; title=&quot;为字体添加颜色&quot;&gt;&lt;/a&gt;为字体添加颜色&lt;/h2&gt;&lt;h3 id=&quot;效果展示&quot;&gt;&lt;a href=&quot;#效果展示&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    <category term="初识hexo" scheme="http://yoursite.com/categories/初识hexo/"/>
+    
+    
+    <category term="初识hexo" scheme="http://yoursite.com/tags/初识hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 迁移</title>
     <link href="http://yoursite.com/2021/10/24/hexo-%E8%BF%81%E7%A7%BB/"/>
     <id>http://yoursite.com/2021/10/24/hexo-%E8%BF%81%E7%A7%BB/</id>
@@ -99,30 +147,6 @@
       
     <summary type="html">&lt;h2 id=&quot;迁移时候主要用到可参考的博客&quot;&gt;&lt;a href=&quot;#迁移时候主要用到可参考的博客&quot; class=&quot;headerlink&quot; title=&quot;迁移时候主要用到可参考的博客&quot;&gt;&lt;/a&gt;迁移时候主要用到可参考的博客&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:/</summary>
-      
-    
-    
-    
-    <category term="初识hexo" scheme="http://yoursite.com/categories/初识hexo/"/>
-    
-    
-    <category term="初识hexo" scheme="http://yoursite.com/tags/初识hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 文章特性设置</title>
-    <link href="http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/</id>
-    <published>2021-10-24T14:45:11.000Z</published>
-    <updated>2022-03-12T14:13:27.056Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="为字体添加颜色"><a href="#为字体添加颜色" class="headerlink" title="为字体添加颜色"></a>为字体添加颜色</h2><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>这是<label style="color:red">红色</label>字体<br>这是<label style="color:green">绿色</label>字体<br>这是<label style="color:yellow">黄色</label>字体<br>这是<label style="color:blue">蓝色</label>字体<br>这是<label style="color:cyan">青色，蓝绿色</label>字体</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体</span><br></pre></td></tr></table></figure><h2 id="文字风格设置"><a href="#文字风格设置" class="headerlink" title="文字风格设置"></a>文字风格设置</h2><p>内容块</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这里的内容显示在内容块中</span><br></pre></td></tr></table></figure><p>显示效果</p><blockquote><p>这里的内容是在内容快中显示的</p></blockquote><p>删除线（中划线），需要使用“~”来包含需要删除线的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~fsadfsa~~</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><del>fsadfsa</del></p></blockquote><p>下划线<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线的文本&lt;/u&gt;</span><br></pre></td></tr></table></figure></p><p>效果显示</p><blockquote><p><u>下划线的文本</u></p></blockquote><p>粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***也就是三个星号***</span><br></pre></td></tr></table></figure></p><p>显示效果</p><blockquote><p><strong><em>也就是三个星号</em></strong></p></blockquote><p>斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*也就是一个星号*</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><em>也就是一个星号</em></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;为字体添加颜色&quot;&gt;&lt;a href=&quot;#为字体添加颜色&quot; class=&quot;headerlink&quot; title=&quot;为字体添加颜色&quot;&gt;&lt;/a&gt;为字体添加颜色&lt;/h2&gt;&lt;h3 id=&quot;效果展示&quot;&gt;&lt;a href=&quot;#效果展示&quot; class=&quot;headerlink&quot; titl</summary>
       
     
     
@@ -468,30 +492,6 @@
     
     
     <category term="cufflinks模块" scheme="http://yoursite.com/tags/cufflinks模块/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>plotly与Pandas</title>
-    <link href="http://yoursite.com/2019/06/02/plotly%E4%B8%8EPandas/"/>
-    <id>http://yoursite.com/2019/06/02/plotly%E4%B8%8EPandas/</id>
-    <published>2019-06-02T06:50:59.000Z</published>
-    <updated>2019-06-02T07:01:23.036Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基本线形图"><a href="#基本线形图" class="headerlink" title="基本线形图"></a>基本线形图</h2><p>   Plotly可以识别Pandas数据格式，所以数据是Pandas的DataFrame或Series结构，可以直接传递给Plotly，不用转换为list数据格式<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py  <span class="comment"># 导入plotly库并命名为py</span></span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="number">500</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, N)</span><br><span class="line">y = np.random.randn(N)</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'x'</span>: x, <span class="string">'y'</span>: y&#125;)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">data = [</span><br><span class="line">    go.Scatter(</span><br><span class="line">        x=df[<span class="string">'x'</span>], <span class="comment"># x可以是 DataFrame 的某一列</span></span><br><span class="line">        y=df[<span class="string">'y'</span>]</span><br><span class="line">    )</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">url = pyplt(data, filename=<span class="string">'tmp/basic_line.html'</span>)</span><br></pre></td></tr></table></figure></p><h2 id="基本散点图"><a href="#基本散点图" class="headerlink" title="基本散点图"></a>基本散点图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py  <span class="comment"># 导入plotly库并命名为py</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">df_50 = pd.read_csv(<span class="string">r'dat/000016.csv'</span>, index_col=[<span class="string">'date'</span>]) <span class="comment"># 读取数据</span></span><br><span class="line">df_50.sort_index(inplace=<span class="keyword">True</span>) <span class="comment"># 排序</span></span><br><span class="line">df_50 = df_50.loc[<span class="string">'2017-01-03'</span>:,:]</span><br><span class="line">df_300 = pd.read_csv(<span class="string">r'dat/000300.csv'</span>, index_col=[<span class="string">'date'</span>])</span><br><span class="line">df_300.sort_index(inplace=<span class="keyword">True</span>) <span class="comment"># 排序</span></span><br><span class="line">df_300 = df_300.loc[<span class="string">'2017-01-01'</span>:]</span><br><span class="line"></span><br><span class="line">fig = &#123;</span><br><span class="line">    <span class="string">'data'</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'x'</span>: df_50.index,</span><br><span class="line">            <span class="string">'y'</span>: df_50.volume,</span><br><span class="line">            <span class="string">'mode'</span>: <span class="string">'markers'</span>,</span><br><span class="line">            <span class="string">'name'</span>: <span class="string">'上证50'</span>&#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">'x'</span>: df_300.index,</span><br><span class="line">            <span class="string">'y'</span>: df_300.volume,</span><br><span class="line">            <span class="string">'mode'</span>: <span class="string">'markers'</span>,</span><br><span class="line">            <span class="string">'name'</span>: <span class="string">'沪深300'</span>&#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">'layout'</span>: &#123;</span><br><span class="line">        <span class="string">'xaxis'</span>: &#123;<span class="string">'title'</span>: <span class="string">'时间'</span>,</span><br><span class="line">                  <span class="comment"># 'type': 'log',</span></span><br><span class="line">                  &#125;,</span><br><span class="line">        <span class="string">'yaxis'</span>: &#123;<span class="string">'title'</span>: <span class="string">"成交量"</span>&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">url = pyplt(fig, filename=<span class="string">'tmp/basic_scatter.html'</span>)</span><br></pre></td></tr></table></figure><h2 id="基本柱状图"><a href="#基本柱状图" class="headerlink" title="基本柱状图"></a>基本柱状图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py  <span class="comment"># 导入plotly库并命名为py</span></span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># -------------pre def</span></span><br><span class="line">pyplt = py.offline.plot</span><br><span class="line"></span><br><span class="line">N = <span class="number">40</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">1</span>, N)</span><br><span class="line">y = np.random.randn(N)</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">'x'</span>: x, <span class="string">'y'</span>: y&#125;)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">data = [</span><br><span class="line">    go.Bar(</span><br><span class="line">        x=df[<span class="string">'x'</span>], <span class="comment"># x可以是 DataFrame 的某一列</span></span><br><span class="line">        y=df[<span class="string">'y'</span>]</span><br><span class="line">    )</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">url = pyplt(data, filename=<span class="string">r'tmp/basic_bar.html'</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;基本线形图&quot;&gt;&lt;a href=&quot;#基本线形图&quot; class=&quot;headerlink&quot; title=&quot;基本线形图&quot;&gt;&lt;/a&gt;基本线形图&lt;/h2&gt;&lt;p&gt;   Plotly可以识别Pandas数据格式，所以数据是Pandas的DataFrame或Series结构，可以直</summary>
-      
-    
-    
-    
-    <category term="Python数据分析" scheme="http://yoursite.com/categories/Python数据分析/"/>
-    
-    
-    <category term="Pandas基本图形" scheme="http://yoursite.com/tags/Pandas基本图形/"/>
     
   </entry>
   
