@@ -293,6 +293,228 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/Python数据的归宿/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lei">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YHNE's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/Python数据的归宿/" itemprop="url">Python数据的归宿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T10:42:09+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python心得/" itemprop="url" rel="index">
+                    <span itemprop="name">Python心得</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/04/08/Python数据的归宿/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/04/08/Python数据的归宿/" class="cy_cmt_count" data-xid="2019/04/08/Python数据的归宿/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="文件的输入-输出"><a href="#文件的输入-输出" class="headerlink" title="文件的输入/输出"></a>文件的输入/输出</h2><p>  一个运行中的程序会存取放在随机存储器（ARM）上的数据。<br>  fileobj = open(filname,mode)<br>  mode的第一个字母表明对其的操作：</p>
+<ul>
+<li>r表示读模式</li>
+<li>w表示写模式。如果文件不存在则新创建，如果存在则重写新内容</li>
+<li>x表示文件不存在的情况下创建并写文件</li>
+<li>a表示文件如果存在，在文件的末尾追加写内容<br>mode的第二个字母是文件类型：</li>
+<li>t(或者省略)代表文本类型</li>
+<li>b代表二进制文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fb = open(<span class="string">'test.txt'</span>,<span class="string">'wt'</span>)</span><br><span class="line">fb.write(str1)</span><br><span class="line">fb.close()</span><br></pre></td></tr></table></figure>
+<h3 id="write-写文本文件"><a href="#write-写文本文件" class="headerlink" title="write()写文本文件"></a>write()写文本文件</h3><p>  数据大可以分块写：</p>
+<pre><code class="python">fout = open(<span class="string">'relativity'</span>,<span class="string">'wt'</span>)
+size = len(pome)
+offset = <span class="number">0</span>
+chunk = <span class="number">100</span>
+<span class="keyword">while</span> Ture:
+    <span class="keyword">if</span> offset &gt; size:
+        <span class="keyword">break</span>
+    fout.write(pome[offset:offset+chunk])
+    offset += chunk
+
+
+</code></pre>
+<h3 id="用read、readline、readlines读取文本文件"><a href="#用read、readline、readlines读取文本文件" class="headerlink" title="用read、readline、readlines读取文本文件"></a>用read、readline、readlines读取文本文件</h3><p>  read()读到文件末尾，再次调用read()会返回字符串‘’。 readline()读取文件的一行，readlines()调用时读取一行，并返回单行字符列表。</p>
+<pre><code class="python">fout = open(<span class="string">'relativity'</span>,<span class="string">'wt'</span>)
+<span class="keyword">while</span> Ture:
+    line = fout.readline()
+    <span class="keyword">if</span> <span class="keyword">not</span> line:
+        <span class="keyword">break</span>
+    poem += line
+fout.close()
+
+</code></pre>
+<h3 id="使用with自动关闭文件"><a href="#使用with自动关闭文件" class="headerlink" title="使用with自动关闭文件"></a>使用with自动关闭文件</h3><p>  with expression as variable:</p>
+<pre><code class="python"><span class="keyword">with</span> open(<span class="string">'relativity'</span>,<span class="string">'wt'</span>) <span class="keyword">as</span> fout:
+  fb.write(str1)
+
+</code></pre>
+<h3 id="使用seek-改变位置"><a href="#使用seek-改变位置" class="headerlink" title="使用seek()改变位置"></a>使用seek()改变位置</h3><p>  函数tell()返回距离文件开始处的字节偏移量。函数seek()允许跳转到文件其他字节偏移量的位置。<br>  seek(offset,origin)</p>
+<ul>
+<li>如果origin=0，从头开始偏移offset个字节</li>
+<li>如果origin=1，从当前位置偏移offset个字节</li>
+<li>如果origin=2，距离最后结尾处偏移offset个字节</li>
+</ul>
+<pre><code class="python">fin = open(<span class="string">'relativity'</span>,<span class="string">'rt'</span>)
+fin.tell()
+fin.seek(<span class="number">151</span>)<span class="comment">#偏移到151处</span>
+</code></pre>
+<h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><p>  数据库展现了表单形式的不同类型数据之间的关系，每一项有对应的关系。NoSQL数据库是键值对形式存储的数据。</p>
+<pre><code class="python">db = sqlite3.connect(<span class="string">'books.db'</span>)<span class="comment">#连接数据库</span>
+curs = db.cursor() <span class="comment">#创建一个cursor对象来管理数据库</span>
+curs.execute(<span class="string">'''create table book (title text,author text,year int)'''</span>) <span class="comment">#对数据库执行一个或多个sql命令</span>
+db.commit()
+<span class="comment">#插入数据</span>
+ins_str = <span class="string">'insert into book values(?, ?, ?)'</span>
+<span class="keyword">with</span> open(<span class="string">'books.csv'</span>,<span class="string">'rt'</span>) <span class="keyword">as</span> infile:
+    books = csv.DictReader(infile)
+    <span class="keyword">for</span> book <span class="keyword">in</span> books:
+        print(book)
+        <span class="keyword">print</span> book[<span class="string">' title'</span>]
+        curs.execute(ins_str,(book[<span class="string">' title'</span>],book[<span class="string">'author'</span>],book[<span class="string">'year'</span>]))
+
+</code></pre>
+<h3 id="DB-API"><a href="#DB-API" class="headerlink" title="DB-API"></a>DB-API</h3><p>  应用程序编程接口。是访问某些服务的函数集合。DB_API是Python中访问关系型数据库的标准API。<br>主要函数如下所示：</p>
+<ul>
+<li>connect（） 连接数据库，包含参数用户名，密码，服务器地址等</li>
+<li>cursor()创建一个cursor对象来管理数据库</li>
+<li>execute()和executemany() 对数据库执行一个或者多个SQL命令</li>
+<li>fetchone()、fetchmany()和fetchall()得到execute之后的结果</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/05/python玩转数据/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2166,178 +2388,6 @@ set()将其他类型转换为集合
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/14/linux网络服务01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lei">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YHNE's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/14/linux网络服务01/" itemprop="url">linux网络服务01</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-14T20:50:26+08:00">
-                2019-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux浅见/" itemprop="url" rel="index">
-                    <span itemprop="name">linux浅见</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/03/14/linux网络服务01/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/03/14/linux网络服务01/" class="cy_cmt_count" data-xid="2019/03/14/linux网络服务01/" itemprop="commentsCount"></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </span></div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="ifconfig-显示或者配置网络设备"><a href="#ifconfig-显示或者配置网络设备" class="headerlink" title="ifconfig: 显示或者配置网络设备"></a>ifconfig: 显示或者配置网络设备</h2><ul>
-<li>语法：ifconfig [网络设备] [-可选参数]</li>
-</ul>
-<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ifconfig  <span class="comment">#显示当前网络设备状态</span></span><br><span class="line">ifconfig eth0 192.168.1.1 netmask 255.255.255.0 <span class="comment">#配置网卡参数</span></span><br><span class="line">ifconfig eth1 down <span class="comment">#关闭网卡</span></span><br><span class="line">ifconfig eth1 up <span class="comment">#开启网卡</span></span><br><span class="line">ifconfig eth1 hw ether 00:10:B2:56:64:2B <span class="comment">#修改网卡的物理地址</span></span><br></pre></td></tr></table></figure>
-<h2 id="ping-测试网络"><a href="#ping-测试网络" class="headerlink" title="ping:测试网络"></a>ping:测试网络</h2><ul>
-<li>语法：ping [-可选参数] 网络地址</li>
-</ul>
-<h3 id="范例-1"><a href="#范例-1" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping 128.168.12.13 <span class="comment">#检测ping的与远端主机的连通情况</span></span><br><span class="line">ping -c 128.168.12.13 <span class="comment">#指定发送数据包的次数</span></span><br></pre></td></tr></table></figure>
-<h2 id="netstat：显示网络状态"><a href="#netstat：显示网络状态" class="headerlink" title="netstat：显示网络状态"></a>netstat：显示网络状态</h2><ul>
-<li>语法：netstat [必要参数] [选择性参数]</li>
-</ul>
-<h3 id="范例-2"><a href="#范例-2" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -r <span class="comment">#显示系统的路由表</span></span><br><span class="line">netstat -an <span class="comment">#显示详细的网络状况</span></span><br></pre></td></tr></table></figure>
-<h2 id="telnet-远程登录"><a href="#telnet-远程登录" class="headerlink" title="telnet:远程登录"></a>telnet:远程登录</h2><ul>
-<li>语法：telnet [-可选参数] 主机名/IP</li>
-</ul>
-<h3 id="范例-3"><a href="#范例-3" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet 192.168.1.1 <span class="comment">#远程登录</span></span><br></pre></td></tr></table></figure>
-<h2 id="rsh-：远端登录的shell"><a href="#rsh-：远端登录的shell" class="headerlink" title="rsh ：远端登录的shell"></a>rsh ：远端登录的shell</h2><ul>
-<li>语法：rsh [-可选参数] 主机 指令</li>
-</ul>
-<h3 id="范例-4"><a href="#范例-4" class="headerlink" title="范例"></a>范例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rlogin on <span class="comment">#启动rlogin工具</span></span><br><span class="line">rlogin 192.168.1.1 <span class="comment">#登录远程主机</span></span><br><span class="line">rsh -l mary 192.168.1.1 /bin/<span class="built_in">pwd</span> <span class="comment">#登录远程主机执行指令/bin/pwd,要正确执行该指令，必须现在远程主机192.168.1.1上启动rlogin指令</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2388,7 +2438,7 @@ set()将其他类型转换为集合
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2399,7 +2449,7 @@ set()将其他类型转换为集合
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2410,7 +2460,7 @@ set()将其他类型转换为集合
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
