@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码  （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码">
+<meta name="description" content="选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码  （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码   概率计算 根据上一期的开奖号码，计算下一期出现的概率 每个号根据历史出现概率计算下一期出现的概率 计算总体趋势的集中度  开奖号码统计 近1">
 <meta name="keywords" content="彩票选号规则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="彩票开发及选号笔记">
 <meta property="og:url" content="http://yoursite.com/2023/06/13/彩票开发及选号笔记/index.html">
 <meta property="og:site_name" content="YHNE&#39;s blog">
-<meta property="og:description" content="选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码  （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码">
+<meta property="og:description" content="选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码  （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码   概率计算 根据上一期的开奖号码，计算下一期出现的概率 每个号根据历史出现概率计算下一期出现的概率 计算总体趋势的集中度  开奖号码统计 近1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2023-06-13T16:00:16.715Z">
+<meta property="og:updated_time" content="2024-06-14T14:46:54.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="彩票开发及选号笔记">
-<meta name="twitter:description" content="选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码  （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码">
+<meta name="twitter:description" content="选号规则1、假定上一次开过的全部都不中2、假定随机（机选）的都不中3、假定10次以上没开过奖的都不中4、在剩下的选频率出现多次的且距上次开奖较近的号码5、选具有一定规律的号码  （1）开奖过的号码呈斜线 （2）多次连开，有二有三，有三有四，类似这样的号码   概率计算 根据上一期的开奖号码，计算下一期出现的概率 每个号根据历史出现概率计算下一期出现的概率 计算总体趋势的集中度  开奖号码统计 近1">
 
 
 
@@ -402,6 +402,15 @@
 <li>（1）开奖过的号码呈斜线</li>
 <li>（2）多次连开，有二有三，有三有四，类似这样的号码 </li>
 </ul>
+<h2 id="概率计算"><a href="#概率计算" class="headerlink" title="概率计算"></a>概率计算</h2><ul>
+<li>根据上一期的开奖号码，计算下一期出现的概率</li>
+<li>每个号根据历史出现概率计算下一期出现的概率</li>
+<li>计算总体趋势的集中度</li>
+</ul>
+<h2 id="开奖号码统计"><a href="#开奖号码统计" class="headerlink" title="开奖号码统计"></a>开奖号码统计</h2><ul>
+<li>近10期开奖号码出现的次数</li>
+<li>近10期没有开奖的号出现的次数 </li>
+</ul>
 
       
     </div>
@@ -617,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选号规则"><span class="nav-number">1.</span> <span class="nav-text">选号规则</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选号规则"><span class="nav-number">1.</span> <span class="nav-text">选号规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概率计算"><span class="nav-number">2.</span> <span class="nav-text">概率计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开奖号码统计"><span class="nav-number">3.</span> <span class="nav-text">开奖号码统计</span></a></li></ol></div>
             
 
           </div>
@@ -637,7 +646,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
