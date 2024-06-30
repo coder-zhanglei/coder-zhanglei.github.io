@@ -70,9 +70,9 @@
     <link href="http://yoursite.com/2023/06/13/%E5%BD%A9%E7%A5%A8%E5%BC%80%E5%8F%91%E5%8F%8A%E9%80%89%E5%8F%B7%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2023/06/13/%E5%BD%A9%E7%A5%A8%E5%BC%80%E5%8F%91%E5%8F%8A%E9%80%89%E5%8F%B7%E7%AC%94%E8%AE%B0/</id>
     <published>2023-06-13T14:36:59.000Z</published>
-    <updated>2024-06-14T14:46:54.001Z</updated>
+    <updated>2024-06-30T12:09:05.501Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="选号规则"><a href="#选号规则" class="headerlink" title="选号规则"></a>选号规则</h2><p>1、假定上一次开过的全部都不中<br>2、假定随机（机选）的都不中<br>3、假定10次以上没开过奖的都不中<br>4、在剩下的选频率出现多次的且距上次开奖较近的号码<br>5、选具有一定规律的号码</p><ul><li>（1）开奖过的号码呈斜线</li><li>（2）多次连开，有二有三，有三有四，类似这样的号码</li></ul><h2 id="概率计算"><a href="#概率计算" class="headerlink" title="概率计算"></a>概率计算</h2><ul><li>根据上一期的开奖号码，计算下一期出现的概率</li><li>每个号根据历史出现概率计算下一期出现的概率</li><li>计算总体趋势的集中度</li></ul><h2 id="开奖号码统计"><a href="#开奖号码统计" class="headerlink" title="开奖号码统计"></a>开奖号码统计</h2><ul><li>近10期开奖号码出现的次数</li><li>近10期没有开奖的号出现的次数</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="选号规则"><a href="#选号规则" class="headerlink" title="选号规则"></a>选号规则</h2><p>1、假定上一次开过的全部都不中<br>2、假定随机（机选）的都不中<br>3、假定10次以上没开过奖的都不中<br>4、在剩下的选频率出现多次的且距上次开奖较近的号码<br>5、选具有一定规律的号码</p><ul><li>（1）开奖过的号码呈斜线</li><li>（2）多次连开，有二有三，有三有四，类似这样的号码</li></ul><h2 id="概率计算"><a href="#概率计算" class="headerlink" title="概率计算"></a>概率计算</h2><ul><li>根据上一期的开奖号码，计算下一期出现的概率</li><li>每个号根据历史出现概率计算下一期出现的概率</li><li>计算总体趋势的集中度</li></ul><h2 id="开奖号码统计"><a href="#开奖号码统计" class="headerlink" title="开奖号码统计"></a>开奖号码统计</h2><ul><li>近10期开奖号码出现的次数</li><li>近10期没有开奖的号出现的次数</li></ul><h2 id="计算输出"><a href="#计算输出" class="headerlink" title="计算输出"></a>计算输出</h2><ul><li>将每次计算出的号码输出到一个文件中</li><li>需要描述得到该组号码的理论依据</li></ul>]]></content>
     
     
       
@@ -134,30 +134,6 @@
   </entry>
   
   <entry>
-    <title>hexo 文章特性设置</title>
-    <link href="http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/</id>
-    <published>2021-10-24T14:45:11.000Z</published>
-    <updated>2022-03-12T14:13:27.056Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="为字体添加颜色"><a href="#为字体添加颜色" class="headerlink" title="为字体添加颜色"></a>为字体添加颜色</h2><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>这是<label style="color:red">红色</label>字体<br>这是<label style="color:green">绿色</label>字体<br>这是<label style="color:#ff0">黄色</label>字体<br>这是<label style="color:#00f">蓝色</label>字体<br>这是<label style="color:#0ff">青色，蓝绿色</label>字体</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体</span><br></pre></td></tr></table></figure><h2 id="文字风格设置"><a href="#文字风格设置" class="headerlink" title="文字风格设置"></a>文字风格设置</h2><p>内容块</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这里的内容显示在内容块中</span><br></pre></td></tr></table></figure><p>显示效果</p><blockquote><p>这里的内容是在内容快中显示的</p></blockquote><p>删除线（中划线），需要使用“~”来包含需要删除线的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~fsadfsa~~</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><del>fsadfsa</del></p></blockquote><p>下划线<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线的文本&lt;/u&gt;</span><br></pre></td></tr></table></figure><p></p><p>效果显示</p><blockquote><p><u>下划线的文本</u></p></blockquote><p>粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***也就是三个星号***</span><br></pre></td></tr></table></figure><p></p><p>显示效果</p><blockquote><p><strong><em>也就是三个星号</em></strong></p></blockquote><p>斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*也就是一个星号*</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><em>也就是一个星号</em></p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;为字体添加颜色&quot;&gt;&lt;a href=&quot;#为字体添加颜色&quot; class=&quot;headerlink&quot; title=&quot;为字体添加颜色&quot;&gt;&lt;/a&gt;为字体添加颜色&lt;/h2&gt;&lt;h3 id=&quot;效果展示&quot;&gt;&lt;a href=&quot;#效果展示&quot; class=&quot;headerlink&quot; titl</summary>
-      
-    
-    
-    
-    <category term="初识hexo" scheme="http://yoursite.com/categories/初识hexo/"/>
-    
-    
-    <category term="初识hexo" scheme="http://yoursite.com/tags/初识hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo 迁移</title>
     <link href="http://yoursite.com/2021/10/24/hexo-%E8%BF%81%E7%A7%BB/"/>
     <id>http://yoursite.com/2021/10/24/hexo-%E8%BF%81%E7%A7%BB/</id>
@@ -170,6 +146,30 @@
       
       
     <summary type="html">&lt;h2 id=&quot;迁移时候主要用到可参考的博客&quot;&gt;&lt;a href=&quot;#迁移时候主要用到可参考的博客&quot; class=&quot;headerlink&quot; title=&quot;迁移时候主要用到可参考的博客&quot;&gt;&lt;/a&gt;迁移时候主要用到可参考的博客&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://</summary>
+      
+    
+    
+    
+    <category term="初识hexo" scheme="http://yoursite.com/categories/初识hexo/"/>
+    
+    
+    <category term="初识hexo" scheme="http://yoursite.com/tags/初识hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 文章特性设置</title>
+    <link href="http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://yoursite.com/2021/10/24/hexo-%E6%96%87%E7%AB%A0%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE/</id>
+    <published>2021-10-24T14:45:11.000Z</published>
+    <updated>2022-03-12T14:13:27.056Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="为字体添加颜色"><a href="#为字体添加颜色" class="headerlink" title="为字体添加颜色"></a>为字体添加颜色</h2><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>这是<label style="color:red">红色</label>字体<br>这是<label style="color:green">绿色</label>字体<br>这是<label style="color:#ff0">黄色</label>字体<br>这是<label style="color:#00f">蓝色</label>字体<br>这是<label style="color:#0ff">青色，蓝绿色</label>字体</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是&lt;label style=&quot;color:red&quot;&gt;红色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:green&quot;&gt;绿色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:yellow&quot;&gt;黄色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:blue&quot;&gt;蓝色&lt;/label&gt;字体</span><br><span class="line">这是&lt;label style=&quot;color:cyan&quot;&gt;青色，蓝绿色&lt;/label&gt;字体</span><br></pre></td></tr></table></figure><h2 id="文字风格设置"><a href="#文字风格设置" class="headerlink" title="文字风格设置"></a>文字风格设置</h2><p>内容块</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这里的内容显示在内容块中</span><br></pre></td></tr></table></figure><p>显示效果</p><blockquote><p>这里的内容是在内容快中显示的</p></blockquote><p>删除线（中划线），需要使用“~”来包含需要删除线的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~fsadfsa~~</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><del>fsadfsa</del></p></blockquote><p>下划线<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线的文本&lt;/u&gt;</span><br></pre></td></tr></table></figure><p></p><p>效果显示</p><blockquote><p><u>下划线的文本</u></p></blockquote><p>粗体+斜体，需要使用“***”，也就是三个星号，来包含需要粗体和斜体的文本<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***也就是三个星号***</span><br></pre></td></tr></table></figure><p></p><p>显示效果</p><blockquote><p><strong><em>也就是三个星号</em></strong></p></blockquote><p>斜体，需要使用“*”，也就是一个星号，来包含需要斜体的文本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*也就是一个星号*</span><br></pre></td></tr></table></figure><p>效果显示</p><blockquote><p><em>也就是一个星号</em></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;为字体添加颜色&quot;&gt;&lt;a href=&quot;#为字体添加颜色&quot; class=&quot;headerlink&quot; title=&quot;为字体添加颜色&quot;&gt;&lt;/a&gt;为字体添加颜色&lt;/h2&gt;&lt;h3 id=&quot;效果展示&quot;&gt;&lt;a href=&quot;#效果展示&quot; class=&quot;headerlink&quot; titl</summary>
       
     
     
